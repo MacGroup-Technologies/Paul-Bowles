@@ -2,28 +2,29 @@
 import { onMounted, ref, watchEffect } from 'vue'
 import gsap from 'gsap'
 import { CSSPlugin } from 'gsap/CSSPlugin';
+import breakpoints from "../utils/breakpoints.js";
 
 gsap.registerPlugin(CSSPlugin);
 
 const hover = ref('')
 const animate = ref('')
 const links = [
-  { title: 'music', link: 'music', animate: 'music' },
-  { title: 'translation', link: 'translation', animate: 'library' },
-  { title: 'library', link: 'library', animate: 'library' },
-  { title: 'chronology', link: 'chronology', animate: 'chronology' },
-  { title: 'memorabilia', link: 'memorabilia', animate: 'memorabilia' },
-  { title: 'writings', link: 'writings', animate: 'writing' },
-  { title: 'moroccan music', link: 'moroccan-music', animate: 'music' },
-  { title: 'photography', link: 'photography', animate: 'photography' },
-  { title: 'on paul bowles', link: 'paul-bowles', animate: 'clips' },
-  { title: 'two clips', link: 'clips', animate: 'clips' },
-  { title: 'contact', link: 'contact', animate: 'chronology' }
+  { title: 'music', link: 'music', animate: 'library' },
+  { title: 'translation', link: 'translation', animate: 'chronology' },
+  { title: 'library', link: 'library', animate: 'chronology' },
+  { title: 'chronology', link: 'chronology', animate: 'memorabilia' },
+  { title: 'memorabilia', link: 'memorabilia', animate: 'clips' },
+  { title: 'writings', link: 'writings', animate: 'music' },
+  { title: 'moroccan music', link: 'moroccan-music', animate: 'chronology' },
+  { title: 'photography', link: 'photography', animate: 'writing' },
+  { title: 'on paul bowles', link: 'paul-bowles', animate: 'memorabilia' },
+  { title: 'two clips', link: 'clips', animate: 'photography' },
+  { title: 'contact', link: 'contact', animate: 'clips' }
 ]
 
 let imgs:HTMLAllCollection
 
-const tl = gsap.timeline()
+const tl = gsap.timeline().repeat(-1)
 const tL = gsap.timeline();
 const textTl = gsap.timeline();
 
@@ -37,18 +38,19 @@ const playBackground = function () {
   img.reverse()
   imgs = img;
   let wrap = gsap.utils.wrap(imgs),
-    count = imgs.length * 10,
+    count = imgs.length + 1,
     i;
   for (i = 0; i < count; i++) {
-    if (imgs[i] !== undefined) {
+    if(imgs[i]) {
       tl
         .to(imgs[i], { autoAlpha: 0 }, "+=2")
-        .addLabel(imgs[i].getAttribute('data-animate'));
+        .addLabel(imgs[i].getAttribute('data-animate'), "+=2");
       tl.to(imgs[i + 1], { autoAlpha: 1 }, '>')
+      console.log()
     } else {
       tl
-        .to(wrap(i), { autoAlpha: 0 }, "+=2")
-        .to(wrap(i + 1), { autoAlpha: 1 }, '>')
+        .to(imgs[i], { autoAlpha: 0 }, ">")
+      tl.to(imgs[i + 1], { autoAlpha: 1 }, '<')
     }
   }
 }
@@ -57,16 +59,12 @@ watchEffect(() => {
   if (hover.value !== "") {
     textTl.play()
     textTl
-      .to('#heading', { fontSize: '25.83px', marginBottom: 10, duration: 0.2 }, 0)
-      .to('#logo', { height: '38px', duration: 0.2 }, 0);
+      .to('#heading', { fontSize: breakpoints.mdAndUp ? '25.83px' : '20px', marginBottom: 10, duration: 0.2 }, 0)
+      .to('#logo', { height: breakpoints.mdAndUp ? '38px' : '25px', duration: 0.2 }, 0);
     tL.reverse()
-    const el = document.querySelectorAll(`[data-animate="${animate.value}"]`)[0]
-    console.log("Tween should go to:", animate.value)
-    console.log("Image to show at this animate value: ", el)
     tl.seek(animate.value)
     tl.paused(true)
   } else {
-    console.log("Reversing textTl")
     textTl.reverse()
     tl.play()
   }
@@ -124,86 +122,86 @@ onMounted(() => {
       />
     </div>
     <div
-      class="absolute top-0 right-0 left-0 bottom-0 z-50 bg-black/80 p-20 flex flex-col justify-between"
+      class="absolute top-0 right-0 left-0 bottom-0 z-50 bg-black/80 p-10 md:p-20 flex flex-col justify-between"
     >
-      <div class="2xl:mt-20">
+      <div class="mt-10 2xl:mt-20">
         <h1
-          class="font-heading font-bold uppercase text-white text-8xl 2xl:text-9xl mb-5"
+          class="font-heading font-bold uppercase text-white text-6xl md:text-8xl 2xl:text-9xl mb-5"
           id="heading"
         >
           The Artist’s Legacy
         </h1>
-        <img src="@/assets/imgs/logo.svg" class="w-auto h-16 2xl:h-28" id="logo" />
+        <img src="@/assets/imgs/logo.svg" class="w-auto h-12 md:h-16 2xl:h-28" id="logo" />
       </div>
       <div clas="mt-10" v-if="hover">
         <div class="" v-if="hover === 'music'">
-          <h2 class="font-serif text-[66px] uppercase">Music</h2>
-          <p class="text-primary text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
-            Lorem ipsum dolor sit amet consectetur, adipiscing elit metus erat.
+          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">Music</h2>
+          <p class="text-primary text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
+            This section contains the amazing musical compositions of Paul Bowles, encompassing a lot of genres.
           </p>
         </div>
         <div class="" v-else-if="hover === 'contact'">
-          <h2 class="font-serif text-[66px] uppercase">Contact</h2>
-          <p class="text-primary text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
-            Lorem ipsum dolor sit amet consectetur, adipiscing elit metus erat.
+          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">Contact</h2>
+          <p class="text-primary text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
+            We value your feedback, questions, and suggestions
           </p>
         </div>
         <div class="" v-else-if="hover === 'chronology'">
-          <h2 class="font-serif text-[66px] uppercase">Chronology</h2>
-          <p class="text-primary text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
-            Lorem ipsum dolor sit amet consectetur, adipiscing elit metus erat.
+          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">Chronology</h2>
+          <p class="text-primary text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
+            December 30, 1910 - November 18th, 1999
           </p>
         </div>
         <div class="" v-else-if="hover === 'translation'">
-          <h2 class="font-serif text-[66px] uppercase">Translation</h2>
-          <p class="text-primary text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
-            Lorem ipsum dolor sit amet consectetur, adipiscing elit metus erat.
+          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">Translation</h2>
+          <p class="text-primary text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
+            Bowles translated into English many French, Spanish, and Moghrebi works.
           </p>
         </div>
         <div class="" v-else-if="hover === 'memorabilia'">
-          <h2 class="font-serif text-[66px] uppercase">Memorabilia</h2>
-          <p class="text-primary text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
+          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">Memorabilia</h2>
+          <p class="text-primary text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
             “A night with thunder in the sky he packed his bag and left,” Paul Bowles wrote...
           </p>
         </div>
         <div class="" v-else-if="hover === 'writings'">
-          <h2 class="font-serif text-[66px] uppercase">Writings</h2>
-          <p class="text-primary text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
-            Lorem ipsum dolor sit amet consectetur, adipiscing elit metus erat.
+          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">Writings</h2>
+          <p class="text-primary text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
+            Paul Bowles: masterful storyteller, skilled writer, connoisseur of words.
           </p>
         </div>
         <div class="" v-else-if="hover === 'moroccan-music'">
-          <h2 class="font-serif text-[66px] uppercase">Moroccan Music</h2>
-          <p class="text-primary text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
-            Lorem ipsum dolor sit amet consectetur, adipiscing elit metus erat.
+          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">Moroccan Music</h2>
+          <p class="text-primary text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
+            A creative mind and love for Morocco culminated in the creation of these amazing pieces of Moroccan music.
           </p>
         </div>
         <div class="" v-else-if="hover === 'clips'">
-          <h2 class="font-serif text-[66px] uppercase">Two clips</h2>
-          <p class="text-primary text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
-            Lorem ipsum dolor sit amet consectetur, adipiscing elit metus erat.
+          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">Two clips</h2>
+          <p class="text-primary text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
+            Paul Bowles was a source of inspiration for many filmmakers with his works influencing numerous movies and  documentaries.
           </p>
         </div>
         <div class="" v-else-if="hover === 'paul-bowles'">
-          <h2 class="font-serif text-[66px] uppercase">on paul bowles</h2>
-          <p class="text-primary text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
-            Lorem ipsum dolor sit amet consectetur, adipiscing elit metus erat.
+          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">on paul bowles</h2>
+          <p class="text-primary text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
+            “A night with thunder in the sky he packed his bag and left,” Paul Bowles wrote...
           </p>
         </div>
         <div class="" v-else-if="hover === 'photography'">
-          <h2 class="font-serif text-[66px] uppercase">photography</h2>
-          <p class="text-primary text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
-            Lorem ipsum dolor sit amet consectetur, adipiscing elit metus erat.
+          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">photography</h2>
+          <p class="text-primary text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
+            This section shows his brilliance with the lens, showcasing his greatness beyond the realm of words.
           </p>
         </div>
         <div class="" v-else>
-          <h2 class="font-serif text-[66px] uppercase">library</h2>
-          <p class="text-primary text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
-            Lorem ipsum dolor sit amet consectetur, adipiscing elit metus erat.
+          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">library</h2>
+          <p class="text-primary text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
+            Explore Paul Bowles's library of over 3,000 volumes collected during the five decades he lived in Tangier.
           </p>
         </div>
       </div>
-      <div class="flex flex-wrap gap-y-5 w-5/6 2xl:w-full mr-40">
+      <div class="flex flex-wrap gap-x-5 md:gap-x-0 gap-y-5 w-full md:w-5/6 2xl:w-full mr-40">
         <div class="2xl:w-72 capitalize" v-for="(item, index) in links" :key="index">
           <router-link
             class="px-5 hover:opacity-70 text-[18px] 2xl:text-[23px] text-white-shade hover:text-primary transition-colors"
