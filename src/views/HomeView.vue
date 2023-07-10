@@ -76,7 +76,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="h-screen bg-black text-white">
+  <main class="h-screen bg-background-dark text-white">
     <div id="img">
       <img
         src="@/assets/imgs/imagehero.png"

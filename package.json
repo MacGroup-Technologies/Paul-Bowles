@@ -12,6 +12,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
     "autoprefixer": "^10.4.14",
     "element-plus": "^2.3.7",
     "gsap": "^3.12.2",

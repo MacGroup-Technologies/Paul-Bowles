@@ -6,7 +6,9 @@ module.exports = {
     extend: {
       colors: {
         primary: "#4d5ad6",
-        "white-shade": "#FFF8E8"
+        "white-shade": "#FFF8E8",
+        "background-light": "#E7EAEC",
+        "background-dark": "#06050C"
       },
       fontFamily: {
         sans: ["PT Mono", "monospace"],
