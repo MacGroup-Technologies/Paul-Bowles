@@ -25,7 +25,7 @@
         class="absolute top-0 right-0 w-full h-full object-cover md:object-scale-down md:object-right-top"
       />
     </div>
-    <div class="p-5 lg:px-16 2xl:px-20 lg:text-2xl lg:py-20 mb-20">
+    <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 mb-20">
       <a name="content" />
       Paul Bowles wrote music that encompassed a broad variety of genres, including scores for
       theater, opera, ballet, and chamber music; soundtracks for art films; piano compositions and

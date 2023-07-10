@@ -69,7 +69,7 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="hidden p-5 lg:px-16 2xl:px-20 flex-wrap gap-y-3 menu">
+        <div class="hidden p-5 lg:px-16 2xl:px-20 flex-wrap flex-col md:flex-row flex-gap-y-5 md:gap-y-3 menu">
           <router-link
             :to="link.link"
             class="md:w-2/12 capitalize text-xl text-black dark:text-white-shade hover:text-primary dark:hover:text-primary"
@@ -82,7 +82,7 @@ onMounted(() => {
       </header>
       <router-view />
     </div>
-    <footer class="flex justify-between p-5 lg:px-16 2xl:px-20 lg:py-16 lg:text-2xl">
+    <footer class="flex flex-col md:flex-row gap-5 justify-between p-5 lg:px-16 2xl:px-20 lg:py-16 lg:text-2xl">
       <p class="">Powered by <a href="#" class="underline">MacGroup Technologies</a></p>
       <div class="flex gap-10">
         <router-link
