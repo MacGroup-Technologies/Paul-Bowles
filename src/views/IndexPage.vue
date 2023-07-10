@@ -10,8 +10,6 @@ const tl = gsap.timeline()
 watch(menutoggler, () => {
   if (menutoggler.value) {
     tl.to(".menu", { autoAlpha: 1 })
-      .to(".hamburger__line:first-of-type", { autoAlpha: 0 }, 0)
-      .to("hamburger__line:nth-of-type(2)", { y: "10px" })
   } else {
     tl.to(".menu", { autoAlpha: 0 })
   }
@@ -31,13 +29,12 @@ onMounted(() => {
         class="flex justify-between items-center p-5 lg:px-16 2xl:px-20 fixed top-0 right-0 left-0 backdrop-blur-sm bg-transparent"
       >
         <input type="checkbox" id="menutoggler" v-model="menutoggler" class="hidden" />
-        {{ menutoggler }}
-        <div class="relative transition">
-          <label class="flex items-center gap-3 cursor-pointer" for="menutoggler">
+        <div class="relative transition w-40 overflow-hidden">
+          <label class="flex items-center gap-3 cursor-pointer hamburger" for="menutoggler">
             {{ menutoggler ? 'Close' : 'Menu' }}
-            <div class="flex flex-col gap-3 hamburger">
-              <div class="px-8 pt-1 bg-black dark:bg-white-shade rounded hamburger__line" />
-              <div class="px-8 pt-1 bg-black dark:bg-white-shade rounded hamburger__line" />
+            <div class="flex flex-col items-center justify-center gap-2">
+              <div class="px-8 pt-[2px] bg-black dark:bg-white-shade rounded hamburger__line" />
+              <div class="px-8 pt-[2px] bg-black dark:bg-white-shade rounded hamburger__line" />
             </div>
           </label>
         </div>
@@ -50,26 +47,41 @@ onMounted(() => {
           <iconLogo class="h-10" />
         </router-link>
         <div class="flex justify-between rounded-3xl p-1 bg-black dark:bg-background-light">
-          <div class="flex items-center justify-center rounded-3xl cursor-pointer transition-opacity" @click="themeStore.updateTheme('light')">
+          <div class="flex items-center justify-center rounded-3xl dark:cursor-pointer transition-opacity" @click="themeStore.updateTheme('light')">
             <icon-sun class="h-7 opacity-0 dark:opacity-100" />
           </div>
-          <div class="bg-background-light rounded-3xl cursor-pointer transition-opacity" @click="themeStore.updateTheme('dark')">
+          <div class="bg-background-light rounded-3xl cursor-pointer dark:cursor-default transition-opacity" @click="themeStore.updateTheme('dark')">
             <icon-moon class="h-7 opacity-100 dark:opacity-0" />
           </div>
         </div>
       </header>
       <router-view />
     </div>
-    <footer class="flex justify-between p-5">
+    <footer class="flex justify-between p-5 lg:px-16 2xl:px-20">
       <p class="">Powered by <a href="#" class="underline">MacGroup Technologies</a></p>
+      <div class="flex gap-10">
+        <router-link to="" class="hover:text-primary hover:scale-x-110 hover:transform font-semibold">Privacy Policy</router-link>
+        <router-link to="" class="hover:text-primary hover:scale-x-110 hover:transform font-semibold">Cookie Policy</router-link>
+      </div>
     </footer>
   </div>
 </template>
 
-<!-- <style lang="scss" scoped>
-#menutoggler {
-  &:checked ~ .menu {
-    display: flex!important;
+<style lang="scss" scoped>
+.hamburger {
+  &:hover &__line {
+    padding: 2px 20px 0;
+    margin: 0 auto;
+  }
+
+  &__line {
+    transition: all .3s ease-in-out;
   }
 }
-</style> -->
+
+#menutoggler {
+  &:checked ~ .relative label div .hamburger__line {
+    &:nth-of-type(odd) { display: none; }
+  }
+}
+</style>
