@@ -14,7 +14,7 @@
         <div class="p-5 lg:px-16 2xl:px-20 mt-8 md:mt-16">
           <a
             href="#content"
-            class="w-20 h-20 md:w-32 md:h-32 flex justify-center items-center rounded-full border-[2px] border-background-dark dark:border-white-shade hover:opacity-75"
+            class="w-20 h-20 md:w-32 md:h-32 flex justify-center items-center rounded-full border-[2px] border-[currentColor] dark:border-white-shade hover:opacity-75"
           >
             <p class="text-5xl md:text-7xl animate-bounce">&DownArrow;</p>
           </a>
