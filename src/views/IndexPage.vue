@@ -22,11 +22,11 @@ onMounted(() => {
 </script>
 <template>
   <div
-    class="bg-background-light dark:bg-background-dark dark:text-white-shade min-h-screen flex flex-col justify-between transition-colors"
+    class="bg-background-light dark:bg-background-dark text-[#545455] dark:text-white-shade min-h-screen flex flex-col justify-between transition-colors"
   >
     <div class="">
       <header
-        class="flex justify-between items-center p-5 lg:px-16 2xl:px-20 fixed top-0 right-0 left-0 backdrop-blur-sm bg-transparent"
+        class="flex justify-between items-center p-5 lg:px-16 2xl:px-20 fixed top-0 right-0 left-0 z-50 backdrop-blur-sm bg-background-light dark:bg-background-dark bg-opacity-30 dark:bg-opacity-30"
       >
         <input type="checkbox" id="menutoggler" v-model="menutoggler" class="hidden" />
         <div class="relative transition w-40 overflow-hidden">
@@ -57,7 +57,7 @@ onMounted(() => {
       </header>
       <router-view />
     </div>
-    <footer class="flex justify-between p-5 lg:px-16 2xl:px-20">
+    <footer class="flex justify-between p-5 lg:px-16 2xl:px-20 lg:py-16 lg:text-2xl">
       <p class="">Powered by <a href="#" class="underline">MacGroup Technologies</a></p>
       <div class="flex gap-10">
         <router-link to="" class="hover:text-primary hover:scale-x-110 hover:transform font-semibold">Privacy Policy</router-link>
