@@ -37,6 +37,19 @@ const router = createRouter({
       ]
     },
     {
+      path: "/admin",
+      name: "AdminBase",
+      component: () => import("../views/Admin/BaseView.vue"),
+      // beforeEnter: admin,
+      children: [
+        {
+          path: "/",
+          name: "AdminIndex",
+          component: () => import("../views/Admin/IndexPage.vue")
+        }
+      ]
+    },
+    {
       path: '/about',
       name: 'about',
       component: () => import('../views/AboutView.vue')
