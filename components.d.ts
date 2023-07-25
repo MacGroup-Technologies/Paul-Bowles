@@ -8,11 +8,15 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElForm: typeof import('element-plus/es')['ElForm']
+    ElFormItem: typeof import('element-plus/es')['ElFormItem']
+    ElInput: typeof import('element-plus/es')['ElInput']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconBack: typeof import('./src/components/icons/IconBack.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
     IconEcosystem: typeof import('./src/components/icons/IconEcosystem.vue')['default']
+    IconHome: typeof import('./src/components/icons/IconHome.vue')['default']
     IconLogo: typeof import('./src/components/icons/IconLogo.vue')['default']
     IconMoon: typeof import('./src/components/icons/IconMoon.vue')['default']
     IconMusic: typeof import('./src/components/icons/IconMusic.vue')['default']

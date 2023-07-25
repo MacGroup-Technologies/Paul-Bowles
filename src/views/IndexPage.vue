@@ -52,7 +52,7 @@ onMounted(() => {
             </label>
           </div>
           <router-link to="/">
-            <iconLogo class="h-10" />
+            <icon-logo class="h-10" />
           </router-link>
           <div class="flex justify-between rounded-3xl p-1 bg-black dark:bg-background-light">
             <div
