@@ -51,7 +51,7 @@ const router = createRouter({
         {
           path: "/admin",
           name: "AdminIndex",
-          beforeEnter: guard,
+          // beforeEnter: guard,
           component: () => import("../views/Admin/IndexPage.vue")
         },
         {
