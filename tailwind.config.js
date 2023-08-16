@@ -13,7 +13,6 @@ module.exports = {
       },
       fontFamily: {
         sans: ["PT Mono", "monospace"],
-        serif: ["VT323", "serif"],
         heading: ["Roboto Condensed", "monospace"]
       }
     },

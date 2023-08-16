@@ -8,7 +8,7 @@ const router = useRoute()
   <div class="">
     <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
-        <h1 class="text-8xl font-serif uppercase">Paul Bowles Music</h1>
+        <h1 class="text-8xl font-heading uppercase">Paul Bowles Music</h1>
         <router-link to="/music" class="hover:opacity-75 hover:-translate-x-5 transition-transform">
           <icon-back />
         </router-link>

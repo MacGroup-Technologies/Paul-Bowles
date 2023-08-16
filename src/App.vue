@@ -2,8 +2,14 @@
 import { onMounted, computed, watch } from 'vue';
 import { useThemeStore } from './stores/theme';
 
+import LoadingComponent from "@/components/LoadingComponent.vue"
+
 const theme = computed(() => {
   return useThemeStore().theme
+})
+
+const loading = computed(() => {
+  return useThemeStore().loading
 })
 
 
@@ -23,5 +29,6 @@ onMounted(() => { themeChanger() })
 </script>
 
 <template>
+  <loading-component v-if="loading" />
   <RouterView />
 </template>

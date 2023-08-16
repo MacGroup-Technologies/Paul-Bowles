@@ -135,67 +135,67 @@ onMounted(() => {
       </div>
       <div clas="mt-10" v-if="hover">
         <div class="" v-if="hover === 'music'">
-          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">Music</h2>
+          <h2 class="font-heading text-[30px] md:text-[66px] uppercase">Music</h2>
           <p class="text-black text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
             This section contains the amazing musical compositions of Paul Bowles, encompassing a lot of genres.
           </p>
         </div>
         <div class="" v-else-if="hover === 'contact'">
-          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">Contact</h2>
+          <h2 class="font-heading text-[30px] md:text-[66px] uppercase">Contact</h2>
           <p class="text-black text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
             We value your feedback, questions, and suggestions
           </p>
         </div>
         <div class="" v-else-if="hover === 'chronology'">
-          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">Chronology</h2>
+          <h2 class="font-heading text-[30px] md:text-[66px] uppercase">Chronology</h2>
           <p class="text-black text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
             December 30, 1910 - November 18th, 1999
           </p>
         </div>
         <div class="" v-else-if="hover === 'translation'">
-          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">Translation</h2>
+          <h2 class="font-heading text-[30px] md:text-[66px] uppercase">Translation</h2>
           <p class="text-black text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
             Bowles translated into English many French, Spanish, and Moghrebi works.
           </p>
         </div>
         <div class="" v-else-if="hover === 'memorabilia'">
-          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">Memorabilia</h2>
+          <h2 class="font-heading text-[30px] md:text-[66px] uppercase">Memorabilia</h2>
           <p class="text-black text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
             “A night with thunder in the sky he packed his bag and left,” Paul Bowles wrote...
           </p>
         </div>
         <div class="" v-else-if="hover === 'writings'">
-          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">Writings</h2>
+          <h2 class="font-heading text-[30px] md:text-[66px] uppercase">Writings</h2>
           <p class="text-black text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
             Paul Bowles: masterful storyteller, skilled writer, connoisseur of words.
           </p>
         </div>
         <div class="" v-else-if="hover === 'moroccan-music'">
-          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">Moroccan Music</h2>
+          <h2 class="font-heading text-[30px] md:text-[66px] uppercase">Moroccan Music</h2>
           <p class="text-black text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
             A creative mind and love for Morocco culminated in the creation of these amazing pieces of Moroccan music.
           </p>
         </div>
         <div class="" v-else-if="hover === 'clips'">
-          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">Two clips</h2>
+          <h2 class="font-heading text-[30px] md:text-[66px] uppercase">Two clips</h2>
           <p class="text-black text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
             Paul Bowles was a source of inspiration for many filmmakers with his works influencing numerous movies and  documentaries.
           </p>
         </div>
         <div class="" v-else-if="hover === 'paul-bowles'">
-          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">on paul bowles</h2>
+          <h2 class="font-heading text-[30px] md:text-[66px] uppercase">on paul bowles</h2>
           <p class="text-black text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
             “A night with thunder in the sky he packed his bag and left,” Paul Bowles wrote...
           </p>
         </div>
         <div class="" v-else-if="hover === 'photography'">
-          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">photography</h2>
+          <h2 class="font-heading text-[30px] md:text-[66px] uppercase">photography</h2>
           <p class="text-black text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
             This section shows his brilliance with the lens, showcasing his greatness beyond the realm of words.
           </p>
         </div>
         <div class="" v-else>
-          <h2 class="font-serif text-[30px] md:text-[66px] uppercase">library</h2>
+          <h2 class="font-heading text-[30px] md:text-[66px] uppercase">library</h2>
           <p class="text-black text-[18px] md:text-[27px] 2xl:text-[37px] w-1/2 2xl:w-1/3">
             Explore Paul Bowles's library of over 3,000 volumes collected during the five decades he lived in Tangier.
           </p>

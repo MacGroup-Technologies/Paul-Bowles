@@ -1,4 +1,20 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { onMounted } from 'vue';
+import { fetchTag } from "@/services/tags";
+
+const getTag = async function() {
+  try {
+    const response = await fetchTag();
+    console.log(response);
+  } catch(error) {
+    console.log(error)
+  }
+}
+
+onMounted(async () => {
+  await getTag();
+})
+</script>
 <template>
   <div class="">
     <div class="h-screen bg-background-light dark:bg-background-dark relative flex items-center">

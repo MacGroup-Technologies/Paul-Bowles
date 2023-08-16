@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteLocationNormalized, NavigationGuardNext } from 'vue-router'
+import { useThemeStore } from '@/stores/theme'
 
 import HomeView from '../views/HomeView.vue'
 import { token } from '../utils/constant.js'
@@ -7,6 +8,10 @@ import { token } from '../utils/constant.js'
 function guard(to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) {
   if (localStorage.getItem(token)) return next();
   return next("/admin-login");
+}
+
+function setLoading() {
+  useThemeStore().updateLoading(true);
 }
 
 const router = createRouter({
@@ -41,6 +46,17 @@ const router = createRouter({
           path: '/library/list',
           name: 'libraryListPage',
           component: () => import('../views/LibraryList.vue')
+        },
+        {
+          path: "/translation",
+          name: "TranslationPage",
+          component: () => import('../views/translations/IndexView.vue')
+        },
+        {
+          path: "/translation/list",
+          name: "TranslationListPage",
+          component: () => import('../views/translations/ListView.vue'),
+          beforeEnter: setLoading
         }
       ]
     },
@@ -51,7 +67,7 @@ const router = createRouter({
         {
           path: "/admin",
           name: "AdminIndex",
-          // beforeEnter: guard,
+          beforeEnter: guard,
           component: () => import("../views/Admin/IndexPage.vue")
         },
         {
@@ -71,7 +87,11 @@ const router = createRouter({
       name: 'about',
       component: () => import('../views/AboutView.vue')
     }
-  ]
-})
+  ],
+  scrollBehavior() {
+    return { top: 0 }
+  }
+});
+
 
 export default router
