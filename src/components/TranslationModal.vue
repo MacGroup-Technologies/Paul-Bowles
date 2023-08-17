@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { OnClickOutside } from '@vueuse/components'
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 
 defineProps<{
-  item: Object
+  item: any
 }>()
 
 const img = ref(null)

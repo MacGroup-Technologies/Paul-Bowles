@@ -1,8 +1,10 @@
 <script lang="ts" setup>
 import { ref, watch, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 import { useThemeStore } from '../stores/theme'
 import { gsap } from 'gsap'
 
+const route = useRoute()
 const menutoggler = ref(false)
 const themeStore = useThemeStore()
 const tl = gsap.timeline()
@@ -19,6 +21,10 @@ const links = [
   { title: 'two clips', link: 'clips', animate: 'photography' },
   { title: 'contact', link: 'contact', animate: 'clips' }
 ]
+
+watch(() => route.name, () => {
+  menutoggler.value = false
+})
 
 watch(menutoggler, () => {
   if (menutoggler.value) {
@@ -71,7 +77,7 @@ onMounted(() => {
         </div>
         <div class="hidden p-5 lg:px-16 2xl:px-20 flex-wrap flex-col md:flex-row flex-gap-y-5 md:gap-y-3 menu">
           <router-link
-            :to="link.link"
+            :to="'/' + link.link"
             class="md:w-2/12 capitalize text-xl text-black dark:text-white-shade hover:text-primary dark:hover:text-primary"
             v-for="link in links"
             :key="link.title"

@@ -13,12 +13,10 @@ declare module 'vue' {
     ElFormItem: typeof import('element-plus/es')['ElFormItem']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElInput: typeof import('element-plus/es')['ElInput']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconBack: typeof import('./src/components/icons/IconBack.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
     IconEcosystem: typeof import('./src/components/icons/IconEcosystem.vue')['default']
-    IconHome: typeof import('./src/components/icons/IconHome.vue')['default']
     IconLogo: typeof import('./src/components/icons/IconLogo.vue')['default']
     IconMoon: typeof import('./src/components/icons/IconMoon.vue')['default']
     IconMusic: typeof import('./src/components/icons/IconMusic.vue')['default']
@@ -29,9 +27,7 @@ declare module 'vue' {
     LoadingComponent: typeof import('./src/components/LoadingComponent.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
     TranslationModal: typeof import('./src/components/TranslationModal.vue')['default']
     UploadItem: typeof import('./src/components/UploadItem.vue')['default']
-    WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }
 }

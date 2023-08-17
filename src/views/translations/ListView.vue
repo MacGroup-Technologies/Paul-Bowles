@@ -75,7 +75,7 @@ onMounted(async () => {
       <div class="grid gap-x-5 gap-y-10 grid-cols-2 md:grid-cols-4 w-full">
         <div class="w-full flex flex-col" v-for="item in translations.items" :key="item.id">
           <img
-            :src="item.cover_image"
+            :src="'https://paul-bowles-665265c4bc24.herokuapp.com/api' + item.cover_image"
             class="w-3/4 h-64 rounded-[22px] fancy-img my-0 mx-auto cursor-pointer"
             @click="openModal(item)"
           />

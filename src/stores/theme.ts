@@ -3,10 +3,10 @@ import { defineStore } from 'pinia'
 
 export const useThemeStore = defineStore('theme', () => {
   const theme = ref("light")
-  const loading = ref(true)
-  const error = ref(null) as unknown;
+  const loading = ref(false)
+  const error = ref(null) as any;
   
-  function updateError(newVal: unknown) {
+  function updateError(newVal: string) {
     error.value = newVal
   }
 

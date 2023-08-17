@@ -88,8 +88,17 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     }
   ],
-  scrollBehavior() {
-    return { top: 0 }
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth'
+      }
+    }
+    return {
+      top: 0,
+      behavior: 'smooth'
+    }
   }
 });
 
