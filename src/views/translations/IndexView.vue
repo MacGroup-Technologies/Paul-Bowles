@@ -26,8 +26,8 @@
         class="absolute top-0 right-0 w-full h-full object-cover md:object-scale-down md:object-right-top"
       />
     </div>
+    <a name="content" />
     <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
-      <a name="content" />
       Paul Bowles was an active translator since his youth and rendered into English numerous works
       from French, Spanish and Moghrebi (Moroccan vernacular). Alongside a few samples of Bowles’s
       work as translator, this section features a recording of Ahmed Yacoubi telling one of his

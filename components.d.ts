@@ -24,6 +24,7 @@ declare module 'vue' {
     IconSun: typeof import('./src/components/icons/IconSun.vue')['default']
     IconSupport: typeof import('./src/components/icons/IconSupport.vue')['default']
     IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
+    IconVideo: typeof import('./src/components/icons/IconVideo.vue')['default']
     LoadingComponent: typeof import('./src/components/LoadingComponent.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

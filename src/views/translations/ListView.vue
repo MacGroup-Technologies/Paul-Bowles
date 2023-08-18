@@ -32,7 +32,7 @@ const setLoading = function(val: boolean) {
   useThemeStore().updateLoading(val)
 }
 
-const setError = function(val: unknown) {
+const setError = function(val: string) {
   useThemeStore().updateError(val)
 }
 

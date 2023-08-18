@@ -57,6 +57,22 @@ const router = createRouter({
           name: "TranslationListPage",
           component: () => import('../views/translations/ListView.vue'),
           beforeEnter: setLoading
+        },
+        {
+          path: "/clips",
+          name: "FilmsIndex",
+          component: () => import('../views/film/IndexView.vue'),
+        },
+        {
+          path: "/clips/two-clips",
+          name: "TwoClips",
+          component: () => import("../views/film/TwoClipsView.vue"),
+          beforeEnter: setLoading
+        },
+        {
+          path: "/clips/documentaries",
+          name: "DocumentariesClips",
+          component: () => import("../views/film/DocumentariesView.vue")
         }
       ]
     },
