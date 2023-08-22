@@ -30,12 +30,26 @@ const router = createRouter({
         {
           path: '/music',
           name: 'musicPage',
-          component: () => import('../views/MusicView.vue')
+          component: () => import('../views/music/IndexView.vue'),
+          beforeEnter: setLoading
         },
         {
-          path: "/music/music",
+          path: "/music/:title",
           name: "PaulBowlesMusicPage",
-          component: () => import('../views/MusicMusicView.vue')
+          component: () => import('../views/music/MusicView.vue'),
+          beforeEnter: setLoading
+        },
+        {
+          path: "/music/book/:title",
+          name: "AltMusicPage",
+          component: () => import('../views/music/BookMusicView.vue'),
+          beforeEnter: setLoading
+        },
+        {
+          path: "/music/music/:title",
+          name: "AltMusicPage",
+          component: () => import('../views/music/MusicMusicView.vue'),
+          beforeEnter: setLoading
         },
         {
           path: '/library',

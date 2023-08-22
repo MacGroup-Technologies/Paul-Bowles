@@ -1,18 +1,38 @@
 <script lang="ts" setup>
-import { onMounted } from 'vue';
-import { fetchTag } from "@/services/tags";
+import { onMounted, reactive, watch } from 'vue';
+import { useRouter } from "vue-router";
+import { fetchMusic } from "@/services/music";
+import { useThemeStore } from '@/stores/theme';
 
-const getTag = async function() {
+const music = reactive({ items: [] })
+const route = useRouter()
+
+
+const setLoading = function(val: boolean) {
+  useThemeStore().updateLoading(val)
+}
+
+const setError = function(val: string) {
+  useThemeStore().updateError(val)
+}
+const getMusic = async function() {
   try {
-    const response = await fetchTag();
-    console.log(response);
+    const response = await fetchMusic();
+    music.items = response.data.results
+    setLoading(false)
   } catch(error) {
+    setError(error)
     console.log(error)
   }
 }
 
+watch(route, async () => {
+  setLoading(true)
+  await getMusic()
+})
+
 onMounted(async () => {
-  await getTag();
+  await getMusic();
 })
 </script>
 <template>
@@ -50,25 +70,14 @@ onMounted(async () => {
       concrète.
     </div>
     <div
-      class="flex gap-20 2xl:gap-48 justify-between py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl"
+      class="grid grid-cols-1 md:grid-cols-3 gap-20 2xl:gap-48 justify-between py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl"
+      v-if="music.items.length !== 0"
     >
-      <router-link to="/music/music" class="flex flex-col items-center gap-3">
+      <router-link :to="'/music/'+encodeURI(item.title)" class="flex flex-col items-center gap-3" v-for="item in music.items" :key="item.id">
         <div class="bg-primary-light w-80 px-20 py-28 rounded-md flex justify-center items-center">
           <icon-music />
         </div>
-        Paul Bowles's Music
-      </router-link>
-      <router-link to="/music/potrait" class="flex flex-col items-center gap-3">
-        <div class="bg-primary-light w-80 px-20 py-28 rounded-md flex justify-center items-center">
-          <icon-music />
-        </div>
-        Musical Portraits
-      </router-link>
-      <router-link to="/music/paul-bowles" class="flex flex-col items-center gap-3">
-        <div class="bg-primary-light w-80 px-20 py-28 rounded-md flex justify-center items-center">
-          <icon-musical />
-        </div>
-        On Paul Bowles's Music
+        {{ item.title }}
       </router-link>
     </div>
     <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 mb-10">
