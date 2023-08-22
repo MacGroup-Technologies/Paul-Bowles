@@ -1,31 +1,5 @@
 <script lang="ts" setup>
-// import { fetchFilms } from "@/services/films"
-// import { onMounted, reactive } from 'vue';
 import IconVideo from "@/components/icons/IconVideo.vue"
-
-
-// const films = reactive({ items: [] })
-// const pagination = reactive({
-//   previous: null,
-//   next: null,
-//   page: 0,
-// })
-
-// const getFilms = async function () {
-//   try {
-//     const response = await fetchFilms();
-//     pagination.previous = response.data.previous
-//     pagination.next = response.data.next
-//     films.items = response.data.results
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
-// onMounted(() => {
-//   getFilms()
-// })
-
 </script>
 <template>
   <div class="">
