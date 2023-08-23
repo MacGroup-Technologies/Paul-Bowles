@@ -50,9 +50,9 @@ onMounted(async () => {
         <pre class="mt-10 text-justify">
           {{ music.items[0].description }}
         </pre>
-        <div class="mt-10 flex items-start gap-10">
-          <div class="" v-for="img in music.items[0].image" :key="img.id">
-            <img :src="img.image" class="w-auto h-auto" />
+        <div class="mt-10 grid dgrid-cols-2 md:grid-cols-5 gap-5">
+          <div class="rounded overflow-hidden" v-for="img in music.items[0].image" :key="img.id">
+            <img :src="'https://res.cloudinary.com/dbrvleydy/'+img.image" class="w-full h-auto" />
           </div>
         </div>
       </div>

@@ -47,9 +47,9 @@ onMounted(() => {
     </div>
     <div class="px-5 py-10 lg:px-16 2xl:px-20 grid place-items-stretch gap-5 grid-cols-1 md:grid-cols-2">
         <div class="block bg-white dark:bg-opacity-10 hover:-translate-y-2 transition-transform p-5 rounded-xl" v-for="item in clips.items" :key="item.id">
-          <div class="flex justify-center items-center p-12 bg-primary-light rounded-xl">
-            <video class="w-full h-auto" preload="metadata" controls>
-              <source :src="item.video_file + '#t=0.1'" type="video/mp4">
+          <div class="flex justify-center items-center bg-primary-light rounded-xl">
+            <video class="w-full h-auto rounded-xl" preload="metadata" controls>
+              <source :src="'https://res.cloudinary.com/dbrvleydy/'+item.video_file + '#t=0.1'" type="video/mp4">
             </video>
           </div>
           <div class="py-5 px-3">

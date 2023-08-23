@@ -41,13 +41,13 @@ const router = createRouter({
         },
         {
           path: "/music/book/:title",
-          name: "AltMusicPage",
+          name: "BookMusicPage",
           component: () => import('../views/music/BookMusicView.vue'),
           beforeEnter: setLoading
         },
         {
           path: "/music/music/:title",
-          name: "AltMusicPage",
+          name: "MusicMusicPage",
           component: () => import('../views/music/MusicMusicView.vue'),
           beforeEnter: setLoading
         },
@@ -87,6 +87,11 @@ const router = createRouter({
           path: "/clips/documentaries",
           name: "DocumentariesClips",
           component: () => import("../views/film/DocumentariesView.vue")
+        },
+        {
+          path: "/chronology",
+          name: "ChronologyView",
+          component: () => import("../views/ChronologyView.vue")
         }
       ]
     },
