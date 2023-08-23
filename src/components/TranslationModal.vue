@@ -12,7 +12,7 @@ const img = ref(null)
 <template>
   <div class="z-50 fixed top-0 right-0 bottom-0 left-0 bg-black bg-opacity-70 flex justify-center items-center">
     <OnClickOutside @trigger="$emit('close')">
-      <div class="h-[80vh] w-[60vw] bg-background-light dark:bg-background-dark rounded-xl">
+      <div class="h-[90vh] w-[60vw] bg-background-light dark:bg-background-dark rounded-xl">
         <div
           class="py-5 px-20 inline-flex items-center gap-3 text-black dark:text-white-shade hover:text-opacity-80 cursor-pointer"
           @click="$emit('close')"
@@ -20,7 +20,7 @@ const img = ref(null)
           Close <span class="inline-block pt-[2px] w-10 bg-black dark:bg-white-shade" />
         </div>
         <div class="py-3 px-20 grid gap-10 grid-cols-1 md:grid-cols-2 h-[65%]">
-          <img :src="img ?? item.cover_image" class="bg-red-500 bg-opacity-20 rounded-2xl w-full h-full" />
+          <img :src="'https://res.cloudinary.com/dbrvleydy/'+img ?? 'https://res.cloudinary.com/dbrvleydy/'+item.cover_image" class="ounded-2xl w-full h-full" />
           <div class="">
             <h1 class="text-xl font-semibold">{{ item.title }}</h1>
             <p class="mt-3">
@@ -30,8 +30,8 @@ const img = ref(null)
         </div>
         <div class="py-3 px-20 grid gap-5 grid-cols-1 md:grid-cols-3 w-[60%]">
           <img
-            :src="imgs.image"
-            class="bg-primary bg-opacity-20 h-20 rounded-xl cursor-pointer hover:-translate-y-2 transition-transform"
+            :src="'https://res.cloudinary.com/dbrvleydy/'+imgs.image"
+            class="bg-primary bg-opacity-20 h-auto w-full rounded-xl cursor-pointer hover:-translate-y-2 transition-transform"
             :class="{ '-translate-y-1' : img == imgs.image }"
             v-for="imgs in item.image"
             :key="imgs.id"
