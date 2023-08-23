@@ -92,6 +92,18 @@ const router = createRouter({
           path: "/chronology",
           name: "ChronologyView",
           component: () => import("../views/ChronologyView.vue")
+        },
+        {
+          path: "/photography",
+          name: "PhotographyView",
+          component: () => import("../views/photography/IndexView.vue"),
+          beforeEnter: setLoading
+        },
+        {
+          path: "/photography/:title",
+          name: "PhotographyItemView",
+          component: () => import("../views/photography/ItemView.vue"),
+          beforeEnter: setLoading
         }
       ]
     },
