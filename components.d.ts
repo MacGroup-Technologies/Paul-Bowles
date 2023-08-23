@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ChronologyListItem: typeof import('./src/components/ChronologyListItem.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElButtonGroup: typeof import('element-plus/es')['ElButtonGroup']
     ElForm: typeof import('element-plus/es')['ElForm']
@@ -21,6 +22,7 @@ declare module 'vue' {
     IconMoon: typeof import('./src/components/icons/IconMoon.vue')['default']
     IconMusic: typeof import('./src/components/icons/IconMusic.vue')['default']
     IconMusical: typeof import('./src/components/icons/IconMusical.vue')['default']
+    IconPlus: typeof import('./src/components/icons/IconPlus.vue')['default']
     IconSun: typeof import('./src/components/icons/IconSun.vue')['default']
     IconSupport: typeof import('./src/components/icons/IconSupport.vue')['default']
     IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']

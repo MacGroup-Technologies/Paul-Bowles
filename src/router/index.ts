@@ -87,6 +87,11 @@ const router = createRouter({
           path: "/clips/documentaries",
           name: "DocumentariesClips",
           component: () => import("../views/film/DocumentariesView.vue")
+        },
+        {
+          path: "/chronology",
+          name: "ChronologyView",
+          component: () => import("../views/ChronologyView.vue")
         }
       ]
     },
