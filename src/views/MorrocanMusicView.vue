@@ -86,8 +86,8 @@ onMounted(() => {
           <div class="w-auto">{{ item.duration }}</div>
         </div>
       </div>
-      <div class="mt-20 flex gap-5 items-center" v-if="book.items.length !== 0">
-        <div class="flex items-center w-1/2 gap-5" v-for="item in book.items" :key="item.id">
+      <div class="mt-20 md:flex gap-5 items-center" v-if="book.items.length !== 0">
+        <div class="flex items-center md:w-1/2 gap-5" v-for="item in book.items" :key="item.id">
           <img :src="'https://res.cloudinary.com/dbrvleydy/' + item.cover_image" class="w-52 h-auto" />
           <p>
             {{ item.description }}
