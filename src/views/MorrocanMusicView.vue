@@ -41,7 +41,7 @@ onMounted(() => {
       >
         <div class="p-5 mt-24 lg:px-16 2xl:px-20">
           <h1 class="text-5xl md:text-8xl font-mono uppercase">moroccan music</h1>
-          <p class="md:w-1/2 text-primary text-3xl mt-5">
+          <p class="w-3/4 md:w-1/2 text-primary text-3xl mt-5">
             In 1959 Paul Bowles traveled extensively across Morocco recording its traditional music.
           </p>
         </div>
