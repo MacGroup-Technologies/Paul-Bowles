@@ -15,7 +15,6 @@ export const useThemeStore = defineStore('theme', () => {
   }
 
   function updateTheme(newVal: string) {
-    localStorage.setItem("theme", newVal)
     theme.value = newVal
   }
 
