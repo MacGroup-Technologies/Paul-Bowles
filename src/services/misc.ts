@@ -9,3 +9,11 @@ export function getUrl(url: string) {
 export function getPhotoAltTag(altTag: string) {
   return axios.get(`${baseURL}/v1/archive/photos/?alttag=${altTag}`)
 }
+
+export function getMusicTag(altTag: string) {
+  return axios.get(`${baseURL}/v1/archive/music/?tag=${altTag}`)
+}
+
+export function getBookTag(altTag: string) {
+  return axios.get(`${baseURL}/v1/archive/books/?tag=${altTag}`)
+}

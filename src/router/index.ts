@@ -104,6 +104,12 @@ const router = createRouter({
           name: "PhotographyItemView",
           component: () => import("../views/photography/ItemView.vue"),
           beforeEnter: setLoading
+        },
+        {
+          path: "/moroccan-music",
+          name: "MorrocanView",
+          component: () => import("../views/MorrocanMusicView.vue"),
+          beforeEnter: setLoading
         }
       ]
     },
