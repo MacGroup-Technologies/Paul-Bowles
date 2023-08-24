@@ -45,7 +45,7 @@ onMounted(async () => {
 </script>
 <template>
   <div class="">
-    <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
         <h1 class="text-5xl md:text-6xl font-heading uppercase">{{ router.params.title }}</h1>
         <router-link
@@ -72,9 +72,9 @@ onMounted(async () => {
         <div class="" v-if="router.params.title === 'Chamber Works and Orchestra'">
           <div class="mb-14" v-for="item in music.items" :key="item.id">
             <h2 class="uppercase text-4xl">{{ item.title }}</h2>
-            <div class="flex items-center gap-5 py-5 text-[20px]">
-              <icon-music class="h-14 w-auto bg-primary-light p-3 rounded-lg" />
-              <h3 class="w-1/2">
+            <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-5 py-5 text-[20px]">
+              <icon-music class="h-14 w-14 md:w-auto bg-primary-light p-3 rounded-lg" />
+              <h3 class="w-full md:w-1/2">
                 {{ item.title }}
               </h3>
               <div>
@@ -85,15 +85,15 @@ onMounted(async () => {
           </div>
         </div>
         <div class="" v-else>
-          <div class="px-10 mb-5 font-bold">List</div>
-          <div class="flex font-bold px-10 mb-3">
+          <div class="md:px-10 mb-5 font-bold">List</div>
+          <div class="flex flex-col md:flex-row gap-3 md:gap-0 font-bold md:px-10 mb-3">
             <div class="w-10">#</div>
             <div class="px-20" />
             <div class="w-full">Title</div>
             <div class="w-96">Time</div>
           </div>
           <div
-            class="flex mb-3 py-5 cursor-pointer px-10 rounded-xl transition hover:bg-white hover:text-black hober:shadow"
+            class="flex flex-col md:flex-row gap-3 md:gap-0 mb-3 py-5 cursor-pointer md:px-10 rounded-xl transition hover:bg-white hover:text-black hober:shadow"
             v-for="(item, index) in music.items"
             :key="item.id"
             @click="player.item = item"

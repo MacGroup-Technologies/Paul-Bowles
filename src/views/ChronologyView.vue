@@ -224,7 +224,7 @@ const chronology = [
         {{ item.year }}
       </a>
     </div>
-    <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 mb-10">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 mb-10">
       <a name="content" />
       <chronology-list v-for="(item, i) in chronology" :key="i" :item="item" />
     </div>

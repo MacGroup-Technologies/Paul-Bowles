@@ -26,7 +26,7 @@
       />
     </div>
     <a name="content" />
-    <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 grid grid-cols-1 md:grid-cols-2 gap-10">
       <router-link to="/paul-bowles/patricia-highsmith" class="rounded-3xl bg-white dark:bg-[#17142B] p-2">
         <img src="@/assets/imgs/Patricia-Highsmith.png" class="w-full h-auto" alt="Patricia Highsmith" />
         <h3 class="capitalize text-3xl font-mono text-background-dark dark:text-background-light p-5">a north african encounter - Patricia Highsmith</h3>

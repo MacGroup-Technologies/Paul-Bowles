@@ -28,8 +28,8 @@ import IconVideo from "@/components/icons/IconVideo.vue"
       />
     </div>
     <a name="content" />
-    <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
-      <div class="grid grid-cols-2 gap-5">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <router-link to="/clips/two-clips" class="block bg-white dark:bg-opacity-10 hover:-translate-y-2 transition-transform p-5 rounded-xl">
           <div class="flex justify-center items-center p-12 bg-primary-light rounded-xl">
             <icon-video />

@@ -60,20 +60,20 @@ onMounted(() => {
       />
     </div>
     <a name="content" />
-    <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <p class="mb-10">
         During a four-month field project sponsored by the Library of Congress with a grant from the Rockefeller Foundation, Paul Bowles traveled by car throughout Morocco in July 1959, to make recordings of the musical heritage of Morocco. Mohammed Larbi Djilali worked as guide and interpreter.
       </p>
       <div class="" v-if="music.items.length !== 0">
         <div class="px-10 mb-5 font-bold">List</div>
-        <div class="flex font-bold px-10 mb-3">
+        <div class="flex flex-col md:flex-row gap-3 font-bold px-10 mb-3">
           <div class="w-10">#</div>
           <div class="px-20" />
           <div class="w-full">Title</div>
           <div class="w-96">Time</div>
         </div>
         <div
-          class="flex mb-3 py-5 cursor-pointer px-10 rounded-xl transition hover:bg-white hover:text-black hober:shadow"
+          class="flex flex-col md:flex-row gap-3 md:gap-0 mb-3 py-5 cursor-pointer px-10 rounded-xl transition hover:bg-white hover:text-black hober:shadow"
           v-for="(item, index) in music.items"
           :key="item.id"
           @click="player.item = item"
@@ -88,7 +88,7 @@ onMounted(() => {
       </div>
       <div class="mt-20 md:flex gap-5 items-center" v-if="book.items.length !== 0">
         <div class="flex items-center md:w-1/2 gap-5" v-for="item in book.items" :key="item.id">
-          <img :src="'https://res.cloudinary.com/dbrvleydy/' + item.cover_image" class="w-52 h-auto" />
+          <img :src="'https://res.cloudinary.com/dbrvleydy/' + item.cover_image" class="w-1/3 md:w-52 h-auto" />
           <p>
             {{ item.description }}
           </p>
