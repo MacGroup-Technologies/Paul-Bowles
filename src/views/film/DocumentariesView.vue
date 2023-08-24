@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 <template>
   <div class="">
-    <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
         <h1 class="text-4xl font-heading uppercase">
           A short selection of films based on Paul Bowles’s works and documentaries on Paul Bowles
@@ -12,7 +12,7 @@
       </div>
       <ul class="mt-10">
         <li class="mb-5">
-          <div class="flex gap-3">
+          <div class="md:flex gap-3">
             <h2 class="font-bold">The Sheltering Sky</h2>
             <p class="">- Bermado Bertolucci (1990)</p>
           </div>

@@ -36,7 +36,7 @@ onMounted(async () => {
 </script>
 <template>
   <div class="">
-    <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
         <h1 class="text-6xl font-heading uppercase">{{ router.params.title }}</h1>
         <router-link to="#back" @click.prevent="route.go(-1)" class="hover:opacity-75 hover:-translate-x-5 transition-transform">
@@ -49,7 +49,7 @@ onMounted(async () => {
       <p class="my-10" v-else>
         Her collection of photos offers a unique glimpse into the artist's life.
       </p>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <img
           :src="'https://res.cloudinary.com/dbrvleydy/'+item.image"
           class="w-full h-auto rounded-3xl cursor-pointer"
@@ -64,7 +64,7 @@ onMounted(async () => {
       class="fixed top-0 right-0 left-0 bottom-0 bg-black bg-opacity-70 flex justify-center items-center text-center z-50"
       v-if="img !== null"
     >  
-    <OnClickOutside @trigger="img = null" class="text-center w-1/3">
+    <OnClickOutside @trigger="img = null" class="text-center px-10 md:px-0 md:w-1/3">
         <img :src="'https://res.cloudinary.com/dbrvleydy/' + img" class="w-full h-auto" />
     </OnClickOutside>
     </div>

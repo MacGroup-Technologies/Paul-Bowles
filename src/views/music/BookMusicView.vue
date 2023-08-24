@@ -39,7 +39,7 @@ onMounted(async () => {
 </script>
 <template>
   <div class="">
-    <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
         <h1 class="text-6xl font-heading uppercase">{{ router.params.title }}</h1>
         <router-link to="#back" @click.prevent="route.go(-1)" class="hover:opacity-75 hover:-translate-x-5 transition-transform">
@@ -52,7 +52,7 @@ onMounted(async () => {
         </pre>
         <div class="mt-10 grid dgrid-cols-2 md:grid-cols-5 gap-5">
           <div class="rounded overflow-hidden" v-for="img in music.items[0].image" :key="img.id">
-            <img :src="'https://res.cloudinary.com/dbrvleydy/'+img.image" class="w-full h-auto" />
+            <img :src="'https://res.cloudinary.com/dbrvleydy/'+img.image" class="w-1/2 md:w-full h-auto" />
           </div>
         </div>
       </div>

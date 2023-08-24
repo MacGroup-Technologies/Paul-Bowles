@@ -62,7 +62,7 @@ onMounted(async () => {
         class="absolute top-0 right-0 w-full h-full object-cover md:object-scale-down md:object-right-top"
       />
     </div>
-    <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <a name="content" />
       Paul Bowles wrote music that encompassed a broad variety of genres, including scores for
       theater, opera, ballet, and chamber music; soundtracks for art films; piano compositions and
@@ -80,7 +80,7 @@ onMounted(async () => {
         {{ item.title }}
       </router-link>
     </div>
-    <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 mb-10">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 mb-10 text-justify md:text-left">
       <h1 class="font-mono font-semibold uppercase text-3xl lg:text-4xl">
         PAUL BOWLES’S MUSICAL WORKS
       </h1>

@@ -37,7 +37,7 @@ onMounted(() => {
 </script>
 <template>
   <div class="">
-    <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
         <h1 class="text-6xl font-heading uppercase">two clips</h1>
         <router-link to="/clips" class="hover:opacity-75 hover:-translate-x-5 transition-transform">

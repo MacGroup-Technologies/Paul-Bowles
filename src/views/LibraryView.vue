@@ -26,7 +26,7 @@
         class="absolute top-0 right-0 w-full h-full object-cover md:object-scale-down md:object-right-top"
       />
     </div>
-    <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 mb-10">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 mb-10">
       <a name="content" />
       Paul Bowles's personal library includes over three thousand volumes that he collected during
       the five decades he lived in Tangier. The result of a recent major cataloging effort, his
@@ -37,7 +37,7 @@
         </router-link>
       </div>
     </div>
-    <div class="flex flex-col md:flex-row gap-10 px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 mb-10">
+    <div class="flex flex-col md:flex-row gap-10 px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 mb-10">
       <div class="md:w-1/3 overflow-scroll md:overflow-hidden flex flex-row md:flex-col gap-5 md:gap-48">
         <div class="w-2/3 flex-shrink-0 md:w-full md:mb-5" v-for="i in 3" :key="i">
           <div class="overflow-hidden rounded">

@@ -44,13 +44,13 @@ onMounted(() => {
   >
     <div class="">
       <header
-        class="fixed top-0 right-0 left-0 z-50 backdrop-blur-sm bg-background-light dark:bg-background-dark bg-opacity-30 dark:bg-opacity-30 transition-all"
+        class="fixed top-0 right-0 left-0 z-50 backdrop-blur-xl md:backdrop-blur-sm bg-background-light dark:bg-background-dark bg-opacity-30 dark:bg-opacity-30 transition-all"
       >
         <div class="flex justify-between items-center p-5 lg:px-16 2xl:px-20">
           <input type="checkbox" id="menutoggler" v-model="menutoggler" class="hidden" />
           <div class="relative transition w-40 overflow-hidden">
             <label class="flex items-center gap-3 cursor-pointer hamburger" for="menutoggler">
-              {{ menutoggler ? 'Close' : 'Menu' }}
+              <span class="hidden md:block">{{ menutoggler ? 'Close' : 'Menu' }}</span>
               <div class="flex flex-col items-center justify-center gap-2">
                 <div class="px-8 pt-[2px] bg-black dark:bg-white-shade rounded hamburger__line" />
                 <div class="px-8 pt-[2px] bg-black dark:bg-white-shade rounded hamburger__line" />
@@ -75,7 +75,7 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="hidden p-5 lg:px-16 2xl:px-20 flex-wrap flex-col md:flex-row flex-gap-y-5 md:gap-y-3 menu">
+        <div class="hidden p-5 lg:px-16 2xl:px-20 flex-wrap flex-col md:flex-row gap-5 flex-gap-y-5 md:gap-y-3 menu">
           <router-link
             :to="'/' + link.link"
             class="md:w-2/12 capitalize text-xl text-black dark:text-white-shade hover:text-primary dark:hover:text-primary"

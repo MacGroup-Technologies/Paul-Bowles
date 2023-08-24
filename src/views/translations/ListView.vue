@@ -61,9 +61,9 @@ onMounted(async () => {
 
 <template>
   <div class="">
-    <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
-        <h1 class="text-6xl font-heading uppercase">translations</h1>
+        <h1 class="text-5xl md:text-6xl font-heading uppercase">translations</h1>
         <router-link to="/translation" class="hover:opacity-75 hover:-translate-x-5 transition-transform">
           <icon-back />
         </router-link>
@@ -72,14 +72,14 @@ onMounted(async () => {
     <div
       class="py-10 lg:px-16 2xl:px-20"
     >
-      <div class="grid gap-x-5 gap-y-10 grid-cols-2 md:grid-cols-4 w-full">
+      <div class="grid gap-x-5 gap-y-10 grid-cols-1 md:grid-cols-4 w-full">
         <div class="w-full flex flex-col" v-for="item in translations.items" :key="item.id">
           <img
             :src="'https://res.cloudinary.com/dbrvleydy/' + item.cover_image"
-            class="w-3/4 h-64 rounded-[22px] fancy-img my-0 mx-auto cursor-pointer"
+            class="w-1/2 md:w-3/4 h-64 rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer"
             @click="openModal(item)"
           />
-          <div class="mt-5">
+          <div class="px-5 md:px-0 mt-5">
             <h2 class="font-semibold">{{ item.title }}</h2>
             <p class="mt-2">
               {{ item.description }}

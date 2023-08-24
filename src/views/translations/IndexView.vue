@@ -6,7 +6,7 @@
         class="h-full md:w-2/3 z-10 bg-gradient-to-r from-background-light dark:from-background-dark md:from-55% to-transparent flex flex-col justify-center items-start"
       >
         <div class="p-5 lg:px-16 2xl:px-20">
-          <h1 class="text-8xl font-mono uppercase">Translations</h1>
+          <h1 class="text-5xl md:text-8xl font-mono uppercase">Translations</h1>
           <p class="md:w-2/3 text-primary text-3xl mt-5">
             Paul Bowles translated into English numerous works from the French, Spanish and
             Moghrebi.
@@ -27,7 +27,7 @@
       />
     </div>
     <a name="content" />
-    <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       Paul Bowles was an active translator since his youth and rendered into English numerous works
       from French, Spanish and Moghrebi (Moroccan vernacular). Alongside a few samples of Bowles’s
       work as translator, this section features a recording of Ahmed Yacoubi telling one of his
