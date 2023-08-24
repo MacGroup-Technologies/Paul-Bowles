@@ -92,6 +92,69 @@ const router = createRouter({
           path: "/chronology",
           name: "ChronologyView",
           component: () => import("../views/ChronologyView.vue")
+        },
+        {
+          path: "/paul-bowles",
+          name: "PaulBowlesView",
+          component: () => import("../views/on paul bowles/IndexView.vue")
+        },
+        {
+          path: "/paul-bowles/patricia-highsmith",
+          name: "PaulBowlesPatriciaView",
+          component: () => import("../views/on paul bowles/PatriciaView.vue")
+        },
+        {
+          path: "/paul-bowles/tennessee-williams",
+          name: "PaulBowlesTennesseeView",
+          component: () => import("../views/on paul bowles/TennesseeView.vue")
+        },
+        {
+          path: "/paul-bowles/allen-ginsberg",
+          name: "PaulBowlesAllenView",
+          component: () => import("../views/on paul bowles/AllenView.vue")
+        },
+        {
+          path: "/paul-bowles/william-burroughs",
+          name: "PaulBowlesWilliamView",
+          component: () => import("../views/on paul bowles/WilliamView.vue")
+        },
+        {
+          path: "/paul-bowles/gore-vidal",
+          name: "PaulBowlesGoreView",
+          component: () => import("../views/on paul bowles/GoreView.vue")
+        },
+        {
+          path: "/paul-bowles/james-purdy",
+          name: "PaulBowlesJamesView",
+          component: () => import("../views/on paul bowles/JamesView.vue")
+        },
+        {
+          path: "/paul-bowles/rey-rosa",
+          name: "PaulBowlesRosaView",
+          component: () => import("../views/on paul bowles/RosaView.vue")
+        },
+        {
+          path: "/paul-bowles/the-economist-obituary",
+          name: "PaulBowlesObituaryView",
+          component: () => import("../views/on paul bowles/ObituaryView.vue")
+        },
+        {
+          path: "/photography",
+          name: "PhotographyView",
+          component: () => import("../views/photography/IndexView.vue"),
+          beforeEnter: setLoading
+        },
+        {
+          path: "/photography/:title",
+          name: "PhotographyItemView",
+          component: () => import("../views/photography/ItemView.vue"),
+          beforeEnter: setLoading
+        },
+        {
+          path: "/moroccan-music",
+          name: "MorrocanView",
+          component: () => import("../views/MorrocanMusicView.vue"),
+          beforeEnter: setLoading
         }
       ]
     },

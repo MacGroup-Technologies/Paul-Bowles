@@ -47,7 +47,7 @@ onMounted(async () => {
   <div class="">
     <div class="px-5 py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
-        <h1 class="text-5xl md:text-8xl font-heading uppercase">{{ router.params.title }}</h1>
+        <h1 class="text-5xl md:text-6xl font-heading uppercase">{{ router.params.title }}</h1>
         <router-link
           to="#back"
           @click.prevent="route.go(-1)"
@@ -113,13 +113,3 @@ onMounted(async () => {
     </div>
   </div>
 </template>
-
-<style>
-pre {
-  white-space: pre-wrap; /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-  white-space: -pre-wrap; /* Opera 4-6 */
-  white-space: -o-pre-wrap; /* Opera 7 */
-  word-wrap: break-word; /* Internet Explorer 5.5+ */
-}
-</style>
