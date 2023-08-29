@@ -9,17 +9,17 @@ const menutoggler = ref(false)
 const themeStore = useThemeStore()
 const tl = gsap.timeline()
 const links = [
-  { title: 'music', link: 'music', animate: 'library' },
-  { title: 'translation', link: 'translation', animate: 'chronology' },
-  { title: 'library', link: 'library', animate: 'chronology' },
-  { title: 'chronology', link: 'chronology', animate: 'memorabilia' },
-  { title: 'memorabilia', link: 'memorabilia', animate: 'clips' },
-  { title: 'writings', link: 'writings', animate: 'music' },
-  { title: 'moroccan music', link: 'moroccan-music', animate: 'chronology' },
-  { title: 'photography', link: 'photography', animate: 'writing' },
-  { title: 'on paul bowles', link: 'paul-bowles', animate: 'memorabilia' },
-  { title: 'two clips', link: 'clips', animate: 'photography' },
-  { title: 'contact', link: 'contact', animate: 'clips' }
+  { title: 'music', link: 'music' },
+  { title: 'translation', link: 'translation' },
+  { title: 'library', link: 'library' },
+  { title: 'chronology', link: 'chronology' },
+  { title: 'photography', link: 'photography' },
+  { title: 'writings', link: 'writings' },
+  { title: 'moroccan music', link: 'moroccan-music' },
+  { title: 'archives', link: 'archives' },
+  { title: 'on paul bowles', link: 'paul-bowles' },
+  { title: 'two clips', link: 'clips' },
+  { title: 'contact', link: 'contact' }
 ]
 
 watch(() => route.name, () => {
@@ -75,10 +75,10 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="hidden p-5 lg:px-16 2xl:px-20 flex-wrap flex-col md:flex-row gap-5 flex-gap-y-5 md:gap-y-3 menu">
+        <div class="hidden p-5 lg:px-16 2xl:px-20 flex-wrap flex-col md:flex-row gap-5 flex-gap-y-5 menu">
           <router-link
             :to="'/' + link.link"
-            class="md:w-2/12 capitalize text-xl text-black dark:text-white-shade hover:text-primary dark:hover:text-primary"
+            class="md:w-44 capitalize text-xl text-black dark:text-white-shade hover:text-primary dark:hover:text-primary"
             v-for="link in links"
             :key="link.title"
           >
