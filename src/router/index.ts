@@ -155,6 +155,11 @@ const router = createRouter({
           name: "MorrocanView",
           component: () => import("../views/MorrocanMusicView.vue"),
           beforeEnter: setLoading
+        },
+        {
+          path: "/contact",
+          name: "ContactUsView",
+          component: () => import("../views/ContactUsView.vue"),
         }
       ]
     },
