@@ -210,5 +210,91 @@
         </el-button>
       </el-form>
     </div>
+    
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
+      <h2 class="uppercase font-heading text-5xl font-bold">Credits</h2>
+      <div class="flex gap-10 flex-col md:flex-row">
+        <div class="md:w-1/2 py-5">
+          <div class="mb-5">
+            <h3 class="font-bold">Research</h3>
+            Delfina Cabrera<br />
+            Rodrigo Rey Rosa
+          </div>
+          <div class="mb-5">
+            <h3 class="font-bold">Programming</h3>
+            Israel Jorquera Vidal
+          </div>
+          <div class="mb-5">
+            <h3 class="font-bold"> Photography </h3>
+            Émil Hernon<br />
+            Floriana Lazzaneo
+          </div>
+          <div class="mb-5">
+            <h3 class="font-bold"> Transcriptions</h3>
+            Antiochus Ommisi<br />
+            Abdelaziz Jadir
+          </div>
+          <div class="mb-5">
+            <h3 class="font-bold">Translations</h3>
+            Daniel Fitzgerald<br />
+            Abdelaziz Jadir<br />
+            Arthur Malcolm Dixon<br />
+            William Morningstar
+          </div>
+        </div>
+        <div class="md:w-1/2 py-5">
+          <div class="mb-5">
+            <h3 class="font-bold">Design & Web Developement</h3>
+            MacGroup Technologies
+          </div>
+          <div class="mb-5">
+            <h3 class="font-bold">Bibliographical Support</h3>
+            Paula Arroyo<br />
+            Camila González Adel<br />
+            Melina Luceri<br />
+            Israel Jorquera Vidal
+          </div>
+          <div class="mb-5">
+            <h3 class="font-bold">Proofreading</h3>
+            Sara Gregg<br />
+            Antiochus Ommisi<br />
+            Arianna Sullivan
+          </div>
+        </div>
+      </div>
+      <h2 class="uppercase font-heading text-5xl font-bold">ACKNOWLEDGEMENTS</h2>
+      <div class="flex gap-10 flex-col md:flex-row mt-5">
+        <div class="md:w-1/2">
+          Miquel Barceló<br />
+          Leonard Bernstein Office<br />
+          Ambrogio Borsani<br />
+          Gary Conklin<br />
+          Jean Philippe Fournier<br />
+          Xenia Geroulanos<br />
+          Peter Hale<br />
+          Irene Herrmann<br />
+          Émil Hernon<br />
+          Abdelaziz Jadir<br />
+          Kenneth Lisenbee<br />
+          Jeffrey Miller<br />
+          Timothy Murray
+        </div>
+        <div class="md:w-1/2">
+          Cherie Nutting<br />
+          Simon Pettet<br />
+          Francis Poole<br />
+          Jeffrey Posternak<br />
+          Phillip Ramey<br />
+          Pía Rey Rosa<br />
+          Katharina Rippstein<br />
+          Claude Natalie Thomas<br />
+          The Allen Ginsberg Project<br />
+          Die Fotostiftung Schweiz<br />
+          The University of Delaware Library<br />
+          The University of Texas<br />
+          The Wylie Agency
+        </div>
+      </div>
+    </div>
   </div>
 </template>
