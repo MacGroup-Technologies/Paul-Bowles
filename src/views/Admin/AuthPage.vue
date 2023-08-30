@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { FormInstance, FormRules } from 'element-plus'
+import FormInstance from 'element-plus'
 import { useHead } from "@unhead/vue"
 
 import type { auth as authRule } from '@/interfaces/user'
@@ -17,9 +17,9 @@ const auth = reactive<authRule>({
   password: ''
 })
 const submitting:boolean = ref(false)
-const ruleFormRef = ref<FormInstance>()
+const ruleFormRef = ref<typeof FormInstance>()
 
-const rules = reactive<FormRules<authRule>>({
+const rules = reactive({
   username: [
     {
       required: true,

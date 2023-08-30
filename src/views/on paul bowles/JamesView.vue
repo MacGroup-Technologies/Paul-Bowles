@@ -29,8 +29,8 @@ window.addEventListener('scroll', function () {
         class="sticky top-0 my-10 py-5 bg-background-light dark:bg-background-dark head flex gap-10"
       >
         <img
-          src="@/assets/imgs/James-Purdy.png"
-          class="md:w-1/3 h-auto transition-all"
+          src="@/assets/imgs/James-Purdy-main.png"
+          class="md:w-1/3 h-auto transition-all rounded-xl"
           alt="James Purdy"
         />
         <h1 class="text-2xl md:text-4xl md:w-1/2 font-heading uppercase hidden">
@@ -38,30 +38,12 @@ window.addEventListener('scroll', function () {
         </h1>
       </div>
       <div class="text-justify">
-        Paul Bowles is one of the most impeccably, almost inhumanly reserved men I have ever known,
-        reminiscent of the subject of Edwin Arlington Robinson's poem, 'The Man Flamonde' — 'How was
-        it that his charm revealed/Somehow the surface of a shield?'
+        Carl Van Vechten invited me to meet Paul Bowles one evening. I was at the beginning of my own career as a writer, and was a bit nervous at meeting so mysterious and legendary a figure as Mr Bowles. My apprehension was put at an end when I met him. He seemed like a quiet, very dignified and kind man, perhaps like a doctor of medicine. It was also heartening to learn that he admired my first book, 63: Dream Palace, which had recently appeared for the first time in England. 
         <p class="my-10">
-          His writing is equally distinguished and special — the typhoid dream from The Sheltering
-          Sky and the hashish delirium at the dead-end of Let It Come Down — these are among my
-          favourite passages in contemporary writing.
+          Since our meeting in Carl Van Vechten's house, we have been in steady correspondence. One of the most interesting things about Paul Bowles is his reserve and distance. Since my meeting with him so long ago nothing has changed that reserve and distance. His letters and our infrequent meetings are always like the first time, framed in the same cordial but distant and formal character as that of our first meeting in New York City.
         </p>
-        <p class="mb-10">
-          The end of The Sheltering Sky is a classic that can take its rightful place alongside the
-          end of Fitzgerald's The Great Gatsby or the end of Joyce's story, 'The Dead'. As the
-          crazed nymphomaniac Kit wanders away into the Native Quarter, the streetcar 'made a wide
-          U-turn and stopped; it was the end of the line'. According to Bernardo Bertolucci, whose
-          film version of The Sheltering Sky was released in late 1990, this ending is too heavy a
-          note of despair for the visual end of a film; but for a book, it is masterful.
-        </p>
-        <p class="mb-10">
-          There is about Paul's writing, at its best, a palpable darkness, like underexposed film,
-          that fills the narrow North African streets, always darker and darkening... I am forever
-          indebted to Paul, for his writing, which drew me to Tangier in 1953; and for his cherished
-          friendship, then and since. I salute him at eighty-two years, as I did at forty-five.
-        </p>
-        <p class="font-bold font-heading">
-          William S. Burroughs<br />
+        <p class="font-heading">
+          James Purdy <br />
           Paul Bowles by His Friends, Peter Owen, London, 1992
         </p>
       </div>

@@ -155,6 +155,27 @@ const router = createRouter({
           name: "MorrocanView",
           component: () => import("../views/MorrocanMusicView.vue"),
           beforeEnter: setLoading
+        },
+        {
+          path: "/contact",
+          name: "ContactUsView",
+          component: () => import("../views/ContactUsView.vue"),
+        },
+        {
+          path: "/writings",
+          name: "WritingsIndexView",
+          component: () => import("../views/writings/IndexView.vue"),
+        },
+        {
+          path: "/writings/list",
+          name: "WritingsListView",
+          component: () => import("../views/writings/ListView.vue"),
+        },
+        {
+          path: "/writings/:title",
+          name: "WritingsView",
+          component: () => import("../views/writings/WritingView.vue"),
+          beforeEnter: setLoading
         }
       ]
     },
