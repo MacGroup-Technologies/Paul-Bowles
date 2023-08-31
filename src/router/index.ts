@@ -176,6 +176,11 @@ const router = createRouter({
           name: "WritingsView",
           component: () => import("../views/writings/WritingView.vue"),
           beforeEnter: setLoading
+        },
+        {
+          path: "/writings/music-criticism/:title",
+          name: "CriticismView",
+          component: () => import("../views/writings/CriticismView.vue")
         }
       ]
     },

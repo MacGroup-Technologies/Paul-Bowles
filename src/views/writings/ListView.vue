@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useHead } from '@unhead/vue';
 
-const items = ["Short Stories", "Novels", "Travels", "Poetry", "Contributions to Periodicals", "Music Criticism"]
+const items = ["Short Stories", "Novels", "Travels", "Poetry", "Contributions to Periodicals", "Music Criticism", "Autobiography"]
 
 useHead({ title: "Paul Bowles Writings" })
 </script>
