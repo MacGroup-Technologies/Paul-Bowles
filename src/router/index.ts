@@ -181,6 +181,26 @@ const router = createRouter({
           path: "/writings/music-criticism/:title",
           name: "CriticismView",
           component: () => import("../views/writings/CriticismView.vue")
+        },
+        {
+          path: "/life",
+          name: "LifeView",
+          component: () => import("../views/LifeView.vue")
+        },
+        {
+          path: "/biography",
+          name: "BiographyView",
+          component: () => import("../views/BiographyView.vue")
+        },
+        {
+          path: "/archives",
+          name: "ArchivesView",
+          component: () => import("../views/ArchiveView.vue")
+        },
+        {
+          path: "/privacy-policy",
+          name: "PrivacyPolicyView",
+          component: () => import("../views/PrivacyPolicyView.vue")
         }
       ]
     },

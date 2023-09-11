@@ -1,4 +1,8 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { useHead } from '@unhead/vue'
+
+useHead({ title: `Paul Bowles' Library` })
+</script>
 <template>
   <div class="">
     <div class="h-screen bg-background-light dark:bg-background-dark relative flex items-center">

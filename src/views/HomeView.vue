@@ -3,6 +3,9 @@ import { onMounted, reactive, watchEffect } from 'vue'
 import gsap from 'gsap'
 import { CSSPlugin } from 'gsap/CSSPlugin'
 import breakpoints from '@/utils/breakpoints.js'
+import { useHead } from '@unhead/vue'
+
+useHead({ title: 'Paul Bowles' })
 
 gsap.registerPlugin(CSSPlugin)
 
