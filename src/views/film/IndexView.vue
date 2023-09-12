@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 import IconVideo from "@/components/icons/IconVideo.vue"
+import { useHead } from '@unhead/vue'
+
+useHead({ title: `Paul Bowles' Films` })
 </script>
 <template>
   <div class="">

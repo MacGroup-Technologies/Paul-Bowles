@@ -790,7 +790,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           study which should be carried on tenfold in the years to come if the musical heritage of
           four centuries is not to be lost.
         </div>
-        <img src="@/assets/imgs/Mexico-Music-Note.png" class="w-auto h-auto" />
+        <!-- <img src="@/assets/imgs/Mexico-Music-Note.png" class="w-auto h-auto" /> -->
       </template>
     </div>
   </div>

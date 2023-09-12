@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import ChronologyList from '@/components/ChronologyListItem.vue'
+import { useHead } from '@unhead/vue'
+useHead({ title: `Paul Bowles' Chronology` })
 
 const chronology = [
   {

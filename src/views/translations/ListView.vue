@@ -6,6 +6,10 @@ import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue';
 import { useThemeStore } from '@/stores/theme';
 import { getUrl } from '@/services/misc';
 
+import { useHead } from '@unhead/vue'
+useHead({ title: `Paul Bowles' Library` })
+
+
 let pagination = reactive({
   next: null,
   previous: null,

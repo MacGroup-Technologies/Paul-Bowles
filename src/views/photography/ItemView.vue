@@ -3,6 +3,7 @@ import { onMounted, reactive, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useThemeStore } from '@/stores/theme';
 import { getPhotoAltTag } from '@/services/misc';
+import { useHead } from '@unhead/vue'
 
 import { OnClickOutside } from '@vueuse/components'
 
@@ -10,6 +11,8 @@ const router = useRoute()
 const route = useRouter()
 const photography = reactive({items: []})
 const img = ref(null)
+
+useHead({ title: `Paul Bowles ${router.params.title}` })
 
 const fetchPhotography = async function() {
   setLoading(true)

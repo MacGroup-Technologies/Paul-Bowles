@@ -2,6 +2,9 @@
 import { onMounted, reactive } from 'vue';
 import { useThemeStore } from '@/stores/theme';
 import { fetchFilms } from '@/services/films';
+import { useHead } from '@unhead/vue'
+
+useHead({ title: `Paul Bowles' Photography` })
 
 
 const photography = reactive({items: []})

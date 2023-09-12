@@ -2,6 +2,9 @@
 import { fetchTwoClips } from "@/services/films";
 import { onMounted, reactive } from 'vue';
 import { useThemeStore } from '@/stores/theme';
+import { useHead } from '@unhead/vue'
+
+useHead({ title: `Two Clips` })
 
 
 const clips = reactive({items: []})

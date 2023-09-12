@@ -89,17 +89,12 @@ onMounted(() => {
       <router-view />
     </div>
     <footer class="flex flex-col md:flex-row gap-5 justify-between p-5 lg:px-16 2xl:px-20 lg:py-16 lg:text-2xl">
-      <p class="">Powered by <a href="#" class="underline">MacGroup Technologies</a></p>
+      <p class="">Powered by <a href="https://www.macgrouptech.com/" target="_blank" class="underline">MacGroup Technologies</a></p>
       <div class="flex gap-10">
         <router-link
-          to=""
+          to="/privacy-policy"
           class="hover:text-primary hover:scale-x-110 hover:transform font-semibold"
           >Privacy Policy</router-link
-        >
-        <router-link
-          to=""
-          class="hover:text-primary hover:scale-x-110 hover:transform font-semibold"
-          >Cookie Policy</router-link
         >
       </div>
     </footer>

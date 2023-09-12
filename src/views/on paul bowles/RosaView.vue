@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 import { useRouter } from 'vue-router'
+import { useHead } from '@unhead/vue'
+
+useHead({ title: `Rodrigo Rey Rosa on Paul Bowles` })
 
 const route = useRouter()
 let header = document.getElementsByClassName('head')

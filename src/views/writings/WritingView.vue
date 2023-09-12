@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useRoute, useRouter } from 'vue-router'
 import { useHead } from '@unhead/vue'
-import { onMounted, reactive, watch } from 'vue'
+import { onMounted, reactive } from 'vue'
 import { fetchMusicBookAlt } from '@/services/music'
 import { useThemeStore } from '@/stores/theme'
 

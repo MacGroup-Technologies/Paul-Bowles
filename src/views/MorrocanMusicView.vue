@@ -2,6 +2,10 @@
 import { onMounted, reactive } from 'vue';
 import { useThemeStore } from '@/stores/theme';
 import { getMusicTag, getBookTag } from "@/services/misc";
+import { useHead } from '@unhead/vue'
+
+
+useHead({ title: `Paul Bowles' Morrocan Music` })
 
 
 const music = reactive({items: {}})

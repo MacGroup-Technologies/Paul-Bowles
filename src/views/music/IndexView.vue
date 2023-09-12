@@ -3,6 +3,9 @@ import { onMounted, reactive, watch } from 'vue';
 import { useRouter } from "vue-router";
 import { fetchMusic } from "@/services/music";
 import { useThemeStore } from '@/stores/theme';
+import { useHead } from '@unhead/vue'
+
+useHead({ title: `Paul Bowles' Music` })
 
 const music = reactive({ items: [] })
 const route = useRouter()
