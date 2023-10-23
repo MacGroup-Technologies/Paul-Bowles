@@ -19,24 +19,36 @@ const img = ref(null)
         >
           Close <span class="inline-block pt-[2px] w-10 bg-black dark:bg-white-shade" />
         </div>
-        <div class="py-3 px-20 grid gap-10 grid-cols-1 md:grid-cols-2 h-[65%]">
-          <img :src="'https://res.cloudinary.com/dbrvleydy/'+img ?? 'https://res.cloudinary.com/dbrvleydy/'+item.cover_image" class="ounded-2xl w-full h-full" />
+        <div class="py-3 px-20 grid place-items-start gap-10 grid-cols-1 md:grid-cols-2 h-[65%]">
+          <div>
+            <img :src="img ?? item.image_urls.split('|')[0]" class="bg-primary rounded-2xl w-full h-auto" v-if="item.image_urls.split('|')[0] !== ''" />
+            <img
+              v-else
+              src="@/assets/imgs/Image-thumbnail.png"
+              class="w-full h-auto rounded-[22px]"
+            />
+            <div class="py-3 px-20 w-full flex gap-5 overflow-auto scrollbar-thin scrollbar-thumb-primary" v-if="item.image_urls.split('|')[0] !== ''">
+              <img
+                :src="imgs"
+                class="bg-primary bg-opacity-20 inline h-24 w-32 rounded-xl cursor-pointer hover:-translate-y-2 transition-transform"
+                :class="{ '-translate-y-1 bg-opacity-70' : img == imgs }"
+                v-for="(imgs, index) in item.image_urls.split('|')"
+                :key="index"
+                @click="img = imgs"
+              />
+            </div>
+          </div>
           <div class="">
             <h1 class="text-xl font-semibold">{{ item.title }}</h1>
-            <p class="mt-3">
-              {{ item.description }}
-            </p>
+            <p class="mt-3" v-html="item.inscription.replaceAll('/', '')" />
+            <div class="mt-5">
+              <b>PUBLISHER:</b> {{ item.publisher }}<br />
+              <b>ISBN:</b> {{ item.isbn }}<br />
+              <b>LANGUAGES:</b> {{ item.language }}<br />
+              <b>TRANSLATOR:</b> {{ item.translator }}<br />
+              <b>GENRE:</b> {{ item.genre }}
+            </div>
           </div>
-        </div>
-        <div class="py-3 px-20 grid gap-5 grid-cols-1 md:grid-cols-3 w-[60%]">
-          <img
-            :src="'https://res.cloudinary.com/dbrvleydy/'+imgs.image"
-            class="bg-primary bg-opacity-20 h-auto w-full rounded-xl cursor-pointer hover:-translate-y-2 transition-transform"
-            :class="{ '-translate-y-1' : img == imgs.image }"
-            v-for="imgs in item.image"
-            :key="imgs.id"
-            @click="img = imgs.image"
-          />
         </div>
       </div>
     </OnClickOutside>

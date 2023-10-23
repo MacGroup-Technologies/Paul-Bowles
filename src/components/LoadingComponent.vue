@@ -2,14 +2,16 @@
 import { useThemeStore } from "@/stores/theme";
 import { computed, ref } from "vue";
 
-const error = computed(() => {
-  return useThemeStore().error;
-})
+const error = useThemeStore().error;
+
+const setLoading = function(val: boolean) {
+  useThemeStore().updateLoading(val)
+}
 
 const slow = ref(false)
 
 const animateLogo = computed(() => {
-  return error.value ?? true
+  return error ?? true
 })
 
 setTimeout(() => {

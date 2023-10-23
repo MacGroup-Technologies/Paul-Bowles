@@ -11,6 +11,7 @@ function guard(to: RouteLocationNormalized, from: RouteLocationNormalized, next:
 }
 
 function setLoading() {
+  useThemeStore().updateError('');
   useThemeStore().updateLoading(true);
 }
 
@@ -70,6 +71,12 @@ const router = createRouter({
           path: "/translation/list",
           name: "TranslationListPage",
           component: () => import('../views/translations/ListView.vue'),
+          beforeEnter: setLoading
+        },
+        {
+          path: "/translation/Moghrebi",
+          name: "TranslationMoghrebiPage",
+          component: () => import('../views/translations/MoghrebiTranslation.vue'),
           beforeEnter: setLoading
         },
         {
@@ -246,5 +253,15 @@ const router = createRouter({
   }
 });
 
+router.beforeEach((to, from) => {
+  if (to.matched[0].beforeEnter === undefined) {
+    useThemeStore().updateLoading(false);
+    return;
+  }
+  if (to.matched[1].beforeEnter === null) {
+    useThemeStore().updateLoading(false);
+    return;
+  };
+})
 
 export default router

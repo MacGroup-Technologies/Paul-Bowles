@@ -1,9 +1,11 @@
+<!-- eslint-disable @typescript-eslint/no-unused-vars -->
 <script setup lang="ts">
-import { onMounted, reactive, watchEffect } from 'vue'
+import { onMounted, reactive, watchEffect, ref, computed } from 'vue';
 import gsap from 'gsap'
 import { CSSPlugin } from 'gsap/CSSPlugin'
 import breakpoints from '@/utils/breakpoints.js'
 import { useHead } from '@unhead/vue'
+import { useThemeStore } from '../stores/theme';
 
 useHead({ title: 'Paul Bowles' })
 
@@ -25,34 +27,16 @@ const links = [
     text: 'Bowles composed orchestral works, piano pieces, and  numerous songs.'
   },
   {
-    title: 'translation',
-    link: 'translation',
-    image: 'Translation',
-    text: 'Paul Bowles translated into English numerous works from the French, Spanish and Moghrebi.'
-  },
-  {
-    title: 'photography',
-    link: 'photography',
-    image: 'Photography',
-    text: 'A selection of travel photography by Bowles, and portraits of Bowles, relatives, and friends.'
-  },
-  {
-    title: 'life',
-    link: 'life',
-    image: 'Life',
-    text: 'A night with thunder in the sky he packed his bag and left…'
-  },
-  {
-    title: 'archives',
-    link: 'archives',
-    image: 'Archive',
-    text: 'Scores, manuscripts, letters—and links to archival collections at the universities of Delaware and Texas.'
-  },
-  {
     title: 'writings',
     link: 'writings',
     image: 'Writings',
     text: '“His short stories are among the best ever written by an American.” Gore Vidal'
+  },
+  {
+    title: 'translation',
+    link: 'translation',
+    image: 'Translation',
+    text: 'Paul Bowles translated into English numerous works from the French, Spanish and Moghrebi.'
   },
   {
     title: 'moroccan music',
@@ -61,16 +45,34 @@ const links = [
     text: 'In 1959 Paul Bowles traveled extensively across Morocco recording its traditional music.'
   },
   {
+    title: 'photography',
+    link: 'photography',
+    image: 'Photography',
+    text: 'A selection of travel photography by Bowles, and portraits of Bowles, relatives, and friends.'
+  },
+  {
     title: 'library',
     link: 'library',
     image: 'Library',
     text: 'Books, journals, magazines collected during the five decades he lived in Tangier.'
   },
   {
+    title: 'life',
+    link: 'life',
+    image: 'Life',
+    text: 'A night with thunder in the sky he packed his bag and left…'
+  },
+  {
     title: 'on paul bowles',
     link: 'paul-bowles',
     image: 'PaulBowles',
     text: 'Highsmith, Williams, Ginsberg, Burroughs, Purdy, Vidal, and Rey Rosa on Paul Bowles.'
+  },
+  {
+    title: 'archives',
+    link: 'archives',
+    image: 'Archive',
+    text: 'Scores, manuscripts, letters—and links to archival collections at the universities of Delaware and Texas.'
   },
   {
     title: 'film',
@@ -81,11 +83,18 @@ const links = [
   { title: 'contact', link: 'contact', image: 'contact', text: '' }
 ]
 
-let imgs: HTMLAllCollection
+let imgs: any
 
 const tl = gsap.timeline().repeat(-1)
 const tL = gsap.timeline()
 const textTl = gsap.timeline()
+const modal = computed(() => {
+  return useThemeStore().modal;
+})
+
+const setModal = function () {
+  useThemeStore().setModal(false);
+}
 
 const mouseHover = function (e: any) {
   if (e === null) {
@@ -116,6 +125,7 @@ const playBackground = function () {
 
 watchEffect(() => {
   if (hover.animate !== '') {
+    tl.paused(true);
     textTl.play()
     textTl
       .to(
@@ -160,57 +170,68 @@ onMounted(() => {
     </div>
     <img
       src="@/assets/imgs/Music-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-cover jumbo"
+      class="absolute top-0 left-0 w-full h-full object-cover jumbo transition-opacity"
+      :class="hover.animate === 'music' ? 'opacity-100' : 'opacity-0'"
       v-if="hover.animate === 'music'"
     />
     <img
       src="@/assets/imgs/Translation-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo"
+      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
+      :class="hover.animate === 'translation' ? 'opacity-100' : 'opacity-0'"
       v-else-if="hover.animate === 'translation'"
     />
     <img
       src="@/assets/imgs/Photography-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo"
+      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
+      :class="hover.animate === 'photography' ? 'opacity-100' : 'opacity-0'"
       v-else-if="hover.animate === 'photography'"
     />
     <img
       src="@/assets/imgs/Life-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo"
+      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
+      :class="hover.animate === 'life' ? 'opacity-100' : 'opacity-0'"
       v-else-if="hover.animate === 'life'"
     />
     <img
       src="@/assets/imgs/Archive-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo"
+      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
+      :class="hover.animate === 'archives' ? 'opacity-100' : 'opacity-0'"
       v-else-if="hover.animate === 'archives'"
     />
     <img
       src="@/assets/imgs/Writings-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo"
+      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
+      :class="hover.animate === 'writings' ? 'opacity-100' : 'opacity-0'"
       v-else-if="hover.animate === 'writings'"
     />
     <img
       src="@/assets/imgs/MoroccanMusic-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo"
+      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
+      :class="hover.animate === 'moroccan music' ? 'opacity-100' : 'opacity-0'"
       v-else-if="hover.animate === 'moroccan music'"
     />
     <img
       src="@/assets/imgs/Library-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo"
+      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
+      :class="hover.animate === 'library' ? 'opacity-100' : 'opacity-0'"
       v-else-if="hover.animate === 'library'"
     />
     <img
       src="@/assets/imgs/PaulBowles-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo"
+      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
+      :class="hover.animate === 'on paul bowles' ? 'opacity-100' : 'opacity-0'"
       v-else-if="hover.animate === 'on paul bowles'"
     />
     <img
       src="@/assets/imgs/Film-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo"
+      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
+      :class="hover.animate === 'film' ? 'opacity-100' : 'opacity-0'"
       v-else-if="hover.animate === 'film'"
     />
     <img
       src="@/assets/imgs/Contact-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo"
+      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
+      :class="hover.animate === 'contact' ? 'opacity-100' : 'opacity-0'"
       v-else-if="hover.animate === 'contact'"
     />
     <div
@@ -231,10 +252,10 @@ onMounted(() => {
           {{ hover.item.text }}
         </p>
       </div>
-      <div class="flex flex-wrap gap-x-5 md:gap-x-0 gap-y-5 w-full md:w-5/6 2xl:w-full mr-40">
+      <div class="hidden md:flex flex-wrap gap-x-5 md:gap-x-0 gap-y-5 w-full md:w-5/6 2xl:w-full mr-40">
         <div class="2xl:w-72 capitalize" v-for="(item, index) in links" :key="index">
           <router-link
-            class="px-5 hover:opacity-70 text-[18px] 2xl:text-[23px] text-white-shade transition-colors"
+            class="px-10 hover:opacity-70 text-[20px] 2xl:text-[40px] text-white-shade transition-colors"
             :to="`/${item.link}`"
             @mouseover="mouseHover(item)"
             @mouseout="mouseHover(null)"
@@ -243,6 +264,37 @@ onMounted(() => {
           </router-link>
         </div>
       </div>
+      <div class="flex md:hidden flex-wrap gap-x-5 md:gap-x-0 gap-y-5 w-full md:w-5/6 2xl:w-full mr-40">
+        <div class="2xl:w-72 capitalize" v-for="(item, index) in links" :key="index">
+          <router-link
+            class="px-5 hover:opacity-70 text-[18px] 2xl:text-[23px] text-white-shade transition-colors"
+            :to="`/${item.link}`"
+          >
+            {{ item.title }}
+          </router-link>
+        </div>
+      </div>
     </div>
   </main>
+  <div v-if="modal" class="fixed top-0 right-0 left-0 bottom-0 bg-black bg-opacity-70 shadow-2xl z-50 flex justify-center items-center">
+    <div class="h-auto w-1/3 bg-primary-light rounded-md px-7 py-4">
+      <div class="flex justify-end mb-2">
+        <div @click="setModal()" class="flex items-center gap-3 cursor-pointer hamburger">
+          <span class="block">Close</span>
+          <div class="flex flex-col items-center justify-center gap-2">
+            <div class="px-6 pt-[2px] bg-black dark:bg-white-shade rounded hamburger__line" />
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <h1 class="text-3xl font-semibold">UPDATE!!!</h1>
+        <p class="mt-3 mb-5 text-xl opacity-75">
+          Audio and transcriptions of Paul Bowles’s translations from the Moghrebi are now available.
+        </p>
+        <router-link to="/translation/Moghrebi">
+          <el-button type="primary" class="bg-primary" style="padding: 20px 25px; border-radius: 8px;">Check it Out</el-button>
+        </router-link>
+      </div>
+    </div>
+  </div>
 </template>

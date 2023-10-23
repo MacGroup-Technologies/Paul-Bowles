@@ -4,10 +4,12 @@ import { useHead } from '@unhead/vue'
 import { onMounted, reactive } from 'vue'
 import { fetchMusicBookAlt } from '@/services/music'
 import { useThemeStore } from '@/stores/theme'
+import { getUrl } from '../../services/misc';
+import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue';
 
 const router = useRoute()
 const route = useRouter()
-const writing = reactive({ item: [] })
+const writing = reactive({ next: null, previous: null, item: [] as any })
 
 const setLoading = function (val: boolean) {
   useThemeStore().updateLoading(val)
@@ -17,13 +19,41 @@ const setError = function (val: string) {
   useThemeStore().updateError(val)
 }
 
-const fetchWriting = async function () {
+const loadUrl = async function (url: string) {
   setLoading(true)
   try {
-    const response = await fetchMusicBookAlt(router.params.title)
+    const response = await getUrl(url)
     writing.item = response.data.results
+    writing.next = response.data.next
+    writing.previous = response.data.previous
     setLoading(false)
-  } catch (error) {
+    window. scrollTo({ top: 0, behavior: "smooth" });
+  } catch (error: any) {
+    setError(error)
+    console.log(error)
+  }
+}
+
+const fetchWriting = async function () {
+  setLoading(true)
+  let params;
+  switch (router.params.title) {
+    case 'Travels':
+      params = 'Travel';
+      break;
+  
+    default:
+      params = router.params.title;
+      break;
+  }
+  try {
+    const response = await fetchMusicBookAlt(params)
+    writing.item = response.data.results
+    writing.next = response.data.next
+    writing.previous = response.data.previous
+    setLoading(false)
+    window. scrollTo({ top: 0, behavior: "smooth" });
+  } catch (error: any) {
     setError(error)
     console.log(error)
   }
@@ -61,9 +91,9 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
         </p>
       </div>
       <p class="mt-16 text-justify" v-else-if="router.params.title === 'Novels'">
-        Paul Bowles wrote three novels set in North Africa: <i>The Sheltering Sky</i>, <i>Let it Come Down</i> and
-        <i>The Spider's House</i>. Up Above the World is set in Central America, and <i>Too Far from Home</i>, a
-        novella, in Mali.
+        Paul Bowles wrote three novels set in North Africa: <i>The Sheltering Sky</i>,
+        <i>Let it Come Down</i> and <i>The Spider's House</i>. Up Above the World is set in Central
+        America, and <i>Too Far from Home</i>, a novella, in Mali.
       </p>
       <p
         class="mt-16 text-justify"
@@ -74,29 +104,48 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
         stories, novels, travel writing, essays, music criticism, autobiography, and translations.
       </p>
       <p class="mt-16 text-justify" v-else-if="router.params.title === 'Autobiography'">
-        In 1972 Bowles published <i>Without Stopping</i>, his book-length autobiography. In this section we
-        present two pages of its typescript along with two short autobiographical texts. “Paul
-        Bowles, His Life” could be called poetic as opposed to the more factual one written for the
-        <i>Contemporary Authors Autobiographical Series</i> (Detroit, 1984).
+        In 1972 Bowles published <i>Without Stopping</i>, his book-length autobiography. In this
+        section we present two pages of its typescript along with two short autobiographical texts.
+        “Paul Bowles, His Life” could be called poetic as opposed to the more factual one written
+        for the <i>Contemporary Authors Autobiographical Series</i> (Detroit, 1984).
       </p>
       <p class="mt-16 text-justify" v-else-if="router.params.title === 'Music Criticism'">
         From 1939 through early 1945, the only prose Paul Bowles published was music criticism. He
-        served on the music reviewing staff of the New York Herald <i>Tribune</i>, where his friend and
-        teacher Virgil Thomson was chief critic. During his three and a half years at the <i>Tribune</i>,
-        Bowles wrote more than four hundred music reviews and columns, many of which focused on
-        Latin American and North African music.
+        served on the music reviewing staff of the New York Herald <i>Tribune</i>, where his friend
+        and teacher Virgil Thomson was chief critic. During his three and a half years at the
+        <i>Tribune</i>, Bowles wrote more than four hundred music reviews and columns, many of which
+        focused on Latin American and North African music.
       </p>
-      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10" v-if="router.params.title === 'Music Criticism'">
-        <router-link :to="`music-criticism/${item.title}`" class="block rounded overflow-hidden" v-for="item in writing.item" :key="item.id">
+      <div
+        class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10"
+        v-if="router.params.title === 'Music Criticism'"
+      >
+        <router-link
+          :to="`music-criticism/${item.title}`"
+          class="block rounded overflow-hidden"
+          v-for="item in writing.item"
+          :key="item.id"
+        >
           <img :src="`https://res.cloudinary.com/dbrvleydy/${item.image[0].image}`" class="" />
           <h3 class="underline mt-4">{{ item.title }}</h3>
         </router-link>
       </div>
       <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10" v-else>
         <div class="rounded overflow-hidden" v-for="item in writing.item" :key="item.id">
-          <img :src="`https://res.cloudinary.com/dbrvleydy/${item.image[0].image}`" class="" />
-          <h3 class="underline mt-4">{{ item.title }}</h3>
+          <img src="@/assets/imgs/Writings-thumbnail.png" />
+          <h3 class="mt-4">{{ item.title }}</h3>
         </div>
+      </div>
+      <div class="flex justify-center mt-10">
+        <el-button-group>
+          <el-button type="primary" class="bg-primary" :icon="ArrowLeft" style="padding: 20px 25px" :disabled="writing.previous === null"  @click="loadUrl(writing.previous)">
+            Previous Page
+          </el-button>
+          <el-button type="primary" class="bg-primary" style="padding: 20px 25px" :disabled="writing.next === null" @click="loadUrl(writing.next)">
+            Next Page
+            <el-icon class="el-icon--right"><ArrowRight /></el-icon>
+          </el-button>
+        </el-button-group>
       </div>
     </div>
   </div>

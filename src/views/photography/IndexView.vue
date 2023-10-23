@@ -34,12 +34,12 @@ onMounted(async () => {
 </script>
 <template>
   <div class="">
-    <div class="h-screen bg-background-light dark:bg-background-dark relative flex items-center">
+    <div class="h-screen bg-background-light dark:bg-background-dark relative bg-[url('@/assets/imgs/photography.png')]">
       <div
-        class="h-full md:w-2/3 z-10 bg-gradient-to-r from-background-light dark:from-background-dark md:from-50% to-transparent flex flex-col justify-center items-start"
+        class="h-full z-10 bg-background-light dark:bg-background-dark bg-opacity-60 dark:bg-opacity-60 flex flex-col justify-center items-start"
       >
         <div class="p-5 mt-24 lg:px-16 2xl:px-20">
-          <h1 class="text-5xl md:text-8xl font-mono uppercase">Photography</h1>
+          <h1 class="text-5xl md:text-8xl font-mono uppercase text-black dark:text-white-shade">Photography</h1>
           <p class="md:w-1/2 text-primary text-3xl mt-5">
             A selection of travel photography by Bowles, and portraits of Bowles, relatives, and friends.
           </p>
@@ -47,16 +47,12 @@ onMounted(async () => {
         <div class="p-5 lg:px-16 2xl:px-20 mt-5">
           <a
             href="#content"
-            class="w-20 h-20 md:w-32 md:h-32 flex justify-center items-center rounded-full border-[2px] border-[currentColor] dark:border-white-shade hover:opacity-75"
+            class="w-20 h-20 md:w-32 md:h-32 flex justify-center items-center rounded-full border-[2px] text-black border-black dark:border-white-shade dark:text-white-shade hover:opacity-75"
           >
             <p class="text-5xl md:text-7xl animate-bounce">&DownArrow;</p>
           </a>
         </div>
       </div>
-      <img
-        src="@/assets/imgs/photography.png"
-        class="absolute top-0 right-0 w-full h-full object-cover md:object-scale-down md:object-right-top"
-      />
     </div>
     <a name="content" />
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">

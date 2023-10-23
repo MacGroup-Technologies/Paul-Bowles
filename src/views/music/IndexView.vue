@@ -4,6 +4,7 @@ import { useRouter } from "vue-router";
 import { fetchMusic } from "@/services/music";
 import { useThemeStore } from '@/stores/theme';
 import { useHead } from '@unhead/vue'
+import { ElMessage } from 'element-plus';
 
 useHead({ title: `Paul Bowles' Music` })
 
@@ -15,18 +16,23 @@ const setLoading = function(val: boolean) {
   useThemeStore().updateLoading(val)
 }
 
-const setError = function(val: string) {
-  useThemeStore().updateError(val)
-}
+// const setError = function(val: string) {
+//   useThemeStore().updateError(val)
+// }
 const getMusic = async function() {
   try {
     const response = await fetchMusic();
     music.items = response.data.results
     setLoading(false)
   } catch(error) {
-    setError(error)
+    // setError(error)
+    ElMessage({
+      type: 'error',
+      message: 'Error loading music data'
+    });
     console.log(error)
   }
+  setLoading(false)
 }
 
 watch(route, async () => {
@@ -42,7 +48,7 @@ onMounted(async () => {
   <div class="">
     <div class="h-screen bg-background-light dark:bg-background-dark relative flex items-center">
       <div
-        class="h-full md:w-2/3 z-10 bg-gradient-to-r from-background-light dark:from-background-dark md:from-55% to-transparent flex flex-col justify-center items-start"
+        class="h-full md:w-full z-10 bg-background-light dark:bg-background-dark bg-opacity-60 dark:bg-opacity-60 flex flex-col justify-center items-start"
       >
         <div class="p-5 lg:px-16 2xl:px-20">
           <h1 class="text-8xl font-mono uppercase">Music</h1>
@@ -62,7 +68,7 @@ onMounted(async () => {
       </div>
       <img
         src="@/assets/imgs/imagehero-4.png"
-        class="absolute top-0 right-0 w-full h-full object-cover md:object-scale-down md:object-right-top"
+        class="absolute top-0 right-0 w-full h-full object-cover md:object-right-top"
       />
     </div>
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">

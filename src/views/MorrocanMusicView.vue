@@ -30,6 +30,7 @@ const fetchMoroccanMusic = async function() {
     console.log(error)
     setError(error);
   })
+  setLoading(false)
 }
 
 

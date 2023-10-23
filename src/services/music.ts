@@ -11,7 +11,7 @@ export function fetchMusicPhotoAlt(altTag: any) {
 }
 
 export function fetchMusicBookAlt(alt: any) {
-  return axios.get(`${baseURL}/v1/archive/books/?alttag=${alt}`)
+  return axios.get(`${baseURL}/v1/archive/writings/?website_tag=${alt}`)
 }
 
 export function fetchMusicAlt(alt: any) {

@@ -15,10 +15,10 @@ let pagination = reactive({
   previous: null,
   page: null
 });
-const translations = reactive({ items: [] });
+const translations = reactive({ items: [] as any });
 const modal = reactive({ opened: false, data: {} })
 
-const getStepUrl = async function(url: string) {
+const getStepUrl = async function(url: any) {
   setLoading(true);
   try {
     const response = await getUrl(url)
@@ -26,7 +26,8 @@ const getStepUrl = async function(url: string) {
     pagination.previous = response.data.previous
     translations.items = response.data.results
     setLoading(false);
-  } catch (error) {
+    window. scrollTo({ top: 0, behavior: "smooth" });
+  } catch (error: any) {
     console.log(error);
     setError(error);
   }
@@ -79,7 +80,18 @@ onMounted(async () => {
       <div class="grid gap-x-5 gap-y-10 grid-cols-1 md:grid-cols-4 w-full">
         <div class="w-full flex flex-col" v-for="item in translations.items" :key="item.id">
           <img
-            :src="'https://res.cloudinary.com/dbrvleydy/' + item.cover_image"
+            v-if="item.image_urls === 'image_urls'"
+            src="@/assets/imgs/Image-thumbnail.png"
+            class="w-1/2 md:w-3/4 h-64 rounded-[22px] my-0 mx-5 md:mx-auto"
+          />
+          <img
+            v-else-if="item.image_urls === 'null'"
+            src="@/assets/imgs/Image-thumbnail.png"
+            class="w-1/2 md:w-3/4 h-64 rounded-[22px] my-0 mx-5 md:mx-auto"
+          />
+          <img
+            v-else
+            :src="item.image_urls.split(',')[0]"
             class="w-1/2 md:w-3/4 h-64 rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer"
             @click="openModal(item)"
           />
@@ -117,17 +129,3 @@ onMounted(async () => {
   </div>
   <translation-modal v-if="modal.opened" :item="modal.data" @close="modal.opened = false" />
 </template>
-
-<style lang="scss" scoped>
-.fancy-img {
-  background-color: #E0E3FF;
-  border: none;
-  outline: none;
-  transition: box-shadow 300ms ease-in-out;
-
-  &:hover {
-    box-shadow: 20px -20px 1px #EDC2CF,
-                -20px 20px 1px #BEDDF3;
-  }
-}
-</style>
