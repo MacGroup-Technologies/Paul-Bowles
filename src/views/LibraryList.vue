@@ -34,7 +34,7 @@ const getStepUrl = async function(url: any) {
     pagination.previous = response.data.previous
     library.items = response.data.results
     setLoading(false);
-    window. scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   } catch (error: any) {
     console.log(error);
     setError(error);

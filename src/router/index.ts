@@ -64,7 +64,7 @@ const router = createRouter({
         },
         {
           path: "/translation",
-          name: "TranslationPage",
+          name: "TranslationHomePage",
           component: () => import('../views/translations/IndexView.vue')
         },
         {
@@ -74,8 +74,8 @@ const router = createRouter({
           beforeEnter: setLoading
         },
         {
-          path: "/translation/Moghrebi",
-          name: "TranslationMoghrebiPage",
+          path: "/translation/:id",
+          name: "TranslationPage",
           component: () => import('../views/translations/MoghrebiTranslation.vue'),
           beforeEnter: setLoading
         },
@@ -253,15 +253,15 @@ const router = createRouter({
   }
 });
 
-router.beforeEach((to, from) => {
-  if (to.matched[0].beforeEnter === undefined) {
-    useThemeStore().updateLoading(false);
-    return;
-  }
-  if (to.matched[1].beforeEnter === null) {
-    useThemeStore().updateLoading(false);
-    return;
-  };
-})
+// router.beforeEach((to) => {
+//   if (to.matched[0].beforeEnter === undefined) {
+//     useThemeStore().updateLoading(false);
+//     return;
+//   }
+//   if (to.matched[1].beforeEnter === null) {
+//     useThemeStore().updateLoading(false);
+//     return;
+//   };
+// })
 
 export default router

@@ -27,7 +27,7 @@ const loadUrl = async function (url: string) {
     writing.next = response.data.next
     writing.previous = response.data.previous
     setLoading(false)
-    window. scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   } catch (error: any) {
     setError(error)
     console.log(error)
@@ -52,7 +52,7 @@ const fetchWriting = async function () {
     writing.next = response.data.next
     writing.previous = response.data.previous
     setLoading(false)
-    window. scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   } catch (error: any) {
     setError(error)
     console.log(error)

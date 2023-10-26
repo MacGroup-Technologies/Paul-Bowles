@@ -1,13 +1,16 @@
 <script lang="ts" setup>
-import { getTranslations } from '@/services/translations';
-import { onMounted, reactive } from 'vue';
-import TranslationModal from '@/components/TranslationModal.vue';
+import { getTranslations, getTranslationsByQuery } from '@/services/translations';
+import { onMounted, reactive, ref } from 'vue';
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue';
 import { useThemeStore } from '@/stores/theme';
 import { getUrl } from '@/services/misc';
 
 import { useHead } from '@unhead/vue'
+import { FormInstance } from 'element-plus';
+import { useRoute } from 'vue-router';
 useHead({ title: `Paul Bowles' Library` })
+
+const route = useRoute();
 
 
 let pagination = reactive({
@@ -16,7 +19,12 @@ let pagination = reactive({
   page: null
 });
 const translations = reactive({ items: [] as any });
-const modal = reactive({ opened: false, data: {} })
+const modal = reactive({ opened: false, data: {} });
+const formRef = ref(null);
+const filter = reactive({
+  keyword: '',
+  category: '' as any,
+});
 
 const getStepUrl = async function(url: any) {
   setLoading(true);
@@ -26,7 +34,7 @@ const getStepUrl = async function(url: any) {
     pagination.previous = response.data.previous
     translations.items = response.data.results
     setLoading(false);
-    window. scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   } catch (error: any) {
     console.log(error);
     setError(error);
@@ -56,10 +64,31 @@ const fetchTranslations = async function() {
   } catch (error) {
     console.log(error);
   }
+
+  setLoading(false);
+}
+
+const filterTranslations = async function () {
+  setLoading(true);
+  try {
+    const response = await getTranslationsByQuery(filter.category);
+    pagination.next = response.data.next
+    pagination.previous = response.data.previous
+    translations.items = response.data.results
+    window.scrollTo({ top: 0, behavior: "smooth" }); 
+  } catch (error) {
+    console.log(error);
+  }
+  setLoading(false);
 }
 
 onMounted(async () => {
-  await fetchTranslations();
+  if (route.query.category) {
+    filter.category = route.query.category;
+    await filterTranslations()
+  } else {
+    await fetchTranslations();
+  }
 })
 
 </script>
@@ -74,26 +103,34 @@ onMounted(async () => {
         </router-link>
       </div>
     </div>
+    <div class="mx-5 mb-10 lg:mx-16 2xl:mx-20 p-10 rounded-xl text-xl bg-white sticky top-20">
+      <el-form :model="filter" ref="formRef" @submit.prevent="filterTranslations(formRef)">
+        <div class="flex gap-5">
+          <el-input v-model="filter.keyword" class="md:w-2/3" size="large" placeholder="Author, Title, or Keyword" />
+          <el-select class="md:w-1/3" v-model="filter.category" size="large">
+            <el-option value="" label="All" />
+            <el-option value="From Moghrebi" label="From Moghrebi" />
+            <el-option value="From Spanish" label="From Spanish" />
+            <el-option value="From French" label="From French" />
+          </el-select>
+          <el-button class="md:w-auto bg-primary" type="primary" size="large" @click="filterTranslations(formRef)">Search</el-button>
+        </div>
+      </el-form>
+    </div>
     <div
       class="py-10 lg:px-16 2xl:px-20"
     >
       <div class="grid gap-x-5 gap-y-10 grid-cols-1 md:grid-cols-4 w-full">
-        <div class="w-full flex flex-col" v-for="item in translations.items" :key="item.id">
+        <router-link :to="`/translation/${item.id}`" class="w-full flex flex-col" v-for="item in translations.items" :key="item.id">
           <img
-            v-if="item.image_urls === 'image_urls'"
+            v-if="item.image_urls === ''"
             src="@/assets/imgs/Image-thumbnail.png"
-            class="w-1/2 md:w-3/4 h-64 rounded-[22px] my-0 mx-5 md:mx-auto"
-          />
-          <img
-            v-else-if="item.image_urls === 'null'"
-            src="@/assets/imgs/Image-thumbnail.png"
-            class="w-1/2 md:w-3/4 h-64 rounded-[22px] my-0 mx-5 md:mx-auto"
+            class="w-1/2 md:w-3/4 h-64 rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer"
           />
           <img
             v-else
             :src="item.image_urls.split(',')[0]"
             class="w-1/2 md:w-3/4 h-64 rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer"
-            @click="openModal(item)"
           />
           <div class="px-5 md:px-0 mt-5">
             <h2 class="font-semibold">{{ item.title }}</h2>
@@ -101,7 +138,7 @@ onMounted(async () => {
               {{ item.description }}
             </p>
           </div>
-        </div>
+        </router-link>
       </div>
     </div>
     <div class="my-24 mx-auto md:w-64 flex justify-center">
@@ -109,6 +146,7 @@ onMounted(async () => {
         <el-button
           type="primary"
           size="large"
+          class="bg-primary"
           :icon="ArrowLeft"
           :disabled="pagination.previous === null"
           @click="getStepUrl(pagination.previous)"
@@ -118,6 +156,7 @@ onMounted(async () => {
         <el-button
           type="primary"
           size="large"
+          class="bg-primary"
           :disabled="pagination.next === null"
           @click="getStepUrl(pagination.next)"
         >
@@ -127,5 +166,4 @@ onMounted(async () => {
       </el-button-group>
     </div>
   </div>
-  <translation-modal v-if="modal.opened" :item="modal.data" @close="modal.opened = false" />
 </template>
