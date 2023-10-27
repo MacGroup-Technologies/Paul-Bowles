@@ -32,14 +32,30 @@ const router = createRouter({
           path: '/music',
           name: 'musicPage',
           component: () => import('../views/music/IndexView.vue'),
+        },
+        {
+          path: "/music/paul-bowles-music",
+          name: "PaulBowlesMusicPage",
+          component: () => import('../views/music/PaulBowlesMusicView.vue'),
+        },
+        {
+          path: "/music/paul-bowles-music/:title",
+          name: "PaulBowlesSubPage",
+          component: () => import('../views/music/PaulBowlesSubView.vue'),
           beforeEnter: setLoading
         },
         {
-          path: "/music/:title",
-          name: "PaulBowlesMusicPage",
-          component: () => import('../views/music/MusicView.vue'),
+          path: "/music/musical-portraits",
+          name: "MusicalPotraitPage",
+          component: () => import('../views/music/MusicalPotraitsView.vue'),
           beforeEnter: setLoading
         },
+        // {
+        //   path: "/music/:title",
+        //   name: "PaulBowlesMusicPage",
+        //   component: () => import('../views/music/MusicView.vue'),
+        //   beforeEnter: setLoading
+        // },
         {
           path: "/music/book/:title",
           name: "BookMusicPage",

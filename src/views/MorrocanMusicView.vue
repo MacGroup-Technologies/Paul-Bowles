@@ -94,13 +94,13 @@ onMounted(async () => {
       </p>
       <div class="" v-if="music.items.length !== 0">
         <div class="px-10 mb-5 font-bold">List</div>
-        <div class="flex flex-col md:flex-row gap-3 font-bold px-10 mb-3">
+        <div class="flex flex-row gap-3 font-bold px-10 mb-3">
           <div class="w-10">#</div>
           <div class="px-8" />
           <div class="w-full">Title</div>
         </div>
         <div
-          class="flex flex-col md:flex-row md:items-center gap-3 md:gap-0 mb-3 py-5 cursor-pointer px-10 rounded-xl transition hover:bg-white hover:text-black hover:shadow"
+          class="flex flex-row md:items-center gap-3 md:gap-0 mb-3 py-5 cursor-pointer px-10 rounded-xl transition hover:bg-white hover:text-black hover:shadow"
           :class="{ 'bg-white text-black shadow': item.title === player.item.title }"
           v-for="(item, index) in music.items"
           :key="item.id"
@@ -243,18 +243,3 @@ onMounted(async () => {
     </div>
   </div>
 </template>
-<style scoped>
-audio::-webkit-media-controls-panel {
-  background-color: #cfd2d4;
-  border-radius: none !important;
-}
-
-audio::-webkit-media-controls-play-button {
-  background-color: red;
-  display: none;
-}
-
-input[type='range' i]::-webkit-media-slider-thumb {
-  background-color: red;
-}
-</style>

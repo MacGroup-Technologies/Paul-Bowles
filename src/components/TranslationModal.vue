@@ -12,14 +12,14 @@ const img = ref(null)
 <template>
   <div class="z-50 fixed top-0 right-0 bottom-0 left-0 bg-black bg-opacity-70 flex justify-center items-center">
     <OnClickOutside @trigger="$emit('close')">
-      <div class="h-[90vh] w-[60vw] bg-background-light dark:bg-background-dark rounded-xl">
+      <div class="overflow-y-auto mx-5 md:mx-0 h-[90vh] md:w-[60vw] bg-background-light dark:bg-background-dark rounded-xl">
         <div
-          class="py-5 px-20 inline-flex items-center gap-3 text-black dark:text-white-shade hover:text-opacity-80 cursor-pointer"
+          class="py-5 px-5 md:px-20 inline-flex items-center gap-3 text-black dark:text-white-shade hover:text-opacity-80 cursor-pointer"
           @click="$emit('close')"
         >
           Close <span class="inline-block pt-[2px] w-10 bg-black dark:bg-white-shade" />
         </div>
-        <div class="py-3 px-20 grid place-items-start gap-10 grid-cols-1 md:grid-cols-2 h-[65%]">
+        <div class="py-5 md:py-3 px-5 md:px-20 grid place-items-start gap-10 grid-cols-1 md:grid-cols-2 h-[65%]">
           <div>
             <img :src="img ?? item.image_urls.split('|')[0]" class="bg-primary rounded-2xl w-full h-auto" v-if="item.image_urls.split('|')[0] !== ''" />
             <img
@@ -27,7 +27,7 @@ const img = ref(null)
               src="@/assets/imgs/Image-thumbnail.png"
               class="w-full h-auto rounded-[22px]"
             />
-            <div class="py-3 px-20 w-full flex gap-5 overflow-auto scrollbar-thin scrollbar-thumb-primary" v-if="item.image_urls.split('|')[0] !== ''">
+            <div class="py-5 md:py-3 px-5 md:px-20 w-full flex gap-5 overflow-auto scrollbar-thin scrollbar-thumb-primary" v-if="item.image_urls.split('|')[0] !== ''">
               <img
                 :src="imgs"
                 class="bg-primary bg-opacity-20 inline h-24 w-32 rounded-xl cursor-pointer hover:-translate-y-2 transition-transform"
@@ -38,7 +38,7 @@ const img = ref(null)
               />
             </div>
           </div>
-          <div class="">
+          <div class="pb-10 md:pb-0">
             <h1 class="text-xl font-semibold">{{ item.title }}</h1>
             <p class="mt-3" v-html="item.inscription.replaceAll('/', '')" />
             <div class="mt-5">
