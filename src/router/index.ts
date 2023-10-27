@@ -50,6 +50,16 @@ const router = createRouter({
           component: () => import('../views/music/MusicalPotraitsView.vue'),
           beforeEnter: setLoading
         },
+        {
+          path: "/music/on-paul-bowless-music",
+          name: "PaulBowlesPage",
+          component: () => import('../views/music/OnPaulBowlesView.vue'),
+        },
+        {
+          path: "/music/on-paul-bowless-music/:title",
+          name: "PaulBowlesMusicView",
+          component: () => import('../views/music/OnPaulBowlesMusicView.vue'),
+        },
         // {
         //   path: "/music/:title",
         //   name: "PaulBowlesMusicPage",

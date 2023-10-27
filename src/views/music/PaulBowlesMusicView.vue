@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import { useHead } from '@unhead/vue'
+useHead({ title: "Paul Bowles Music" })
+
 const music = [
   {
     title: 'Songs',

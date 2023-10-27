@@ -12,6 +12,10 @@ const setLoading = function (val: boolean) {
   useThemeStore().updateLoading(val)
 }
 
+const setError = function (val: string) {
+  useThemeStore().updateError(val)
+}
+
 const fetchMusic = async function () {
   setLoading(true);
   try {
@@ -19,6 +23,7 @@ const fetchMusic = async function () {
     music.items = response.data.results;
   } catch (error: any) {
     console.log(error)
+    setError(error)
   }
   setLoading(false);
 }
