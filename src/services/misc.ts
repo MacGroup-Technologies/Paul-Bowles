@@ -7,7 +7,7 @@ export function getUrl(url: string) {
 }
 
 export function getPhotoAltTag(altTag: string) {
-  return axios.get(`${baseURL}/v1/archive/photos/?alttag=${altTag}`)
+  return axios.get(`${baseURL}/v1/archive/images/?image_category=${altTag}`)
 }
 
 // export function getMusicTag(altTag: string) {

@@ -60,24 +60,6 @@ const router = createRouter({
           name: "PaulBowlesMusicView",
           component: () => import('../views/music/OnPaulBowlesMusicView.vue'),
         },
-        // {
-        //   path: "/music/:title",
-        //   name: "PaulBowlesMusicPage",
-        //   component: () => import('../views/music/MusicView.vue'),
-        //   beforeEnter: setLoading
-        // },
-        {
-          path: "/music/book/:title",
-          name: "BookMusicPage",
-          component: () => import('../views/music/BookMusicView.vue'),
-          beforeEnter: setLoading
-        },
-        {
-          path: "/music/music/:title",
-          name: "MusicMusicPage",
-          component: () => import('../views/music/MusicMusicView.vue'),
-          beforeEnter: setLoading
-        },
         {
           path: '/library',
           name: 'libraryPage',
@@ -175,7 +157,6 @@ const router = createRouter({
           path: "/photography",
           name: "PhotographyView",
           component: () => import("../views/photography/IndexView.vue"),
-          beforeEnter: setLoading
         },
         {
           path: "/photography/:title",
@@ -214,6 +195,11 @@ const router = createRouter({
           path: "/writings/music-criticism/:title",
           name: "CriticismView",
           component: () => import("../views/writings/CriticismView.vue")
+        },
+        {
+          path: "/writings/Autobiography/:title",
+          name: "AutobiographyView",
+          component: () => import("../views/writings/AutobiographyView.vue")
         },
         {
           path: "/life",

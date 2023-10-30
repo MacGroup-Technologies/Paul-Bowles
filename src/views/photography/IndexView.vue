@@ -1,36 +1,23 @@
 <script lang="ts" setup>
-import { onMounted, reactive } from 'vue';
-import { useThemeStore } from '@/stores/theme';
-import { fetchFilms } from '@/services/films';
+import { reactive } from 'vue';
 import { useHead } from '@unhead/vue'
 
 useHead({ title: `Paul Bowles' Photography` })
+import Potrait from '@/assets/imgs/CherieNutting.jpg';
+import PaulBowlesArchieve from '@/assets/imgs/PaulBowlesArchive.jpg';
 
 
-const photography = reactive({items: []})
+const photography = reactive([
+  {
+    title: 'Portraits by Cherie Nutting',
+    image: Potrait,
+  },
+  {
+    title: 'Paul Bowles Archive at Fotostiftung Schweiz',
+    image: PaulBowlesArchieve,
+  }
+])
 
-const fetchPhotography = async function() {
-  setLoading(true)
-  await fetchFilms("photography").then((response) => {
-    photography.items = response.data.results
-    setLoading(false)
-  }).catch((error) => {
-    setLoading(false)
-    setError(error)
-  })
-}
-
-const setLoading = function(val: boolean) {
-  useThemeStore().updateLoading(val)
-}
-
-const setError = function(val: string) {
-  useThemeStore().updateError(val)
-}
-
-onMounted(async () => {
-  await fetchPhotography();
-})
 </script>
 <template>
   <div class="">
@@ -57,8 +44,8 @@ onMounted(async () => {
     <a name="content" />
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <router-link :to="'/photography/' + encodeURI(item.title)" class="block p-2 bg-primary-light rounded-3xl transition-transform hover:-translate-y-3" v-for="item in photography.items" :key="item.id">
-          <img :src="'https://res.cloudinary.com/dbrvleydy/' + item.image" class="w-full h-auto md:h-96 rounded-3xl" />
+        <router-link :to="'/photography/' + encodeURI(item.title)" class="block p-2 bg-primary-light rounded-3xl transition-transform hover:-translate-y-3" v-for="(item, index) in photography" :key="index">
+          <div class="w-full h-[500px] bg-center bg-no-repeat bg-cover rounded-3xl" :style="`background-image: url(${item.image})`" />
           <h2 class="text-background-dark m-5 mt-7">{{ item.title }}</h2>
         </router-link>
       </div>

@@ -69,11 +69,11 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
   <div class="">
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
-        <h1 class="text-5xl md:text-6xl font-heading uppercase">{{ router.params.title }}</h1>
+        <h1 class="text-3xl md:text-6xl font-heading uppercase">{{ router.params.title }}</h1>
         <router-link
           to="#back"
           @click.prevent="route.go(-1)"
-          class="hover:opacity-75 hover:-translate-x-5 transition-transform"
+          class="hover:opacity-75 scale-75 md:scale-100 hover:-translate-x-5 transition-transform"
         >
           <icon-back />
         </router-link>
@@ -126,7 +126,21 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           v-for="item in writing.item"
           :key="item.id"
         >
-          <img :src="`https://res.cloudinary.com/dbrvleydy/${item.image[0].image}`" class="" />
+          <img src="@/assets/imgs/Writings-thumbnail.png" />
+          <h3 class="underline mt-4">{{ item.title }}</h3>
+        </router-link>
+      </div>
+      <div
+        class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10"
+        v-else-if="router.params.title === 'Autobiography'"
+      >
+        <router-link
+          :to="`Autobiography/${item.title}`"
+          class="block rounded overflow-hidden"
+          v-for="item in writing.item"
+          :key="item.id"
+        >
+          <img src="@/assets/imgs/Writings-thumbnail.png" />
           <h3 class="underline mt-4">{{ item.title }}</h3>
         </router-link>
       </div>
@@ -136,7 +150,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           <h3 class="mt-4">{{ item.title }}</h3>
         </div>
       </div>
-      <div class="flex justify-center mt-10">
+      <div class="flex justify-center mt-10" v-if="router.params.title !== 'Autobiography'">
         <el-button-group>
           <el-button type="primary" class="bg-primary" :icon="ArrowLeft" style="padding: 20px 25px" :disabled="writing.previous === null"  @click="loadUrl(writing.previous)">
             Previous Page

@@ -6,7 +6,6 @@ import { useThemeStore } from '@/stores/theme';
 import { getUrl } from '@/services/misc';
 
 import { useHead } from '@unhead/vue'
-import { FormInstance } from 'element-plus';
 import { useRoute } from 'vue-router';
 useHead({ title: `Paul Bowles' Library` })
 
@@ -19,7 +18,6 @@ let pagination = reactive({
   page: null
 });
 const translations = reactive({ items: [] as any });
-const modal = reactive({ opened: false, data: {} });
 const formRef = ref(null);
 const filter = reactive({
   keyword: '',
@@ -47,11 +45,6 @@ const setLoading = function(val: boolean) {
 
 const setError = function(val: string) {
   useThemeStore().updateError(val)
-}
-
-const openModal = function(item:Object) {
-  modal.opened = true;
-  modal.data = item;
 }
 
 const fetchTranslations = async function() {
@@ -97,15 +90,15 @@ onMounted(async () => {
   <div class="">
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
-        <h1 class="text-5xl md:text-6xl font-heading uppercase">translations</h1>
-        <router-link to="/translation" class="hover:opacity-75 hover:-translate-x-5 transition-transform">
+        <h1 class="text-3xl md:text-6xl font-heading uppercase">translations</h1>
+        <router-link to="/translation" class="hover:opacity-75 scale-50 md:scale-100 hover:-translate-x-5 transition-transform">
           <icon-back />
         </router-link>
       </div>
     </div>
     <div class="mx-5 mb-10 lg:mx-16 2xl:mx-20 p-10 rounded-xl text-xl bg-white sticky top-20">
-      <el-form :model="filter" ref="formRef" @submit.prevent="filterTranslations(formRef)">
-        <div class="flex gap-5">
+      <el-form :model="filter" ref="formRef" @submit.prevent="filterTranslations()">
+        <div class="flex flex-col md:flex-row gap-5">
           <el-input v-model="filter.keyword" class="md:w-2/3" size="large" placeholder="Author, Title, or Keyword" />
           <el-select class="md:w-1/3" v-model="filter.category" size="large">
             <el-option value="" label="All" />
@@ -113,7 +106,7 @@ onMounted(async () => {
             <el-option value="From Spanish" label="From Spanish" />
             <el-option value="From French" label="From French" />
           </el-select>
-          <el-button class="md:w-auto bg-primary" type="primary" size="large" @click="filterTranslations(formRef)">Search</el-button>
+          <el-button class="md:w-auto bg-primary" type="primary" size="large" @click="filterTranslations()">Search</el-button>
         </div>
       </el-form>
     </div>
@@ -125,12 +118,12 @@ onMounted(async () => {
           <img
             v-if="item.image_urls === ''"
             src="@/assets/imgs/Image-thumbnail.png"
-            class="w-1/2 md:w-3/4 h-64 rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer"
+            class="w-2/3 md:w-3/4 h-auto rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer"
           />
           <img
             v-else
             :src="item.image_urls.split(',')[0]"
-            class="w-1/2 md:w-3/4 h-64 rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer"
+            class="w-2/3 md:w-3/4 h-auto rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer"
           />
           <div class="px-5 md:px-0 mt-5">
             <h2 class="font-semibold">{{ item.title }}</h2>

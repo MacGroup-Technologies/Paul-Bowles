@@ -34,13 +34,6 @@ useHead({ title: `Paul Bowles' Translations` })
       also present a transcription of Yacoubi’s story both in Arabic and Latin characters.
     </div>
     <div class="px-5 pb-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:pb-20">
-      Paul Bowles was an active translator since his youth and rendered into English numerous works
-      from French, Spanish and Moghrebi (Moroccan vernacular). Alongside a few samples of Bowles’s
-      work as translator, this section features a recording of Ahmed Yacoubi telling one of his
-      stories to Bowles in the Moroccan vernacular from Fez. Thanks to professor Abdelaziz Jadir, we
-      also present a transcription of Yacoubi’s story both in Arabic and Latin.
-    </div>
-    <div class="px-5 pb-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:pb-20">
       <router-link to="/translation/list">
         <el-button type="primary" size="large" class="bg-primary" style="padding: 30px 35px;">Proceed to Translations</el-button>
       </router-link>

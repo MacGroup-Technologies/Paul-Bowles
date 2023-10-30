@@ -1,37 +1,47 @@
 <script lang="ts" setup>
 import { OnClickOutside } from '@vueuse/components'
-import { ref } from 'vue';
+import { ref } from 'vue'
+import { VueImageZoomer } from 'vue-image-zoomer'
+import 'vue-image-zoomer/dist/style.css'
 
 defineProps<{
   item: any
 }>()
 
 const img = ref(null)
-
 </script>
 <template>
-  <div class="z-50 fixed top-0 right-0 bottom-0 left-0 bg-black bg-opacity-70 flex justify-center items-center">
+  <div
+    class="z-50 fixed top-0 right-0 bottom-0 left-0 bg-black bg-opacity-70 flex justify-center items-center"
+  >
     <OnClickOutside @trigger="$emit('close')">
-      <div class="overflow-y-auto mx-5 md:mx-0 h-[90vh] md:w-[60vw] bg-background-light dark:bg-background-dark rounded-xl">
+      <div
+        class="overflow-y-auto mx-5 md:mx-0 h-[90vh] md:w-[60vw] bg-background-light dark:bg-background-dark rounded-xl"
+      >
         <div
           class="py-5 px-5 md:px-20 inline-flex items-center gap-3 text-black dark:text-white-shade hover:text-opacity-80 cursor-pointer"
           @click="$emit('close')"
         >
           Close <span class="inline-block pt-[2px] w-10 bg-black dark:bg-white-shade" />
         </div>
-        <div class="py-5 md:py-3 px-5 md:px-20 grid place-items-start gap-10 grid-cols-1 md:grid-cols-2 h-[65%]">
+        <div
+          class="py-5 md:py-3 px-5 md:px-20 grid place-items-start gap-10 grid-cols-1 md:grid-cols-2 h-[65%]"
+        >
           <div>
-            <img :src="img ?? item.image_urls.split('|')[0]" class="bg-primary rounded-2xl w-full h-auto" v-if="item.image_urls.split('|')[0] !== ''" />
+            <vue-image-zoomer :regular="img ?? item.image_urls.split('|')[0]" class="bg-primary rounded-2xl w-full h-auto" v-if="item.image_urls.split('|')[0] !== ''" />
             <img
               v-else
               src="@/assets/imgs/Image-thumbnail.png"
               class="w-full h-auto rounded-[22px]"
             />
-            <div class="py-5 md:py-3 px-5 md:px-20 w-full flex gap-5 overflow-auto scrollbar-thin scrollbar-thumb-primary" v-if="item.image_urls.split('|')[0] !== ''">
+            <div
+              class="py-5 md:py-3 px-5 md:px-20 w-full flex gap-5 overflow-auto scrollbar-thin scrollbar-thumb-primary"
+              v-if="item.image_urls.split('|')[0] !== ''"
+            >
               <img
                 :src="imgs"
                 class="bg-primary bg-opacity-20 inline h-24 w-32 rounded-xl cursor-pointer hover:-translate-y-2 transition-transform"
-                :class="{ '-translate-y-1 bg-opacity-70' : img == imgs }"
+                :class="{ '-translate-y-1 bg-opacity-70': img == imgs }"
                 v-for="(imgs, index) in item.image_urls.split('|')"
                 :key="index"
                 @click="img = imgs"
@@ -42,11 +52,11 @@ const img = ref(null)
             <h1 class="text-xl font-semibold">{{ item.title }}</h1>
             <p class="mt-3" v-html="item.inscription.replaceAll('/', '')" />
             <div class="mt-5">
-              <b>PUBLISHER:</b> {{ item.publisher }}<br />
-              <b>ISBN:</b> {{ item.isbn }}<br />
-              <b>LANGUAGES:</b> {{ item.language }}<br />
-              <b>TRANSLATOR:</b> {{ item.translator }}<br />
-              <b>GENRE:</b> {{ item.genre }}
+              <div class="" v-if="item.publisher"><b>PUBLISHER:</b> {{ item.publisher }}</div>
+              <div class="" v-if="item.isbn"><b>ISBN:</b> {{ item.isbn }}</div>
+              <div class="" v-if="item.language"><b>LANGUAGES:</b> {{ item.language }}</div>
+              <div class="" v-if="item.translator"><b>TRANSLATOR:</b> {{ item.translator }}</div>
+              <div class="" v-if="item.genre"><b>GENRE:</b> {{ item.genre }}</div>
             </div>
           </div>
         </div>
