@@ -100,7 +100,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         many articles on these topics to the periodical Modern Music. At the beginning of the
         post-war period, Bowles received a pair of commissions from the two-piano team of Gold and
         Fizdale (Arthur Gold and Robert Fizdale), who programmed some of the composer's earlier
-        duets, and had made their own duo-piano transcriptions of several Bowles's solo pieces
+        duets, and had made their own duo-piano transcriptions of several Bowles' solo pieces
         evoking Latin-American dance. Bowles responded with two of his finest concert scores:
         the Concerto for Two Pianos, <i>Winds and Percussion (1946-47)</i>, and the <i>Sonata for Two
         Pianos (1947)</i>. Composing these, he revealed in his autobiography Without Stopping, gave him
@@ -121,7 +121,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         throughout northern and central Morocco, which culminated in a two-LP set issued by the
         Library of Congress.
         <br /><br />
-        While the main body of Bowles's musical output was completed before 1948, he sporadically
+        While the main body of Bowles' musical output was completed before 1948, he sporadically
         composed incidental theater music in later years. This included his last two dramatic
         collaborations with Tennessee Williams on music for the plays Sweet Bird of Youth, 1959,
         and The Milk Train Doesn't Stop Here Anymore, 1962; and nine scores for dramatic productions
@@ -131,7 +131,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         <br /><br />
         Paul Bowles continued, moreover, to write songs throughout his life, setting texts in
         English, Spanish and French by Jane Bowles, Tennessee Williams, Gertrude Stein, Jean
-        Cocteau, Lorca and others. Bowles's vocal works are unfailingly idiomatic. He stated that
+        Cocteau, Lorca and others. Bowles' vocal works are unfailingly idiomatic. He stated that
         his aim was "distorting speech the least amount possible. Singing, it seems to me, should be
         an extension of speech."
         <br /><br />
@@ -154,7 +154,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         Irene Herrmann
       </div>
       <div class="mt-10 text-justify"  v-else-if="route.params.title === 'Virgil Thompson - Twelfth Night'">
-        It is Mr. Bowles's gift as a composer to write theater music of pinpoint delicacy that is so precise in its functional design and so accurate. In its adjustment to the subject of each play it hits his audience squarely in both ears and rings the bell for the play at every music cue. With six musicians—flute, oboe, harp, imitation harpsichord, percussion and, very occasionally, a muted trumpet—he makes a rich and ancient-sounding ensemble that is more sufficient than a larger group would be of more disparate sonorities. He makes no effort to fill the house with noise or to dominate the applause between scenes. Even if the music gets lost for a moment or two, that is better than any unnecessary stridency. He keeps rigidly within his chosen limit, thereby gaining power. The Bowles formula was already complete in Dr. Faustus [1936]. He writes no brassy pit-music, no off-stage realistic sound-effects. He does what nearly every musician in the world would say, on principle, can't be done. He writes chamber-music to accompany large theatrical productions, and he aggravates his supposed error by putting that chamber-music down in the pit. In Dr. Faustus he used seven men under an apron. The reason his music does not disappear from all audibility lies in his choice of instruments and his manner of scoring. He uses only sharp and incisive timbres; he writes a true melodic part for each; and he never doubles, never upsets his sonorous equilibrium by making one line heavier than another.
+        It is Mr. Bowles' gift as a composer to write theater music of pinpoint delicacy that is so precise in its functional design and so accurate. In its adjustment to the subject of each play it hits his audience squarely in both ears and rings the bell for the play at every music cue. With six musicians—flute, oboe, harp, imitation harpsichord, percussion and, very occasionally, a muted trumpet—he makes a rich and ancient-sounding ensemble that is more sufficient than a larger group would be of more disparate sonorities. He makes no effort to fill the house with noise or to dominate the applause between scenes. Even if the music gets lost for a moment or two, that is better than any unnecessary stridency. He keeps rigidly within his chosen limit, thereby gaining power. The Bowles formula was already complete in Dr. Faustus [1936]. He writes no brassy pit-music, no off-stage realistic sound-effects. He does what nearly every musician in the world would say, on principle, can't be done. He writes chamber-music to accompany large theatrical productions, and he aggravates his supposed error by putting that chamber-music down in the pit. In Dr. Faustus he used seven men under an apron. The reason his music does not disappear from all audibility lies in his choice of instruments and his manner of scoring. He uses only sharp and incisive timbres; he writes a true melodic part for each; and he never doubles, never upsets his sonorous equilibrium by making one line heavier than another.
         <br /><br />
         All his emphasis comes from contrast of tune and timbre, from structure and harmonic progress, never from weight. He leaves that to the actors. If they want to shout and whisper, that is their business. Mr. Bowles sets a play to music as a printer sets up an author's manuscript. He makes it clear and clean and comprehensible, frames it with appropriate initials and tailpieces. If Miss Hayes, Mr. Evans and Mr. Shakespeare did not each have such a faithful and absorbed public, Mr. Bowles might easily have walked away with Twelfth Night. For the play is, after all, a comedy with music. It has a musical beginning and a musical finale and songs all the way through. No one writing in the Broadway theater makes a song within a play so charmingly as Bowles does. He does not aim at song hits easily extractable from their context. He aims rather to concentrate a play's whole mood and presentation into brief musical moments. He avoids italianate melodic proportions. His songs could go on forever, so little have they the air of getting anywhere. They are as static as décor, as expressive as good costumes. Every member of the Twelfth Night cast and every scene of Shakespeare's play was aided and enhanced by the presence of this sumptuous and suitable music, every measure fit embroidered by hand. And when the whole stage joined in the final song it was as if the evening and its applause were being handed on a platter to Mr. Bowles as homage to his self-effacing and accurate workmanship in the preceding scenes.
         <br /><br /><br />

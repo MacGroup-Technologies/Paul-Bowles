@@ -12,7 +12,7 @@ useHead({ title: `Paul Bowles' Library` })
         <div class="p-5 lg:px-16 2xl:px-20">
           <h1 class="text-8xl font-mono uppercase text-black dark:text-white-shade">Library</h1>
           <p class="md:w-1/2 text-primary text-3xl mt-5">
-            Explore Paul Bowles's library of over 3,000 volumes collected during the five decades he
+            Explore Paul Bowles' library of over 3,000 volumes collected during the five decades he
             lived in Tangier.
           </p>
         </div>
@@ -28,7 +28,7 @@ useHead({ title: `Paul Bowles' Library` })
     </div>
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 mb-10">
       <a name="content" />
-      Paul Bowles's personal library includes over three thousand volumes that he collected during
+      Paul Bowles' personal library includes over three thousand volumes that he collected during
       the five decades he lived in Tangier. The result of a recent major cataloging effort, his
       copious library is now available in digitized form for public consultation.
       <div class="mt-5 md:mt-10">

@@ -45,7 +45,7 @@ window.addEventListener('scroll' , function () {
       </div>
       <div class="text-justify">
         <p class="mb-10">
-          After several literary seasons given over, mostly, to the frisky antics of kids, precociously knowing and singularly charming, but not to be counted on for those gifts that arrive by no other way than the experience and contemplation of a truly adult mind, now is obviously the perfect time for a writer with such a mind to engage our attention. That is precisely the event to be celebrated in the appearance of The Sheltering Sky, Paul Bowles's first novel.
+          After several literary seasons given over, mostly, to the frisky antics of kids, precociously knowing and singularly charming, but not to be counted on for those gifts that arrive by no other way than the experience and contemplation of a truly adult mind, now is obviously the perfect time for a writer with such a mind to engage our attention. That is precisely the event to be celebrated in the appearance of The Sheltering Sky, Paul Bowles' first novel.
         </p>
         <p class="mb-10">
           It has been a good while since first novels in America have come from men in their middle or late thirties (Paul Bowles is thirty-eight). Even in past decades the first novel has usually been written during the writers' first years out of college. Moreover, because success and public attention operate as a sort of pressure cooker or freezer, there has been a discouraging tendency for the talent to bake or congeal at a premature level of inner development.

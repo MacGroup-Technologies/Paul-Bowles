@@ -27,8 +27,7 @@ const music = [
         <div class="p-5 lg:px-16 2xl:px-20">
           <h1 class="text-8xl font-mono uppercase">Music</h1>
           <p class="md:w-2/3 text-primary text-3xl mt-10">
-            This section contains the amazing musical compositions of Paul Bowles, encompassing a
-            lot of genres.
+            Bowles composed orchestral works, piano pieces, and  numerous songs.
           </p>
         </div>
         <div class="p-5 lg:px-16 2xl:px-20 mt-8 md:mt-3">
@@ -250,7 +249,7 @@ const music = [
             Another Joseph A. McPhillips adaptation of Camp Cataract was produced professionally in
             Vienna, Austria, in 1991. Truman Capote wrote the following:
             <i
-              >"Camp Cataract, to my mind the most complete of Mrs. Bowles's stories and the one
+              >"Camp Cataract, to my mind the most complete of Mrs. Bowles' stories and the one
               most representative of her work, is a rending sample of controlled compassion: a comic
               tale of doom that has at its heart, and as its heart, the subtlest comprehension of
               eccentricity and human apartment. This story alone would require that we accord Jane
