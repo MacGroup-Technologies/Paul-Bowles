@@ -20,22 +20,14 @@ window.addEventListener('scroll', function () {
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
         <h1 class="text-5xl md:text-6xl font-heading uppercase">the economist</h1>
-        <router-link
-          to="#back"
-          @click.prevent="route.go(-1)"
-          class="hover:opacity-75 hover:-translate-x-5 transition-transform"
-        >
+        <router-link to="#back" @click.prevent="route.go(-1)"
+          class="hover:opacity-75 hover:-translate-x-5 transition-transform">
           <icon-back />
         </router-link>
       </div>
-      <div
-        class="sticky top-0 my-10 py-5 bg-background-light dark:bg-background-dark head flex gap-10"
-      >
-        <img
-          src="@/assets/imgs/Paul-Bowles-obituary.png"
-          class="md:w-1/3 h-auto transition-all"
-          alt="Paul Bowles obituary via The Economist"
-        />
+      <div class="sticky top-0 my-10 py-5 bg-background-light dark:bg-background-dark head flex gap-10">
+        <img src="@/assets/imgs/Paul-Bowles-obituary.png" class="md:w-1/3 h-auto transition-all"
+          alt="Paul Bowles obituary via The Economist" />
         <h1 class="text-2xl md:text-4xl md:w-1/2 font-heading uppercase hidden">the economist</h1>
       </div>
       <div class="text-justify">
@@ -163,7 +155,7 @@ window.addEventListener('scroll', function () {
             Malcolm Lowry (Under the Volcano) and Jack Kerouac (On the Road), to be remembered
             mainly for one novel. Mr Bertolucci's 1990 film gave it legs, but it is a great one.
           </p>
-          <p class="my-5 font-heading font-bold">
+          <p class="text-right my-5 font-heading font-bold">
             This article appeared in the obituary section of  the Economist (print edition),<br />
             November 27, 1999, under the headline "Paul Bowles."
           </p>

@@ -22,22 +22,13 @@ window.addEventListener('scroll', function () {
         <h1 class="text-5xl md:text-6xl font-heading uppercase">
           a north african encounter - Patricia Highsmith
         </h1>
-        <router-link
-          to="#back"
-          @click.prevent="route.go(-1)"
-          class="hover:opacity-75 hover:-translate-x-5 transition-transform"
-        >
+        <router-link to="#back" @click.prevent="route.go(-1)"
+          class="hover:opacity-75 hover:-translate-x-5 transition-transform">
           <icon-back />
         </router-link>
       </div>
-      <div
-        class="sticky top-0 my-10 py-5 bg-background-light dark:bg-background-dark head flex gap-10"
-      >
-        <img
-          src="@/assets/imgs/Patricia-Highsmith.png"
-          class="md:w-1/3 h-auto transition-all"
-          alt="Patricia Highsmith"
-        />
+      <div class="sticky top-0 my-10 py-5 bg-background-light dark:bg-background-dark head flex gap-10">
+        <img src="@/assets/imgs/Patricia-Highsmith.png" class="md:w-1/3 h-auto transition-all" alt="Patricia Highsmith" />
         <h1 class="text-2xl md:text-4xl md:w-1/2 font-heading uppercase hidden">
           a north african encounter - Patricia Highsmith
         </h1>
@@ -108,7 +99,7 @@ window.addEventListener('scroll', function () {
           I'd like to ask Paul, and shall by letter. He will have the patience to answer. He gives a
           lot to other people.
         </p>
-        <p class="font-bold mb-10 font-heading">
+        <p class="text-right font-bold mb-10 font-heading">
           Patricia Highsmith
           <br />
           Paul Bowles by His Friends, Peter Owen, London, 1992

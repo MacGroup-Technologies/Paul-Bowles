@@ -20,22 +20,13 @@ window.addEventListener('scroll', function () {
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
         <h1 class="text-5xl md:text-6xl font-heading uppercase">Bowles and i - Rodrigo Rey Rosa</h1>
-        <router-link
-          to="#back"
-          @click.prevent="route.go(-1)"
-          class="hover:opacity-75 hover:-translate-x-5 transition-transform"
-        >
+        <router-link to="#back" @click.prevent="route.go(-1)"
+          class="hover:opacity-75 hover:-translate-x-5 transition-transform">
           <icon-back />
         </router-link>
       </div>
-      <div
-        class="sticky top-0 my-10 py-5 bg-background-light dark:bg-background-dark head flex gap-10"
-      >
-        <img
-          src="@/assets/imgs/Rey-Rosa.png"
-          class="md:w-1/3 h-auto transition-all"
-          alt="Rodrigo Rey Rosa"
-        />
+      <div class="sticky top-0 my-10 py-5 bg-background-light dark:bg-background-dark head flex gap-10">
+        <img src="@/assets/imgs/Rey-Rosa.png" class="md:w-1/3 h-auto transition-all" alt="Rodrigo Rey Rosa" />
         <h1 class="text-2xl md:text-4xl md:w-1/2 font-heading uppercase hidden">
           Bowles and i - Rodrigo Rey Rosa
         </h1>
@@ -276,7 +267,7 @@ window.addEventListener('scroll', function () {
           silhouettes of the Roman cypresses beyond the Moorish arch of the magnificent house at
           Monteviejo with its grand doorway, which is wide open.
         </p>
-        <p class="my-10 font-bold font-heading">Rodrigo Rey Rosa</p>
+        <p class="text-right my-10 font-bold font-heading">Rodrigo Rey Rosa</p>
       </div>
     </div>
   </div>

@@ -54,7 +54,7 @@ useHead({ title: `Paul Bowles' Biography` })
       Toward the end he liked to claim he had no ego, that the accidents in the life of a creative
       artist are of no import, that only the work matters.
     </div>
-    <p class="px-5 lg:px-16 2xl:px-20 text-xl lg:text-2xl text-justify text-primary font-bold font-heading">
+    <p class="text-right px-5 lg:px-16 2xl:px-20 text-xl lg:text-2xl text-primary font-bold font-heading">
       Rodrigo Rey Rosa
     </p>
   </div>

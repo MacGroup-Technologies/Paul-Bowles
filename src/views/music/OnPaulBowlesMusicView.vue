@@ -15,19 +15,14 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         <h1 class="text-5xl md:text-6xl font-heading uppercase">
           {{ route.params.title }}
         </h1>
-        <router-link
-          to="#back"
-          @click.prevent="router.go(-1)"
-          class="hover:opacity-75 hover:-translate-x-5 transition-transform"
-        >
+        <router-link to="#back" @click.prevent="router.go(-1)"
+          class="hover:opacity-75 hover:-translate-x-5 transition-transform">
           <icon-back />
         </router-link>
       </div>
       <div class="mt-10" v-if="route.params.title === 'Berstein'">
-        <b
-          >Handwritten note by Leonard Bernstein to professor Lawrence J. Shifreen in a letter dated
-          03/10/77</b
-        >
+        <b>Handwritten note by Leonard Bernstein to professor Lawrence J. Shifreen in a letter dated
+          03/10/77</b>
         <p class="my-3">
           I have always regretted the fact that Paul stopped composing. He had a genuine gift, a
           highly original sense of how to “modernize” traditional materials. He has done the same
@@ -35,7 +30,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
           the shocking. He is a wonder, and I have learned a lot from him. (Copland still refers to
           the “Bowles style” that crops up now and then in my music.)
         </p>
-        L.B.
+        <p class="text-right"> L.B. </p>
       </div>
       <div class="mt-10 text-justify" v-else-if="route.params.title === 'Paul Bowles, Composer'">
         Paul Bowles once said, "I never wanted a career," contempt dripping from his inflection.
@@ -103,7 +98,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         duets, and had made their own duo-piano transcriptions of several Bowles' solo pieces
         evoking Latin-American dance. Bowles responded with two of his finest concert scores:
         the Concerto for Two Pianos, <i>Winds and Percussion (1946-47)</i>, and the <i>Sonata for Two
-        Pianos (1947)</i>. Composing these, he revealed in his autobiography Without Stopping, gave him
+          Pianos (1947)</i>. Composing these, he revealed in his autobiography Without Stopping, gave him
         a welcome respite from his work in the theater, which was becoming irksome.
         <br /><br />
         Increasingly dissatisfied, in fact, with the life of a composer of Gebrauchsmusik, Bowles
@@ -151,39 +146,83 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         renaissance of interest during the final decade of his life, evidenced by numerous
         recordings and performances.
         <br /><br /><br />
+        <p class="text-right">
         Irene Herrmann
+        </p>
       </div>
-      <div class="mt-10 text-justify"  v-else-if="route.params.title === 'Virgil Thompson - Twelfth Night'">
-        It is Mr. Bowles' gift as a composer to write theater music of pinpoint delicacy that is so precise in its functional design and so accurate. In its adjustment to the subject of each play it hits his audience squarely in both ears and rings the bell for the play at every music cue. With six musicians—flute, oboe, harp, imitation harpsichord, percussion and, very occasionally, a muted trumpet—he makes a rich and ancient-sounding ensemble that is more sufficient than a larger group would be of more disparate sonorities. He makes no effort to fill the house with noise or to dominate the applause between scenes. Even if the music gets lost for a moment or two, that is better than any unnecessary stridency. He keeps rigidly within his chosen limit, thereby gaining power. The Bowles formula was already complete in Dr. Faustus [1936]. He writes no brassy pit-music, no off-stage realistic sound-effects. He does what nearly every musician in the world would say, on principle, can't be done. He writes chamber-music to accompany large theatrical productions, and he aggravates his supposed error by putting that chamber-music down in the pit. In Dr. Faustus he used seven men under an apron. The reason his music does not disappear from all audibility lies in his choice of instruments and his manner of scoring. He uses only sharp and incisive timbres; he writes a true melodic part for each; and he never doubles, never upsets his sonorous equilibrium by making one line heavier than another.
+      <div class="mt-10 text-justify" v-else-if="route.params.title === 'Virgil Thompson - Twelfth Night'">
+        It is Mr. Bowles' gift as a composer to write theater music of pinpoint delicacy that is so precise in its
+        functional design and so accurate. In its adjustment to the subject of each play it hits his audience squarely in
+        both ears and rings the bell for the play at every music cue. With six musicians—flute, oboe, harp, imitation
+        harpsichord, percussion and, very occasionally, a muted trumpet—he makes a rich and ancient-sounding ensemble that
+        is more sufficient than a larger group would be of more disparate sonorities. He makes no effort to fill the house
+        with noise or to dominate the applause between scenes. Even if the music gets lost for a moment or two, that is
+        better than any unnecessary stridency. He keeps rigidly within his chosen limit, thereby gaining power. The Bowles
+        formula was already complete in Dr. Faustus [1936]. He writes no brassy pit-music, no off-stage realistic
+        sound-effects. He does what nearly every musician in the world would say, on principle, can't be done. He writes
+        chamber-music to accompany large theatrical productions, and he aggravates his supposed error by putting that
+        chamber-music down in the pit. In Dr. Faustus he used seven men under an apron. The reason his music does not
+        disappear from all audibility lies in his choice of instruments and his manner of scoring. He uses only sharp and
+        incisive timbres; he writes a true melodic part for each; and he never doubles, never upsets his sonorous
+        equilibrium by making one line heavier than another.
         <br /><br />
-        All his emphasis comes from contrast of tune and timbre, from structure and harmonic progress, never from weight. He leaves that to the actors. If they want to shout and whisper, that is their business. Mr. Bowles sets a play to music as a printer sets up an author's manuscript. He makes it clear and clean and comprehensible, frames it with appropriate initials and tailpieces. If Miss Hayes, Mr. Evans and Mr. Shakespeare did not each have such a faithful and absorbed public, Mr. Bowles might easily have walked away with Twelfth Night. For the play is, after all, a comedy with music. It has a musical beginning and a musical finale and songs all the way through. No one writing in the Broadway theater makes a song within a play so charmingly as Bowles does. He does not aim at song hits easily extractable from their context. He aims rather to concentrate a play's whole mood and presentation into brief musical moments. He avoids italianate melodic proportions. His songs could go on forever, so little have they the air of getting anywhere. They are as static as décor, as expressive as good costumes. Every member of the Twelfth Night cast and every scene of Shakespeare's play was aided and enhanced by the presence of this sumptuous and suitable music, every measure fit embroidered by hand. And when the whole stage joined in the final song it was as if the evening and its applause were being handed on a platter to Mr. Bowles as homage to his self-effacing and accurate workmanship in the preceding scenes.
+        All his emphasis comes from contrast of tune and timbre, from structure and harmonic progress, never from weight.
+        He leaves that to the actors. If they want to shout and whisper, that is their business. Mr. Bowles sets a play to
+        music as a printer sets up an author's manuscript. He makes it clear and clean and comprehensible, frames it with
+        appropriate initials and tailpieces. If Miss Hayes, Mr. Evans and Mr. Shakespeare did not each have such a
+        faithful and absorbed public, Mr. Bowles might easily have walked away with Twelfth Night. For the play is, after
+        all, a comedy with music. It has a musical beginning and a musical finale and songs all the way through. No one
+        writing in the Broadway theater makes a song within a play so charmingly as Bowles does. He does not aim at song
+        hits easily extractable from their context. He aims rather to concentrate a play's whole mood and presentation
+        into brief musical moments. He avoids italianate melodic proportions. His songs could go on forever, so little
+        have they the air of getting anywhere. They are as static as décor, as expressive as good costumes. Every member
+        of the Twelfth Night cast and every scene of Shakespeare's play was aided and enhanced by the presence of this
+        sumptuous and suitable music, every measure fit embroidered by hand. And when the whole stage joined in the final
+        song it was as if the evening and its applause were being handed on a platter to Mr. Bowles as homage to his
+        self-effacing and accurate workmanship in the preceding scenes.
         <br /><br /><br />
-        Virgil Thomson,<br />
+        <p class="text-right">
+        Virgil Thompson,<br />
         New York Herald Tribune,<br /> 20 November 1940
+        </p>
       </div>
-      <div class="mt-10 text-justify"  v-else-if="route.params.title === 'Lincoln Center Tribute'">
-        In 1995, Paul Bowles was honored with a festival at Lincoln Center in New York. His music was performed by the Eos Orchestra, conducted by Jonathan Sheffer.
+      <div class="mt-10 text-justify" v-else-if="route.params.title === 'Lincoln Center Tribute'">
+        In 1995, Paul Bowles was honored with a festival at Lincoln Center in New York. His music was performed by the Eos
+        Orchestra, conducted by Jonathan Sheffer.
         <div class="flex gap-10 mt-10">
-          <img src="@/assets/imgs/Lincoln_program.png" alt="Paul Bowles Lincoln Center Tribute Flier" class="w-auto h-auto" />
-          <img src="@/assets/imgs/Lincoln_programA.png" alt="Paul Bowles Lincoln Center Tribute Program" class="w-auto h-auto" />
-        </div>
+          <img src="@/assets/imgs/Lincoln_program.png" alt="Paul Bowles Lincoln Center Tribute Flier"
+            class="w-auto h-auto" />
+          <img src="@/assets/imgs/Lincoln_programA.png" alt="Paul Bowles Lincoln Center Tribute Program"
+          class="w-auto h-auto" />
       </div>
-      <div class="mt-10 text-justify"  v-else-if="route.params.title === 'Rey Rosa - The Return Trip'">
-        <div class="text-right">
-          Les sons rentreront dans<br />
-          l'orgue et l'avenir<br />
-          s'invaginera dans le passé<br />
-          comme il a toujours fait.<br />
-          <b>Henri Michaux</b>
-        </div>
-        <div class="mt-16">
-          Imagine a situation involving a man with two lives moving in opposite directions simultaneously, one of which goes toward the future in usual fashion (from today to tomorrow, from childhood to maturity and on to old age), while the other life goes toward the past. Thus, inside the child born in 1910, there lived a man in his eighties.
-          <br /><br />
-          This would explain how in 1930 Gertrude Stein, after exchanging letters, was convinced that her correspondent was a gentleman of at least seventy. So that today we have an octogenarian in whom is imprisoned a child travelling into the past. And this explains how one forgets that he is old, and how being in his company provides a delight similar to that provoked, as if through contagion, by the presence of small children. More than half a century ago those attempting to educate him considered him a stubborn youth; they warned him that unless he studied music as tradition demanded, he would never succeed in being a composer. But they were unaware that this student needed no other teacher than himself, because in spite of his youthful appearance he had already made the return trip.
-          <br /><br /><br />
-          Rodrigo Rey Rosa, Tangier, 1995
-        </div>
+    </div>
+    <div class="mt-10 text-justify" v-else-if="route.params.title === 'Rey Rosa - The Return Trip'">
+      <div class="text-right">
+        Les sons rentreront dans<br />
+        l'orgue et l'avenir<br />
+        s'invaginera dans le passé<br />
+        comme il a toujours fait.<br />
+        <b>Henri Michaux</b>
+      </div>
+      <div class="mt-16">
+        Imagine a situation involving a man with two lives moving in opposite directions simultaneously, one of which
+        goes toward the future in usual fashion (from today to tomorrow, from childhood to maturity and on to old age),
+        while the other life goes toward the past. Thus, inside the child born in 1910, there lived a man in his
+        eighties.
+        <br /><br />
+        This would explain how in 1930 Gertrude Stein, after exchanging letters, was convinced that her correspondent
+        was a gentleman of at least seventy. So that today we have an octogenarian in whom is imprisoned a child
+        travelling into the past. And this explains how one forgets that he is old, and how being in his company
+        provides a delight similar to that provoked, as if through contagion, by the presence of small children. More
+        than half a century ago those attempting to educate him considered him a stubborn youth; they warned him that
+        unless he studied music as tradition demanded, he would never succeed in being a composer. But they were unaware
+        that this student needed no other teacher than himself, because in spite of his youthful appearance he had
+        already made the return trip.
+        <br /><br /><br />
+        <p class="text-right">
+        Rodrigo Rey Rosa, Tangier, 1995
+        </p>
       </div>
     </div>
   </div>
-</template>
+</div></template>
