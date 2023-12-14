@@ -58,7 +58,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         appearance of musical illiteracy. Yet Bowles had a quality that cannot be taught, acutely
         summed up by Aaron Copland: "Paul never wrote a dull piece."
         <br /><br />
-        Equally formative during these years of desultory apprenticeship were Bowles' travels to
+        Equally formative during these years of desultory apprenticeship were Bowles's travels to
         Guatemala, Mexico, Ceylon, southern India and the Sahara—for this rather nomadic life
         enabled him to explore his interest in the indigenous musical styles he encountered,
         fostering the use of folk rhythms and idioms in his compositions without quoting actual folk
@@ -95,7 +95,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         many articles on these topics to the periodical Modern Music. At the beginning of the
         post-war period, Bowles received a pair of commissions from the two-piano team of Gold and
         Fizdale (Arthur Gold and Robert Fizdale), who programmed some of the composer's earlier
-        duets, and had made their own duo-piano transcriptions of several Bowles' solo pieces
+        duets, and had made their own duo-piano transcriptions of several Bowles's solo pieces
         evoking Latin-American dance. Bowles responded with two of his finest concert scores:
         the Concerto for Two Pianos, <i>Winds and Percussion (1946-47)</i>, and the <i>Sonata for Two
           Pianos (1947)</i>. Composing these, he revealed in his autobiography Without Stopping, gave him
@@ -116,7 +116,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         throughout northern and central Morocco, which culminated in a two-LP set issued by the
         Library of Congress.
         <br /><br />
-        While the main body of Bowles' musical output was completed before 1948, he sporadically
+        While the main body of Bowles's musical output was completed before 1948, he sporadically
         composed incidental theater music in later years. This included his last two dramatic
         collaborations with Tennessee Williams on music for the plays Sweet Bird of Youth, 1959,
         and The Milk Train Doesn't Stop Here Anymore, 1962; and nine scores for dramatic productions
@@ -126,7 +126,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         <br /><br />
         Paul Bowles continued, moreover, to write songs throughout his life, setting texts in
         English, Spanish and French by Jane Bowles, Tennessee Williams, Gertrude Stein, Jean
-        Cocteau, Lorca and others. Bowles' vocal works are unfailingly idiomatic. He stated that
+        Cocteau, Lorca and others. Bowles's vocal works are unfailingly idiomatic. He stated that
         his aim was "distorting speech the least amount possible. Singing, it seems to me, should be
         an extension of speech."
         <br /><br />
@@ -151,7 +151,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         </p>
       </div>
       <div class="mt-10 text-justify" v-else-if="route.params.title === 'Virgil Thompson - Twelfth Night'">
-        It is Mr. Bowles' gift as a composer to write theater music of pinpoint delicacy that is so precise in its
+        It is Mr. Bowles's gift as a composer to write theater music of pinpoint delicacy that is so precise in its
         functional design and so accurate. In its adjustment to the subject of each play it hits his audience squarely in
         both ears and rings the bell for the play at every music cue. With six musicians—flute, oboe, harp, imitation
         harpsichord, percussion and, very occasionally, a muted trumpet—he makes a rich and ancient-sounding ensemble that

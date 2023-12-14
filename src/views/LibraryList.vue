@@ -8,7 +8,7 @@ import { getUrl } from '@/services/misc';
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue';
 import TranslationModal from '@/components/TranslationModal.vue';
 
-useHead({ title: `Paul Bowles' Library` })
+useHead({ title: `Paul Bowles's Library` })
 
 const modal = reactive({ opened: false, data: {} });
 const library = reactive({ items: [] as any });
@@ -18,15 +18,15 @@ const pagination = reactive({
   page: null,
 });
 
-const setLoading = function(val: boolean) {
+const setLoading = function (val: boolean) {
   useThemeStore().updateLoading(val)
 }
 
-const setError = function(val: string) {
+const setError = function (val: string) {
   useThemeStore().updateError(val)
 }
 
-const getStepUrl = async function(url: any) {
+const getStepUrl = async function (url: any) {
   setLoading(true);
   try {
     const response = await getUrl(url)
@@ -75,23 +75,15 @@ onMounted(async () => {
         </router-link>
       </div>
     </div>
-    <div
-      class="py-10 lg:px-16 2xl:px-20"
-    >
+    <div class="py-10 lg:px-16 2xl:px-20">
       <div class="grid gap-x-5 gap-y-10 grid-cols-1 md:grid-cols-4 w-full">
         <div class="w-full flex flex-col px-10 md:px-0" v-for="item in library.items" :key="item.id">
-          <img
-            v-if="item.image_urls === ''"
-            src="@/assets/imgs/Image-thumbnail.png"
+          <img v-if="item.image_urls === ''" src="@/assets/imgs/Image-thumbnail.png"
             class="w-full h-auto md:w-3/4 md:h-64 rounded-[22px] fancy-img my-0 md:mx-auto cursor-pointer"
-            @click="openModal(item)"
-          />
-          <img
-            v-else
-            :src="item.image_urls.split('|')[0]"
+            @click="openModal(item)" />
+          <img v-else :src="item.image_urls.split('|')[0]"
             class="w-auto md:w-3/4 h-64 rounded-[22px] fancy-img my-0 md:mx-auto cursor-pointer"
-            @click="openModal(item)"
-          />
+            @click="openModal(item)" />
           <div class="px-5 md:px-0 mt-5">
             <h2 class="font-semibold">{{ item.title }}</h2>
             <p class="mt-2">
@@ -103,25 +95,16 @@ onMounted(async () => {
     </div>
     <div class="my-24 mx-auto md:w-64 flex justify-center">
       <el-button-group>
-        <el-button
-          type="primary"
-          size="large"
-          class="bg-primary"
-          :icon="ArrowLeft"
-          :disabled="pagination.previous === null"
-          @click="getStepUrl(pagination.previous)"
-        >
+        <el-button type="primary" size="large" class="bg-primary" :icon="ArrowLeft"
+          :disabled="pagination.previous === null" @click="getStepUrl(pagination.previous)">
           Prev
         </el-button>
-        <el-button
-          type="primary"
-          size="large"
-          class="bg-primary"
-          :disabled="pagination.next === null"
-          @click="getStepUrl(pagination.next)"
-        >
+        <el-button type="primary" size="large" class="bg-primary" :disabled="pagination.next === null"
+          @click="getStepUrl(pagination.next)">
           Next
-          <el-icon class="el-icon--right"><ArrowRight /></el-icon>
+          <el-icon class="el-icon--right">
+            <ArrowRight />
+          </el-icon>
         </el-button>
       </el-button-group>
     </div>

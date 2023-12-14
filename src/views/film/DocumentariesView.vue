@@ -8,7 +8,7 @@ useHead({ title: `Works and Documentaries on Paul Bowles` })
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
         <h1 class="text-4xl font-heading uppercase">
-          A short selection of films based on Paul Bowles' works and documentaries on Paul Bowles
+          A short selection of films based on Paul Bowles's works and documentaries on Paul Bowles
         </h1>
         <router-link to="/clips" class="hover:opacity-75 hover:-translate-x-5 transition-transform">
           <icon-back />
@@ -24,13 +24,13 @@ useHead({ title: `Works and Documentaries on Paul Bowles` })
         <li class="mb-5">
           <div class="">
             <b>Halfmoon (a tryptic based on “The Story of Lahcen and Idir”, “Call at Corazón”, and “Allal”)</b>
-             - Frieder Schleich (1995)
+            - Frieder Schleich (1995)
           </div>
         </li>
         <li class="mb-5">
           <div class="">
             <b>The Sky Trembles and the Earth is Afraid (based on “A distant Episode”)</b>
-             - Ben Rivers (2015)
+            - Ben Rivers (2015)
           </div>
         </li>
       </ul>

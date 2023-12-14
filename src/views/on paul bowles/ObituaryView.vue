@@ -44,7 +44,7 @@ window.addEventListener('scroll', function () {
             This may or may not have actually happened. Young Paul so hated his father Claude, a New
             York dentist whose “mere presence meant misery,” that he was prepared to believe him
             capable of anything, even attempted infanticide. It was also just the sort of horror
-            story that excited Paul Bowles' imagination.
+            story that excited Paul Bowles's imagination.
           </p>
           <p class="mb-5">
             A fascination with macabre cruelty suffuses his fiction—a fascination initially inspired
@@ -77,7 +77,7 @@ window.addEventListener('scroll', function () {
             This may or may not have actually happened. Young Paul so hated his father Claude, a New
             York dentist whose “mere presence meant misery,” that he was prepared to believe him
             capable of anything, even attempted infanticide. It was also just the sort of horror
-            story that excited Paul Bowles' imagination.
+            story that excited Paul Bowles's imagination.
           </p>
           <p class="mb-5">
             A fascination with macabre cruelty suffuses his fiction—a fascination initially inspired
@@ -107,7 +107,7 @@ window.addEventListener('scroll', function () {
           the actual desert, and in the inner desert of the spirit.”
           <p class="my-5">
             For some reason, the novel is more highly regarded in Europe than America. It may be
-            that Mr Bowles' bleak world is more accessible to societies that experienced the full
+            that Mr Bowles's bleak world is more accessible to societies that experienced the full
             horrors of two world wars. Like other atheistic existentialists, Mr Bowles put no store
             in a compassionate God, let alone the innate goodness of man. His characters are, as a
             British critic, Melvyn Bragg, says, “acted upon rather than acting for themselves”;
@@ -121,7 +121,7 @@ window.addEventListener('scroll', function () {
             acclaim, orchestrated by a rave review by Tennessee Williams in the New York Times.
           </p>
           <p class="my-5">
-            For 40 years, this marked the peak of Mr Bowles' career as a writer. Other novels as
+            For 40 years, this marked the peak of Mr Bowles's career as a writer. Other novels as
             well as collections of sometimes Gothic short stories followed, but his literary fame
             was eclipsed by his cult status. Most unfairly, he and his wife, Jane, an author in her
             own right and a late convert to Catholicism, came to be seen as mere celebrities. In the
@@ -151,7 +151,7 @@ window.addEventListener('scroll', function () {
             again to read his long forgotten masterwork.
           </p>
           <p class="my-5">
-            The rest of Mr Bowles' fiction remains largely neglected. He seems destined, like
+            The rest of Mr Bowles's fiction remains largely neglected. He seems destined, like
             Malcolm Lowry (Under the Volcano) and Jack Kerouac (On the Road), to be remembered
             mainly for one novel. Mr Bertolucci's 1990 film gave it legs, but it is a great one.
           </p>

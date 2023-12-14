@@ -40,7 +40,7 @@ window.addEventListener('scroll', function () {
           singularly charming, but not to be counted on for those gifts that arrive by no other way than the experience
           and contemplation of a truly adult mind, now is obviously the perfect time for a writer with such a mind to
           engage our attention. That is precisely the event to be celebrated in the appearance of The Sheltering Sky, Paul
-          Bowles' first novel.
+          Bowles's first novel.
         </p>
         <p class="mb-10">
           It has been a good while since first novels in America have come from men in their middle or late thirties (Paul

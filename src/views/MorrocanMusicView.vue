@@ -5,7 +5,7 @@ import { getMorrocanMusic } from '@/services/misc'
 import { useHead } from '@unhead/vue'
 import { isEmpty } from 'lodash'
 
-useHead({ title: `Paul Bowles' Morrocan Music` })
+useHead({ title: `Paul Bowles's Morrocan Music` })
 
 const music = reactive({ items: [] as any[] })
 const player = reactive({ item: {} as any })

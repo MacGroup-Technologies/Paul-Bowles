@@ -7,7 +7,7 @@ import { getUrl } from '@/services/misc';
 
 import { useHead } from '@unhead/vue'
 import { useRoute } from 'vue-router';
-useHead({ title: `Paul Bowles' Library` })
+useHead({ title: `Paul Bowles's Library` })
 
 const route = useRoute();
 
@@ -24,7 +24,7 @@ const filter = reactive({
   category: '' as any,
 });
 
-const getStepUrl = async function(url: any) {
+const getStepUrl = async function (url: any) {
   setLoading(true);
   try {
     const response = await getUrl(url)
@@ -39,15 +39,15 @@ const getStepUrl = async function(url: any) {
   }
 }
 
-const setLoading = function(val: boolean) {
+const setLoading = function (val: boolean) {
   useThemeStore().updateLoading(val)
 }
 
-const setError = function(val: string) {
+const setError = function (val: string) {
   useThemeStore().updateError(val)
 }
 
-const fetchTranslations = async function() {
+const fetchTranslations = async function () {
   try {
     const response = await getTranslations();
     pagination.next = response.data.next
@@ -68,7 +68,7 @@ const filterTranslations = async function () {
     pagination.next = response.data.next
     pagination.previous = response.data.previous
     translations.items = response.data.results
-    window.scrollTo({ top: 0, behavior: "smooth" }); 
+    window.scrollTo({ top: 0, behavior: "smooth" });
   } catch (error) {
     console.log(error);
   }
@@ -91,7 +91,8 @@ onMounted(async () => {
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
         <h1 class="text-3xl md:text-6xl font-heading uppercase">translations</h1>
-        <router-link to="/translation" class="hover:opacity-75 scale-50 md:scale-100 hover:-translate-x-5 transition-transform">
+        <router-link to="/translation"
+          class="hover:opacity-75 scale-50 md:scale-100 hover:-translate-x-5 transition-transform">
           <icon-back />
         </router-link>
       </div>
@@ -106,25 +107,19 @@ onMounted(async () => {
             <el-option value="From Spanish" label="From Spanish" />
             <el-option value="From French" label="From French" />
           </el-select>
-          <el-button class="md:w-auto bg-primary" type="primary" size="large" @click="filterTranslations()">Search</el-button>
+          <el-button class="md:w-auto bg-primary" type="primary" size="large"
+            @click="filterTranslations()">Search</el-button>
         </div>
       </el-form>
     </div>
-    <div
-      class="py-10 lg:px-16 2xl:px-20"
-    >
+    <div class="py-10 lg:px-16 2xl:px-20">
       <div class="grid gap-x-5 gap-y-10 grid-cols-1 md:grid-cols-4 w-full">
-        <router-link :to="`/translation/${item.id}`" class="w-full flex flex-col" v-for="item in translations.items" :key="item.id">
-          <img
-            v-if="item.image_urls === ''"
-            src="@/assets/imgs/Image-thumbnail.png"
-            class="w-2/3 md:w-3/4 h-auto rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer"
-          />
-          <img
-            v-else
-            :src="item.image_urls.split(',')[0]"
-            class="w-2/3 md:w-3/4 h-auto rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer"
-          />
+        <router-link :to="`/translation/${item.id}`" class="w-full flex flex-col" v-for="item in translations.items"
+          :key="item.id">
+          <img v-if="item.image_urls === ''" src="@/assets/imgs/Image-thumbnail.png"
+            class="w-2/3 md:w-3/4 h-auto rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer" />
+          <img v-else :src="item.image_urls.split(',')[0]"
+            class="w-2/3 md:w-3/4 h-auto rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer" />
           <div class="px-5 md:px-0 mt-5">
             <h2 class="font-semibold">{{ item.title }}</h2>
             <p class="mt-2">
@@ -136,25 +131,16 @@ onMounted(async () => {
     </div>
     <div class="my-24 mx-auto md:w-64 flex justify-center">
       <el-button-group>
-        <el-button
-          type="primary"
-          size="large"
-          class="bg-primary"
-          :icon="ArrowLeft"
-          :disabled="pagination.previous === null"
-          @click="getStepUrl(pagination.previous)"
-        >
+        <el-button type="primary" size="large" class="bg-primary" :icon="ArrowLeft"
+          :disabled="pagination.previous === null" @click="getStepUrl(pagination.previous)">
           Prev
         </el-button>
-        <el-button
-          type="primary"
-          size="large"
-          class="bg-primary"
-          :disabled="pagination.next === null"
-          @click="getStepUrl(pagination.next)"
-        >
+        <el-button type="primary" size="large" class="bg-primary" :disabled="pagination.next === null"
+          @click="getStepUrl(pagination.next)">
           Next
-          <el-icon class="el-icon--right"><ArrowRight /></el-icon>
+          <el-icon class="el-icon--right">
+            <ArrowRight />
+          </el-icon>
         </el-button>
       </el-button-group>
     </div>

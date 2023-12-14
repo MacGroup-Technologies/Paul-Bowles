@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useHead } from '@unhead/vue'
 
-useHead({ title: `Paul Bowles' Life` })
+useHead({ title: `Paul Bowles's Life` })
 </script>
 <template>
   <div class="">

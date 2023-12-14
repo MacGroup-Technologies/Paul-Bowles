@@ -69,7 +69,7 @@ window.addEventListener('scroll', function () {
           his own uses oral Mexican and Moroccan folk-lore he listened as much as he read. 
         </p>
         <p class="mb-10">
-          I suspect that Bowles' apparent foreignness has limited the number of doctoral theses
+          I suspect that Bowles's apparent foreignness has limited the number of doctoral theses
           that ought by now to have been devoted to one whose art far exceeds that of… well, name
           the great American writers of our day (a list that was as different yesterday as it will
           be tomorrow). For the American Academic, Bowles is still odd man out; he writes as if Moby
@@ -79,7 +79,7 @@ window.addEventListener('scroll', function () {
           critics have expressed the hope that literature might one day take on the attributes of
           the “highest” of all the arts, music, Bowles has been composing music as well as writing
           prose. I am certain that the first critic able to deal both with his music and his writing
-          will find that Bowles' life work has been marvelous in a way not accessible to those of
+          will find that Bowles's life work has been marvelous in a way not accessible to those of
           us who know only one or the other of the two art forms.
         </p>
         <p class="mb-10">
@@ -146,7 +146,7 @@ window.addEventListener('scroll', function () {
           recognized as being unlike anything else in our literature. I have just re-read the three
           stories, with some nervousness. After all these years, I wondered if they would still
           “work.” In my youth I had admired D. H. Lawrence's novels. Now, I deeply dislike them. I
-          was relieved to find that Bowles' art is still as disturbing as ever. I was surprised to
+          was relieved to find that Bowles's art is still as disturbing as ever. I was surprised to
           note how the actual stories differ from my memory of them. I recalled a graphic
           description of a sixteen-year old boy's seduction of his father on a hot summer night in
           Jamaica. Over the years, carnal details had built up in my memory like a coral reef. Yet
@@ -157,14 +157,14 @@ window.addEventListener('scroll', function () {
           terror that they did the first time I read them. “The Delicate Prey” turns on a Gidean
           acte gratuit: the slicing off of the boy's penis is not only like the incident on the
           train in Les Caves du Vatican but also presages the driving of a nail through a skull in
-          Bowles' novel Let It Come Down. “A Distant Episode” seems to me to be more than ever
+          Bowles's novel Let It Come Down. “A Distant Episode” seems to me to be more than ever
           emblematic of the helplessness of an over-civilized sensibility (the Professor's) when
           confronted with an alien culture. Captured by North African nomads, his tongue cut out, he
           is made into a clown, a toy. He is used to make his captors laugh. He appears to accept
           his fate. Something harsh is glimpsed in the lines of a story that is now plainer in its
           reverberations than it was when written. But then it is no longer news to anyone that the
           floor to this ramshackle civilization that we have built cannot bear much longer our
-          weight. lt was Bowles' genius to suggest the horrors which lie beneath that floor, as
+          weight. lt was Bowles's genius to suggest the horrors which lie beneath that floor, as
           fragile, in its way, as the sky that shelters us from a devouring vastness.
         </p>
         <p class="mb-10">

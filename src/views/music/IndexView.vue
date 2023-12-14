@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { useHead } from '@unhead/vue'
 
-useHead({ title: `Paul Bowles' Music` })
+useHead({ title: `Paul Bowles's Music` })
 
 const music = [
   {
-    title: "Paul Bowles' Music",
+    title: "Paul Bowles's Music",
     link: 'paul-bowles-music'
   },
   {
@@ -13,7 +13,7 @@ const music = [
     link: 'musical-portraits'
   },
   {
-    title: "On Paul Bowles' Music",
+    title: "On Paul Bowles's Music",
     link: 'on-paul-bowless-music'
   }
 ]
@@ -249,7 +249,7 @@ const music = [
             Another Joseph A. McPhillips adaptation of Camp Cataract was produced professionally in
             Vienna, Austria, in 1991. Truman Capote wrote the following:
             <i
-              >"Camp Cataract, to my mind the most complete of Mrs. Bowles' stories and the one
+              >"Camp Cataract, to my mind the most complete of Mrs. Bowles's stories and the one
               most representative of her work, is a rending sample of controlled compassion: a comic
               tale of doom that has at its heart, and as its heart, the subtlest comprehension of
               eccentricity and human apartment. This story alone would require that we accord Jane
@@ -565,7 +565,7 @@ const music = [
           <h3>Blue Mountain Ballads (1946)</h3>
           <p class="text-xl mt-1">
             Tennessee Williams "Scenes from the Door" (New York: Éditions de la Vipère, 1934) Paul
-            Bowles' first printed musical composition. The text by Gertrude Stein.
+            Bowles's first printed musical composition. The text by Gertrude Stein.
           </p>
         </li>
         <li class="mt-10">
