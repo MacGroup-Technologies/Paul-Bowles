@@ -31,7 +31,7 @@ useHead({ title: `Paul Bowles' Life` })
           <img src="@/assets/imgs/Biography-Thumbnail.png" />
         </div>
         <div class="py-5 px-3">
-          <h2 class="font-heading text-3xl">SYNTHETIC BIOGRAPHY</h2>
+          <h2 class="font-heading text-3xl">Synthetic Biography</h2>
           <p class="mt-2">A night with thunder in the sky he packed his bag and left...</p>
         </div>
       </router-link>
