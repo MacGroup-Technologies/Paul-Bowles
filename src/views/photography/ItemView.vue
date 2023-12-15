@@ -79,11 +79,11 @@ onMounted(async () => {
     </div>
   </div>
   <div
-    class="fixed top-0 right-0 left-0 bottom-0 bg-black bg-opacity-70 flex justify-center items-center text-center z-50"
     v-if="img !== null"
   >
     <OnClickOutside @trigger="img = null" class="text-center px-10 md:px-0 md:w-1/3 cursor-pointer">
       <img :src="img" class="w-full h-auto rounded-xl cursor-default" />
+    class="fixed top-0 right-0 left-0 bottom-0 bg-black bg-opacity-80 flex justify-center items-center text-center z-50"
     </OnClickOutside>
   </div>
 </template>
