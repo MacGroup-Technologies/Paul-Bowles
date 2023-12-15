@@ -13,6 +13,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
 
 const music = reactive({ items: [] as any[] })
 const player = reactive({ item: {} as any })
+const collections = reactive({items: [] as any[]})
 
 const audio = document.getElementsByTagName('audio') as any
 const playState = ref('pause')
@@ -29,15 +30,30 @@ const getMusic = async function () {
     const response = await fetchMusicAlt(router.params.title)
     music.items = response.data.results
 
-    if (router.params.title === 'Film Music') {
-    const film_music = []
-      const music_item = response.data.results[0];
-      music_item.attachment_url.split(",").forEach((url:string,index:number)=>{
-        const item = { ...music_item, attachment_url: url, title:`${music_item.title} part ${index + 1}`, id: music_item.id+index+1 }
-        film_music.push(item)
+    const matches_file_music_route = router.params.title === 'Film Music' 
+     const matches_incidental_music_route =router.params.title == "Incidental Music"
+
+      let film_music = []
+      const _collections = []
+
+    if (matches_file_music_route|| matches_incidental_music_route) {
+      response.data.results.map((music_item, index)=>{
+          music_item.attachment_url.split(",").forEach((url:string,index:number)=>{
+            const item = { ...music_item, attachment_url: url, title:`${music_item.title} part ${index + 1}`, id: music_item.id+index+1 }
+            film_music.push(item)
+          })
+          music.items = film_music
+          if (matches_incidental_music_route){
+            _collections.push({ title: music_item.title, items: {items:film_music} })
+            film_music = []
+          }
       })
-      music.items = film_music
     }
+
+    if (!matches_incidental_music_route) {
+    _collections.push({id:1, items:music})
+    }
+    collections.items = _collections;
 
     setLoading(false)
   } catch (error: any) {
@@ -134,6 +150,12 @@ onMounted(async () => {
             </el-button>
           </div>
         </div>
+
+        <div v-for="(collection, collection_index) in collections.items" class="mb-12" :key="collection_index">
+          <div class="px-10 mb-5 font-bold">
+            <h1 class="font-mono font-semibold uppercase text-3xl lg:text-4xl">{{collection.title}}</h1>
+          </div>
+          
         <div class="">
           <div class="px-10 mb-5 font-bold">List</div>
           <div class="flex flex-row gap-3 font-bold px-10 mb-3">
@@ -144,7 +166,7 @@ onMounted(async () => {
           <div
             class="flex flex-row md:items-center gap-3 md:gap-0 mb-3 py-5 cursor-pointer px-10 rounded-xl transition hover:bg-white hover:text-black hover:shadow"
             :class="{ 'bg-white text-black shadow': item.title === player.item.title }"
-            v-for="(item, index) in music.items" :key="item.id" @click="player.item = item">
+            v-for="(item, index) in collection.items.items" :key="item.id" @click="player.item = item">
             <div class="w-10" v-if="item.title !== player.item.title">{{ index + 1 }}</div>
             <div class="w-10 flex items-center justify-center" @click="playMusic()" v-else>
               <svg v-if="playState !== 'play'" width="40" height="40" viewBox="0 0 40 40" fill="none"
@@ -222,6 +244,7 @@ onMounted(async () => {
               </div>
             </audio>
           </div>
+        </div>
         </div>
       </template>
       <div class="my-24 opacity-75" v-else>Nothing here, yet</div>
