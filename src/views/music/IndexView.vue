@@ -26,7 +26,7 @@ const music = [
         <div class="p-5 lg:px-16 2xl:px-20">
           <h1 class="text-8xl font-mono uppercase">Music</h1>
           <p class="md:w-2/3 text-primary text-3xl mt-10">
-            Bowles composed orchestral works, piano pieces, and numerous songs.
+          This section contains the amazing musical compositions of Paul Bowles, encompassing a variety of genres
           </p>
         </div>
         <div class="p-5 lg:px-16 2xl:px-20 mt-8 md:mt-3">
