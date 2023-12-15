@@ -144,6 +144,9 @@ watchEffect(() => {
 
 onMounted(() => {
   playBackground()
+  setTimeout(()=>{
+    setModal()
+  }, 5000)
 })
 </script>
 
@@ -226,8 +229,8 @@ onMounted(() => {
     </div>
   </main>
   <div v-if="modal"
-    class="fixed top-0 right-0 left-0 bottom-0 bg-black bg-opacity-70 shadow-2xl z-50 flex justify-center items-center">
-    <div class="h-auto md:w-1/3 bg-primary-light rounded-md px-7 py-4 mx-10 md:mx-0">
+    class="fixed top-0 right-0 z-50 flex justify-end m-8 items-center">
+    <div class="h-auto md:w-1/3 shadow-2xl bg-primary-light rounded-md px-7 py-4 mx-10 md:mx-0">
       <div class="flex justify-end mb-2">
         <div @click="setModal()" class="flex items-center gap-3 cursor-pointer hamburger">
           <span class="block">Close</span>
