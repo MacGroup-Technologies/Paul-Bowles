@@ -87,8 +87,7 @@
   <div class="">
     <div class="h-screen overflow-hidden bg-background-light dark:bg-background-dark relative bg-[url('@/assets/imgs/contact.png')]">
       <div
-        class="h-full z-10 bg-background-light dark:bg-background-dark bg-opacity-60 dark:bg-opacity-60 flex flex-col justify-center items-start"
-      >
+        class="h-full md:w-2/3 z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">
         <div class="p-5 mt-24 lg:px-16 2xl:px-20">
           <h1 class="text-5xl md:text-8xl font-mono uppercase text-black dark:text-white-shade">Contact</h1>
         </div>
@@ -261,7 +260,6 @@
       <div class="flex gap-10 flex-col md:flex-row mt-5">
         <div class="md:w-1/2">
           Miquel Barceló<br />
-          Leonard Bernstein Office<br />
           Ambrogio Borsani<br />
           Gary Conklin<br />
           Jean Philippe Fournier<br />
@@ -283,6 +281,7 @@
           Pía Rey Rosa<br />
           Katharina Rippstein<br />
           Claude Natalie Thomas<br />
+          Leonard Bernstein Office<br />
           The Allen Ginsberg Project<br />
           Die Fotostiftung Schweiz<br />
           The University of Delaware Library<br />

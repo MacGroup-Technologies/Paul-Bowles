@@ -103,28 +103,49 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
         “Paul Bowles, His Life” could be called poetic as opposed to the more factual one written
         for the <i>Contemporary Authors Autobiographical Series</i> (Detroit, 1984).
       </p>
-      <p class="mt-16 text-justify" v-else-if="router.params.title === 'Music Criticism'">
-        From 1939 through early 1945, the only prose Paul Bowles published was music criticism. He
-        served on the music reviewing staff of the New York Herald <i>Tribune</i>, where his friend
-        and teacher Virgil Thomson was chief critic. During his three and a half years at the
-        <i>Tribune</i>, Bowles wrote more than four hundred music reviews and columns, many of which
-        focused on Latin American and North African music.
-      </p>
-      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10" v-if="router.params.title === 'Music Criticism'">
-        <router-link :to="`music-criticism/${item.title}`" class="block rounded overflow-hidden"
-          v-for="item in writing.item" :key="item.id">
-          <img src="@/assets/imgs/writings-thumbnail.png" />
-          <h3 class="underline mt-4">{{ item.title }}</h3>
-        </router-link>
+      <div class="mt-16 text-justify" v-else-if="router.params.title === 'Music Criticism'">
+        <p>
+          From 1939 through early 1945, the only prose Paul Bowles published was music criticism. He
+          served on the music reviewing staff of the New York Herald <i>Tribune</i>, where his friend
+          and teacher Virgil Thomson was chief critic. During his three and a half years at the
+          <i>Tribune</i>, Bowles wrote more than four hundred music reviews and columns, many of which
+          focused on Latin American and North African music.
+        </p>
+        <p>Below is a selection of Paul Bowles’s music criticism :</p>
       </div>
-      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10" v-else-if="router.params.title === 'Autobiography'">
-        <router-link :to="`Autobiography/${item.title}`" class="block rounded overflow-hidden"
-          v-for="item in writing.item" :key="item.id">
-          <img src="@/assets/imgs/writings-thumbnail.png" />
-          <h3 class="underline mt-4">{{ item.title }}</h3>
-        </router-link>
+      <div class="mt-10" v-if="router.params.title === 'Music Criticism'">
+        <ol class="list-decimal mt-10 ml-10">
+          <li v-for="item in writing.item" :key="item.id">
+            <router-link :to="`music-criticism/${item.title}`" class="block rounded overflow-hidden" :key="item.id">
+              <h3 class="underline mt-4">{{ item.title }}</h3>
+            </router-link>
+          </li>
+        </ol>
       </div>
+
+      <div class="mt-10" v-else-if="router.params.title === 'Autobiography'">
+        <ol class="list-decimal mt-10 ml-10">
+          <li v-for="item in writing.item.slice(0,2)" :key="item.id">
+            <router-link :to="`music-criticism/${item.title}`" class="block rounded overflow-hidden" :key="item.id">
+              <h3 class="underline mt-4">{{ item.title }}</h3>
+            </router-link>
+          </li>
+        </ol>
+        <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10">
+          <router-link :to="`Autobiography/${item.title}`" class="block rounded overflow-hidden"
+            v-for="item in writing.item.slice(2)" :key="item.id">
+            <img src="@/assets/imgs/writings-thumbnail.png" />
+            <h3 class="underline mt-4">{{ item.title }}</h3>
+          </router-link>
+        </div>
+      </div>
+
       <ol class="list-decimal mt-10 ml-10" v-else-if="router.params.title === 'Contributions to Periodicals'">
+        <li v-for="item in writing.item" :key="item.id">
+          <h3 class="mt-4">{{ item.title }}</h3>
+        </li>
+      </ol>
+      <ol class="list-decimal mt-10 ml-10" v-else-if="router.params.title === 'Poetry'">
         <li v-for="item in writing.item" :key="item.id">
           <h3 class="mt-4">{{ item.title }}</h3>
         </li>

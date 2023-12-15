@@ -5,10 +5,10 @@ useHead({ title: `Paul Bowles's Library` })
 </script>
 <template>
   <div class="">
-    <div class="h-screen bg-background-light dark:bg-background-dark relative flex items-center bg-[url('@/assets/imgs/imagehero-5.png')]">
+    <div
+      class="h-screen bg-background-light dark:bg-background-dark relative flex items-center bg-[url('@/assets/imgs/imagehero-5.png')]">
       <div
-        class="h-full z-10 bg-background-light dark:bg-background-dark bg-opacity-60 dark:bg-opacity-60 flex flex-col justify-center items-start"
-      >
+        class="h-full md:w-2/3 z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">
         <div class="p-5 lg:px-16 2xl:px-20">
           <h1 class="text-8xl font-mono uppercase text-black dark:text-white-shade">Library</h1>
           <p class="md:w-1/2 text-primary text-3xl mt-5">
@@ -17,10 +17,8 @@ useHead({ title: `Paul Bowles's Library` })
           </p>
         </div>
         <div class="p-5 lg:px-16 2xl:px-20">
-          <a
-            href="#content"
-            class="w-20 h-20 md:w-32 md:h-32 flex justify-center items-center rounded-full border-[2px] text-black border-black dark:border-white-shade dark:text-white-shade hover:opacity-75"
-          >
+          <a href="#content"
+            class="w-20 h-20 md:w-32 md:h-32 flex justify-center items-center rounded-full border-[2px] text-black border-black dark:border-white-shade dark:text-white-shade hover:opacity-75">
             <p class="text-5xl md:text-7xl animate-bounce">&DownArrow;</p>
           </a>
         </div>
@@ -33,7 +31,8 @@ useHead({ title: `Paul Bowles's Library` })
       copious library is now available in digitized form for public consultation.
       <div class="mt-5 md:mt-10">
         <router-link to="/library/list">
-          <el-button type="primary" size="large" class="bg-primary" style="padding: 30px 35px;">Proceed to Library</el-button>
+          <el-button type="primary" size="large" class="bg-primary" style="padding: 30px 35px;">Proceed to
+            Library</el-button>
         </router-link>
       </div>
     </div>
@@ -41,7 +40,8 @@ useHead({ title: `Paul Bowles's Library` })
       <div class="md:w-1/3 overflow-scroll md:overflow-hidden flex flex-row md:flex-col gap-5">
         <div class="w-2/3 flex-shrink-0 md:w-full md:mb-5">
           <div class="overflow-hidden rounded">
-            <img src="@/assets/imgs/image4.png" class="my-0 mx-auto h-auto w-1/2 object-fill transition hover:scale-105 hover:transform hover:transition" />
+            <img src="@/assets/imgs/image4.png"
+              class="my-0 mx-auto h-auto w-1/2 object-fill transition hover:scale-105 hover:transform hover:transition" />
           </div>
           <p class="text-[14px] md:text-[20px] text-primary mt-3">
             A seminal work that explores musical traditions in the United States, offering
@@ -50,15 +50,18 @@ useHead({ title: `Paul Bowles's Library` })
         </div>
         <div class="w-2/3 flex-shrink-0 md:w-full md:mb-5">
           <div class="overflow-hidden rounded">
-            <img src="@/assets/imgs/image4-1.png" class="my-0 mx-auto h-auto w-1/2 object-fill transition hover:scale-105 hover:transform hover:transition" />
+            <img src="@/assets/imgs/image4-1.png"
+              class="my-0 mx-auto h-auto w-1/2 object-fill transition hover:scale-105 hover:transform hover:transition" />
           </div>
           <p class="text-[14px] md:text-[20px] text-primary mt-3">
-            A collection of literary works exploring the cultural, historical, and medicinal significance of cannabis and its multifaceted aspects.
+            A collection of literary works exploring the cultural, historical, and medicinal significance of cannabis and
+            its multifaceted aspects.
           </p>
         </div>
         <div class="w-2/3 flex-shrink-0 md:w-full md:mb-5">
           <div class="overflow-hidden rounded">
-            <img src="@/assets/imgs/image4-2.png" class="my-0 mx-auto h-auto w-1/2 object-fill transition hover:scale-105 hover:transform hover:transition" />
+            <img src="@/assets/imgs/image4-2.png"
+              class="my-0 mx-auto h-auto w-1/2 object-fill transition hover:scale-105 hover:transform hover:transition" />
           </div>
           <p class="text-[14px] md:text-[20px] text-primary mt-3">
             A sample of Bowles’s collection of books on North Africa, arguably a source for
@@ -67,7 +70,8 @@ useHead({ title: `Paul Bowles's Library` })
         </div>
         <div class="w-2/3 flex-shrink-0 md:w-full md:mb-5">
           <div class="overflow-hidden rounded">
-            <img src="@/assets/imgs/image4-3.png" class="my-0 mx-auto h-auto w-1/2 object-fill transition hover:scale-105 hover:transform hover:transition" />
+            <img src="@/assets/imgs/image4-3.png"
+              class="my-0 mx-auto h-auto w-1/2 object-fill transition hover:scale-105 hover:transform hover:transition" />
           </div>
           <p class="text-[14px] md:text-[20px] text-primary mt-3">
             Augiéras was a French artist and writer known for his provocative works. La
@@ -76,7 +80,8 @@ useHead({ title: `Paul Bowles's Library` })
         </div>
         <div class="w-2/3 flex-shrink-0 md:w-full md:mb-5">
           <div class="overflow-hidden rounded">
-            <img src="@/assets/imgs/image4-4.png" class="my-0 mx-auto h-auto w-1/2 object-fill transition hover:scale-105 hover:transform hover:transition" />
+            <img src="@/assets/imgs/image4-4.png"
+              class="my-0 mx-auto h-auto w-1/2 object-fill transition hover:scale-105 hover:transform hover:transition" />
           </div>
           <p class="text-[14px] md:text-[20px] text-primary mt-3">
             A groundbreaking audio cut-up experiment which explores the possibilities of
@@ -85,10 +90,12 @@ useHead({ title: `Paul Bowles's Library` })
         </div>
         <div class="w-2/3 flex-shrink-0 md:w-full md:mb-5">
           <div class="overflow-hidden rounded">
-            <img src="@/assets/imgs/image4-5.png" class="my-0 mx-auto h-auto w-1/2 object-fill transition hover:scale-105 hover:transform hover:transition" />
+            <img src="@/assets/imgs/image4-5.png"
+              class="my-0 mx-auto h-auto w-1/2 object-fill transition hover:scale-105 hover:transform hover:transition" />
           </div>
           <p class="text-[14px] md:text-[20px] text-primary mt-3">
-            The first number of Antaeus, the literary magazine founded by Paul Bowles and Daniel Halpern in Tangier in 1970.
+            The first number of Antaeus, the literary magazine founded by Paul Bowles and Daniel Halpern in Tangier in
+            1970.
           </p>
         </div>
       </div>
@@ -169,9 +176,8 @@ useHead({ title: `Paul Bowles's Library` })
           that of Antiochus Omissi, who patiently reviewed all the information uploaded, so that it
           would be ready for use. This joint and collective effort aims to create a new space for
           interaction among Bowles’s readers in order to open his legacy up to new modes of use,
-          study, and reading. 
-        </p>
-      </div>
+        study, and reading. 
+      </p>
     </div>
   </div>
-</template>
+</div></template>

@@ -194,7 +194,7 @@ const chronology = [
   <div class="relative">
     <div class="h-screen bg-background-light dark:bg-background-dark relative bg-[url('@/assets/imgs/chronology.png')]">
       <div
-        class="h-full z-10 bg-background-light dark:bg-background-dark bg-opacity-60 dark:bg-opacity-60 flex flex-col justify-center items-start">
+        class="h-full md:w-2/3 z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">
         <div class="p-5 mt-24 lg:px-16 2xl:px-20">
           <h1 class="text-5xl md:text-8xl font-mono uppercase text-black dark:text-white-shade">Chronology</h1>
           <p class="md:w-1/2 text-primary text-3xl mt-5">December 30, 1910 &mdash; November 18th, 1999</p>
