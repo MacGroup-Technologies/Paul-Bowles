@@ -6,8 +6,17 @@ import { useHead } from '@unhead/vue'
 import { useRoute } from 'vue-router';
 import { getTranslationsById } from '../../services/translations';
 
+import ImageViewerModal from '@/components/ImageViewerModal.vue';
+
+const modal = reactive({ opened: false, items: {}, active_index: 0 });
+const openModal = async function (items: string[], active_index = 0) {
+  modal.opened = true;
+  modal.items = items;
+  modal.active_index = active_index
+}
+
 const route = useRoute();
-const setLoading = function(val: boolean) {
+const setLoading = function (val: boolean) {
   useThemeStore().updateLoading(val)
 }
 const translation = reactive({ data: {} as any, img: '' });
@@ -47,24 +56,19 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
         </router-link>
       </div>
     </div>
-    
-    <div
-      class="px-5 py-5 lg:px-16 2xl:px-20"
-      v-if="translation.data.title !== ''"
-    >
+
+    <div class="px-5 py-5 lg:px-16 2xl:px-20" v-if="translation.data.title !== ''">
       <div class="flex flex-col md:flex-row justify-between">
         <div class="text-2xl md:w-2/3">
           <b>Author:</b> {{ translation.data.author }}<br />
-          <b>DATE:</b> {{ translation.data.date === '' ? translation.data.date_of_publication_w : translation.data.date }}<br />
+          <b>DATE:</b> {{ translation.data.date === '' ? translation.data.date_of_publication_w : translation.data.date
+          }}<br />
           <b>PUBLISHER:</b> {{ translation.data.publisher }}<br />
           <b>PLACE OF PUBLICATION:</b> {{ translation.data.place_of_publication }}<br />
         </div>
-        <img
-            v-if="translation.img === ''"
-            src="@/assets/imgs/Image-thumbnail.png"
-            class="w-auto h-auto rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer"
-          />
-          <img :src="translation.img.split(',')[0]" class="w-1/2 md:w-80 h-auto" v-else />
+        <img v-if="translation.img === ''" src="@/assets/imgs/Image-thumbnail.png"
+          class="w-auto h-auto rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer" />
+        <img :src="translation.img.split(',')[0]" class="w-1/2 md:w-80 h-auto" v-else />
       </div>
       <div class="my-10 text-2xl">
         <p v-html="translation.data.blocks_rows_0_text" v-if="translation.data.blocks_rows_0_text !== ''" />
@@ -81,9 +85,15 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
           <p v-html="translation.data.blocks_1_column_3" />
         </div>
       </div>
-      <div class="flex items-center flex-col md:flex-row md:overflow-x-auto pb-5 scrollbar-thin scrollbar-thumb-primary gap-10" v-if="translation.img.split(',').length !== 0">
-        <img src="@/assets/imgs/image10.png" class="w-2/3 md:w-1/3 h-auto" v-for="(img, index) in translation.img.split(',')[0]" :key="index" />
+      <div
+        class="flex items-center flex-col md:flex-row md:overflow-x-auto pb-5 scrollbar-thin scrollbar-thumb-primary gap-10"
+        v-if="translation.img.split(',').length !== 0">
+        <img @click="() => openModal(translation.img.split(','), index)" :src="img"
+          class="cursor-pointer w-[200px] h-[200px] object-cover" v-for="(img, index) in translation.img.split(',')"
+          :key="index" lazy />
       </div>
     </div>
   </div>
+  <image-viewer-modal v-if="modal.opened" :items="modal.items" :active_index="modal.active_index"
+    @close="modal.opened = false" />
 </template>
