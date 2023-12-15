@@ -113,14 +113,14 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
       <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10" v-if="router.params.title === 'Music Criticism'">
         <router-link :to="`music-criticism/${item.title}`" class="block rounded overflow-hidden"
           v-for="item in writing.item" :key="item.id">
-          <img src="@/assets/imgs/Writings-thumbnail.png" />
+          <img src="@/assets/imgs/writings-thumbnail.png" />
           <h3 class="underline mt-4">{{ item.title }}</h3>
         </router-link>
       </div>
       <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10" v-else-if="router.params.title === 'Autobiography'">
         <router-link :to="`Autobiography/${item.title}`" class="block rounded overflow-hidden"
           v-for="item in writing.item" :key="item.id">
-          <img src="@/assets/imgs/Writings-thumbnail.png" />
+          <img src="@/assets/imgs/writings-thumbnail.png" />
           <h3 class="underline mt-4">{{ item.title }}</h3>
         </router-link>
       </div>
@@ -131,7 +131,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
       </ol>
       <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10" v-else>
         <div class="rounded overflow-hidden" v-for="item in writing.item" :key="item.id">
-          <img src="@/assets/imgs/Writings-thumbnail.png" />
+          <img src="@/assets/imgs/writings-thumbnail.png" />
           <h3 class="mt-4">{{ item.title }}</h3>
         </div>
       </div>

@@ -67,7 +67,7 @@ useHead({ title: `Privacy Policy` })
       respond to your inquiries or requests. We do not share or sell this information to third
       parties.
       <br /><br />
-      <h2 class="font-bold font-heading">3. Links to Third-Party Websites:</h2>
+      <h2 class="font-bold font-heading">3. Links to Third&mdash;Party Websites:</h2>
       Our Website may contain links to third-party websites for your convenience. We are not
       responsible for the privacy practices or content of these external websites. We encourage you
       to review the privacy policies of any third-party websites you visit.

@@ -12,11 +12,8 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
         <h1 class="text-5xl md:text-6xl font-heading uppercase">{{ router.params.title }}</h1>
-        <router-link
-          to="#back"
-          @click.prevent="route.go(-1)"
-          class="hover:opacity-75 hover:-translate-x-5 transition-transform"
-        >
+        <router-link to="#back" @click.prevent="route.go(-1)"
+          class="hover:opacity-75 hover:-translate-x-5 transition-transform">
           <icon-back />
         </router-link>
       </div>
@@ -299,7 +296,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
       </template>
       <template v-else-if="router.params.title === 'Letter from Mexico'">
         <div class="mt-10">
-          <h2 class="">NOVEMBER-DECEMBER (1941), <i>MODERN MUSIC</i></h2>
+          <h2 class="">NOVEMBER&mdash;DECEMBER (1941), <i>MODERN MUSIC</i></h2>
         </div>
         <p class="mt-10 mb-5 text-right italic">Mexico City, November 1</p>
         <div class="my-10 text-justify">
@@ -337,19 +334,15 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           tripe. Only two Mexicans have substantial lists of integrated film scores to their credit.
           One is Revueltas, who began with <i>Redes</i> and continued with a long list of
           documentaries and several feature films, the most important of which are
-          <i
-            >La Noche de los mayas, Bajo el signo de la muerte, Los de abajo, and Que viene mi
-            marido!</i
-          >
+          <i>La Noche de los mayas, Bajo el signo de la muerte, Los de abajo, and Que viene mi
+            marido!</i>
           The other man is Raul Lavista, who at the moment has a virtual monopoly on grade-A Mexican
           films (if indeed such can be said to exist). Lavista believes in Hollywood, has the
           greatest admiration for Max Steiner, and explains that the film people here have always
           preferred his music to that of Revueltas because he knew how to make concessions to
           popular taste, a thing Revueltas refused to do. The music for his four most recent films:
-          <i
-            >Viviré otra vez; El Hijo de cruz diabolo; Ay, qué tiempos; Señor Don Simon! and La Casa
-            del rencor,</i
-          >
+          <i>Viviré otra vez; El Hijo de cruz diabolo; Ay, qué tiempos; Señor Don Simon! and La Casa
+            del rencor,</i>
           is decidedly nonexperimental and completely competent. He has to do all his own
           orchestration, as well as rehearse dancers and singers, conduct at recordings, and write
           lyrics if needed. The average price paid for an hour's score is the equivalent of five
@@ -582,7 +575,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           personal.<br />
           &nbsp;&nbsp;Commodore has two records, both by the gang at Nick's, of which one is a
           twelve-inch and is labeled Panama and <i>That's a Plenty</i>, played by “Wild Bill”
-          Davison and his Commodores. The other is <i>Ugly Chile</i> and <i>That Da-Da Strain</i>,
+          Davison and his Commodores. The other is <i>Ugly Chile</i> and <i>That Da&mdash;Da Strain</i>,
           and the group is billed as George Brunis and His Jazz Band. The ensemble is made up in
           both cases of George Brunis, trombone; Davison, trumpet; Pee Wee Russell, clarinet; Eddie
           Condon, guitar; Gene Schroeder, piano; Bob Casey, bass; and George Wettling, drums. My
@@ -621,7 +614,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
       </template>
       <template v-else>
         <div class="mt-10">
-          <h2 class="">MAY-JUNE (1941), <i>MODERN MUSIC</i></h2>
+          <h2 class="">MAY&mdash;JUNE (1941), <i>MODERN MUSIC</i></h2>
         </div>
         <div class="my-10 text-justify">
           There exists a state of great confusion about the factors that differentiate the various

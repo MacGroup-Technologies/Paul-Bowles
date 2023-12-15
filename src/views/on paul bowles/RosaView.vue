@@ -19,7 +19,7 @@ window.addEventListener('scroll', function () {
   <div class="">
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
-        <h1 class="text-5xl md:text-6xl font-heading uppercase">Bowles and i - Rodrigo Rey Rosa</h1>
+        <h1 class="text-5xl md:text-6xl font-heading uppercase">Bowles and i &mdash; Rodrigo Rey Rosa</h1>
         <router-link to="#back" @click.prevent="route.go(-1)"
           class="hover:opacity-75 hover:-translate-x-5 transition-transform">
           <icon-back />

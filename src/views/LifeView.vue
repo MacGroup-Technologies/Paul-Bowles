@@ -42,7 +42,7 @@ useHead({ title: `Paul Bowles's Life` })
         </div>
         <div class="py-5 px-3">
           <h2 class="font-heading text-3xl">Chronology</h2>
-          <p class="mt-2">December 30, 1910 - November 18th, 1999</p>
+          <p class="mt-2">December 30, 1910 &mdash; November 18th, 1999</p>
         </div>
       </router-link>
     </div>

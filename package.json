@@ -16,6 +16,7 @@
     "@unhead/vue": "^1.1.32",
     "@vueuse/components": "^10.3.0",
     "@vueuse/core": "^10.3.0",
+    "@websitebeaver/vue-magnifier": "^1.1.0",
     "autoprefixer": "^10.4.14",
     "axios": "^1.4.0",
     "element-plus": "^2.3.7",
