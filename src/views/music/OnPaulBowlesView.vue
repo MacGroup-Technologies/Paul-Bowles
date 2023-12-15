@@ -7,7 +7,7 @@ useHead({ title: "On Paul Bowles Music" })
 const route = useRouter()
 
 const music = [
-  'Berstein',
+  'Leonard Bernstein',
   'Paul Bowles, Composer',
   'Virgil Thompson - Twelfth Night',
   'Rey Rosa - The Return Trip',
