@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import ChronologyList from '@/components/ChronologyListItem.vue'
 import { useHead } from '@unhead/vue'
-useHead({ title: `Paul Bowles' Chronology` })
+useHead({ title: `Paul Bowles's Chronology` })
 
 const chronology = [
   {
@@ -136,7 +136,7 @@ const chronology = [
   },
   {
     year: '1940',
-    text:  `Bowles and Jane move into the Chelsea Hotel.
+    text: `Bowles and Jane move into the Chelsea Hotel.
           <br /><br />Completes music for Saroyan’s Love’s Old Sweet Song. Writes music for Roots in the Soil, a film about soil conservation in New Mexico.
           <br /><br />Composes music for the Theatre Guild’s production of Twelfth Night. Bowles’s score is a critical success; he receives a second Theatre Guild commission for Philip Barry’s Liberty Jones, directed by Houseman. Writes music for Lillian Hellman’s Watch on the Rhine.`,
     highlight: `“He writes no brassy pit-music, no off-stage realistic sound-effects. He does what nearly every musician in the world would say, on principle, can’t be done.” (Virgil Thomson in Paul Bowles’s Music, Eos, pages 74-77)`
@@ -192,37 +192,25 @@ const chronology = [
 </script>
 <template>
   <div class="relative">
-    <div class="h-screen bg-background-light dark:bg-background-dark relative flex items-center">
+    <div class="h-screen bg-background-light dark:bg-background-dark relative bg-[url('@/assets/imgs/chronology.png')]">
       <div
-        class="h-full md:w-2/3 z-10 bg-gradient-to-r from-background-light dark:from-background-dark md:from-50% to-transparent flex flex-col justify-center items-start"
-      >
+        class="h-full z-10 bg-background-light dark:bg-background-dark bg-opacity-60 dark:bg-opacity-60 flex flex-col justify-center items-start">
         <div class="p-5 mt-24 lg:px-16 2xl:px-20">
-          <h1 class="text-5xl md:text-8xl font-mono uppercase">Chrono-biography</h1>
+          <h1 class="text-5xl md:text-8xl font-mono uppercase text-black dark:text-white-shade">Chrono-biography</h1>
           <p class="md:w-1/2 text-primary text-3xl mt-5">December 30, 1910 - November 18th, 1999</p>
         </div>
         <div class="p-5 lg:px-16 2xl:px-20 mt-5">
-          <a
-            href="#content"
-            class="w-20 h-20 md:w-32 md:h-32 flex justify-center items-center rounded-full border-[2px] border-[currentColor] dark:border-white-shade hover:opacity-75"
-          >
+          <a href="#content"
+            class="w-20 h-20 md:w-32 md:h-32 flex justify-center items-center rounded-full border-[2px] text-black border-black dark:border-white-shade dark:text-white-shade hover:opacity-75">
             <p class="text-5xl md:text-7xl animate-bounce">&DownArrow;</p>
           </a>
         </div>
       </div>
-      <img
-        src="@/assets/imgs/chronology.png"
-        class="absolute top-0 right-0 w-full h-full object-cover md:object-scale-down md:object-right-top"
-      />
     </div>
     <div
-      class="fixed top-20 right-0 left-0 px-5 md:px-16 py-3 z-30 backdrop-blur-sm bg-background-light dark:bg-background-dark bg-opacity-30 dark:bg-opacity-30 transition-all flex overflow-auto md:flex-wrap gap-x-5 gap-y-3"
-    >
-      <a
-        :href="'#' + item.year"
-        class="inline-block px-2 mr-5 flex-shrink-0 hover:text-primary"
-        v-for="(item, i) in chronology"
-        :key="i"
-      >
+      class="fixed top-20 right-0 left-0 px-5 md:px-16 py-3 z-30 backdrop-blur-sm bg-background-light dark:bg-background-dark bg-opacity-30 dark:bg-opacity-30 transition-all flex overflow-auto md:flex-wrap gap-x-5 gap-y-3">
+      <a :href="'#' + item.year" class="inline-block px-2 mr-5 flex-shrink-0 hover:text-primary"
+        v-for="(item, i) in chronology" :key="i">
         {{ item.year }}
       </a>
     </div>

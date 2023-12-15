@@ -1,13 +1,15 @@
 <script lang="ts" setup>
-import { getTranslations } from '@/services/translations';
-import { onMounted, reactive } from 'vue';
-import TranslationModal from '@/components/TranslationModal.vue';
+import { getTranslations, getTranslationsByQuery } from '@/services/translations';
+import { onMounted, reactive, ref } from 'vue';
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue';
 import { useThemeStore } from '@/stores/theme';
 import { getUrl } from '@/services/misc';
 
 import { useHead } from '@unhead/vue'
-useHead({ title: `Paul Bowles' Library` })
+import { useRoute } from 'vue-router';
+useHead({ title: `Paul Bowles's Library` })
+
+const route = useRoute();
 
 
 let pagination = reactive({
@@ -15,10 +17,14 @@ let pagination = reactive({
   previous: null,
   page: null
 });
-const translations = reactive({ items: [] });
-const modal = reactive({ opened: false, data: {} })
+const translations = reactive({ items: [] as any });
+const formRef = ref(null);
+const filter = reactive({
+  keyword: '',
+  category: '' as any,
+});
 
-const getStepUrl = async function(url: string) {
+const getStepUrl = async function (url: any) {
   setLoading(true);
   try {
     const response = await getUrl(url)
@@ -26,26 +32,22 @@ const getStepUrl = async function(url: string) {
     pagination.previous = response.data.previous
     translations.items = response.data.results
     setLoading(false);
-  } catch (error) {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  } catch (error: any) {
     console.log(error);
     setError(error);
   }
 }
 
-const setLoading = function(val: boolean) {
+const setLoading = function (val: boolean) {
   useThemeStore().updateLoading(val)
 }
 
-const setError = function(val: string) {
+const setError = function (val: string) {
   useThemeStore().updateError(val)
 }
 
-const openModal = function(item:Object) {
-  modal.opened = true;
-  modal.data = item;
-}
-
-const fetchTranslations = async function() {
+const fetchTranslations = async function () {
   try {
     const response = await getTranslations();
     pagination.next = response.data.next
@@ -55,10 +57,31 @@ const fetchTranslations = async function() {
   } catch (error) {
     console.log(error);
   }
+
+  setLoading(false);
+}
+
+const filterTranslations = async function () {
+  setLoading(true);
+  try {
+    const response = await getTranslationsByQuery(filter.category);
+    pagination.next = response.data.next
+    pagination.previous = response.data.previous
+    translations.items = response.data.results
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  } catch (error) {
+    console.log(error);
+  }
+  setLoading(false);
 }
 
 onMounted(async () => {
-  await fetchTranslations();
+  if (route.query.category) {
+    filter.category = route.query.category;
+    await filterTranslations()
+  } else {
+    await fetchTranslations();
+  }
 })
 
 </script>
@@ -67,67 +90,59 @@ onMounted(async () => {
   <div class="">
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
-        <h1 class="text-5xl md:text-6xl font-heading uppercase">translations</h1>
-        <router-link to="/translation" class="hover:opacity-75 hover:-translate-x-5 transition-transform">
+        <h1 class="text-3xl md:text-6xl font-heading uppercase">translations</h1>
+        <router-link to="/translation"
+          class="hover:opacity-75 scale-50 md:scale-100 hover:-translate-x-5 transition-transform">
           <icon-back />
         </router-link>
       </div>
     </div>
-    <div
-      class="py-10 lg:px-16 2xl:px-20"
-    >
+    <div class="mx-5 mb-10 lg:mx-16 2xl:mx-20 p-10 rounded-xl text-xl bg-white sticky top-20">
+      <el-form :model="filter" ref="formRef" @submit.prevent="filterTranslations()">
+        <div class="flex flex-col md:flex-row gap-5">
+          <el-input v-model="filter.keyword" class="md:w-2/3" size="large" placeholder="Author, Title, or Keyword" />
+          <el-select class="md:w-1/3" v-model="filter.category" size="large">
+            <el-option value="" label="All" />
+            <el-option value="From Moghrebi" label="From Moghrebi" />
+            <el-option value="From Spanish" label="From Spanish" />
+            <el-option value="From French" label="From French" />
+          </el-select>
+          <el-button class="md:w-auto bg-primary" type="primary" size="large"
+            @click="filterTranslations()">Search</el-button>
+        </div>
+      </el-form>
+    </div>
+    <div class="py-10 lg:px-16 2xl:px-20">
       <div class="grid gap-x-5 gap-y-10 grid-cols-1 md:grid-cols-4 w-full">
-        <div class="w-full flex flex-col" v-for="item in translations.items" :key="item.id">
-          <img
-            :src="'https://res.cloudinary.com/dbrvleydy/' + item.cover_image"
-            class="w-1/2 md:w-3/4 h-64 rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer"
-            @click="openModal(item)"
-          />
+        <router-link :to="`/translation/${item.id}`" class="w-full flex flex-col" v-for="item in translations.items"
+          :key="item.id">
+          <div class="flex-1 flex items-center justify-center w-2/3 md:w-3/4 h-full rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer">
+          <img v-if="item.image_urls === ''" src="@/assets/imgs/Image-thumbnail.png" />
+          <img v-else :src="item.image_urls.split(',')[0]" />
+          </div>
           <div class="px-5 md:px-0 mt-5">
             <h2 class="font-semibold">{{ item.title }}</h2>
             <p class="mt-2">
               {{ item.description }}
             </p>
           </div>
-        </div>
+        </router-link>
       </div>
     </div>
     <div class="my-24 mx-auto md:w-64 flex justify-center">
       <el-button-group>
-        <el-button
-          type="primary"
-          size="large"
-          :icon="ArrowLeft"
-          :disabled="pagination.previous === null"
-          @click="getStepUrl(pagination.previous)"
-        >
+        <el-button type="primary" size="large" class="bg-primary" :icon="ArrowLeft"
+          :disabled="pagination.previous === null" @click="getStepUrl(pagination.previous)">
           Prev
         </el-button>
-        <el-button
-          type="primary"
-          size="large"
-          :disabled="pagination.next === null"
-          @click="getStepUrl(pagination.next)"
-        >
+        <el-button type="primary" size="large" class="bg-primary" :disabled="pagination.next === null"
+          @click="getStepUrl(pagination.next)">
           Next
-          <el-icon class="el-icon--right"><ArrowRight /></el-icon>
+          <el-icon class="el-icon--right">
+            <ArrowRight />
+          </el-icon>
         </el-button>
       </el-button-group>
     </div>
   </div>
-  <translation-modal v-if="modal.opened" :item="modal.data" @close="modal.opened = false" />
 </template>
-
-<style lang="scss" scoped>
-.fancy-img {
-  background-color: #E0E3FF;
-  border: none;
-  outline: none;
-  transition: box-shadow 300ms ease-in-out;
-
-  &:hover {
-    box-shadow: 20px -20px 1px #EDC2CF,
-                -20px 20px 1px #BEDDF3;
-  }
-}
-</style>

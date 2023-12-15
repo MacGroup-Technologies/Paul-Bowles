@@ -11,6 +11,7 @@ function guard(to: RouteLocationNormalized, from: RouteLocationNormalized, next:
 }
 
 function setLoading() {
+  useThemeStore().updateError('');
   useThemeStore().updateLoading(true);
 }
 
@@ -31,25 +32,33 @@ const router = createRouter({
           path: '/music',
           name: 'musicPage',
           component: () => import('../views/music/IndexView.vue'),
-          beforeEnter: setLoading
         },
         {
-          path: "/music/:title",
+          path: "/music/paul-bowles-music",
           name: "PaulBowlesMusicPage",
-          component: () => import('../views/music/MusicView.vue'),
+          component: () => import('../views/music/PaulBowlesMusicView.vue'),
+        },
+        {
+          path: "/music/paul-bowles-music/:title",
+          name: "PaulBowlesSubPage",
+          component: () => import('../views/music/PaulBowlesSubView.vue'),
           beforeEnter: setLoading
         },
         {
-          path: "/music/book/:title",
-          name: "BookMusicPage",
-          component: () => import('../views/music/BookMusicView.vue'),
+          path: "/music/musical-portraits",
+          name: "MusicalPotraitPage",
+          component: () => import('../views/music/MusicalPotraitsView.vue'),
           beforeEnter: setLoading
         },
         {
-          path: "/music/music/:title",
-          name: "MusicMusicPage",
-          component: () => import('../views/music/MusicMusicView.vue'),
-          beforeEnter: setLoading
+          path: "/music/on-paul-bowless-music",
+          name: "PaulBowlesPage",
+          component: () => import('../views/music/OnPaulBowlesView.vue'),
+        },
+        {
+          path: "/music/on-paul-bowless-music/:title",
+          name: "PaulBowlesMusicView",
+          component: () => import('../views/music/OnPaulBowlesMusicView.vue'),
         },
         {
           path: '/library',
@@ -63,13 +72,19 @@ const router = createRouter({
         },
         {
           path: "/translation",
-          name: "TranslationPage",
+          name: "TranslationHomePage",
           component: () => import('../views/translations/IndexView.vue')
         },
         {
           path: "/translation/list",
           name: "TranslationListPage",
           component: () => import('../views/translations/ListView.vue'),
+          beforeEnter: setLoading
+        },
+        {
+          path: "/translation/:id",
+          name: "TranslationPage",
+          component: () => import('../views/translations/MoghrebiTranslation.vue'),
           beforeEnter: setLoading
         },
         {
@@ -142,7 +157,6 @@ const router = createRouter({
           path: "/photography",
           name: "PhotographyView",
           component: () => import("../views/photography/IndexView.vue"),
-          beforeEnter: setLoading
         },
         {
           path: "/photography/:title",
@@ -181,6 +195,11 @@ const router = createRouter({
           path: "/writings/music-criticism/:title",
           name: "CriticismView",
           component: () => import("../views/writings/CriticismView.vue")
+        },
+        {
+          path: "/writings/Autobiography/:title",
+          name: "AutobiographyView",
+          component: () => import("../views/writings/AutobiographyView.vue")
         },
         {
           path: "/life",
@@ -246,5 +265,15 @@ const router = createRouter({
   }
 });
 
+// router.beforeEach((to) => {
+//   if (to.matched[0].beforeEnter === undefined) {
+//     useThemeStore().updateLoading(false);
+//     return;
+//   }
+//   if (to.matched[1].beforeEnter === null) {
+//     useThemeStore().updateLoading(false);
+//     return;
+//   };
+// })
 
 export default router

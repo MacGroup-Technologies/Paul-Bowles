@@ -63,7 +63,7 @@ window.addEventListener('scroll', function () {
           indebted to Paul, for his writing, which drew me to Tangier in 1953; and for his cherished
           friendship, then and since. I salute him at eighty-two years, as I did at forty-five.
         </p>
-        <p class="font-bold font-heading">
+        <p class="text-right font-bold font-heading">
           William S. Burroughs<br />
           Paul Bowles by His Friends, Peter Owen, London, 1992
         </p>

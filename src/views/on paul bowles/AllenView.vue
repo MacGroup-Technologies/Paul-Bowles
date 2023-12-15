@@ -20,22 +20,13 @@ window.addEventListener('scroll', function () {
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
         <h1 class="text-5xl md:text-6xl font-heading uppercase">Allen Ginsberg</h1>
-        <router-link
-          to="#back"
-          @click.prevent="route.go(-1)"
-          class="hover:opacity-75 hover:-translate-x-5 transition-transform"
-        >
+        <router-link to="#back" @click.prevent="route.go(-1)"
+          class="hover:opacity-75 hover:-translate-x-5 transition-transform">
           <icon-back />
         </router-link>
       </div>
-      <div
-        class="sticky top-0 my-10 py-5 bg-background-light dark:bg-background-dark head flex gap-10"
-      >
-        <img
-          src="@/assets/imgs/Allen-Ginsberg.png"
-          class="md:w-1/3 h-auto transition-all"
-          alt="Allen Ginsberg"
-        />
+      <div class="sticky top-0 my-10 py-5 bg-background-light dark:bg-background-dark head flex gap-10">
+        <img src="@/assets/imgs/Allen-Ginsberg.png" class="md:w-1/3 h-auto transition-all" alt="Allen Ginsberg" />
         <h1 class="text-2xl md:text-4xl md:w-1/2 font-heading uppercase hidden">Allen Ginsberg</h1>
       </div>
       <div class="text-justify">
@@ -64,6 +55,7 @@ window.addEventListener('scroll', function () {
           suspect he would like to make it on wilder greater level. He reads WCW (William Carlos
           Williams) and would maybe order Kora In Hell.
         </p>
+        <p class="text-right font-heading">Allen Ginsberg</p>
       </div>
     </div>
   </div>

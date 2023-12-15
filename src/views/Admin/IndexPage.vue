@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 import { ref, watch, onMounted } from 'vue'
+import type { Ref } from 'vue'
 import { getData } from '@/services/dashboard'
-import type { tab as tabInterface } from '@/interfaces/user';
+import type { tab as tabInterface } from '@/utils/types';
 
-const tab: tabInterface = ref('albums')
+const tab: Ref<tabInterface> = ref('albums')
 const page = ref(1)
-const tabs = ['albums', 'books', 'photos', 'videos']
+const tabs = ['albums', 'books', 'photos', 'videos'] as tabInterface[]
 const tableData = ref([])
 
 const fetchData = async function () {
@@ -13,12 +14,13 @@ const fetchData = async function () {
     const response = await getData(tab.value, page.value)
     tableData.value = response.data.results
   } catch (error) {
+    // @ts-ignore
     ElMessage.error(error);
     console.log(error)
   }
 }
 
-onMounted(() => {})
+onMounted(() => { })
 
 watch(tab, () => fetchData())
 </script>
@@ -26,13 +28,9 @@ watch(tab, () => fetchData())
   <div class="">
     <div class="flex gap-5 justify-between">
       <div class="flex gap-5">
-        <div
-          class="py-3 px-5 rounded-3xl capitalize cursor-pointer"
-          :class="tab === item ? 'bg-primary text-white shadow-md' : 'bg-gray-200 text-primary'"
-          @click="tab = item"
-          v-for="item in tabs"
-          :key="item"
-        >
+        <div class="py-3 px-5 rounded-3xl capitalize cursor-pointer"
+          :class="tab === item ? 'bg-primary text-white shadow-md' : 'bg-gray-200 text-primary'" @click="tab = item"
+          v-for="item in tabs" :key="item">
           {{ item }}
         </div>
       </div>

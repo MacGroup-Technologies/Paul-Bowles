@@ -24,13 +24,13 @@ useHead({ title: `Works and Documentaries on Paul Bowles` })
         <li class="mb-5">
           <div class="">
             <b>Halfmoon (a tryptic based on “The Story of Lahcen and Idir”, “Call at Corazón”, and “Allal”)</b>
-             - Frieder Schleich (1995)
+            - Frieder Schleich (1995)
           </div>
         </li>
         <li class="mb-5">
           <div class="">
             <b>The Sky Trembles and the Earth is Afraid (based on “A distant Episode”)</b>
-             - Ben Rivers (2015)
+            - Ben Rivers (2015)
           </div>
         </li>
       </ul>

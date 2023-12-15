@@ -3,6 +3,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { onMounted, reactive, watch } from 'vue'
 import { fetchMusicAlt } from '@/services/music'
 import { useThemeStore } from '@/stores/theme'
+import type { MusicItem } from '@/utils/types'
 import { useHead } from '@unhead/vue'
 
 const router = useRoute()
@@ -10,7 +11,8 @@ const route = useRouter()
 
 useHead({ title: `Paul Bowles ${router.params.title}` })
 
-const music = reactive({ items: [] })
+const music = reactive({ items: [] as MusicItem[] })
+
 const player = reactive({ item: {} })
 
 const setLoading = function (val: boolean) {
@@ -31,7 +33,7 @@ const getMusic = async function () {
     const response = await fetchMusicAlt(params)
     music.items = response.data.results
     setLoading(false)
-  } catch (error) {
+  } catch (error: any) {
     setError(error)
     console.log(error)
   }
@@ -51,11 +53,8 @@ onMounted(async () => {
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
         <h1 class="text-5xl md:text-6xl font-heading uppercase">{{ router.params.title }}</h1>
-        <router-link
-          to="#back"
-          @click.prevent="route.go(-1)"
-          class="hover:opacity-75 hover:-translate-x-5 transition-transform"
-        >
+        <router-link to="#back" @click.prevent="route.go(-1)"
+          class="hover:opacity-75 hover:-translate-x-5 transition-transform">
           <icon-back />
         </router-link>
       </div>
@@ -97,10 +96,7 @@ onMounted(async () => {
           </div>
           <div
             class="flex flex-col md:flex-row gap-3 md:gap-0 mb-3 py-5 cursor-pointer md:px-10 rounded-xl transition hover:bg-white hover:text-black hober:shadow"
-            v-for="(item, index) in music.items"
-            :key="item.id"
-            @click="player.item = item"
-          >
+            v-for="(item, index) in music.items" :key="item.id" @click="player.item = item">
             <div class="w-10">{{ index + 1 }}</div>
             <div class="px-20" />
             <div class="w-full">

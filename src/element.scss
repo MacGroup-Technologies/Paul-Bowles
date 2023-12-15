@@ -6,3 +6,15 @@
     ),
   )
 );
+
+.fancy-img {
+  background-color: #E0E3FF;
+  border: none;
+  outline: none;
+  transition: box-shadow 300ms ease-in-out;
+
+  &:hover {
+    box-shadow: 20px -20px 1px #EDC2CF,
+                -20px 20px 1px #BEDDF3;
+  }
+}

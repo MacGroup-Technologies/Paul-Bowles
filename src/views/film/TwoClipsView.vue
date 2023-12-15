@@ -7,7 +7,7 @@ import { useHead } from '@unhead/vue'
 useHead({ title: `Two Clips` })
 
 
-const clips = reactive({items: []})
+const clips = reactive({items: [] as any})
 const pagination = reactive({
   next: null,
   previous: null
@@ -28,7 +28,7 @@ const getTwoClips = async function () {
     pagination.next = response.data.next
     pagination.previous = response.data.previous
     setLoading(false)
-  } catch (error) {
+  } catch (error: any) {
     setError(error)
     console.log(error);
   }
@@ -49,10 +49,11 @@ onMounted(() => {
       </div>
     </div>
     <div class="px-5 py-10 lg:px-16 2xl:px-20 grid place-items-stretch gap-5 grid-cols-1 md:grid-cols-2">
-        <div class="block bg-white dark:bg-opacity-10 hover:-translate-y-2 transition-transform p-5 rounded-xl" v-for="item in clips.items" :key="item.id">
+      <template v-for="item in clips.items" :key="item.id">
+        <div class="block bg-white dark:bg-opacity-10 hover:-translate-y-2 transition-transform p-5 rounded-xl" v-if="item.attachment_url">
           <div class="flex justify-center items-center bg-primary-light rounded-xl">
             <video class="w-full h-auto rounded-xl" preload="metadata" controls>
-              <source :src="'https://res.cloudinary.com/dbrvleydy/'+item.video_file + '#t=0.1'" type="video/mp4">
+              <source :src="item.attachment_url + '#t=0.1'" type="video/mp4">
             </video>
           </div>
           <div class="py-5 px-3">
@@ -60,6 +61,7 @@ onMounted(() => {
             <p class="mt-2">{{ item.description }}</p>
           </div>
         </div>
+      </template>
     </div>
   </div>
 </template>

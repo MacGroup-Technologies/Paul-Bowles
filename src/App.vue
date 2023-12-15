@@ -14,10 +14,8 @@ const loading = computed(() => {
 
 
 const themeChanger = function() {
-  if (
-    theme.value === 'dark' ||
-    (window.matchMedia('(prefers-color-scheme: dark)').matches)
-  ) {
+  if (theme.value === 'dark')
+   {
     document.documentElement.classList.add('dark')
   } else {
     document.documentElement.classList.remove('dark')

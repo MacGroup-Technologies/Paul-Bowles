@@ -11,11 +11,15 @@ export function fetchMusicPhotoAlt(altTag: any) {
 }
 
 export function fetchMusicBookAlt(alt: any) {
-  return axios.get(`${baseURL}/v1/archive/books/?alttag=${alt}`)
+  return axios.get(`${baseURL}/v1/archive/writings/?website_tag=${alt}`)
+}
+
+export function fetchMusicalPortraits() {
+  return axios.get(`${baseURL}/v1/archive/music/?music_category=Musical Portraits and Homages`)
 }
 
 export function fetchMusicAlt(alt: any) {
-  return axios.get(`${baseURL}/v1/archive/music/?alttag=${alt}`)
+  return axios.get(`${baseURL}/v1/archive/music/?music_category=Paul Bowles's Music>${alt}`)
 }
 
 export function fetchOnPaulBowlesMusic() {

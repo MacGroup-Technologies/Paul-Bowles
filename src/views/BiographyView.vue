@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useHead } from '@unhead/vue'
 
-useHead({ title: `Paul Bowles' Biography` })
+useHead({ title: `Paul Bowles's Biography` })
 </script>
 <template>
   <div class="">
@@ -34,12 +34,12 @@ useHead({ title: `Paul Bowles' Biography` })
     <a name="content" />
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 text-justify">
       “A night with thunder in the sky he packed his bag and left,” Paul Bowles wrote in a short
-      autobiographical piece in 1986–referring to an escape from his parents’ home in New York City
+      autobiographical piece in 1986&#8212;referring to an escape from his parents’ home in New York City
       to Paris in 1929, at the age of eighteen, after tossing a coin to decide whether he should
       travel to Europe or commit suicide. At the time he had already seen some of his poems
       published in <i>transition</i>, the experimental literary journal published in Paris from 1927
       till 1938, and he was also an aspiring composer. <br /><br />
-      His long creative life oscillated between writing words–poems, short stories, novels,
+      His long creative life oscillated between writing words&#8212;poems, short stories, novels,
       travel–and composing music–songs, piano pieces, concertos, ballets, scores for theater and
       film.
       <br /><br />
@@ -47,14 +47,14 @@ useHead({ title: `Paul Bowles' Biography` })
       means, from Latin America to North Africa and South Asia, and both his literature and his
       music carry the marks of his extensive travels.
       <br /><br />
-      A free and fearless spirit–as some of his friends described him–he experimented in several
+      A free and fearless spirit&mdash;as some of his friends described him&mdash;he experimented in several
       kinds of transgression, and in his work and private life he made few concessions to
       convention.
       <br /><br />
       Toward the end he liked to claim he had no ego, that the accidents in the life of a creative
       artist are of no import, that only the work matters.
     </div>
-    <p class="px-5 lg:px-16 2xl:px-20 text-xl lg:text-2xl text-justify text-primary font-bold font-heading">
+    <p class="text-right px-5 lg:px-16 2xl:px-20 text-xl lg:text-2xl text-primary font-bold font-heading">
       Rodrigo Rey Rosa
     </p>
   </div>

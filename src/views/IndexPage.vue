@@ -9,8 +9,9 @@ const menutoggler = ref(false)
 const themeStore = useThemeStore()
 const tl = gsap.timeline()
 const links = [
+  { title: 'life', link: 'life' },
   { title: 'music', link: 'music' },
-  { title: 'translation', link: 'translation' },
+  { title: 'translations', link: 'translation' },
   { title: 'library', link: 'library' },
   { title: 'chronology', link: 'chronology' },
   { title: 'photography', link: 'photography' },

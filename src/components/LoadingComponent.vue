@@ -1,16 +1,10 @@
 <script lang="ts" setup>
 import { useThemeStore } from "@/stores/theme";
-import { computed, ref } from "vue";
+import { ref } from "vue";
 
-const error = computed(() => {
-  return useThemeStore().error;
-})
+const error = useThemeStore().error;
 
 const slow = ref(false)
-
-const animateLogo = computed(() => {
-  return error.value ?? true
-})
 
 setTimeout(() => {
   slow.value = true
@@ -20,7 +14,7 @@ setTimeout(() => {
 <template>
   <div class="fixed top-0 right-0 bottom-0 left-0 bg-background-light dark:bg-background-dark z-[99] flex justify-center items-center">
     <div class="text-center">
-      <icon-logo class="h-10 inline" :class="animateLogo ? 'animate-ping' : ''" />
+      <icon-logo class="h-10 inline animate-ping" />
       <p class="mt-20 text-xl text-background-dark dark:text-background-light" v-if="error">
         An error occured: <i class="text-red-600">{{ error }}</i>
       </p>

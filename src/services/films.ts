@@ -7,5 +7,5 @@ export function fetchFilms(tag = "film") {
 }
 
 export function fetchTwoClips() {
-  return axios.get(`${baseURL}/v1/archive/videos/?alttag=Two Clips`);
+  return axios.get(`${baseURL}/v1/archive/images/?image_category=Two Films`);
 }
