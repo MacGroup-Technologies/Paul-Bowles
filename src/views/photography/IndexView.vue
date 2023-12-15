@@ -9,10 +9,12 @@ import PaulBowlesArchieve from '@/assets/imgs/PaulBowlesArchive.jpg';
 
 const photography = reactive([
   {
+    id: 0,
     title: 'Portraits by Cherie Nutting',
     image: Potrait,
   },
   {
+    id: 2,
     title: 'Paul Bowles Archive at Fotostiftung Schweiz',
     image: PaulBowlesArchieve,
   }
@@ -42,11 +44,18 @@ const photography = reactive([
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <router-link :to="'/photography/' + encodeURI(item.title)"
-          class="block p-2 bg-primary-light rounded-3xl transition-transform hover:-translate-y-3"
+          class="group/image block p-2 bg-primary-light rounded-3xl transition-transform hover:-translate-y-3"
           v-for="(item, index) in photography" :key="index">
           <div class="w-full h-[500px] bg-center bg-no-repeat bg-cover rounded-3xl"
             :style="`background-image: url(${item.image})`" />
-          <h2 class="text-background-dark m-5 mt-7">{{ item.title }}</h2>
+          <h2 class="text-background-dark m-5 mt-7">
+            {{ item.title }}
+            <span v-if="item.id == 0" class="group-hover/image:opacity-100 opacity-0 transition-opacity block text-sm">
+              Photograph was taken
+              by
+              Jeffrey Miller
+            </span>
+          </h2>
         </router-link>
       </div>
     </div>
