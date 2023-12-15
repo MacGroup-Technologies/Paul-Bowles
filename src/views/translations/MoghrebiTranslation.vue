@@ -7,6 +7,7 @@ import { useRoute } from 'vue-router';
 import { getTranslationsById } from '../../services/translations';
 
 import ImageViewerModal from '@/components/ImageViewerModal.vue';
+import VueMagnifier from '@websitebeaver/vue-magnifier'
 
 const modal = reactive({ opened: false, items: {}, active_index: 0 });
 const openModal = async function (items: string[], active_index = 0) {
@@ -59,16 +60,20 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
 
     <div class="px-5 py-5 lg:px-16 2xl:px-20" v-if="translation.data.title !== ''">
       <div class="flex flex-col md:flex-row justify-between">
-        <div class="text-2xl md:w-2/3">
-          <b>Author:</b> {{ translation.data.author }}<br />
-          <b>DATE:</b> {{ translation.data.date === '' ? translation.data.date_of_publication_w : translation.data.date
-          }}<br />
-          <b>PUBLISHER:</b> {{ translation.data.publisher }}<br />
-          <b>PLACE OF PUBLICATION:</b> {{ translation.data.place_of_publication }}<br />
+        <div class="flex-1 overflow-hidden relative py-20">
+          <div class="absolute inset-0 opacity-60 blur-md">
+            <VueMagnifier class="translate-y-[-50%] scale-125" :src="translation.img.split(',')[0]" />
+          </div>
+          <div class="text-2xl text-center relative">
+            <img v-if="translation.img === ''" src="@/assets/imgs/Image-thumbnail.png"
+              class="w-auto h-auto rounded-[22px] fancy-img mb-2 mx-5 md:mx-auto cursor-pointer" />
+            <b>Author:</b> {{ translation.data.author }}<br />
+            <b>DATE:</b> {{ translation.data.date === '' ? translation.data.date_of_publication_w : translation.data.date
+            }}<br />
+            <b>PUBLISHER:</b> {{ translation.data.publisher }}<br />
+            <b>PLACE OF PUBLICATION:</b> {{ translation.data.place_of_publication }}<br />
+          </div>
         </div>
-        <img v-if="translation.img === ''" src="@/assets/imgs/Image-thumbnail.png"
-          class="w-auto h-auto rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer" />
-        <img :src="translation.img.split(',')[0]" class="w-1/2 md:w-80 h-auto" v-else />
       </div>
       <div class="my-10 text-2xl">
         <p v-html="translation.data.blocks_rows_0_text" v-if="translation.data.blocks_rows_0_text !== ''" />
@@ -87,7 +92,7 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
       </div>
       <div
         class="flex items-center flex-col md:flex-row md:overflow-x-auto pb-5 scrollbar-thin scrollbar-thumb-primary gap-10"
-        v-if="translation.img.split(',').length !== 0">
+        v-if="translation.img.split(',').length !== 0 && translation.img !== ''">
         <img @click="() => openModal(translation.img.split(','), index)" :src="img"
           class="cursor-pointer w-[200px] h-[200px] object-cover" v-for="(img, index) in translation.img.split(',')"
           :key="index" lazy />
