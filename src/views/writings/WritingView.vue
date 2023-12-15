@@ -9,7 +9,7 @@ import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue';
 
 const router = useRoute()
 const route = useRouter()
-const writing = reactive({ next: null, previous: null, item: [] as any })
+const writing = reactive({ next: "", previous: "", item: [] as any })
 
 const setLoading = function (val: boolean) {
   useThemeStore().updateLoading(val)
@@ -41,7 +41,7 @@ const fetchWriting = async function () {
     case 'Travels':
       params = 'Travel';
       break;
-  
+
     default:
       params = router.params.title;
       break;
@@ -70,11 +70,8 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
         <h1 class="text-3xl md:text-6xl font-heading uppercase">{{ router.params.title }}</h1>
-        <router-link
-          to="#back"
-          @click.prevent="route.go(-1)"
-          class="hover:opacity-75 scale-75 md:scale-100 hover:-translate-x-5 transition-transform"
-        >
+        <router-link to="#back" @click.prevent="route.go(-1)"
+          class="hover:opacity-75 scale-75 md:scale-100 hover:-translate-x-5 transition-transform">
           <icon-back />
         </router-link>
       </div>
@@ -95,10 +92,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
         <i>Let it Come Down</i> and <i>The Spider's House</i>. Up Above the World is set in Central
         America, and <i>Too Far from Home</i>, a novella, in Mali.
       </p>
-      <p
-        class="mt-16 text-justify"
-        v-else-if="router.params.title === 'Contributions to Periodicals'"
-      >
+      <p class="mt-16 text-justify" v-else-if="router.params.title === 'Contributions to Periodicals'">
         By the time of his death in Tangier, Morocco, in 1999, Paul Bowles had become a legendary
         figure in modern literary culture. The range of his literary work includes poems, short
         stories, novels, travel writing, essays, music criticism, autobiography, and translations.
@@ -116,35 +110,21 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
         <i>Tribune</i>, Bowles wrote more than four hundred music reviews and columns, many of which
         focused on Latin American and North African music.
       </p>
-      <div
-        class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10"
-        v-if="router.params.title === 'Music Criticism'"
-      >
-        <router-link
-          :to="`music-criticism/${item.title}`"
-          class="block rounded overflow-hidden"
-          v-for="item in writing.item"
-          :key="item.id"
-        >
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10" v-if="router.params.title === 'Music Criticism'">
+        <router-link :to="`music-criticism/${item.title}`" class="block rounded overflow-hidden"
+          v-for="item in writing.item" :key="item.id">
           <img src="@/assets/imgs/Writings-thumbnail.png" />
           <h3 class="underline mt-4">{{ item.title }}</h3>
         </router-link>
       </div>
-      <div
-        class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10"
-        v-else-if="router.params.title === 'Autobiography'"
-      >
-        <router-link
-          :to="`Autobiography/${item.title}`"
-          class="block rounded overflow-hidden"
-          v-for="item in writing.item"
-          :key="item.id"
-        >
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10" v-else-if="router.params.title === 'Autobiography'">
+        <router-link :to="`Autobiography/${item.title}`" class="block rounded overflow-hidden"
+          v-for="item in writing.item" :key="item.id">
           <img src="@/assets/imgs/Writings-thumbnail.png" />
           <h3 class="underline mt-4">{{ item.title }}</h3>
         </router-link>
       </div>
-      <ol class="list-decimal mt-10 ml-10" v-else-if="router.params.title ===  'Contributions to Periodicals' ">
+      <ol class="list-decimal mt-10 ml-10" v-else-if="router.params.title === 'Contributions to Periodicals'">
         <li v-for="item in writing.item" :key="item.id">
           <h3 class="mt-4">{{ item.title }}</h3>
         </li>
@@ -157,12 +137,16 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
       </div>
       <div class="flex justify-center mt-10" v-if="router.params.title !== 'Autobiography'">
         <el-button-group>
-          <el-button type="primary" class="bg-primary" :icon="ArrowLeft" style="padding: 20px 25px" :disabled="writing.previous === null"  @click="loadUrl(writing.previous)">
+          <el-button type="primary" class="bg-primary" :icon="ArrowLeft" style="padding: 20px 25px"
+            :disabled="writing.previous === ''" @click="loadUrl(writing.previous)">
             Previous Page
           </el-button>
-          <el-button type="primary" class="bg-primary" style="padding: 20px 25px" :disabled="writing.next === null" @click="loadUrl(writing.next)">
+          <el-button type="primary" class="bg-primary" style="padding: 20px 25px" :disabled="writing.next === ''"
+            @click="loadUrl(writing.next)">
             Next Page
-            <el-icon class="el-icon--right"><ArrowRight /></el-icon>
+            <el-icon class="el-icon--right">
+              <ArrowRight />
+            </el-icon>
           </el-button>
         </el-button-group>
       </div>

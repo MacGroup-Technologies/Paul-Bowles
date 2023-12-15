@@ -2,6 +2,7 @@
 import { useRoute } from "vue-router";
 import { onMounted, reactive, watch } from 'vue';
 import { fetchMusicPhotoAlt, fetchOnPaulBowlesMusic } from "@/services/music";
+import type { MusicItem } from '@/utils/types'
 import { useThemeStore } from '@/stores/theme';
 import { useHead } from '@unhead/vue'
 
@@ -9,29 +10,29 @@ const router = useRoute()
 
 useHead({ title: `Paul Bowles ${router.params.title}` })
 
-const music = reactive({ items: [] })
+const music = reactive({ items: [] as MusicItem[] })
 
 
-const setLoading = function(val: boolean) {
+const setLoading = function (val: boolean) {
   useThemeStore().updateLoading(val)
 }
 
-const setError = function(val: string) {
+const setError = function (val: string) {
   useThemeStore().updateError(val)
 }
-const getMusic = async function() {
+const getMusic = async function () {
   try {
     let response;
     if (router.params.title === "On Paul Bowles's Music") {
       response = await fetchOnPaulBowlesMusic();
     } else if (router.params.title === "Paul Bowles's Music") {
       response = await fetchMusicPhotoAlt("Paul Bowles Music");
-    }else {
+    } else {
       response = await fetchMusicPhotoAlt(router.params.title);
     }
     music.items = response.data.results
     setLoading(false)
-  } catch(error) {
+  } catch (error: any) {
     setError(error)
     console.log(error)
   }
@@ -55,15 +56,10 @@ onMounted(async () => {
           <icon-back />
         </router-link>
       </div>
-      <div
-        class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center pt-28 lg:px-16 2xl:px-20 text-xl lg:text-2xl"
-        v-if="music.items.length !== 0"
-      >
-        <router-link
-          :to="`/music/${router.params.title === 'Paul Bowles\'s Music' ? 'music/' : 'book/'}${item.title}`"
-          class="flex flex-col items-center gap-3"
-          v-for="item in music.items" :key="item.id"
-        >
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center pt-28 lg:px-16 2xl:px-20 text-xl lg:text-2xl"
+        v-if="music.items.length !== 0">
+        <router-link :to="`/music/${router.params.title === 'Paul Bowles\'s Music' ? 'music/' : 'book/'}${item.title}`"
+          class="flex flex-col items-center gap-3" v-for="item in music.items" :key="item.id">
           <div class="bg-primary-light w-80 px-20 py-28 rounded-md flex justify-center items-center">
             <icon-music />
           </div>

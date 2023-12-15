@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useRoute } from "vue-router"
+// @ts-ignore
 import { adminRoutes } from '@/utils/constant'
 
 const route = useRoute()
@@ -10,19 +11,15 @@ const route = useRoute()
       <div class="w-1/5 h-full">
         <nav class="bg-black bg-opacity-10 h-full flex flex-col overflow-hidden">
           <div class="h-full">
-            <div
-              class="h-1/6 flex flex-col justify-center items-center mx-3 border-b border-black"
-            >
+            <div class="h-1/6 flex flex-col justify-center items-center mx-3 border-b border-black">
               <icon-logo class="w-40 text-white" />
             </div>
             <h3 class="uppercase font-semibold text-gray-500 text-sm mx-3 my-5">Navigation links</h3>
             <ul class="">
               <li v-for="routes in adminRoutes" :key="routes.title">
-                <router-link
-                  :to="routes.link"
+                <router-link :to="routes.link"
                   :class="route.path === routes.link ? 'bg-black text-white-shade' : 'bg-transparent text-black'"
-                  class="block p-3 mb-2 border-l-4 border-black hover:bg-black hover:text-white-shade transition-all font-bold text-lg"
-                >
+                  class="block p-3 mb-2 border-l-4 border-black hover:bg-black hover:text-white-shade transition-all font-bold text-lg">
                   {{ routes.title }}
                 </router-link>
               </li>

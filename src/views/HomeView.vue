@@ -3,6 +3,7 @@
 import { onMounted, reactive, watchEffect, ref, computed } from 'vue';
 import gsap from 'gsap'
 import { CSSPlugin } from 'gsap/CSSPlugin'
+// @ts-ignore
 import breakpoints from '@/utils/breakpoints.js'
 import { useHead } from '@unhead/vue'
 import { useThemeStore } from '../stores/theme';

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import { reactive, ref } from 'vue';
-  import { FormInstance, FormRules } from 'element-plus'
+  import type { FormInstance, FormRules } from 'element-plus'
   import { useHead } from "@unhead/vue"
 
   const wylie = reactive({
@@ -85,7 +85,7 @@
 </script>
 <template>
   <div class="">
-    <div class="h-screen overflow-hidden bg-background-light dark:bg-background-dark relative bg-[url('@/assets/imgs/Contact.png')]">
+    <div class="h-screen overflow-hidden bg-background-light dark:bg-background-dark relative bg-[url('@/assets/imgs/contact.png')]">
       <div
         class="h-full z-10 bg-background-light dark:bg-background-dark bg-opacity-60 dark:bg-opacity-60 flex flex-col justify-center items-start"
       >
