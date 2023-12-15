@@ -196,8 +196,7 @@ const chronology = [
       <div
         class="h-full z-10 bg-background-light dark:bg-background-dark bg-opacity-60 dark:bg-opacity-60 flex flex-col justify-center items-start">
         <div class="p-5 mt-24 lg:px-16 2xl:px-20">
-          <h1 class="text-5xl md:text-8xl font-mono uppercase text-black dark:text-white-shade">Chrono&mdash;biography
-          </h1>
+          <h1 class="text-5xl md:text-8xl font-mono uppercase text-black dark:text-white-shade">Chronology</h1>
           <p class="md:w-1/2 text-primary text-3xl mt-5">December 30, 1910 &mdash; November 18th, 1999</p>
         </div>
         <div class="p-5 lg:px-16 2xl:px-20 mt-5">
