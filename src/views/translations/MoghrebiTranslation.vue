@@ -75,6 +75,13 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
           </div>
         </div>
       </div>
+      <div v-if="translation.data.attachment_url?.split(',')[0].endsWith('.mp3')" class="space-y-2 mt-4 ">
+        <p>Listen to audio:</p>
+        <audio controls class="w-full" autoplay>
+          <source :src="translation.data.attachment_url.split(',')[0]" type="audio/mpeg" />
+          <div class="text-red-500 font-bold p-5 border-red-300">Your device does not support audio</div>
+        </audio>
+      </div>
       <div class="my-10 text-2xl">
         <p v-html="translation.data.blocks_rows_0_text" v-if="translation.data.blocks_rows_0_text !== ''" />
         <p v-html="translation.data.blocks_0_column_1" v-else />
