@@ -78,13 +78,13 @@ onMounted(async () => {
     <div class="py-10 lg:px-16 2xl:px-20">
       <div class="grid gap-x-5 gap-y-10 grid-cols-1 md:grid-cols-4 w-full">
         <div class="w-full flex flex-col px-10 md:px-0" v-for="item in library.items" :key="item.id">
-          <img v-if="item.image_urls === ''" src="@/assets/imgs/Image-thumbnail.png"
+          <img v-if="item.image_urls === ''" src="@/assets/imgs/library-thumbnail.png"
             class="w-full h-auto md:w-3/4 md:h-64 rounded-[22px] fancy-img my-0 md:mx-auto cursor-pointer"
             @click="openModal(item)" />
           <img v-else :src="item.image_urls.split('|')[0]"
             class="w-auto md:w-3/4 h-64 rounded-[22px] fancy-img my-0 md:mx-auto cursor-pointer"
             @click="openModal(item)" />
-          <div class="px-5 md:px-0 mt-5">
+          <div class="px-5 md:px-0 mt-5 text-center">
             <h2 class="font-semibold">{{ item.title }}</h2>
             <p class="mt-2">
               {{ item.author }}
