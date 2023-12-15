@@ -116,10 +116,10 @@ onMounted(async () => {
       <div class="grid gap-x-5 gap-y-10 grid-cols-1 md:grid-cols-4 w-full">
         <router-link :to="`/translation/${item.id}`" class="w-full flex flex-col" v-for="item in translations.items"
           :key="item.id">
-          <img v-if="item.image_urls === ''" src="@/assets/imgs/Image-thumbnail.png"
-            class="w-2/3 md:w-3/4 h-auto rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer" />
-          <img v-else :src="item.image_urls.split(',')[0]"
-            class="w-2/3 md:w-3/4 h-auto rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer" />
+          <div class="flex-1 flex items-center justify-center w-2/3 md:w-3/4 h-full rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer">
+          <img v-if="item.image_urls === ''" src="@/assets/imgs/Image-thumbnail.png" />
+          <img v-else :src="item.image_urls.split(',')[0]" />
+          </div>
           <div class="px-5 md:px-0 mt-5">
             <h2 class="font-semibold">{{ item.title }}</h2>
             <p class="mt-2">
