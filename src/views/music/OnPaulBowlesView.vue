@@ -7,7 +7,7 @@ useHead({ title: "On Paul Bowles Music" })
 const route = useRouter()
 
 const music = [
-  'Berstein',
+  'Leonard Bernstein',
   'Paul Bowles, Composer',
   'Virgil Thompson - Twelfth Night',
   'Rey Rosa - The Return Trip',
@@ -30,9 +30,7 @@ const music = [
           class="grid grid-cols-1 md:grid-cols-3 gap-20 2xl:gap-48 justify-between py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl text-center">
           <router-link :to="'/music/on-paul-bowless-music/' + encodeURI(item)" class="flex flex-col items-center gap-3"
             v-for="(item, index) in music" :key="index">
-            <div class="bg-primary-light w-80 px-20 py-28 rounded-md flex justify-center items-center">
-              <icon-musical />
-            </div>
+            <img src="@/assets/imgs/music-thumbnail.png" alt="">
             {{ item }}
           </router-link>
         </div>

@@ -20,10 +20,9 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
           <icon-back />
         </router-link>
       </div>
-      <div class="mt-10" v-if="route.params.title === 'Berstein'">
-        <b>Handwritten note by Leonard Bernstein to professor Lawrence J. Shifreen in a letter dated
-          03/10/77</b>
-        <p class="my-3">
+      <div class="mt-10" v-if="route.params.title === 'Leonard Bernstein'">
+        <b>Handwritten note by Leonard Bernstein to professor Lawrence J. Shifreen in a letter dated 03/10/77</b>
+        <p class="my-6">
           I have always regretted the fact that Paul stopped composing. He had a genuine gift, a
           highly original sense of how to “modernize” traditional materials. He has done the same
           thing with words in his precise and quasi-Victorian way of presenting the primitive and
