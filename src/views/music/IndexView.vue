@@ -22,27 +22,22 @@ const music = [
   <div class="">
     <div class="h-screen bg-background-light dark:bg-background-dark relative flex items-center">
       <div
-        class="h-full md:w-full z-10 bg-background-light dark:bg-background-dark bg-opacity-60 dark:bg-opacity-60 flex flex-col justify-center items-start"
-      >
+        class="h-full md:w-full z-10 bg-background-light dark:bg-background-dark bg-opacity-60 dark:bg-opacity-60 flex flex-col justify-center items-start">
         <div class="p-5 lg:px-16 2xl:px-20">
           <h1 class="text-8xl font-mono uppercase">Music</h1>
           <p class="md:w-2/3 text-primary text-3xl mt-10">
-            Bowles composed orchestral works, piano pieces, and  numerous songs.
+            Bowles composed orchestral works, piano pieces, and numerous songs.
           </p>
         </div>
         <div class="p-5 lg:px-16 2xl:px-20 mt-8 md:mt-3">
-          <a
-            href="#content"
-            class="w-20 h-20 md:w-32 md:h-32 flex justify-center items-center rounded-full border-[2px] border-[currentColor] dark:border-white-shade hover:opacity-75"
-          >
+          <a href="#content"
+            class="w-20 h-20 md:w-32 md:h-32 flex justify-center items-center rounded-full border-[2px] border-[currentColor] dark:border-white-shade hover:opacity-75">
             <p class="text-5xl md:text-7xl animate-bounce">&DownArrow;</p>
           </a>
         </div>
       </div>
-      <img
-        src="@/assets/imgs/imagehero-4.png"
-        class="absolute top-0 right-0 w-full h-full object-cover md:object-right-top"
-      />
+      <img src="@/assets/imgs/imagehero-4.png"
+        class="absolute top-0 right-0 w-full h-full object-cover md:object-right-top" />
     </div>
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <a name="content" />
@@ -50,25 +45,18 @@ const music = [
       theater, opera, ballet, and chamber music; soundtracks for art films; piano compositions and
       experimental sound recordings, particularly those of a style often referred to as musique
       concrète.
-    </div> 
+    </div>
     <div
-      class="grid grid-cols-1 md:grid-cols-3 gap-20 2xl:gap-48 justify-between py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl"
-    >
-      <router-link
-        :to="'/music/' + encodeURI(item.link)"
-        class="flex flex-col items-center gap-3"
-        v-for="(item, index) in music"
-        :key="index"
-      >
+      class="grid grid-cols-1 md:grid-cols-3 gap-20 2xl:gap-48 justify-between py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl">
+      <router-link :to="'/music/' + encodeURI(item.link)" class="flex flex-col items-center gap-3"
+        v-for="(item, index) in music" :key="index">
         <div class="bg-primary-light w-80 px-20 py-28 rounded-md flex justify-center items-center">
           <icon-music />
         </div>
         {{ item.title }}
       </router-link>
     </div>
-    <div
-      class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 mb-10 text-justify md:text-left"
-    >
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 mb-10 text-justify md:text-left">
       <h1 class="font-mono font-semibold uppercase text-3xl lg:text-4xl">
         PAUL BOWLES’S MUSICAL WORKS
       </h1>
@@ -192,16 +180,14 @@ const music = [
           <h3 class="">Palais de la Mamounia, June 4, 1966. Music for the chorus(es).</h3>
           <p class="mt-1 text-xl">
             Bowles wrote the following about his music:
-            <i
-              >“The necessity here was for simplicity. To make a virtue out of a necessity, it is
+            <i>“The necessity here was for simplicity. To make a virtue out of a necessity, it is
               convenient to stylize. There are six choruses and I chose a series of six modes of
               highly limited range (certain of which are perhaps somewhat nearer to those of
               present-day Moroccan music than to the well-known modes reputed, but not proven, to
               have been in use in Classical Greece). Each chorus is thus written in its own
               particular mode, without recourse to passing tones. The vocal line is determined
               almost exclusively by consideration of speech-inflections, and the percussive
-              accompaniments are basic and unadorned, in straight binary or ternary meters.”</i
-            >
+              accompaniments are basic and unadorned, in straight binary or ternary meters.”</i>
           </p>
         </li>
         <li class="mt-10">
@@ -217,8 +203,7 @@ const music = [
           </h3>
           <p class="mt-1 text-xl">
             Bowles wrote the following about his music:
-            <i
-              >“When I received the text of The Bacchae, together with a letter from Mr. McPhillips
+            <i>“When I received the text of The Bacchae, together with a letter from Mr. McPhillips
               asking me to provide sound for the American School production of it, I was in Santa
               Monica, California. I took advantage of the fact that at that moment I was preparing a
               similar (that is, taped) score for a production at U.C.L.A. to get on tape the basic
@@ -230,31 +215,28 @@ const music = [
               indeed, some sound vaguely like actual musical instruments. The real instruments here
               are played by eleven Moroccans seated backstage: they perform on the bendir,
               the qasba, the tbel, the tar, and other less usual instruments such as finger
-              cymbals.”</i
-            >
+              cymbals.”</i>
           </p>
         </li>
         <li class="mt-10">
-          <h3>Orestes by Euripides (Palais du Marshan, June 10 - 11, 1978)*</h3>
+          <h3>Orestes by Euripides (Palais du Marshan, June 10 &mdash; 11, 1978)*</h3>
         </li>
         <li class="mt-10">
-          <h3>Caligula by Albert Camus (December 1 - 2, 1978)*</h3>
+          <h3>Caligula by Albert Camus (December 1 &mdash; 2, 1978)*</h3>
         </li>
         <li class="mt-10">
           <h3 class="">
-            Camp Cataract and A Quarrelling Pair by Jane Bowles (June 14 - 15, 1984; adaptations by
+            Camp Cataract and A Quarrelling Pair by Jane Bowles (June 14 &mdash; 15, 1984; adaptations by
             Joseph A. McPhillips, III)
           </h3>
           <p class="text-xl mt-1">
             Another Joseph A. McPhillips adaptation of Camp Cataract was produced professionally in
             Vienna, Austria, in 1991. Truman Capote wrote the following:
-            <i
-              >"Camp Cataract, to my mind the most complete of Mrs. Bowles's stories and the one
+            <i>"Camp Cataract, to my mind the most complete of Mrs. Bowles's stories and the one
               most representative of her work, is a rending sample of controlled compassion: a comic
               tale of doom that has at its heart, and as its heart, the subtlest comprehension of
               eccentricity and human apartment. This story alone would require that we accord Jane
-              Bowles high esteem."</i
-            >
+              Bowles high esteem."</i>
           </p>
         </li>
         <li class="mt-10">
@@ -291,19 +273,19 @@ const music = [
           <h3>Suite of [Three] Mexican Dances for Small Orchestra (1937)</h3>
         </li>
         <li class="mt-10">
-          <h3>Concerto for Two Pianos, Winds and Percussion (1946 - 47)</h3>
+          <h3>Concerto for Two Pianos, Winds and Percussion (1946 &mdash; 47)</h3>
         </li>
         <li class="mt-10">
-          <h3>Version for full orchestra as Concerto for Two Pianos and Orchestra (1947 - 49)</h3>
+          <h3>Version for full orchestra as Concerto for Two Pianos and Orchestra (1947 &mdash; 49)</h3>
         </li>
       </ul>
       <h2 class="mt-10 font-semibold">CHAMBER ENSEMBLE</h2>
       <ul>
         <li class="mt-10">
-          <h3>Music For a Farce (1938) - for small ensemble</h3>
+          <h3>Music For a Farce (1938) &mdash; for small ensemble</h3>
         </li>
         <li class="mt-10">
-          <h3>Prelude and Dance (1947) - lost</h3>
+          <h3>Prelude and Dance (1947) &mdash; lost</h3>
         </li>
       </ul>
       <h2 class="mt-10 font-semibold">CHAMBER MUSIC</h2>
@@ -321,7 +303,7 @@ const music = [
           <h3>Sonata for Violin and Piano (1934)</h3>
         </li>
         <li class="mt-10">
-          <h3>Trio for Violin, Cello, and Piano (1936) - lost</h3>
+          <h3>Trio for Violin, Cello, and Piano (1936) &mdash; lost</h3>
         </li>
         <li class="mt-10">
           <h3>Romantic Suite, for Trumpet, Clarinet, Piano, and Percussion (1938)</h3>
@@ -342,7 +324,7 @@ const music = [
           <h3>Reverie (1932. No. 3 of Four Miniatures)</h3>
         </li>
         <li class="mt-10">
-          <h3>Sonatina (1932 - 33)</h3>
+          <h3>Sonatina (1932 &mdash; 33)</h3>
         </li>
         <li class="mt-10">
           <h3>La Femme de Dakar (1933)</h3>
@@ -388,7 +370,9 @@ const music = [
         <li class="mt-10">
           <h3>Six Preludes for Piano (1938, 1945, 1943, 1934, 1936, 1944)</h3>
         </li>
-        <li class="mt-10"><h3>Folk Preludes (1939)</h3></li>
+        <li class="mt-10">
+          <h3>Folk Preludes (1939)</h3>
+        </li>
         <li class="mt-10">
           <h3>Carretera De Estepona (1939)</h3>
         </li>
@@ -398,34 +382,60 @@ const music = [
         <li class="mt-10">
           <h3>El Bejuco (1943)</h3>
         </li>
-        <li class="mt-10"><h3>Sarabande (1943. No. 4 of Four Miniatures)</h3></li>
-        <li class="mt-10"><h3>Sayula (1946)</h3></li>
-        <li class="mt-10"><h3>Tierra Mojada (Iquitos) (1947)</h3></li>
-        <li class="mt-10"><h3>Orosí (1948)</h3></li>
+        <li class="mt-10">
+          <h3>Sarabande (1943. No. 4 of Four Miniatures)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Sayula (1946)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Tierra Mojada (Iquitos) (1947)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Orosí (1948)</h3>
+        </li>
       </ul>
       <h2 class="mt-10 font-semibold">TWO PIANOS</h2>
       <ul>
-        <li class="mt-10"><h3>Nocturne (1935)</h3></li>
-        <li class="mt-10"><h3>Fantasia (1935) (lost or identical with Nocturne)</h3></li>
-        <li class="mt-10"><h3>Small Suite (1939)</h3></li>
-        <li class="mt-10"><h3>Sonata for Two Pianos (1947)</h3></li>
-        <li class="mt-10"><h3>Night Waltz (1949)</h3></li>
-        <li class="mt-10"><h3>Cross Country (1976)</h3></li>
+        <li class="mt-10">
+          <h3>Nocturne (1935)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Fantasia (1935) (lost or identical with Nocturne)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Small Suite (1939)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Sonata for Two Pianos (1947)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Night Waltz (1949)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Cross Country (1976)</h3>
+        </li>
       </ul>
       <h2 class="mt-10 font-semibold">CHORUS (ACAPPELLA)</h2>
       <ul>
-        <li class="mt-10"><h3>Lullaby (1939)</h3></li>
-        <li class="mt-10"><h3>Tornado Blues (1945)</h3></li>
+        <li class="mt-10">
+          <h3>Lullaby (1939)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Tornado Blues (1945)</h3>
+        </li>
       </ul>
       <h2 class="mt-10 font-semibold">VOCAL WITH ENSEMBLE</h2>
       <ul>
-        <li class="mt-10"><h3>Scènes d'Anabase for Tenor, Piano, Oboe (1932)</h3></li>
         <li class="mt-10">
-          <h3>Cantata, for Soprano, Four Male Voices, and Harmonium (1933) - Text by composer</h3>
+          <h3>Scènes d'Anabase for Tenor, Piano, Oboe (1932)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Cantata, for Soprano, Four Male Voices, and Harmonium (1933) &mdash; Text by composer</h3>
         </li>
         <li class="mt-10">
           <h3>
-            Three Pastoral Songs, for Voice and String Ensemble (1944) - Also with a piano score
+            Three Pastoral Songs, for Voice and String Ensemble (1944) &mdash; Also with a piano score
           </h3>
         </li>
         <li class="mt-10">
@@ -441,13 +451,15 @@ const music = [
         <li class="mt-10">
           <h3>
             Songs (38) from Paul Bowles’s Selected Songs (Santa Fe, New Mexico: Soundings Press,
-            1984) - out of print
+            1984) &mdash; out of print
           </h3>
         </li>
-        <li class="mt-10"><h3>"On a Quiet Conscience" (1947)</h3></li>
+        <li class="mt-10">
+          <h3>"On a Quiet Conscience" (1947)</h3>
+        </li>
         <li class="mt-10">
           <h3>David (1944)</h3>
-          <p class="text-xl mt-1">Possibly published in Young Israel as early as 1935 - 36.</p>
+          <p class="text-xl mt-1">Possibly published in Young Israel as early as 1935 &mdash; 36.</p>
         </li>
         <li class="mt-10">
           <h3>Letter to Freddy - for Voice and Piano (New York: G. Schirmer, Inc., 1947)</h3>
@@ -584,13 +596,27 @@ const music = [
         <li class="mt-10">
           <h3>"Two Skies" (1942)</h3>
         </li>
-        <li class="mt-10"><h3>"The Frozen Horse" (1945)</h3></li>
-        <li class="mt-10"><h3>"When Rain or Love Began" (1946)</h3></li>
-        <li class="mt-10"><h3>"Sailor's Song" (recorded 1946)</h3></li>
-        <li class="mt-10"><h3>"Baby Baby" (1946)</h3></li>
-        <li class="mt-10"><h3>"My Love was Light" (1984)</h3></li>
-        <li class="mt-10"><h3>Twelve American Folk Songs (1939)</h3></li>
-        <li class="mt-10"><h3>Four American Folk Songs (1939)</h3></li>
+        <li class="mt-10">
+          <h3>"The Frozen Horse" (1945)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>"When Rain or Love Began" (1946)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>"Sailor's Song" (recorded 1946)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>"Baby Baby" (1946)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>"My Love was Light" (1984)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Twelve American Folk Songs (1939)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Four American Folk Songs (1939)</h3>
+        </li>
       </ul>
       <h2 class="mt-10 font-semibold">THEATER MUSIC</h2>
       <ul>
@@ -608,7 +634,9 @@ const music = [
         <li class="mt-10">
           <h3>Twelfth Night (1940)*</h3>
         </li>
-        <li class="mt-10"><h3>Liberty Jones (1941)*</h3></li>
+        <li class="mt-10">
+          <h3>Liberty Jones (1941)*</h3>
+        </li>
         <li class="mt-10">
           <h3>Watch on the Rhine (1941)*</h3>
           <p class="text-xl mt-1">
@@ -621,7 +649,9 @@ const music = [
             Play by Dorothy Heyward and Howard Rigsby (not the musical South Pacific)
           </p>
         </li>
-        <li class="mt-10"><h3>'Tis Pity She’s a Whore (1943)*</h3></li>
+        <li class="mt-10">
+          <h3>'Tis Pity She’s a Whore (1943)*</h3>
+        </li>
         <li class="mt-10">
           <h3>The Glass Menagerie (1944)</h3>
           <p class="text-xl mt-1">Music for the play by Tennessee Williams.</p>
@@ -629,7 +659,9 @@ const music = [
         <li class="mt-10">
           <h3>Jacobowsky and the Colonel (1944)*</h3>
         </li>
-        <li class="mt-10"><h3>Ondine (1945)* - not staged</h3></li>
+        <li class="mt-10">
+          <h3>Ondine (1945)* - not staged</h3>
+        </li>
         <li class="mt-10">
           <h3>Cyrano de Bergerac (1946)*</h3>
         </li>
@@ -660,34 +692,81 @@ const music = [
         <li class="mt-10">
           <h3>Elektra (1965)*</h3>
         </li>
-        <li class="mt-10"><h3>Oedipus (1966)*</h3></li>
-        <li class="mt-10"><h3>The Garden (1967)*</h3></li>
-        <li class="mt-10"><h3>Wet and Dry/Alive (1968)*</h3></li>
-        <li class="mt-10"><h3>The Bacchae (1969)*</h3></li>
-        <li class="mt-10"><h3>Bachelor Furnished (1969)*</h3></li>
-        <li class="mt-10"><h3>Orestes (1978)*</h3></li>
-        <li class="mt-10"><h3>Caligula (1978)*</h3></li>
-        <li class="mt-10"><h3>Birdbath (1981)*</h3></li>
-        <li class="mt-10"><h3>Camp Cataract and A Quarreling Pair (1984)</h3></li>
-        <li class="mt-10"><h3>Hippolytos (1992)</h3></li>
-        <li class="mt-10"><h3>Salomé (1993)</h3></li>
-        <li class="mt-10"><h3>The Royal Hunt of the Sun (1996)</h3></li>
-      </ul>
-      <h2 class="mt-10 font-semibold">FILM MUSIC</h2>
-      <ul>
-        <li class="mt-10"><h3>Bride of Samoa (1933)*</h3></li>
-        <li class="mt-10"><h3>Venus and Adonis (1935)*</h3></li>
-        <li class="mt-10"><h3>145 W. 21 (1936)*</h3></li>
-        <li class="mt-10"><h3>Seeing the World (1936)*</h3></li>
-        <li class="mt-10"><h3>America’s Disinherited (1937)*</h3></li>
-        <li class="mt-10"><h3>Chelsea through the Magnifying Glass (1937)*</h3></li>
-        <li class="mt-10"><h3>How to Become a Citizen of the U. S. (1938)*</h3></li>
-        <li class="mt-10"><h3>The Sex Life of the Common Film (1938)*</h3></li>
-        <li class="mt-10"><h3>Film Made to Music (1939)*</h3></li>
-        <li class="mt-10"><h3>Roots in the Soil (1940)*</h3></li>
-        <li class="mt-10"><h3>Congo (1944)</h3></li>
-        <li class="mt-10"><h3>Dreams that Money Can Buy (1947)*</h3></li>
-      </ul>
-    </div>
+        <li class="mt-10">
+        <h3>Oedipus (1966)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>The Garden (1967)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>Wet and Dry/Alive (1968)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>The Bacchae (1969)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>Bachelor Furnished (1969)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>Orestes (1978)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>Caligula (1978)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>Birdbath (1981)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>Camp Cataract and A Quarreling Pair (1984)</h3>
+      </li>
+      <li class="mt-10">
+        <h3>Hippolytos (1992)</h3>
+      </li>
+      <li class="mt-10">
+        <h3>Salomé (1993)</h3>
+      </li>
+      <li class="mt-10">
+        <h3>The Royal Hunt of the Sun (1996)</h3>
+      </li>
+    </ul>
+    <h2 class="mt-10 font-semibold">FILM MUSIC</h2>
+    <ul>
+      <li class="mt-10">
+        <h3>Bride of Samoa (1933)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>Venus and Adonis (1935)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>145 W. 21 (1936)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>Seeing the World (1936)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>America’s Disinherited (1937)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>Chelsea through the Magnifying Glass (1937)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>How to Become a Citizen of the U. S. (1938)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>The Sex Life of the Common Film (1938)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>Film Made to Music (1939)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>Roots in the Soil (1940)*</h3>
+      </li>
+      <li class="mt-10">
+        <h3>Congo (1944)</h3>
+      </li>
+      <li class="mt-10">
+        <h3>Dreams that Money Can Buy (1947)*</h3>
+      </li>
+    </ul>
   </div>
-</template>
+</div></template>

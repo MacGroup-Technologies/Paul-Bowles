@@ -97,7 +97,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         Fizdale (Arthur Gold and Robert Fizdale), who programmed some of the composer's earlier
         duets, and had made their own duo-piano transcriptions of several Bowles's solo pieces
         evoking Latin-American dance. Bowles responded with two of his finest concert scores:
-        the Concerto for Two Pianos, <i>Winds and Percussion (1946-47)</i>, and the <i>Sonata for Two
+        the Concerto for Two Pianos, <i>Winds and Percussion (1946&mdash;47)</i>, and the <i>Sonata for Two
           Pianos (1947)</i>. Composing these, he revealed in his autobiography Without Stopping, gave him
         a welcome respite from his work in the theater, which was becoming irksome.
         <br /><br />
@@ -147,7 +147,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         recordings and performances.
         <br /><br /><br />
         <p class="text-right">
-        Irene Herrmann
+          Irene Herrmann
         </p>
       </div>
       <div class="mt-10 text-justify" v-else-if="route.params.title === 'Virgil Thompson - Twelfth Night'">
@@ -182,8 +182,8 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         self-effacing and accurate workmanship in the preceding scenes.
         <br /><br /><br />
         <p class="text-right">
-        Virgil Thompson,<br />
-        New York Herald Tribune,<br /> 20 November 1940
+          Virgil Thompson,<br />
+          New York Herald Tribune,<br /> 20 November 1940
         </p>
       </div>
       <div class="mt-10 text-justify" v-else-if="route.params.title === 'Lincoln Center Tribute'">
@@ -193,36 +193,37 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
           <img src="@/assets/imgs/Lincoln_program.png" alt="Paul Bowles Lincoln Center Tribute Flier"
             class="w-auto h-auto" />
           <img src="@/assets/imgs/Lincoln_programA.png" alt="Paul Bowles Lincoln Center Tribute Program"
-          class="w-auto h-auto" />
+            class="w-auto h-auto" />
+        </div>
       </div>
-    </div>
-    <div class="mt-10 text-justify" v-else-if="route.params.title === 'Rey Rosa - The Return Trip'">
-      <div class="text-right">
-        Les sons rentreront dans<br />
-        l'orgue et l'avenir<br />
-        s'invaginera dans le passé<br />
-        comme il a toujours fait.<br />
-        <b>Henri Michaux</b>
-      </div>
-      <div class="mt-16">
-        Imagine a situation involving a man with two lives moving in opposite directions simultaneously, one of which
-        goes toward the future in usual fashion (from today to tomorrow, from childhood to maturity and on to old age),
-        while the other life goes toward the past. Thus, inside the child born in 1910, there lived a man in his
-        eighties.
-        <br /><br />
-        This would explain how in 1930 Gertrude Stein, after exchanging letters, was convinced that her correspondent
-        was a gentleman of at least seventy. So that today we have an octogenarian in whom is imprisoned a child
-        travelling into the past. And this explains how one forgets that he is old, and how being in his company
-        provides a delight similar to that provoked, as if through contagion, by the presence of small children. More
-        than half a century ago those attempting to educate him considered him a stubborn youth; they warned him that
-        unless he studied music as tradition demanded, he would never succeed in being a composer. But they were unaware
-        that this student needed no other teacher than himself, because in spite of his youthful appearance he had
-        already made the return trip.
-        <br /><br /><br />
-        <p class="text-right">
-        Rodrigo Rey Rosa, Tangier, 1995
-        </p>
+      <div class="mt-10 text-justify" v-else-if="route.params.title === 'Rey Rosa - The Return Trip'">
+        <div class="text-right">
+          Les sons rentreront dans<br />
+          l'orgue et l'avenir<br />
+          s'invaginera dans le passé<br />
+          comme il a toujours fait.<br />
+          <b>Henri Michaux</b>
+        </div>
+        <div class="mt-16">
+          Imagine a situation involving a man with two lives moving in opposite directions simultaneously, one of which
+          goes toward the future in usual fashion (from today to tomorrow, from childhood to maturity and on to old age),
+          while the other life goes toward the past. Thus, inside the child born in 1910, there lived a man in his
+          eighties.
+          <br /><br />
+          This would explain how in 1930 Gertrude Stein, after exchanging letters, was convinced that her correspondent
+          was a gentleman of at least seventy. So that today we have an octogenarian in whom is imprisoned a child
+          travelling into the past. And this explains how one forgets that he is old, and how being in his company
+          provides a delight similar to that provoked, as if through contagion, by the presence of small children. More
+          than half a century ago those attempting to educate him considered him a stubborn youth; they warned him that
+          unless he studied music as tradition demanded, he would never succeed in being a composer. But they were unaware
+          that this student needed no other teacher than himself, because in spite of his youthful appearance he had
+          already made the return trip.
+          <br /><br /><br />
+          <p class="text-right">
+            Rodrigo Rey Rosa, Tangier, 1995
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</div></template>
+</template>

@@ -7,8 +7,7 @@ useHead({ title: `Tributes to Paul Bowles` })
   <div class="">
     <div class="h-screen bg-background-light dark:bg-background-dark relative bg-[url('@/assets/imgs/paul-bowles.png')]">
       <div
-        class="h-full z-10 bg-background-light dark:bg-background-dark bg-opacity-60 dark:bg-opacity-60 flex flex-col justify-center items-start"
-      >
+        class="h-full z-10 bg-background-light dark:bg-background-dark bg-opacity-60 dark:bg-opacity-60 flex flex-col justify-center items-start">
         <div class="p-5 mt-24 lg:px-16 2xl:px-20">
           <h1 class="text-5xl md:text-8xl font-mono uppercase text-black dark:text-white-shade">on paul bowles</h1>
           <p class="md:w-2/3 text-primary text-3xl mt-5">
@@ -16,10 +15,8 @@ useHead({ title: `Tributes to Paul Bowles` })
           </p>
         </div>
         <div class="p-5 lg:px-16 2xl:px-20 mt-5">
-          <a
-            href="#content"
-            class="w-20 h-20 md:w-32 md:h-32 flex justify-center items-center rounded-full border-[2px] text-black border-black dark:border-white-shade dark:text-white-shade hover:opacity-75"
-          >
+          <a href="#content"
+            class="w-20 h-20 md:w-32 md:h-32 flex justify-center items-center rounded-full border-[2px] text-black border-black dark:border-white-shade dark:text-white-shade hover:opacity-75">
             <p class="text-5xl md:text-7xl animate-bounce">&DownArrow;</p>
           </a>
         </div>
@@ -29,7 +26,8 @@ useHead({ title: `Tributes to Paul Bowles` })
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 grid grid-cols-1 md:grid-cols-2 gap-10">
       <router-link to="/paul-bowles/patricia-highsmith" class="rounded-3xl bg-white dark:bg-[#17142B] p-2">
         <img src="@/assets/imgs/Patricia-Highsmith.png" class="w-full h-auto" alt="Patricia Highsmith" />
-        <h3 class="capitalize text-3xl font-mono text-background-dark dark:text-background-light p-5">a north african encounter - Patricia Highsmith</h3>
+        <h3 class="capitalize text-3xl font-mono text-background-dark dark:text-background-light p-5">a north african
+          encounter &mdash; Patricia Highsmith</h3>
       </router-link>
       <router-link to="/paul-bowles/tennessee-williams" class="rounded-3xl bg-white dark:bg-[#17142B] p-2">
         <img src="@/assets/imgs/Tennessee-Williams.png" class="w-full h-auto" alt="Tennessee Williams" />
@@ -68,7 +66,8 @@ useHead({ title: `Tributes to Paul Bowles` })
         </h3>
       </router-link>
       <router-link to="/paul-bowles/the-economist-obituary" class="rounded-3xl bg-white dark:bg-[#17142B] p-2">
-        <img src="@/assets/imgs/Paul-Bowles-obituary.png" class="w-full h-auto" alt="Paul Bowles obituary via The Economist" />
+        <img src="@/assets/imgs/Paul-Bowles-obituary.png" class="w-full h-auto"
+          alt="Paul Bowles obituary via The Economist" />
         <h3 class="capitalize text-3xl font-mono text-background-dark dark:text-background-light p-5">
           the economist - obituary
         </h3>

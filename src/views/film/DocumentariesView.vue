@@ -18,7 +18,7 @@ useHead({ title: `Works and Documentaries on Paul Bowles` })
         <li class="mb-5">
           <div class="md:flex gap-3">
             <h2 class="font-bold">The Sheltering Sky</h2>
-            <p class="">- Bermado Bertolucci (1990)</p>
+            <p class="">&mdash; Bermado Bertolucci (1990)</p>
           </div>
         </li>
         <li class="mb-5">
@@ -37,10 +37,10 @@ useHead({ title: `Works and Documentaries on Paul Bowles` })
       <h2 class="font-bold mt-14">Documentaries on Paul Bowles:</h2>
       <ul class="mt-5">
         <li class="mb-5">
-          <div class=""><b>Paul Bowles in Morocco</b> - Gary Conklin (1970)</div>
+          <div class=""><b>Paul Bowles in Morocco</b> &mdash; Gary Conklin (1970)</div>
         </li>
-        <li class="mb-5"><b>Let It Come Down: The Life of Paul Bowles</b> - Jennifer Baichwal (1998)</li>
-        <li class=""><b>The Cage's Door Is Always Open</b> - Daniel Young (2012)</li>
+        <li class="mb-5"><b>Let It Come Down: The Life of Paul Bowles</b> &mdash; Jennifer Baichwal (1998)</li>
+        <li class=""><b>The Cage's Door Is Always Open</b> &mdash; Daniel Young (2012)</li>
       </ul>
     </div>
   </div>
