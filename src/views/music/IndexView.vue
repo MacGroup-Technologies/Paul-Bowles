@@ -26,7 +26,7 @@ const music = [
         <div class="p-5 lg:px-16 2xl:px-20">
           <h1 class="text-8xl font-mono uppercase">Music</h1>
           <p class="md:w-2/3 text-primary text-3xl mt-10">
-          This section contains the amazing musical compositions of Paul Bowles, encompassing a variety of genres
+            This section contains the amazing musical compositions of Paul Bowles, encompassing a variety of genres
           </p>
         </div>
         <div class="p-5 lg:px-16 2xl:px-20 mt-8 md:mt-3">
@@ -50,9 +50,7 @@ const music = [
       class="grid grid-cols-1 md:grid-cols-3 gap-20 2xl:gap-48 justify-between py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl">
       <router-link :to="'/music/' + encodeURI(item.link)" class="flex flex-col items-center gap-3"
         v-for="(item, index) in music" :key="index">
-        <div class="bg-primary-light w-80 px-20 py-28 rounded-md flex justify-center items-center">
-          <icon-music />
-        </div>
+        <img src="@/assets/imgs/music-thumbnail.png" alt="">
         {{ item.title }}
       </router-link>
     </div>
@@ -693,80 +691,81 @@ const music = [
           <h3>Elektra (1965)*</h3>
         </li>
         <li class="mt-10">
-        <h3>Oedipus (1966)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>The Garden (1967)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>Wet and Dry/Alive (1968)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>The Bacchae (1969)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>Bachelor Furnished (1969)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>Orestes (1978)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>Caligula (1978)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>Birdbath (1981)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>Camp Cataract and A Quarreling Pair (1984)</h3>
-      </li>
-      <li class="mt-10">
-        <h3>Hippolytos (1992)</h3>
-      </li>
-      <li class="mt-10">
-        <h3>Salomé (1993)</h3>
-      </li>
-      <li class="mt-10">
-        <h3>The Royal Hunt of the Sun (1996)</h3>
-      </li>
-    </ul>
-    <h2 class="mt-10 font-semibold">FILM MUSIC</h2>
-    <ul>
-      <li class="mt-10">
-        <h3>Bride of Samoa (1933)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>Venus and Adonis (1935)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>145 W. 21 (1936)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>Seeing the World (1936)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>America’s Disinherited (1937)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>Chelsea through the Magnifying Glass (1937)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>How to Become a Citizen of the U. S. (1938)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>The Sex Life of the Common Film (1938)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>Film Made to Music (1939)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>Roots in the Soil (1940)*</h3>
-      </li>
-      <li class="mt-10">
-        <h3>Congo (1944)</h3>
-      </li>
-      <li class="mt-10">
-        <h3>Dreams that Money Can Buy (1947)*</h3>
-      </li>
-    </ul>
+          <h3>Oedipus (1966)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>The Garden (1967)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Wet and Dry/Alive (1968)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>The Bacchae (1969)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Bachelor Furnished (1969)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Orestes (1978)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Caligula (1978)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Birdbath (1981)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Camp Cataract and A Quarreling Pair (1984)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Hippolytos (1992)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Salomé (1993)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>The Royal Hunt of the Sun (1996)</h3>
+        </li>
+      </ul>
+      <h2 class="mt-10 font-semibold">FILM MUSIC</h2>
+      <ul>
+        <li class="mt-10">
+          <h3>Bride of Samoa (1933)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Venus and Adonis (1935)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>145 W. 21 (1936)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Seeing the World (1936)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>America’s Disinherited (1937)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Chelsea through the Magnifying Glass (1937)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>How to Become a Citizen of the U. S. (1938)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>The Sex Life of the Common Film (1938)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Film Made to Music (1939)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Roots in the Soil (1940)*</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Congo (1944)</h3>
+        </li>
+        <li class="mt-10">
+          <h3>Dreams that Money Can Buy (1947)*</h3>
+        </li>
+      </ul>
+    </div>
   </div>
-</div></template>
+</template>
