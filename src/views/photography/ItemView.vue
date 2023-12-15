@@ -68,12 +68,10 @@ onMounted(async () => {
       </p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div
-          class="w-full h-64 bg-cover bg-center rounded-xl cursor-pointer transition-transform hover:scale-105"
-          :style="`background-image: url(${item.image_featured})`"
-          v-for="item in photography.items"
-          :key="item.id"
           @click="img = item.image_featured"
         >
+          :class="`w-full h-64 bg-cover ${item.id == 68 ? '' : 'bg-center'} rounded-xl cursor-pointer transition-transform hover:scale-105`"
+          :style="`background-image: url(${item.image_featured})`" v-for="item in photography.items" :key="item.id"
         </div>
       </div>
     </div>
