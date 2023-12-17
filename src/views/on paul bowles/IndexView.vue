@@ -26,13 +26,13 @@ useHead({ title: `Tributes to Paul Bowles` })
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 grid grid-cols-1 md:grid-cols-2 gap-10">
       <router-link to="/paul-bowles/patricia-highsmith" class="rounded-3xl bg-white dark:bg-[#17142B] p-2">
         <img src="@/assets/imgs/Patricia-Highsmith.png" class="w-full h-auto" alt="Patricia Highsmith" />
-        <h3 class="capitalize text-3xl font-mono text-background-dark dark:text-background-light p-5">a north african
-          encounter &mdash; Patricia Highsmith</h3>
+        <h3 class="capitalize text-3xl font-mono text-background-dark dark:text-background-light p-5">
+          Patricia Highsmith</h3>
       </router-link>
       <router-link to="/paul-bowles/tennessee-williams" class="rounded-3xl bg-white dark:bg-[#17142B] p-2">
         <img src="@/assets/imgs/Tennessee-Williams.png" class="w-full h-auto" alt="Tennessee Williams" />
         <h3 class="capitalize text-3xl font-mono text-background-dark dark:text-background-light p-5">
-          an allegory of man and his sahara - Tennessee Williams
+          Tennessee Williams
         </h3>
       </router-link>
       <router-link to="/paul-bowles/william-burroughs" class="rounded-3xl bg-white dark:bg-[#17142B] p-2">
@@ -62,7 +62,7 @@ useHead({ title: `Tributes to Paul Bowles` })
       <router-link to="/paul-bowles/rey-rosa" class="rounded-3xl bg-white dark:bg-[#17142B] p-2">
         <img src="@/assets/imgs/Rey-Rosa.png" class="w-full h-auto" alt="Rodrigo Rey Rosa" />
         <h3 class="capitalize text-3xl font-mono text-background-dark dark:text-background-light p-5">
-          Bowles and i - Rodrigo Rey Rosa
+          Rodrigo Rey Rosa
         </h3>
       </router-link>
       <router-link to="/paul-bowles/the-economist-obituary" class="rounded-3xl bg-white dark:bg-[#17142B] p-2">
