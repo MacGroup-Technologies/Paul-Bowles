@@ -62,9 +62,17 @@ onMounted(async () => {
       </p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div
-          :class="`w-full h-64 bg-cover ${item.id == 68 ? '' : 'bg-center'} rounded-xl cursor-pointer transition-transform hover:scale-105`"
+          :class="`w-full h-64 bg-cover group/image ${item.id == 68 ? '' : 'bg-center'} rounded-xl cursor-pointer transition-transform hover:scale-105 relative`"
           :style="`background-image: url(${item.image_featured})`" v-for="item in photography.items" :key="item.id"
           @click="active_item = item">
+          <div class="absolute inset-0 overflow-hidden">
+            <div
+              class="opacity-0 group-hover/image:opacity-100 tranisiton-opacity bg-gradient-to-t from-black/60 absolute inset-0">
+            </div>
+            <p v-if="isNaN(item.title)"
+              class="opacity-0 translate-y-10 group-hover/image:opacity-100 group-hover/image:translate-y-0 transition-all text-sm text-center absolute bottom-0 inset-x-0">
+              {{ item.title.split(" ").slice(1, item.title.length).join(" ") }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -74,7 +82,8 @@ onMounted(async () => {
     v-if="active_item !== null">
     <OnClickOutside @trigger="active_item = null" class="text-center px-10 md:px-0 md:w-1/3 cursor-pointer">
       <img :src="active_item.image_featured" class="w-full h-auto rounded-xl cursor-default" />
-      <p v-if="isNaN(active_item.title)">{{ active_item.title }}</p>
+      <p v-if="isNaN(active_item.title)"> {{ active_item.title.split(" ").slice(1, active_item.title.length).join(" ") }}
+      </p>
     </OnClickOutside>
   </div>
 </template>
