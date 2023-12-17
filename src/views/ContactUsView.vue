@@ -270,10 +270,10 @@
           Abdelaziz Jadir<br />
           Kenneth Lisenbee<br />
           Jeffrey Miller<br />
-          Timothy Murray
+          Timothy Murray<br />
+          Cherie Nutting
         </div>
         <div class="md:w-1/2">
-          Cherie Nutting<br />
           Simon Pettet<br />
           Francis Poole<br />
           Jeffrey Posternak<br />
