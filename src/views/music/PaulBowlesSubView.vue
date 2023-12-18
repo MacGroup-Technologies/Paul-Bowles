@@ -201,7 +201,7 @@ onMounted(async () => {
               </div>
               <div class="w-full">
                 <h2> {{ item.title }} </h2>
-                <p class="text-sm" v-if="item.title == player.item.title">Synthesizer played by Paul Bowles.
+                <p class="text-sm" v-if="router.params.title === 'Film Music'">Synthesizer played by Paul Bowles.
                 </p>
               </div>
             </div>
