@@ -2,7 +2,15 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useThemeStore = defineStore('theme', () => {
-  const theme = ref("light");
+  let default_theme = "light"
+
+  // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    default_theme = "dark"
+  }
+
+
+  const theme = ref(default_theme);
   const loading = ref(false);
   const error = ref(null) as any;
   const modal = ref(true);
@@ -21,6 +29,10 @@ export const useThemeStore = defineStore('theme', () => {
 
   function updateTheme(newVal: string) {
     theme.value = newVal
+    localStorage.theme = newVal
+
+    // Whenever the user explicitly chooses to respect the OS preference
+    // localStorage.removeItem('theme')
   }
 
   return { theme, loading, error, modal, updateTheme, updateLoading, updateError, setModal }

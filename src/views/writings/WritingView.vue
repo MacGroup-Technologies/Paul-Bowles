@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useRoute, useRouter } from 'vue-router'
+import ContributionsListItem from '@/components/ContributionsToPeriodicalsListItem.vue'
 import { useHead } from '@unhead/vue'
 import { onMounted, reactive } from 'vue'
 import { fetchMusicBookAlt } from '@/services/music'
@@ -125,24 +126,17 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
 
       <div class="mt-10" v-else-if="router.params.title === 'Autobiography'">
         <ol class="list-decimal mt-10 ml-10">
-          <li v-for="item in writing.item.slice(0,2)" :key="item.id">
+          <li v-for="item in writing.item" :key="item.id">
             <router-link :to="`music-criticism/${item.title}`" class="block rounded overflow-hidden" :key="item.id">
               <h3 class="underline mt-4">{{ item.title }}</h3>
             </router-link>
           </li>
         </ol>
-        <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10">
-          <router-link :to="`Autobiography/${item.title}`" class="block rounded overflow-hidden"
-            v-for="item in writing.item.slice(2)" :key="item.id">
-            <img src="@/assets/imgs/writings-thumbnail.png" />
-            <h3 class="underline mt-4">{{ item.title }}</h3>
-          </router-link>
-        </div>
       </div>
 
-      <ol class="list-decimal mt-10 ml-10" v-else-if="router.params.title === 'Contributions to Periodicals'">
-        <li v-for="item in writing.item" :key="item.id">
-          <h3 class="mt-4">{{ item.title }}</h3>
+      <ol class="list-decimal- mt-10 ml-10" v-else-if="router.params.title === 'Contributions to Periodicals'">
+        <li v-for="(item,index) in writing.item" :key="item.id">
+          <contributions-list-item :index="index" :item="item" ></contributions-list-item>
         </li>
       </ol>
       <ol class="list-decimal mt-10 ml-10" v-else-if="router.params.title === 'Poetry'">

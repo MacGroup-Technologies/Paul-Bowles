@@ -13,9 +13,8 @@ const loading = computed(() => {
 })
 
 
-const themeChanger = function() {
-  if (theme.value === 'dark')
-   {
+const themeChanger = function () {
+  if (theme.value === 'dark') {
     document.documentElement.classList.add('dark')
   } else {
     document.documentElement.classList.remove('dark')
