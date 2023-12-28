@@ -24,5 +24,27 @@ useHead({ title: `Archives` })
       </div>
     </div>
     <a name="content" />
+    <div class="px-5 py-10 lg:px-16 2xl:px-20 grid place-items-stretch gap-5 grid-cols-1 md:grid-cols-2">
+      <a target="_blank" href="https://norman.hrc.utexas.edu/fasearch/findingAid.cfm?eadid=0014"
+        class="flex flex-col bg-white dark:bg-opacity-10 hover:-translate-y-2 transition-transform p-5 rounded-xl">
+        <div class="flex flex-1 justify-center bg-primary rounded-xl">
+          <img src="https://www.hrc.utexas.edu/images-root/logos/harry-ransom-center-logo.png" class="py-20" />
+        </div>
+        <div class="py-5 px-3">
+          <h2 class="font-heading text-3xl">Paul Bowles:</h2>
+          <p class="mt-2">An Inventory of His Collection at the Harry Ransom Center</p>
+        </div>
+      </a>
+      <a target="_blank" href="https://library.udel.edu/special/findaids/view?docId=ead/mss0164.xml;tab=subj"
+        class="flex flex-col bg-white dark:bg-opacity-10 hover:-translate-y-2 transition-transform p-5 rounded-xl">
+        <div class="flex justify-center flex-1 bg-primary rounded-xl">
+          <img src="https://library.udel.edu/static/img/ud-logo-head.png" class="py-20" />
+        </div>
+        <div class="py-5 px-3">
+          <h2 class="font-heading text-3xl">Paul Bowles collection</h2>
+          <p class="mt-2">University of Delaware</p>
+        </div>
+      </a>
+    </div>
   </div>
 </template>
