@@ -97,7 +97,7 @@ onMounted(async () => {
         </router-link>
       </div>
     </div>
-    <div class="mx-5 mb-10 lg:mx-16 2xl:mx-20 p-10 rounded-xl text-xl bg-white sticky top-20">
+    <div class="mx-5 mb-10 lg:mx-16 2xl:mx-20 p-10 rounded-xl text-xl bg-white z-10 sticky top-20">
       <el-form :model="filter" ref="formRef" @submit.prevent="filterTranslations()">
         <div class="flex flex-col md:flex-row gap-5">
           <el-input v-model="filter.keyword" class="md:w-2/3" size="large" placeholder="Author, Title, or Keyword" />
@@ -116,10 +116,16 @@ onMounted(async () => {
       <div class="grid gap-x-5 gap-y-10 grid-cols-1 md:grid-cols-4 w-full">
         <router-link :to="`/translation/${item.id}`" class="w-full flex flex-col" v-for="item in translations.items"
           :key="item.id">
-          <div
-            class="flex-1 flex items-center justify-center w-2/3 md:w-3/4 h-full rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer">
-            <img v-if="item.image_urls === ''" src="@/assets/imgs/translations-thumbnail.png" />
-            <img v-else :src="item.image_urls.split(',')[0]" />
+          <div v-if="item.image_urls === ''"
+            class="flex-1 flex items-center justify-center w-2/3 md:w-3/4 max-h-[200px] h-full rounded-[22px] fancy-img my-0 mx-5 md:mx-auto cursor-pointer">
+            <img src="@/assets/imgs/translations-thumbnail.png" class="max-h-[200px]" />
+          </div>
+          <div v-else class="flex flex-col flex-1  justify-center ">
+            <div class=" flex-1 flex items-center mx-auto justify-center relative overflow-hidden w-[210px] rounded-3xl">
+              <img :src="item.image_urls.split(',')[0]"
+                class="absolute inset-0 object-center h-full blur-sm scale-[200%]  object-cover" />
+              <img :src="item.image_urls.split(',')[0]" class="relative max-h-[200px] m-1 " />
+            </div>
           </div>
           <div class="px-5 md:px-0 mt-5 text-center">
             <h2 class="font-semibold">{{ item.title }}</h2>
