@@ -40,7 +40,7 @@ const links = [
     text: '“His short stories are among the best ever written by an American.” Gore Vidal'
   },
   {
-    title: 'translation',
+    title: 'translations',
     link: 'translation',
     image: 'Translation',
     text: 'Paul Bowles translated into English numerous works from the French, Spanish and Moghrebi.'
