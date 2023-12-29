@@ -81,9 +81,13 @@ onMounted(async () => {
           <img v-if="item.image_urls === ''" src="@/assets/imgs/library-thumbnail.png"
             class="w-full h-auto md:w-3/4 md:h-64 rounded-[22px] fancy-img my-0 md:mx-auto cursor-pointer"
             @click="openModal(item)" />
-          <img v-else :src="item.image_urls.split('|')[0]"
-            class="w-auto md:w-3/4 h-64 rounded-[22px] fancy-img my-0 md:mx-auto cursor-pointer"
-            @click="openModal(item)" />
+          <div v-else class="flex flex-col flex-1 max-h-[256px] justify-center cursor-pointer" @click="openModal(item)">
+            <div class=" flex-1 flex items-center mx-auto justify-center relative overflow-hidden w-[210px] rounded-3xl">
+              <img :src="item.image_urls.split('|')[0]"
+                class="absolute inset-0 object-center h-full blur-sm scale-[200%]  object-cover" />
+              <img :src="item.image_urls.split('|')[0]" class="relative max-h-[200px] m-1 " />
+            </div>
+          </div>
           <div class="px-5 md:px-0 mt-5 text-center">
             <h2 class="font-semibold">{{ item.title }}</h2>
             <p class="mt-2">
