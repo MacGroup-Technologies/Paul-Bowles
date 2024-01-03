@@ -1,14 +1,16 @@
 <script lang="ts" setup>
-import { reactive, onMounted } from 'vue';
+import { reactive, onMounted, onUpdated } from 'vue';
 import { useHead } from '@unhead/vue'
 import { useThemeStore } from '@/stores/theme';
-import { fetchLibrary } from '@/services/library';
-import { getUrl } from '@/services/misc';
+import { fetchLibrary, getLibraryStats } from '@/services/library';
+import { useRoute, onBeforeRouteUpdate } from 'vue-router';
 
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue';
 import TranslationModal from '@/components/TranslationModal.vue';
 
 useHead({ title: `Paul Bowles's Library` })
+
+const route = useRoute();
 
 const modal = reactive({ opened: false, data: {} });
 const library = reactive({ items: [] as any });
@@ -26,42 +28,48 @@ const setError = function (val: string) {
   useThemeStore().updateError(val)
 }
 
-const getStepUrl = async function (url: any) {
-  setLoading(true);
-  try {
-    const response = await getUrl(url)
-    pagination.next = response.data.next
-    pagination.previous = response.data.previous
-    library.items = response.data.results
-    setLoading(false);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  } catch (error: any) {
-    console.log(error);
-    setError(error);
-  }
-}
-
 const openModal = async function (item: any) {
   modal.opened = true;
   modal.data = item;
 }
 
-const fetchLibraryData = async function () {
+const PAGE_URL = window.location.pathname;
+function getNextPage() {
+  return PAGE_URL + `?page=${Number(route.query.page) + 1}`;
+}
+function getPreviousPage() {
+  return PAGE_URL + `?page=${Number(route.query.page) - 1 || 1}`;
+}
+
+let LAST_PAGE_FOR_IMAGES = 1;
+
+function fetchPageData() {
   setLoading(true);
-  try {
-    const response = await fetchLibrary();
+  fetchLibrary(Number(route.query.page) || 1, LAST_PAGE_FOR_IMAGES).then(response => {
     library.items = response.data.results;
     pagination.next = response.data.next;
     pagination.previous = response.data.previous;
     setLoading(false);
+  });
+}
+
+onBeforeRouteUpdate((to, from)=>{
+  if (to!==from) {
+    fetchPageData()
+  }
+})
+
+onMounted(async () => {
+  setLoading(true);
+  try {
+    await getLibraryStats().then((_response: any) => {
+      LAST_PAGE_FOR_IMAGES = _response.last_page_for_images;
+      fetchPageData();
+    })
   } catch (error: any) {
     console.log(error);
     setError(error);
   }
-};
-
-onMounted(async () => {
-  await fetchLibraryData();
 });
 
 </script>
@@ -99,19 +107,23 @@ onMounted(async () => {
     </div>
     <div class="my-24 mx-auto md:w-64 flex justify-center">
       <el-button-group>
-        <el-button type="primary" size="large" class="bg-primary" :icon="ArrowLeft"
-          :disabled="pagination.previous === null" @click="getStepUrl(pagination.previous)">
+        <router-link :disabled="!pagination.previous" :to="getPreviousPage()"
+          :class="{ 'is-disabled': !pagination.previous }" class="el-button--primary el-button--large el-button">
+          <el-icon class="el-icon--left">
+            <ArrowLeft />
+          </el-icon>
           Prev
-        </el-button>
-        <el-button type="primary" size="large" class="bg-primary" :disabled="pagination.next === null"
-          @click="getStepUrl(pagination.next)">
+        </router-link>
+        <router-link :disabled="!pagination.next" :to="getNextPage()" :class="{ 'is-disabled': !pagination.next }"
+          class="el-button--primary el-button--large el-button">
           Next
           <el-icon class="el-icon--right">
             <ArrowRight />
           </el-icon>
-        </el-button>
+        </router-link>
       </el-button-group>
     </div>
     <translation-modal v-if="modal.opened" :item="modal.data" @close="modal.opened = false" />
   </div>
 </template>
+
