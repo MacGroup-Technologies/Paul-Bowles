@@ -2,7 +2,7 @@
 import { reactive, onMounted, onUpdated } from 'vue';
 import { useHead } from '@unhead/vue'
 import { useThemeStore } from '@/stores/theme';
-import { fetchLibrary, getLibraryStats } from '@/services/library';
+import { fetchLibrary } from '@/services/library';
 import { useRoute, onBeforeRouteUpdate } from 'vue-router';
 
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue';
@@ -35,17 +35,16 @@ const openModal = async function (item: any) {
 
 const PAGE_URL = window.location.pathname;
 function getNextPage() {
-  return PAGE_URL + `?page=${Number(route.query.page) + 1}`;
+  return PAGE_URL + `?page=${Number(route.query.page || 1) + 1}`;
 }
 function getPreviousPage() {
   return PAGE_URL + `?page=${Number(route.query.page) - 1 || 1}`;
 }
 
-let LAST_PAGE_FOR_IMAGES = 1;
 
 function fetchPageData() {
   setLoading(true);
-  fetchLibrary(Number(route.query.page) || 1, LAST_PAGE_FOR_IMAGES).then(response => {
+  fetchLibrary(Number(route.query.page) || 1).then(response => {
     library.items = response.data.results;
     pagination.next = response.data.next;
     pagination.previous = response.data.previous;
@@ -53,8 +52,8 @@ function fetchPageData() {
   });
 }
 
-onBeforeRouteUpdate((to, from)=>{
-  if (to!==from) {
+onBeforeRouteUpdate((to, from) => {
+  if (to !== from) {
     fetchPageData()
   }
 })
@@ -62,10 +61,7 @@ onBeforeRouteUpdate((to, from)=>{
 onMounted(async () => {
   setLoading(true);
   try {
-    await getLibraryStats().then((_response: any) => {
-      LAST_PAGE_FOR_IMAGES = _response.last_page_for_images;
-      fetchPageData();
-    })
+    fetchPageData();
   } catch (error: any) {
     console.log(error);
     setError(error);
@@ -107,20 +103,32 @@ onMounted(async () => {
     </div>
     <div class="my-24 mx-auto md:w-64 flex justify-center">
       <el-button-group>
-        <router-link :disabled="!pagination.previous" :to="getPreviousPage()"
-          :class="{ 'is-disabled': !pagination.previous }" class="el-button--primary el-button--large el-button">
+        <router-link v-if="pagination.previous" :to="getPreviousPage()"
+          class="el-button--primary el-button--large el-button">
           <el-icon class="el-icon--left">
             <ArrowLeft />
           </el-icon>
           Prev
         </router-link>
-        <router-link :disabled="!pagination.next" :to="getNextPage()" :class="{ 'is-disabled': !pagination.next }"
-          class="el-button--primary el-button--large el-button">
+        <p v-else class="is-disabled el-button--primary el-button--large el-button">
+          <el-icon class="el-icon--left">
+            <ArrowLeft />
+          </el-icon>
+          Prev
+        </p>
+
+        <router-link v-if="pagination.next" :to="getNextPage()" class="el-button--primary el-button--large el-button">
           Next
           <el-icon class="el-icon--right">
             <ArrowRight />
           </el-icon>
         </router-link>
+        <p v-else class="is-disabled el-button--primary el-button--large el-button">
+          Next
+          <el-icon class="el-icon--right">
+            <ArrowRight />
+          </el-icon>
+        </p>
       </el-button-group>
     </div>
     <translation-modal v-if="modal.opened" :item="modal.data" @close="modal.opened = false" />
