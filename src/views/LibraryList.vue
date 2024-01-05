@@ -3,7 +3,7 @@ import { reactive, onMounted, onUpdated } from 'vue';
 import { useHead } from '@unhead/vue'
 import { useThemeStore } from '@/stores/theme';
 import { fetchLibrary } from '@/services/library';
-import { useRoute, onBeforeRouteUpdate } from 'vue-router';
+import { useRouter, useRoute, onBeforeRouteUpdate } from 'vue-router';
 
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue';
 import TranslationModal from '@/components/TranslationModal.vue';
@@ -11,6 +11,7 @@ import TranslationModal from '@/components/TranslationModal.vue';
 useHead({ title: `Paul Bowles's Library` })
 
 const route = useRoute();
+const router = useRouter();
 
 const modal = reactive({ opened: false, data: {} });
 const library = reactive({ items: [] as any });
@@ -19,6 +20,7 @@ const pagination = reactive({
   previous: null,
   page: null,
 });
+
 
 const setLoading = function (val: boolean) {
   useThemeStore().updateLoading(val)
@@ -34,17 +36,35 @@ const openModal = async function (item: any) {
 }
 
 const PAGE_URL = window.location.pathname;
+const PAGE_QUERY = route.query.query;
+
 function getNextPage() {
-  return PAGE_URL + `?page=${Number(route.query.page || 1) + 1}`;
-}
-function getPreviousPage() {
-  return PAGE_URL + `?page=${Number(route.query.page) - 1 || 1}`;
+  return PAGE_URL + `?page=${Number(route.query.page || 1) + 1}&query=${route.query.query || ''}`;
 }
 
+function getPreviousPage() {
+  return PAGE_URL + `?page=${Number(route.query.page) - 1 || 1}&query=${route.query.query || ''}`;
+}
+
+const filter = reactive({
+  keyword: route.query.query || '',
+  page: Number(route.query.page) || 1,
+});
+
+const filterLibrary = async function () {
+  const _route = { path: PAGE_URL, query: { query: filter.keyword } }
+  if (filter.keyword) {
+    router.push(_route);
+  }
+}
+
+function clearFilters() {
+  router.push({ path: PAGE_URL, query: { query: '' } });
+}
 
 function fetchPageData() {
   setLoading(true);
-  fetchLibrary(Number(route.query.page) || 1).then(response => {
+  fetchLibrary(filter.page, filter.keyword as string).then((response: any) => {
     library.items = response.data.results;
     pagination.next = response.data.next;
     pagination.previous = response.data.previous;
@@ -54,6 +74,8 @@ function fetchPageData() {
 
 onBeforeRouteUpdate((to, from) => {
   if (to !== from) {
+    filter.keyword = to.query.query || '';
+    filter.page = Number(to.query.page) || 1;
     fetchPageData()
   }
 })
@@ -79,7 +101,30 @@ onMounted(async () => {
         </router-link>
       </div>
     </div>
+    <div class="mx-5 mb-10 lg:mx-16 2xl:mx-20 p-10 rounded-xl text-xl bg-white z-10 sticky top-20">
+      <el-form :model="filter" ref="formRef" @submit.prevent="filterLibrary()">
+        <div class="flex flex-col md:flex-row gap-5">
+          <el-input v-model="filter.keyword" class="md:w-2/3" size="large" placeholder="Author, Title, or Keyword" />
+          <el-button v-if="!route.query.query || route.query.query !== filter.keyword" class="md:w-auto bg-primary"
+            type="primary" size="large" @click="() => filterLibrary()">Search</el-button>
+          <el-button v-if="route.query.query" type="primary" size="large" class="bg-primary" @click="clearFilters">
+            Clear filters
+          </el-button>
+        </div>
+      </el-form>
+    </div>
     <div class="py-10 lg:px-16 2xl:px-20">
+      <template v-if="library.items.length === 0">
+        <div class="space-y-2 text-center">
+          <p>No item to display</p>
+          <div v-if="filter.keyword" class="space-y-2 text-sm">
+            <p>try clearing your filter to get more results</p>
+            <el-button type="primary" size="large" class="bg-primary" @click="clearFilters">
+              Clear filters
+            </el-button>
+          </div>
+        </div>
+      </template>
       <div class="grid gap-x-5 gap-y-10 grid-cols-1 md:grid-cols-4 w-full">
         <div class="w-full flex flex-col px-10 md:px-0" v-for="item in library.items" :key="item.id">
           <img v-if="item.image_urls === ''" src="@/assets/imgs/library-thumbnail.png"
