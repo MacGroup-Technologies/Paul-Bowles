@@ -80,9 +80,9 @@ onMounted(async () => {
   <div
     class="fixed top-0 right-0 left-0 bottom-0 bg-black bg-opacity-80 flex justify-center items-center text-center z-50"
     v-if="active_item !== null">
-    <OnClickOutside @trigger="active_item = null" class="text-center px-10 md:px-0 md:w-1/3 cursor-pointer">
+    <OnClickOutside @trigger="active_item = null" class="text-center px-10 md:px-0 md:w-1/3 cursor-pointer text-white">
       <img :src="active_item.image_featured" class="w-full h-auto rounded-xl cursor-default" />
-      <p v-if="isNaN(active_item.title)"> {{ active_item.title.split(" ").slice(1, active_item.title.length).join(" ") }}
+      <p v-if="isNaN(active_item.title)" class="text-white"> {{ active_item.title.split(" ").slice(1, active_item.title.length).join(" ") }}
       </p>
     </OnClickOutside>
   </div>
