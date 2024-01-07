@@ -11,14 +11,15 @@ const tl = gsap.timeline()
 const links = [
   { title: 'life', link: 'life' },
   { title: 'music', link: 'music' },
+  { title: 'writings', link: 'writings' },
   { title: 'translations', link: 'translation' },
+  { title: 'moroccan music', link: 'moroccan-music' },
+  { title: 'photography', link: 'photography' },
   { title: 'library', link: 'library' },
   { title: 'chronology', link: 'chronology' },
-  { title: 'photography', link: 'photography' },
-  { title: 'writings', link: 'writings' },
-  { title: 'moroccan music', link: 'moroccan-music' },
-  { title: 'archives', link: 'archives' },
   { title: 'on paul bowles', link: 'paul-bowles' },
+  { title: 'archives', link: 'archives' },
+  { title: 'film', link: 'clips' },
   { title: 'contact', link: 'contact' }
 ]
 

@@ -62,15 +62,15 @@ onMounted(async () => {
       </p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div
-          :class="`w-full h-64 bg-cover group/image ${item.id == 68 ? '' : 'bg-center'} rounded-xl cursor-pointer transition-transform hover:scale-105 relative`"
+          :class="`w-full h-64 bg-cover group/image ${item.id == 68 ? '' : 'bg-center'} rounded-xl cursor-pointer transition-transform hover:scale-105 relative overflow-hidden`"
           :style="`background-image: url(${item.image_featured})`" v-for="item in photography.items" :key="item.id"
           @click="active_item = item">
           <div class="absolute inset-0 overflow-hidden">
             <div
-              class="opacity-0 group-hover/image:opacity-100 tranisiton-opacity bg-gradient-to-t from-black/60 absolute inset-0">
+              class="opacity-0 group-hover/image:opacity-100 tranisiton-opacity bg-gradient-to-t from-black/60 absolute inset-0 text-white">
             </div>
             <p v-if="isNaN(item.title)"
-              class="opacity-0 translate-y-10 group-hover/image:opacity-100 group-hover/image:translate-y-0 transition-all text-sm text-center absolute bottom-0 inset-x-0">
+              class="opacity-0 translate-y-10 group-hover/image:opacity-100 group-hover/image:translate-y-0 transition-all text-sm text-center absolute bottom-0 inset-x-0 text-white pb-1 px-1">
               {{ item.title.split(" ").slice(1, item.title.length).join(" ") }}</p>
           </div>
         </div>
