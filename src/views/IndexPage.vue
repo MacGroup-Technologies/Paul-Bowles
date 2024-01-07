@@ -16,7 +16,7 @@ const links = [
   { title: 'moroccan music', link: 'moroccan-music' },
   { title: 'photography', link: 'photography' },
   { title: 'library', link: 'library' },
-  { title: 'chronology', link: 'chronology' },
+  // { title: 'chronology', link: 'chronology' },
   { title: 'on paul bowles', link: 'paul-bowles' },
   { title: 'archives', link: 'archives' },
   { title: 'film', link: 'clips' },
