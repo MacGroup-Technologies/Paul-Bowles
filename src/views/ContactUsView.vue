@@ -160,20 +160,39 @@ useHead({
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <h2 class="uppercase font-heading text-5xl font-bold">Credits</h2>
       <div class="flex gap-10 flex-col md:flex-row">
-        <div class="md:w-1/2 py-5">
+        <div class="md:w-1/2 md:py-5">
           <div class="mb-5">
-            <h3 class="font-bold">Research</h3>
-            Delfina Cabrera<br />
-            Rodrigo Rey Rosa
+            <h3 class="font-bold">Bibliographical Support</h3>
+            Camila González Adel<br />
+            Israel Jorquera Vidal<br />
+            Melina Luceri<br />
+            Paula Arroyo
+          </div>
+          <div class="mb-5">
+            <h3 class="font-bold">Design & Web Developement</h3>
+            MacGroup Technologies
+          </div>
+          <div class="mb-5">
+            <h3 class="font-bold"> Photography </h3>
+            Émil Hernon<br />
+            Floriana Lazzaneo
           </div>
           <div class="mb-5">
             <h3 class="font-bold">Programming</h3>
             Israel Jorquera Vidal
           </div>
           <div class="mb-5">
-            <h3 class="font-bold"> Photography </h3>
-            Émil Hernon<br />
-            Floriana Lazzaneo
+            <h3 class="font-bold">Proofreading</h3>
+            Antiochus Ommisi<br />
+            Arianna Sullivan<br />
+            Sara Gregg
+          </div>
+        </div>
+        <div class="md:w-1/2 md:py-5">  
+          <div class="mb-5">
+            <h3 class="font-bold">Research</h3>
+            Delfina Cabrera<br />
+            Rodrigo Rey Rosa
           </div>
           <div class="mb-5">
             <h3 class="font-bold"> Transcriptions</h3>
@@ -188,57 +207,37 @@ useHead({
             William Morningstar
           </div>
         </div>
-        <div class="md:w-1/2 py-5">
-          <div class="mb-5">
-            <h3 class="font-bold">Design & Web Developement</h3>
-            MacGroup Technologies
-          </div>
-          <div class="mb-5">
-            <h3 class="font-bold">Bibliographical Support</h3>
-            Camila González Adel<br />
-            Israel Jorquera Vidal<br />
-            Melina Luceri<br />
-            Paula Arroyo
-          </div>
-          <div class="mb-5">
-            <h3 class="font-bold">Proofreading</h3>
-            Antiochus Ommisi<br />
-            Arianna Sullivan<br />
-            Sara Gregg
-          </div>
-        </div>
       </div>
       <h2 class="uppercase font-heading text-5xl font-bold">ACKNOWLEDGEMENTS</h2>
       <div class="flex gap-10 flex-col md:flex-row mt-5">
         <div class="md:w-1/2">
-          Miquel Barceló<br />
-          Ambrogio Borsani<br />
-          Gary Conklin<br />
-          Jean Philippe Fournier<br />
-          Xenia Geroulanos<br />
-          Peter Hale<br />
-          Irene Herrmann<br />
-          Émil Hernon<br />
           Abdelaziz Jadir<br />
-          Kenneth Lisenbee<br />
+          Ambrogio Borsani<br />
+          Cherie Nutting<br />
+          Claude Natalie Thomas<br />
+          Die Fotostiftung Schweiz<br />
+          Émil Hernon<br />
+          Francis Poole<br />
+          Gary Conklin<br />
+          Irene Herrmann<br />
           Jeffrey Miller<br />
-          Timothy Murray<br />
-          Cherie Nutting
+          Jeffrey Posternak<br />
+          Katharina Rippstein<br />
+          Kenneth Lisenbee<br />
         </div>
         <div class="md:w-1/2">
-          Simon Pettet<br />
-          Francis Poole<br />
-          Jeffrey Posternak<br />
+          Leonard Bernstein Office<br />
+          Miquel Barceló<br />
+          Peter Hale<br />
           Phillip Ramey<br />
           Pía Rey Rosa<br />
-          Katharina Rippstein<br />
-          Claude Natalie Thomas<br />
-          Leonard Bernstein Office<br />
+          Simon Pettet<br />
           The Allen Ginsberg Project<br />
-          Die Fotostiftung Schweiz<br />
           The University of Delaware Library<br />
           The University of Texas<br />
-          The Wylie Agency
+          The Wylie Agency<br />
+          Timothy Murray<br />
+          Xenia Geroulanos<br />
         </div>
       </div>
     </div>
