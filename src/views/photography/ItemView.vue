@@ -67,7 +67,7 @@ onMounted(async () => {
           @click="active_item = item">
           <div class="absolute inset-0 overflow-hidden">
             <div
-              class="opacity-0 group-hover/image:opacity-100 tranisiton-opacity bg-gradient-to-t from-black/60 absolute inset-0 text-white">
+              class="opacity-0 group-hover/image:opacity-100 tranisiton-opacity bg-gradient-to-t from-black/90 absolute inset-0 text-white">
             </div>
             <p v-if="isNaN(item.title)"
               class="opacity-0 translate-y-10 group-hover/image:opacity-100 group-hover/image:translate-y-0 transition-all text-sm text-center absolute bottom-0 inset-x-0 text-white pb-1 px-1">
