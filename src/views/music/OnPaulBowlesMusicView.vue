@@ -32,7 +32,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         </p>
         <p class="text-right"> L.B. </p>
       </div>
-      <div class="mt-10 text-justify" v-else-if="route.params.title === 'Paul Bowles, Composer'">
+      <div class="mt-10 text-justify" v-else-if="route.params.title === 'Irene Herrmann: Paul Bowles, Composer'">
         Paul Bowles once said, "I never wanted a career," contempt dripping from his inflection.
         That he managed to leave an indelible, if modest entry in the annals of American music—a
         distinction desperately but vainly coveted by many better-trained, more ambitious
