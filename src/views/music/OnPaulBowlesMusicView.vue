@@ -150,7 +150,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
           Irene Herrmann
         </p>
       </div>
-      <div class="mt-10 text-justify" v-else-if="route.params.title === 'Virgil Thompson - Twelfth Night'">
+      <div class="mt-10 text-justify" v-else-if="route.params.title === 'Virgil Thompson - On Twelfth Night'">
         It is Mr. Bowles's gift as a composer to write theater music of pinpoint delicacy that is so precise in its
         functional design and so accurate. In its adjustment to the subject of each play it hits his audience squarely in
         both ears and rings the bell for the play at every music cue. With six musicians—flute, oboe, harp, imitation
