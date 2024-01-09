@@ -322,6 +322,23 @@ const chronology = [
     text: `Publication of Mrabet's The Lemon by Peter Owen and M'Hashish by City Lights, both translated by Bowles.`,
     highlight: null
   },
+  {
+    year: '1970',
+    text: `Antaeus, a literary review founded by Bowles and Daniel Halpern, begins publication.`,
+    highlight: null
+  },
+  {
+    year: '1971 - 1972',
+    text: `Bowles begins translating the work of Mohamed Choukri, Moroccan writer, working from the Arabic texts with the help of the author.
+    	  </p>
+     	  <br /><br />Music of Morocco, two long-play records taken from Bowles's recordings in the archives of the Library of Congress, is released.
+	  <br /><br />Black Sparrow Press brings out The Thicket of Spring: Poems 1926-69.
+          <br /><br />Autobiography, Without Stopping, is published by G.P. Putnam's Sons.
+	  <br /><br />Bowles translates the stories of Swiss expatriate writer Isabelle Eberhardt (1877-1904).
+          <p class="text-primary my-5">
+            “Not long before her death Isabelle Eberhardt wrote: "No one ever lived more from day to day or was more dependent upon chance. It is the inescapable chain of events that has brought me to this point, rather than I who have caused these things to happen." Her life seems haphazard, at the mercy of caprice, but her writings prove otherwise. She did not make decisions; she was impelled to take action. Her nature combined an extraordinary singleness of purpose and an equally powerful nostalgia for the unattainable.” (Paul Bowles, preface to The Oblivion Seekers)`,
+    highlight: null,
+  },
 ]
 </script>
 <template>
