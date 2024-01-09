@@ -278,6 +278,50 @@ const chronology = [
             “In 1960 I began to experiment with the idea of constructing stories whose subject matter would consist of disparate elements and unrelated characters taken directly from life and fitted together as in a mosaic. The problem was to create a story-line which would make each arbitrarily chosen episode compatible with the others, to make one lead to the next with a semblance of naturalness. I believed that through the intermediary of kif the barriers separating the unrelated elements might be destroyed, and the disconnected episodes forced into a symbiotic relationship. I listed a group of incidents and situations I had either witnessed or heard about that year.” (One Hundred Camels in the Courtyard, Preface)`,
     highlight: null,
   },
+  {
+    year: '1962',
+    text: `Continues to record and translate stories told to him by Moroccans, a pursuit that will figure prominently in his later career. Meets Larbi Layachi, who tells Bowles autobiographical tales under the pseudonym Driss ben Hamed Charhadi. “The Orphan,” the first chapter of Layachi's novel A Life Full of Holes, transcribed and translated by Bowles, is published in Evergreen Review.
+          <br /><br />One Hundred Camels in the Courtyard is published by City Lights. 
+   	  <br /><br />Writes music for Williams's The Milk Train Doesn't Stop Here Anymore.`,
+    highlight: null
+  },
+  {
+    year: '1963',
+    text: `Peter Owen publishes Their Heads Are Green and Their Hands Are Blue, a collection of travel essays.`,
+    highlight: null
+  },
+  {
+    year: '1964',
+    text: `A Life Full of Holes by Charhadi, translated by Bowles, is published by Grove Press.`,
+    highlight: null
+  },
+  {
+    year: '1965',
+    text: `Begins to record and translate the spoken stories of Mohammed Mrabet, who becomes a close friend and regular visitor to Bowles's home.`,
+    highlight: null
+  },
+  {
+    year: '1966',
+    text: `Novel Up Above the World is published by Simon & Schuster.`,
+    highlight: null
+  },
+  {
+    year: '1967',
+    text: `Jilala, an album featuring recordings of the Jilala religious brotherhood made by Bowles and Brion Gysin, is released.
+          <br /><br />Translation of Mrabet's Love With a Few Hairs is published by Peter Owen.`,
+    highlight: null
+  },
+  {
+    year: '1968',
+    text: `Bowles teaches a seminar on existentialism and the novel in the English Department of San Fernando Valley State College in California.
+          <br /><br />Peter Owen publishes story collection Pages from Cold Point.`,
+    highlight: null
+  },
+  {
+    year: '1969',
+    text: `Publication of Mrabet's The Lemon by Peter Owen and M'Hashish by City Lights, both translated by Bowles.`,
+    highlight: null
+  },
 ]
 </script>
 <template>
