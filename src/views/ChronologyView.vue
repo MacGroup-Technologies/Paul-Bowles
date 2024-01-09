@@ -328,7 +328,7 @@ const chronology = [
     highlight: null
   },
   {
-    year: '1971 - 1972',
+    year: '1971-1972',
     text: `Bowles begins translating the work of Mohamed Choukri, Moroccan writer, working from the Arabic texts with the help of the author.
     	  </p>
      	  <br /><br />Music of Morocco, two long-play records taken from Bowles's recordings in the archives of the Library of Congress, is released.
@@ -337,6 +337,23 @@ const chronology = [
 	  <br /><br />Bowles translates the stories of Swiss expatriate writer Isabelle Eberhardt (1877-1904).
           <p class="text-primary my-5">
             “Not long before her death Isabelle Eberhardt wrote: "No one ever lived more from day to day or was more dependent upon chance. It is the inescapable chain of events that has brought me to this point, rather than I who have caused these things to happen." Her life seems haphazard, at the mercy of caprice, but her writings prove otherwise. She did not make decisions; she was impelled to take action. Her nature combined an extraordinary singleness of purpose and an equally powerful nostalgia for the unattainable.” (Paul Bowles, preface to The Oblivion Seekers)`,
+    highlight: null,
+  },
+  {
+    year: '1973',
+    text: `Jane Bowles dies on May 4. 
+          <br /><br />Paul Bowles writes his longest poem, “Next to Nothing.”`,
+    highlight: null
+  },
+    year: '1974-1980',
+    text: `Bowles' story collection Things Gone and Things Still Here published in July 1977..
+    	  </p>
+     	  <br /><br />Several of Bowles’s translations of works by Choukri, Mrabet, and Eberhardt’s The Oblivion Seekers are published.
+	  <br /><br />Collected Stories 1939-76 is published by Black Sparrow Press.
+          <br /><br />Story collection Midnight Mass is brought out by Black Sparrow Press.
+	  <br /><br />Next to Nothing: Collected Poems 1926-1977, is published by Black Sparrow Press.
+          <br /><br />Bowles discovers the work of Guatemalan writer Rodrigo Rey Rosa, whose stories he begins to translate. 
+          <br /><br />Bowles completes Points in Time, a long piece about Morocco in a genre that he calls “lyrical history,” to be published in 1982 in England by Peter Owen (American edition, The Ecco Press, 1984).`,
     highlight: null,
   },
 ]
