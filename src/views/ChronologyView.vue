@@ -207,6 +207,19 @@ const chronology = [
           <br /><br />Bowles becomes friends with Gore Vidal and meets Truman Capote.`,
     highlight: null
   },
+  {
+    year: '1949',
+    text: `The Sheltering Sky, Bowles's most famous novel is published by John Lehmann in London.
+          <br /><br />Bowles works on novel Almost All the Apples Are Gone which is never completed. Sails for Sri Lanka with Yacoubi and begins writing a new novel, Let It Come Down.`,
+    highlight: null
+  },
+  {
+    year: '1950',
+    text: `The Sheltering Sky enters The New York Times bestseller list.
+          <br /><br />Bowles spends several months in Sri Lanka and South India, working on Yerma, an opera for singer Libby Holman based on the García Lorca play. Composes The Tempest (theater music).
+	  <br /><br />John Lehmann publishes A Little Stone, omitting “The Delicate Prey” and “Pages from Cold Point” because of censorship concerns. The American version, The Delicate Prey and Other Stories, includes the two stories and is published by Random House.`,
+    highlight: null
+  },
 ]
 </script>
 <template>
