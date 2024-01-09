@@ -186,7 +186,7 @@ const chronology = [
   {
     year: '1946',
     text: 'Completes music for Blue Mountain Ballads, with lyrics by Tennessee Williams. Completes Sonata for Two Pianos, piano pieces La cuelga, Orosí, Sayula, and the theater scores Cyrano de Bergerac, The Dancer, Land’s End, On Whitman Avenue, Twilight Bar.',
-    highlight: null,
+    highlight: null
   },
   {
     year: '1947',
@@ -194,16 +194,12 @@ const chronology = [
           <p class="text-primary my-5">
             “One balmy night in May, asleep in my quiet bedroom, I had a dream. There was nothing extraordinary about that; I always dreamed, and sometimes I awoke and wrote the dreams down immediately without even turning on the light. This dream was distinctive because although short and with no anecdotal content beyond that of a changing succession of streets, after I awoke, it had left its essence with me in a state of enameled precision: a residue of ineffable sweetness and calm. In the late afternoon sunlight I walked slowly through complex and tunneled streets. As I reviewed it, lying there, sorry to have left the place behind, I realized with a jolt that the magic city really existed. It was Tangier.” (Without Stopping, page 274)
           </p>
-          Partisan Review publishes “A Distant Episode.” Works on The Sheltering Sky. 
-
-		      <br /><br />Meets Moroccan artist Ahmed Yacoubi, who will become a close companion during the 1950s. 
-
-		      <br /><br />Composes Prelude and Dance (winds, percussion, double bass and piano), Six Preludes for Piano, Carretera de Estepona (piano solo), Sonatina for Piano Solo,  
-
+          Partisan Review publishes “A Distant Episode.” Works on The Sheltering Sky.
+	  <br /><br />Meets Moroccan artist Ahmed Yacoubi, who will become a close companion during the 1950s.
+   	  <br /><br />Composes Prelude and Dance (winds, percussion, double bass and piano), Six Preludes for Piano, Carretera de Estepona (piano solo), Sonatina for Piano Solo,
           <br /><br />Iquitos (retitled Tierra Mojada) (piano solo), Folk Preludes for Piano Solo and Dreams that Money can Buy (film Score).
-
           <br /><br />Takes majoun for the first time, a jam made from cannabis; tries kif, which he will begin smoking regularly and in large quantities from the 1950s through the 1980s, when health problems force him to reduce his consumption to one cigarette a day.`,
-    highlight: null
+    highlight: null,
   }
 ]
 </script>
