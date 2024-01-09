@@ -346,7 +346,7 @@ const chronology = [
     highlight: null
   },
     year: '1974-1980',
-    text: `Bowles' story collection Things Gone and Things Still Here published in July 1977..
+    text: `Bowles' story collection Things Gone and Things Still Here published in July 1977.
     	  </p>
      	  <br /><br />Several of Bowles’s translations of works by Choukri, Mrabet, and Eberhardt’s The Oblivion Seekers are published.
 	  <br /><br />Collected Stories 1939-76 is published by Black Sparrow Press.
@@ -354,6 +354,14 @@ const chronology = [
 	  <br /><br />Next to Nothing: Collected Poems 1926-1977, is published by Black Sparrow Press.
           <br /><br />Bowles discovers the work of Guatemalan writer Rodrigo Rey Rosa, whose stories he begins to translate. 
           <br /><br />Bowles completes Points in Time, a long piece about Morocco in a genre that he calls “lyrical history,” to be published in 1982 in England by Peter Owen (American edition, The Ecco Press, 1984).`,
+    highlight: null,
+  },
+  },
+    year: '1981-1985',
+    text: `Translation of Rey Rosa's The Path Doubles Back is published in 1982 in New York, and The Beggar's Knife is published in 1985 in San Francisco.
+    	  </p>
+     	  <br /><br />Bowles publishes unpunctuated “Monologue” stories in The Threepenny Review and Conjunctions.
+          <br /><br />She Woke Me Up So I Killed Her, a collection of Bowles’s translations from several authors, is published.`,
     highlight: null,
   },
 ]
