@@ -365,6 +365,43 @@ const chronology = [
           <br /><br />She Woke Me Up So I Killed Her, a collection of Bowles’s translations from several authors, is published.`,
     highlight: null,
   },
+  {
+    year: '1986-1990',
+    text: `Begins keeping a diary, which will be published as Days: Tangier Journal 1987-89.
+    	  </p>
+     	  <br /><br />Story collection Unwelcome Words is published by Tombuctou Books. 
+	  <br /><br />Filming in Morocco of The Sheltering Sky, directed by Bernardo Bertolucci, begins in 1989.
+          <br /><br />Peter Owen brings out story collection Call at Corazón and Bowles's translation of Rey Rosa's Dust on Her Tongue. 
+	  <br /><br />Next to Nothing: Collected Poems 1926-1977, is published by Black Sparrow Press.
+          <br /><br />Exhibition “Paul Bowles at 80” mounted at the University of Delaware.`,
+    highlight: null,
+  },
+  {
+    year: '1991-1994',
+    text: `Translations of Mrabet's Chocolate Creams and Dollars by Inanout Press and Rey Rosa's The Pelcari Project by Peter Owen in 1992.
+    	  </p>
+     	  <br /><br />Too Far from Home, a novella, is published by Bruno Bischofberger in Zurich in 1992 with a series of gouaches by Miquel Barceló.
+	  <br /><br />Bowles’s essay “Morocco” is published in a limited edition with photographs by Barry Brukoff.
+          <br /><br />Bowles's vision is impaired due to glaucoma.
+	  <br /><br />Scores written for synthesizer are performed at productions of Oscar Wilde's Salome (1992) and Euripides's Hippolytus (1993) at the American School in Tangier. 
+          <br /><br />Show of Bowles's photographs exhibited at the Boijmans van Beuningen museum in Rotterdam; Paul Bowles Photographs: "How Could I Send a Picture into the Desert?" is published. 
+          <br /><br />In Touch, an edition of Bowles's letters edited by Jeffrey Miller, is published.`,
+    highlight: null,
+  },
+  {
+    year: '1995',
+    text: `The Music of Paul Bowles, performed by the Eos Orchestra at Lincoln Center under the direction of Jonathan Sheffer, is released by BMG/Catalyst.`,
+    highlight: null
+  },
+  {
+    year: '1999',
+    text: `Bowles dies in Tangier on November 18th.
+          <p class="text-primary my-5">
+            “Paul Bowles, ‘the only American existentialist,’ died on November 18th, aged 88” (The Economist, 27th November 1999).
+          </p>
+          Bowles's ashes were interred near those of his parents and grandparents at Lakemont Cemetery, Glenora, New York, on November 1st 2000.`,
+    highlight: null,
+  },
 ]
 </script>
 <template>
