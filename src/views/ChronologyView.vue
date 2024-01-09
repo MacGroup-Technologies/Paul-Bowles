@@ -206,7 +206,7 @@ const chronology = [
     text: `Writes theater music for Williams's Summer and Smoke. Concerto for Two Pianos, Winds, and Percussion premieres in New York.
           <br /><br />Bowles becomes friends with Gore Vidal and meets Truman Capote.`,
     highlight: null
-},
+  },
 ]
 </script>
 <template>
