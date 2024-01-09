@@ -220,6 +220,31 @@ const chronology = [
 	  <br /><br />John Lehmann publishes A Little Stone, omitting “The Delicate Prey” and “Pages from Cold Point” because of censorship concerns. The American version, The Delicate Prey and Other Stories, includes the two stories and is published by Random House.`,
     highlight: null
   },
+  {
+    year: '1950',
+    text: `Let It Come Down is published by Random House and by John Lehmann in England.
+          <br /><br />Buys the island of Taprobane off the coast of Sri Lanka. Leaves with Yacoubi for Italy, where they play a role in Hans Richter's film 8 x 8.`,
+    highlight: null
+  },
+  {
+    year: '1953',
+    text: `Jane Bowles completes In the Summer House and Bowles composes the music (now lost) for the play.`,
+    highlight: null
+  },
+  {
+    year: '1954',
+    text: `Begins writing The Spider's House, inspired by political upheaval in Morocco.
+          <br /><br />Transcribes Moghrebi tales told to him by Yacoubi.`,
+    highlight: null
+  },	
+  {
+    year: '1955',
+    text: `Works on The Spider’s House at house on Taprobane.
+          <br /><br />Writes text for Yallah, a book of Saharan photographs taken by Peter Haeberlin.
+	  <br /><br />Develops friendship with Francis Bacon.
+   	  <br /><br />The Spider's House is published by Random House.`,
+    highlight: null
+  },
 ]
 </script>
 <template>
