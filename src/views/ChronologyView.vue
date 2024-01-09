@@ -345,6 +345,7 @@ const chronology = [
           <br /><br />Paul Bowles writes his longest poem, “Next to Nothing.”`,
     highlight: null
   },
+  {
     year: '1974-1980',
     text: `Bowles' story collection Things Gone and Things Still Here published in July 1977.
     	  </p>
