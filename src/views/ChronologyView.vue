@@ -357,7 +357,7 @@ const chronology = [
           <br /><br />Bowles completes Points in Time, a long piece about Morocco in a genre that he calls “lyrical history,” to be published in 1982 in England by Peter Owen (American edition, The Ecco Press, 1984).`,
     highlight: null,
   },
-  },
+  {
     year: '1981-1985',
     text: `Translation of Rey Rosa's The Path Doubles Back is published in 1982 in New York, and The Beggar's Knife is published in 1985 in San Francisco.
     	  </p>
