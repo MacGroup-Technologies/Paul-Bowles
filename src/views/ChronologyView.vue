@@ -201,6 +201,12 @@ const chronology = [
           <br /><br />Takes majoun for the first time, a jam made from cannabis; tries kif, which he will begin smoking regularly and in large quantities from the 1950s through the 1980s, when health problems force him to reduce his consumption to one cigarette a day.`,
     highlight: null,
   }
+  {
+    year: '1948',
+    text: `Writes theater music for Williams's Summer and Smoke. Concerto for Two Pianos, Winds, and Percussion premieres in New York.
+          <br /><br />Bowles becomes friends with Gore Vidal and meets Truman Capote.`,
+    highlight: null
+},
 ]
 </script>
 <template>
