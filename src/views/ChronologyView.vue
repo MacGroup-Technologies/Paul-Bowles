@@ -245,6 +245,39 @@ const chronology = [
    	  <br /><br />The Spider's House is published by Random House.`,
     highlight: null
   },
+  {
+    year: '1956',
+    text: `Morocco gains independence on March 2, with Tangier remaining under international control.`,
+    highlight: null
+  },
+  {
+    year: '1957',
+    text: `Travels to Kenya to cover the Mau-Mau uprising for The Nation. Upon return to Morocco, discovers that Jane has suffered a stroke and takes her to London for treatment. Returns to Tangier with Jane and Yacoubi.`,
+    highlight: null
+  },
+  {
+    year: '1958',
+    text: `Finishes score for Yerma. Writes score for Milton Geiger's play Edwin Booth, directed by José Ferrer and Night Waltz for Two Pianos.
+          <br /><br />In New York, tries mescaline for the first time with Ned Rorem and John Goodwin.`,
+    highlight: null
+  },
+  {
+    year: '1959',
+    text: `Heinemann publishes the story collection The Hours After Noon.
+          <br /><br />Bowles is awarded Rockefeller Grant to record North African music. Accompanied by Canadian painter and journalist Christopher Wanklyn and driver Mohammed Larbi, Bowles makes four trips to record in remote areas and takes extensive notes that form the basis of the essay “The Rif, to Music.” Near the end of the project, the Moroccan government forbids further recording, calling the endeavor “ill-timed.” `,
+    highlight: null
+  },
+  {
+    year: '1961',
+    text: `Tape-records and translates tales by Yacoubi, publishing “The Game” in Contact and “The Night Before Thinking” in Evergreen Review.
+          <p class="text-primary my-5">
+            “I had first admired Ahmed Yacoubi‘s stories as long ago as 1947, but it was not until 1952 that the idea occurred to me that I might be instrumental in preserving at least a few of them …. One day as Yacoubi began to speak, I seized a notebook and rapidly scribbled the English translation of a story.” (Preface to Five Eyes: Stories by Abdeslam Boulaich. Mohamed Choukri, Larbi Layachi, Mohammed Mrabet, Ahmed Yacoubi, Santa Barbara, CA: Black Sparrow Press, 1979, page 7.)
+          </p>
+          Encouraged by Ginsberg, Bowles prepares a collection of stories which were written with the aid of kif (published the following year as One Hundred Camels in the Courtyard by City Lights Books).
+	  <p class="text-primary my-5">
+            “In 1960 I began to experiment with the idea of constructing stories whose subject matter would consist of disparate elements and unrelated characters taken directly from life and fitted together as in a mosaic. The problem was to create a story-line which would make each arbitrarily chosen episode compatible with the others, to make one lead to the next with a semblance of naturalness. I believed that through the intermediary of kif the barriers separating the unrelated elements might be destroyed, and the disconnected episodes forced into a symbiotic relationship. I listed a group of incidents and situations I had either witnessed or heard about that year.” (One Hundred Camels in the Courtyard, Preface)`,
+    highlight: null,
+  },
 ]
 </script>
 <template>
