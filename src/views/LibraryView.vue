@@ -29,7 +29,7 @@ useHead({ title: `Paul Bowles's Library` })
       Paul Bowles's personal library includes over three thousand volumes that he collected during
       the five decades he lived in Tangier. The result of a recent major cataloging effort, his
       copious library is now available in digitized form for public consultation.
-    <br />
+    <br /><br />
       Notice: Missing Books from Paul Bowles’s Personal Library<br />
 Unfortunately, already a year or two before Bowles passed away, some visitors had begun to ransack his bookshelves. 
       Among the absent volumes were works by renowned authors, with signatures and dedications. Noteworthy losses included 
