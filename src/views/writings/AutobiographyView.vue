@@ -169,11 +169,7 @@ useHead({ title: `${router.params.title}` })
         </div>
       </template>
       <template
-        v-else-if="
-          router.params.title ===
-          'Paul Bowles, Contemporary Authors Autobiographical Series, volume I, pp. 81-95'
-        "
-      >
+        v-else-if="router.params.title ==='Paul Bowles, Contemporary Authors Autobiographical Series, volume I, pp. 81-95'">
         <div class="mt-10 text-justify">
           I think that my father would have preferred not to have been burdened with a child. Quite
           possibly my coming into existence was the result of an accident. He was nervous and
