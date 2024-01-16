@@ -110,7 +110,7 @@ useHead({ title: `${router.params.title}` })
           the dogs. He took a boat across to Dhanushkodi in India. India was hotter than Sri Lanka.
           He worked on his novel. When he arrived in Paris, Jane was not ready to leave. He was
           making an opera out of Garcia Lorca's Yerma. This was for Libby Holman. They spent a month
-          together in Andalucia. Autumn in Fez. Winter and spring in the Sahara. Jane wanted to
+          together in Andalusia. Autumn in Fez. Winter and spring in the Sahara. Jane wanted to
           return to Morocco. He drove to the French frontier and picked her up. But she liked Spain
           so much that they spent a month there. She finished her play and went to New York. He
           finished his novel and went to Bombay. The Indian railways had suffered in the past two
