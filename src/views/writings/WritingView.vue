@@ -127,7 +127,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
       <div class="mt-10" v-else-if="router.params.title === 'Autobiography'">
         <ol class="list-decimal mt-10 ml-10">
           <li v-for="item in writing.item" :key="item.id">
-            <router-link :to="`music-criticism/${item.title}`" class="block rounded overflow-hidden" :key="item.id">
+            <router-link :to="`autobiography/${item.title}`" class="block rounded overflow-hidden" :key="item.id">
               <h3 class="underline mt-4">{{ item.title }}</h3>
             </router-link>
           </li>
