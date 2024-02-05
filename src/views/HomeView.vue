@@ -101,8 +101,10 @@ const mouseHover = function (e: any) {
   if (e === null) {
     ; (hover.animate = ''), (hover.item = { title: '', text: '', image: '' })
   } else {
-    hover.item = e
-    hover.animate = e.title
+    setTimeout(() => {
+      hover.item = e
+      hover.animate = e.title
+    }, 400);
   }
 }
 
@@ -212,7 +214,7 @@ onMounted(() => {
       </div>
       <div class="hidden md:flex flex-wrap gap-x-5 md:gap-x-0 gap-y-5 w-full md:w-5/6 2xl:w-full mr-40">
         <div class="2xl:w-72 capitalize" v-for="(item, index) in links" :key="index">
-          <router-link class="px-10 hover:opacity-70 text-[20px] 2xl:text-[40px] text-white-shade transition-colors"
+          <router-link class="px-10 hover:opacity-70 text-[20px] 2xl:text-[40px] text-white-shade transition-colors hover:bg-white/0"
             :to="`/${item.link}`" @mouseover="mouseHover(item)" @mouseout="mouseHover(null)">
             {{ item.title }}
           </router-link>
