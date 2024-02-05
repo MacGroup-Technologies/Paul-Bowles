@@ -224,20 +224,20 @@ useHead({
           Jeffrey Posternak<br />
           Katharina Rippstein<br />
           Kenneth Lisenbee<br />
-        </div>
-        <div class="md:w-1/2">
-          Leonard Bernstein Office<br />
           Miquel Barceló<br />
           Peter Hale<br />
           Phillip Ramey<br />
           Pía Rey Rosa<br />
           Simon Pettet<br />
+          Timothy Murray<br />
+          Xenia Geroulanos<br />
+        </div>
+        <div class="md:w-1/2">
+          Leonard Bernstein Office<br />
           The Allen Ginsberg Project<br />
           The University of Delaware Library<br />
           The University of Texas<br />
           The Wylie Agency<br />
-          Timothy Murray<br />
-          Xenia Geroulanos<br />
         </div>
       </div>
     </div>
