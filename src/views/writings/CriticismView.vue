@@ -392,7 +392,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           by composer. Result: no entries.
         </div>
       </template>
-      <template v-else-if="router.params.title === 'North African Music'">
+      <template v-else-if="router.params.title === 'North African Music I'">
         <div class="mt-10">
           <h2 class="">DECEMBER 27 (1942), <i>NEW YORK HERALD TRIBUNE</i></h2>
         </div>
@@ -655,7 +655,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           not like any folk music one can hear in Spain today. The hands of the performers being
           occupied in playing their guitars and harp, the singers' feet often take over the job of
           making the rhythm more incisive, of emphasizing certain offbeats for the sake of variety,
-          which the clapping hands do in Andalusía. Sometimes at the end of a chorus comes a
+          which the clapping hands do in Andalusia. Sometimes at the end of a chorus comes a
           <i>desplante</i> during which the dancers, if any, rest or sing falsetto allusions of a
           challenging or insulting nature regarding each other's defects. (This happens in the
           <i>Fandango</i> in Spain.) Along the Gulf Coast, yearly regional contests are held.
@@ -761,7 +761,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           and brilliance which characterize the music of Spain. Listen any evening in the Plaza
           Garibaldi to the simultaneous playing of six or seven groups of ordinary Mariachis. The
           rhythms are unpredictable but earthbound. Nothing could be much farther from the hard,
-          circumspect precisions of Andalusía or Asturias. But the great differences lie not
+          circumspect precisions of Andalusia or Asturias. But the great differences lie not
           primarily in the melodies, nor in the harmonic progressions, nor yet in the rhythms, but
           rather in a whole mass of innumerable details affecting all these things, details which
           when combined make a result distinct from the original music. What remains is as much a

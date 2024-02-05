@@ -186,8 +186,222 @@ const chronology = [
   {
     year: '1946',
     text: 'Completes music for Blue Mountain Ballads, with lyrics by Tennessee Williams. Completes Sonata for Two Pianos, piano pieces La cuelga, Orosí, Sayula, and the theater scores Cyrano de Bergerac, The Dancer, Land’s End, On Whitman Avenue, Twilight Bar.',
+    highlight: null
+  },
+  {
+    year: '1947',
+    text: `Settles in Tangier.
+          <p class="text-primary my-5">
+            “One balmy night in May, asleep in my quiet bedroom, I had a dream. There was nothing extraordinary about that; I always dreamed, and sometimes I awoke and wrote the dreams down immediately without even turning on the light. This dream was distinctive because although short and with no anecdotal content beyond that of a changing succession of streets, after I awoke, it had left its essence with me in a state of enameled precision: a residue of ineffable sweetness and calm. In the late afternoon sunlight I walked slowly through complex and tunneled streets. As I reviewed it, lying there, sorry to have left the place behind, I realized with a jolt that the magic city really existed. It was Tangier.” (Without Stopping, page 274)
+          </p>
+          Partisan Review publishes “A Distant Episode.” Works on The Sheltering Sky.
+	  <br /><br />Meets Moroccan artist Ahmed Yacoubi, who will become a close companion during the 1950s.
+   	  <br /><br />Composes Prelude and Dance (winds, percussion, double bass and piano), Six Preludes for Piano, Carretera de Estepona (piano solo), Sonatina for Piano Solo,
+          <br /><br />Iquitos (retitled Tierra Mojada) (piano solo), Folk Preludes for Piano Solo and Dreams that Money can Buy (film Score).
+          <br /><br />Takes majoun for the first time, a jam made from cannabis; tries kif, which he will begin smoking regularly and in large quantities from the 1950s through the 1980s, when health problems force him to reduce his consumption to one cigarette a day.`,
     highlight: null,
-  }
+  },
+  {
+    year: '1948',
+    text: `Writes theater music for Williams's Summer and Smoke. Concerto for Two Pianos, Winds, and Percussion premieres in New York.
+          <br /><br />Bowles becomes friends with Gore Vidal and meets Truman Capote.`,
+    highlight: null
+  },
+  {
+    year: '1949',
+    text: `The Sheltering Sky, Bowles's most famous novel is published by John Lehmann in London.
+          <br /><br />Bowles works on novel Almost All the Apples Are Gone which is never completed. Sails for Sri Lanka with Yacoubi and begins writing a new novel, Let It Come Down.`,
+    highlight: null
+  },
+  {
+    year: '1950',
+    text: `The Sheltering Sky enters The New York Times bestseller list.
+          <br /><br />Bowles spends several months in Sri Lanka and South India, working on Yerma, an opera for singer Libby Holman based on the García Lorca play. Composes The Tempest (theater music).
+	  <br /><br />John Lehmann publishes A Little Stone, omitting “The Delicate Prey” and “Pages from Cold Point” because of censorship concerns. The American version, The Delicate Prey and Other Stories, includes the two stories and is published by Random House.`,
+    highlight: null
+  },
+  {
+    year: '1950',
+    text: `Let It Come Down is published by Random House and by John Lehmann in England.
+          <br /><br />Buys the island of Taprobane off the coast of Sri Lanka. Leaves with Yacoubi for Italy, where they play a role in Hans Richter's film 8 x 8.`,
+    highlight: null
+  },
+  {
+    year: '1953',
+    text: `Jane Bowles completes In the Summer House and Bowles composes the music (now lost) for the play.`,
+    highlight: null
+  },
+  {
+    year: '1954',
+    text: `Begins writing The Spider's House, inspired by political upheaval in Morocco.
+          <br /><br />Transcribes Moghrebi tales told to him by Yacoubi.`,
+    highlight: null
+  },	
+  {
+    year: '1955',
+    text: `Works on The Spider’s House at house on Taprobane.
+          <br /><br />Writes text for Yallah, a book of Saharan photographs taken by Peter Haeberlin.
+	  <br /><br />Develops friendship with Francis Bacon.
+   	  <br /><br />The Spider's House is published by Random House.`,
+    highlight: null
+  },
+  {
+    year: '1956',
+    text: `Morocco gains independence on March 2, with Tangier remaining under international control.`,
+    highlight: null
+  },
+  {
+    year: '1957',
+    text: `Travels to Kenya to cover the Mau-Mau uprising for The Nation. Upon return to Morocco, discovers that Jane has suffered a stroke and takes her to London for treatment. Returns to Tangier with Jane and Yacoubi.`,
+    highlight: null
+  },
+  {
+    year: '1958',
+    text: `Finishes score for Yerma. Writes score for Milton Geiger's play Edwin Booth, directed by José Ferrer and Night Waltz for Two Pianos.
+          <br /><br />In New York, tries mescaline for the first time with Ned Rorem and John Goodwin.`,
+    highlight: null
+  },
+  {
+    year: '1959',
+    text: `Heinemann publishes the story collection The Hours After Noon.
+          <br /><br />Bowles is awarded Rockefeller Grant to record North African music. Accompanied by Canadian painter and journalist Christopher Wanklyn and driver Mohammed Larbi, Bowles makes four trips to record in remote areas and takes extensive notes that form the basis of the essay “The Rif, to Music.” Near the end of the project, the Moroccan government forbids further recording, calling the endeavor “ill-timed.” `,
+    highlight: null
+  },
+  {
+    year: '1961',
+    text: `Tape-records and translates tales by Yacoubi, publishing “The Game” in Contact and “The Night Before Thinking” in Evergreen Review.
+          <p class="text-primary my-5">
+            “I had first admired Ahmed Yacoubi‘s stories as long ago as 1947, but it was not until 1952 that the idea occurred to me that I might be instrumental in preserving at least a few of them …. One day as Yacoubi began to speak, I seized a notebook and rapidly scribbled the English translation of a story.” (Preface to Five Eyes: Stories by Abdeslam Boulaich. Mohamed Choukri, Larbi Layachi, Mohammed Mrabet, Ahmed Yacoubi, Santa Barbara, CA: Black Sparrow Press, 1979, page 7.)
+          </p>
+          Encouraged by Ginsberg, Bowles prepares a collection of stories which were written with the aid of kif (published the following year as One Hundred Camels in the Courtyard by City Lights Books).
+	  <p class="text-primary my-5">
+            “In 1960 I began to experiment with the idea of constructing stories whose subject matter would consist of disparate elements and unrelated characters taken directly from life and fitted together as in a mosaic. The problem was to create a story-line which would make each arbitrarily chosen episode compatible with the others, to make one lead to the next with a semblance of naturalness. I believed that through the intermediary of kif the barriers separating the unrelated elements might be destroyed, and the disconnected episodes forced into a symbiotic relationship. I listed a group of incidents and situations I had either witnessed or heard about that year.” (One Hundred Camels in the Courtyard, Preface)`,
+    highlight: null,
+  },
+  {
+    year: '1962',
+    text: `Continues to record and translate stories told to him by Moroccans, a pursuit that will figure prominently in his later career. Meets Larbi Layachi, who tells Bowles autobiographical tales under the pseudonym Driss ben Hamed Charhadi. “The Orphan,” the first chapter of Layachi's novel A Life Full of Holes, transcribed and translated by Bowles, is published in Evergreen Review.
+          <br /><br />One Hundred Camels in the Courtyard is published by City Lights. 
+   	  <br /><br />Writes music for Williams's The Milk Train Doesn't Stop Here Anymore.`,
+    highlight: null
+  },
+  {
+    year: '1963',
+    text: `Peter Owen publishes Their Heads Are Green and Their Hands Are Blue, a collection of travel essays.`,
+    highlight: null
+  },
+  {
+    year: '1964',
+    text: `A Life Full of Holes by Charhadi, translated by Bowles, is published by Grove Press.`,
+    highlight: null
+  },
+  {
+    year: '1965',
+    text: `Begins to record and translate the spoken stories of Mohammed Mrabet, who becomes a close friend and regular visitor to Bowles's home.`,
+    highlight: null
+  },
+  {
+    year: '1966',
+    text: `Novel Up Above the World is published by Simon & Schuster.`,
+    highlight: null
+  },
+  {
+    year: '1967',
+    text: `Jilala, an album featuring recordings of the Jilala religious brotherhood made by Bowles and Brion Gysin, is released.
+          <br /><br />Translation of Mrabet's Love With a Few Hairs is published by Peter Owen.`,
+    highlight: null
+  },
+  {
+    year: '1968',
+    text: `Bowles teaches a seminar on existentialism and the novel in the English Department of San Fernando Valley State College in California.
+          <br /><br />Peter Owen publishes story collection Pages from Cold Point.`,
+    highlight: null
+  },
+  {
+    year: '1969',
+    text: `Publication of Mrabet's The Lemon by Peter Owen and M'Hashish by City Lights, both translated by Bowles.`,
+    highlight: null
+  },
+  {
+    year: '1970',
+    text: `Antaeus, a literary review founded by Bowles and Daniel Halpern, begins publication.`,
+    highlight: null
+  },
+  {
+    year: '1971-1972',
+    text: `Bowles begins translating the work of Mohamed Choukri, Moroccan writer, working from the Arabic texts with the help of the author.
+    	  </p>
+     	  <br /><br />Music of Morocco, two long-play records taken from Bowles's recordings in the archives of the Library of Congress, is released.
+	  <br /><br />Black Sparrow Press brings out The Thicket of Spring: Poems 1926-69.
+          <br /><br />Autobiography, Without Stopping, is published by G.P. Putnam's Sons.
+	  <br /><br />Bowles translates the stories of Swiss expatriate writer Isabelle Eberhardt (1877-1904).
+          <p class="text-primary my-5">
+            “Not long before her death Isabelle Eberhardt wrote: "No one ever lived more from day to day or was more dependent upon chance. It is the inescapable chain of events that has brought me to this point, rather than I who have caused these things to happen." Her life seems haphazard, at the mercy of caprice, but her writings prove otherwise. She did not make decisions; she was impelled to take action. Her nature combined an extraordinary singleness of purpose and an equally powerful nostalgia for the unattainable.” (Paul Bowles, preface to The Oblivion Seekers)`,
+    highlight: null,
+  },
+  {
+    year: '1973',
+    text: `Jane Bowles dies on May 4. 
+          <br /><br />Paul Bowles writes his longest poem, “Next to Nothing.”`,
+    highlight: null
+  },
+  {
+    year: '1974-1980',
+    text: `Bowles' story collection Things Gone and Things Still Here published in July 1977.
+    	  </p>
+     	  <br /><br />Several of Bowles’s translations of works by Choukri, Mrabet, and Eberhardt’s The Oblivion Seekers are published.
+	  <br /><br />Collected Stories 1939-76 is published by Black Sparrow Press.
+          <br /><br />Story collection Midnight Mass is brought out by Black Sparrow Press.
+	  <br /><br />Next to Nothing: Collected Poems 1926-1977, is published by Black Sparrow Press.
+          <br /><br />Bowles discovers the work of Guatemalan writer Rodrigo Rey Rosa, whose stories he begins to translate. 
+          <br /><br />Bowles completes Points in Time, a long piece about Morocco in a genre that he calls “lyrical history,” to be published in 1982 in England by Peter Owen (American edition, The Ecco Press, 1984).`,
+    highlight: null,
+  },
+  {
+    year: '1981-1985',
+    text: `Translation of Rey Rosa's The Path Doubles Back is published in 1982 in New York, and The Beggar's Knife is published in 1985 in San Francisco.
+    	  </p>
+     	  <br /><br />Bowles publishes unpunctuated “Monologue” stories in The Threepenny Review and Conjunctions.
+          <br /><br />She Woke Me Up So I Killed Her, a collection of Bowles’s translations from several authors, is published.`,
+    highlight: null,
+  },
+  {
+    year: '1986-1990',
+    text: `Begins keeping a diary, which will be published as Days: Tangier Journal 1987-89.
+    	  </p>
+     	  <br /><br />Story collection Unwelcome Words is published by Tombuctou Books. 
+	  <br /><br />Filming in Morocco of The Sheltering Sky, directed by Bernardo Bertolucci, begins in 1989.
+          <br /><br />Peter Owen brings out story collection Call at Corazón and Bowles's translation of Rey Rosa's Dust on Her Tongue. 
+	  <br /><br />Next to Nothing: Collected Poems 1926-1977, is published by Black Sparrow Press.
+          <br /><br />Exhibition “Paul Bowles at 80” mounted at the University of Delaware.`,
+    highlight: null,
+  },
+  {
+    year: '1991-1994',
+    text: `Translations of Mrabet's Chocolate Creams and Dollars by Inanout Press and Rey Rosa's The Pelcari Project by Peter Owen in 1992.
+    	  </p>
+     	  <br /><br />Too Far from Home, a novella, is published by Bruno Bischofberger in Zurich in 1992 with a series of gouaches by Miquel Barceló.
+	  <br /><br />Bowles’s essay “Morocco” is published in a limited edition with photographs by Barry Brukoff.
+          <br /><br />Bowles's vision is impaired due to glaucoma.
+	  <br /><br />Scores written for synthesizer are performed at productions of Oscar Wilde's Salome (1992) and Euripides's Hippolytus (1993) at the American School in Tangier. 
+          <br /><br />Show of Bowles's photographs exhibited at the Boijmans van Beuningen museum in Rotterdam; Paul Bowles Photographs: "How Could I Send a Picture into the Desert?" is published. 
+          <br /><br />In Touch, an edition of Bowles's letters edited by Jeffrey Miller, is published.`,
+    highlight: null,
+  },
+  {
+    year: '1995',
+    text: `The Music of Paul Bowles, performed by the Eos Orchestra at Lincoln Center under the direction of Jonathan Sheffer, is released by BMG/Catalyst.`,
+    highlight: null
+  },
+  {
+    year: '1999',
+    text: `Bowles dies in Tangier on November 18th.
+          <p class="text-primary my-5">
+            “Paul Bowles, ‘the only American existentialist,’ died on November 18th, aged 88” (The Economist, 27th November 1999).
+          </p>
+          Bowles's ashes were interred near those of his parents and grandparents at Lakemont Cemetery, Glenora, New York, on November 1st 2000.`,
+    highlight: null,
+  },
 ]
 </script>
 <template>

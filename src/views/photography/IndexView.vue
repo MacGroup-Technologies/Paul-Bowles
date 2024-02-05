@@ -51,9 +51,7 @@ const photography = reactive([
           <h2 class="text-background-dark m-5 mt-7">
             {{ item.title }}
             <span v-if="item.id == 0" class="group-hover/image:opacity-100 opacity-0 transition-opacity block text-sm">
-              Photograph was taken
-              by
-              Jeffrey Miller
+              Photo of Paul Bowles and Cherie Nutting by Jeffrey Miller
             </span>
           </h2>
         </router-link>

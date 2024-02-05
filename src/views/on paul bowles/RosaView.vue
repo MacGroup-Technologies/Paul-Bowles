@@ -267,7 +267,8 @@ window.addEventListener('scroll', function () {
           silhouettes of the Roman cypresses beyond the Moorish arch of the magnificent house at
           Monteviejo with its grand doorway, which is wide open.
         </p>
-        <p class="text-right my-10 font-bold font-heading">Rodrigo Rey Rosa</p>
+        <p class="text-right my-10 font-bold font-heading">Rodrigo Rey Rosa<br />
+        Letra Internacional, nº 93, Invierno 2006</p>
       </div>
     </div>
   </div>

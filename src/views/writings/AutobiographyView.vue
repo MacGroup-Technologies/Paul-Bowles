@@ -110,7 +110,7 @@ useHead({ title: `${router.params.title}` })
           the dogs. He took a boat across to Dhanushkodi in India. India was hotter than Sri Lanka.
           He worked on his novel. When he arrived in Paris, Jane was not ready to leave. He was
           making an opera out of Garcia Lorca's Yerma. This was for Libby Holman. They spent a month
-          together in Andalucia. Autumn in Fez. Winter and spring in the Sahara. Jane wanted to
+          together in Andalusia. Autumn in Fez. Winter and spring in the Sahara. Jane wanted to
           return to Morocco. He drove to the French frontier and picked her up. But she liked Spain
           so much that they spent a month there. She finished her play and went to New York. He
           finished his novel and went to Bombay. The Indian railways had suffered in the past two
@@ -169,11 +169,7 @@ useHead({ title: `${router.params.title}` })
         </div>
       </template>
       <template
-        v-else-if="
-          router.params.title ===
-          'Paul Bowles, Contemporary Authors Autobiographical Series, volume I, pp. 81-95'
-        "
-      >
+        v-else-if="router.params.title === 'Paul Bowles, Contemporary Authors Autobiographical Series, volume I, pp. 81-95'">
         <div class="mt-10 text-justify">
           I think that my father would have preferred not to have been burdened with a child. Quite
           possibly my coming into existence was the result of an accident. He was nervous and

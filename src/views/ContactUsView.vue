@@ -163,10 +163,10 @@ useHead({
         <div class="md:w-1/2 md:py-5">
           <div class="mb-5">
             <h3 class="font-bold">Bibliographical Support</h3>
+            Paula Arroyo<br />
             Camila González Adel<br />
             Israel Jorquera Vidal<br />
-            Melina Luceri<br />
-            Paula Arroyo
+            Melina Luceri
           </div>
           <div class="mb-5">
             <h3 class="font-bold">Design & Web Developement</h3>
@@ -183,9 +183,9 @@ useHead({
           </div>
           <div class="mb-5">
             <h3 class="font-bold">Proofreading</h3>
+            Sara Gregg<br />
             Antiochus Ommisi<br />
-            Arianna Sullivan<br />
-            Sara Gregg
+            Arianna Sullivan
           </div>
         </div>
         <div class="md:w-1/2 md:py-5">  

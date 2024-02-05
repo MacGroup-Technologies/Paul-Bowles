@@ -8,8 +8,8 @@ const route = useRouter()
 
 const music = [
   'Leonard Bernstein',
-  'Paul Bowles, Composer',
-  'Virgil Thompson - Twelfth Night',
+  'Irene Herrmann: Paul Bowles, Composer',
+  'Virgil Thompson - On Twelfth Night',
   'Rey Rosa - The Return Trip',
   'Lincoln Center Tribute',
 ]
