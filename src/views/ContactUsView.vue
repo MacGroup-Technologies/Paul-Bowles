@@ -211,33 +211,56 @@ useHead({
       <h2 class="uppercase font-heading text-5xl font-bold">ACKNOWLEDGEMENTS</h2>
       <div class="flex gap-10 flex-col md:flex-row mt-5">
         <div class="md:w-1/2">
-          Abdelaziz Jadir<br />
-          Ambrogio Borsani<br />
-          Cherie Nutting<br />
-          Claude Natalie Thomas<br />
-          Die Fotostiftung Schweiz<br />
-          Émil Hernon<br />
-          Francis Poole<br />
-          Gary Conklin<br />
-          Irene Herrmann<br />
-          Jeffrey Miller<br />
-          Jeffrey Posternak<br />
-          Katharina Rippstein<br />
-          Kenneth Lisenbee<br />
-          Miquel Barceló<br />
-          Peter Hale<br />
-          Phillip Ramey<br />
-          Pía Rey Rosa<br />
-          Simon Pettet<br />
-          Timothy Murray<br />
-          Xenia Geroulanos<br />
+          Miquel  Barceló<br />
+Ambrogio Borsani<br />
+<br />
+
+Gary Conklin<br />
+<br />
+
+Jean Philippe Fournier<br />
+<br />
+
+Xenia Geroulanos<br />
+<br />
+
+Peter Hale<br />
+Irene Hermann<br />
+Émil Hernon<br />
+<br />
+
+Abdelaziz Jadir<br />
+<br />
+
+Kenneth Lisenbee<br />
+<br />
+
+
+Jeffrey Miller<br />
+Timothy  Murray<br />
+<br />
+
+Cherie Nutting<br />
+<br />
+
+Simon Pettet<br />
+Francis Poole<br />
+Jeffrey Posternak<br />
+<br />
+
+Philip Ramey<br />
+Pía Rey Rosa<br />
+Katharina Rippstein<br />
+<br />
+
+Claude Natalie Thomas<br />
         </div>
         <div class="md:w-1/2">
           Leonard Bernstein Office<br />
-          The Allen Ginsberg Project<br />
-          The University of Delaware Library<br />
-          The University of Texas<br />
-          The Wylie Agency<br />
+The University of Delaware Library<br />
+Fotostiftung Schweiz<br />
+The Wylie Agency<br />
+The Allen Ginsberg Project<br />
         </div>
       </div>
     </div>
