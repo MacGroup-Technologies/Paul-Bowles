@@ -7,11 +7,11 @@ useHead({ title: "On Paul Bowles Music" })
 const route = useRouter()
 
 const music = [
-  'Leonard Bernstein',
-  'Irene Herrmann: Paul Bowles, Composer',
-  'Virgil Thompson - On Twelfth Night',
-  'Rey Rosa - The Return Trip',
-  'Lincoln Center Tribute',
+  { title: 'Leonard Bernstein', image: "Leonard-Bernstein-to-Professor-Lawrence.jpg" },
+  { title: 'Irene Herrmann: Paul Bowles, Composer', },
+  { title: 'Virgil Thompson - On Twelfth Night', },
+  { title: 'Rey Rosa - The Return Trip', },
+  { title: 'Lincoln Center Tribute', },
 ]
 </script>
 <template>
@@ -28,10 +28,11 @@ const music = [
         <p>A selection of texts on the music of Paul Bowles</p>
         <div
           class="grid grid-cols-1 md:grid-cols-3 gap-20 2xl:gap-48 justify-between py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl text-center">
-          <router-link :to="'/music/on-paul-bowless-music/' + encodeURI(item)" class="flex flex-col items-center gap-3"
-            v-for="(item, index) in music" :key="index">
-            <img src="@/assets/imgs/music-thumbnail.png" alt="">
-            {{ item }}
+          <router-link :to="'/music/on-paul-bowless-music/' + encodeURI(item.title)"
+            class="flex flex-col items-center gap-3" v-for="(item, index) in  music " :key="index">
+            <img :src="'/src/assets/imgs/' + item.image" alt="" v-if="item.image" class="rounded-2xl ">
+            <img src="@/assets/imgs/music-thumbnail.png" alt="" v-else>
+            {{ item.title }}
           </router-link>
         </div>
       </div>
