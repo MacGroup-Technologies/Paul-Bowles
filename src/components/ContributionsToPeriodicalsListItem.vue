@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+
 defineProps({
   item: {
     type: Object,
@@ -17,10 +21,10 @@ const opened = ref(false);
 <template>
   <div class="flex justify-between items-start mb-8 gap-10 overflow-hidden">
     <div class="w-[80vw] md:w-1/2 h-auto overflow-hidden cursor-pointer text-md" @click="opened = !opened">
-      <div class="flex gap-4"><span>{{index+1}}.</span>
+      <div class="flex gap-4"><span>{{ (Number(route.query.page || 1) - 1) * 20 + index + 1 }}.</span>
         <div>
           <div class="space-y-4">
-            <h2>{{item.title}}</h2>
+            <h2>{{ item.title }}</h2>
             <div class="space-y-2 text-lg">
               <p class="text-primary transition-all" v-if="opened">{{ item.date_of_publication }}</p>
               <p class="text-primary transition-all" v-if="opened">{{ item.place_of_publication }}</p>
