@@ -25,7 +25,7 @@ useHead({ title: `Archives` })
     </div>
     <a name="content" />
     <div class="px-5 py-10 lg:px-16 2xl:px-20 grid place-items-stretch gap-5 grid-cols-1 md:grid-cols-2">
-      <a target="_blank" href="https://norman.hrc.utexas.edu/fasearch/findingAid.cfm?eadid=0014"
+      <a target="_blank" href="https://norman.hrc.utexas.edu/fasearch/findingAid.cfm?eadid=00141"
         class="flex flex-col bg-white dark:bg-opacity-10 hover:-translate-y-2 transition-transform p-5 rounded-xl">
         <div class="flex flex-1 justify-center bg-primary rounded-xl">
           <img src="https://www.hrc.utexas.edu/images-root/logos/harry-ransom-center-logo.png" class="py-20" />
