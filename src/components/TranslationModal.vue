@@ -43,6 +43,9 @@ const img = ref(null)
               <div class="" v-if="item.language"><b>LANGUAGES:</b> {{ item.language }}</div>
               <div class="" v-if="item.translator"><b>TRANSLATOR:</b> {{ item.translator }}</div>
               <div class="" v-if="item.genre"><b>GENRE:</b> {{ item.genre }}</div>
+              <div class="" v-if="item.library_tags">
+                <b>TAGS:</b> {{ item.library_tags }}
+              </div>
             </div>
           </div>
         </div>
