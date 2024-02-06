@@ -201,9 +201,9 @@ useHead({
           </div>
           <div class="mb-5">
             <h3 class="font-bold">Translations</h3>
-            Abdelaziz Jadir<br />
             Arthur Malcolm Dixon<br />
             Daniel Fitzgerald<br />
+            Abdelaziz Jadir<br />
             William Morningstar
           </div>
         </div>
