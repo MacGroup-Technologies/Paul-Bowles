@@ -61,9 +61,8 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
     <div class="px-5 py-5 lg:px-16 2xl:px-20" v-if="translation.data.title !== ''">
       <div class="flex flex-col md:flex-row justify-between">
         <div class="flex-1 overflow-hidden relative py-20">
-          <div class="absolute inset-0 opacity-60 blur-md">
-            <VueMagnifier class="translate-y-[-50%] scale-125" :src="translation.img.split(',')[0]" />
-          </div>
+          <div class="absolute inset-0 opacity-60 blur-md"
+            :style="`background-image:url('${translation.img.split(',')[0]}')`" style="background-position:center" />
           <div class="text-2xl text-center relative">
             <img v-if="translation.img === ''" src="@/assets/imgs/Image-thumbnail.png"
               class="w-auto h-auto rounded-[22px] fancy-img mb-2 mx-5 md:mx-auto cursor-pointer" />
