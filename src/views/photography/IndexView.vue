@@ -9,15 +9,15 @@ import PaulBowlesArchieve from '@/assets/imgs/PaulBowlesArchive.jpg';
 
 const photography = reactive([
   {
+    id: 2,
+    title: 'Paul Bowles Archive at Fotostiftung Schweiz',
+    image: PaulBowlesArchieve,
+  },
+  {
     id: 0,
     title: 'Portraits by Cherie Nutting',
     image: Potrait,
   },
-  {
-    id: 2,
-    title: 'Paul Bowles Archive at Fotostiftung Schweiz',
-    image: PaulBowlesArchieve,
-  }
 ])
 
 </script>

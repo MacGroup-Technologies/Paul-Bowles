@@ -240,7 +240,7 @@ onMounted(async () => {
                   </svg>
                 </div>
               </div>
-              <audio controls class="w-full" autoplay>
+              <audio controls controlslist="nodownload" class="w-full" autoplay>
                 <source :src="player.item.attachment_url" type="audio/mpeg" />
                 <div class="text-red-500 font-bold p-5 border-red-300">
                   Your device does not support audio

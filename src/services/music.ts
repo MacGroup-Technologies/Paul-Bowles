@@ -10,8 +10,8 @@ export function fetchMusicPhotoAlt(altTag: any) {
   return axios.get(`${baseURL}/v1/archive/photos/?alttag=${altTag}`)
 }
 
-export function fetchMusicBookAlt(alt: any) {
-  return axios.get(`${baseURL}/v1/archive/writings/?website_tag=${alt}`)
+export function fetchMusicBookAlt(alt: any,page=1) {
+  return axios.get(`${baseURL}/v1/archive/writings/?website_tag=${alt}&page=${page}`)
 }
 
 export function fetchMusicalPortraits() {

@@ -61,9 +61,8 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
     <div class="px-5 py-5 lg:px-16 2xl:px-20" v-if="translation.data.title !== ''">
       <div class="flex flex-col md:flex-row justify-between">
         <div class="flex-1 overflow-hidden relative py-20">
-          <div class="absolute inset-0 opacity-60 blur-md">
-            <VueMagnifier class="translate-y-[-50%] scale-125" :src="translation.img.split(',')[0]" />
-          </div>
+          <div class="absolute inset-0 opacity-60 blur-md"
+            :style="`background-image:url('${translation.img.split(',')[0]}')`" style="background-position:center" />
           <div class="text-2xl text-center relative">
             <img v-if="translation.img === ''" src="@/assets/imgs/Image-thumbnail.png"
               class="w-auto h-auto rounded-[22px] fancy-img mb-2 mx-5 md:mx-auto cursor-pointer" />
@@ -77,7 +76,7 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
       </div>
       <div v-if="translation.data.attachment_url?.split(',')[0].endsWith('.mp3')" class="space-y-2 mt-4 ">
         <p>Listen to audio:</p>
-        <audio controls class="w-full" autoplay>
+        <audio controls controlslist="nodownload" class="w-full" autoplay>
           <source :src="translation.data.attachment_url.split(',')[0]" type="audio/mpeg" />
           <div class="text-red-500 font-bold p-5 border-red-300">Your device does not support audio</div>
         </audio>
