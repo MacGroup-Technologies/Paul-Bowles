@@ -1,9 +1,15 @@
 <script lang="ts" setup>
 import { useRoute, useRouter } from 'vue-router'
 import { useHead } from '@unhead/vue'
+import { OnClickOutside } from '@vueuse/components'
+import { ref } from 'vue'
+
+import WithoutStopingImage from '@/assets/imgs/Without-Stopping-1.jpg';
+import WithoutStopingImageTwo from '@/assets/imgs/Without-Stopping-2.jpg';
 
 const router = useRoute()
 const route = useRouter()
+const active_item = ref<any>(null)
 
 useHead({ title: `${router.params.title}` })
 </script>
@@ -169,7 +175,11 @@ useHead({ title: `${router.params.title}` })
         </div>
       </template>
       <template
-        v-else-if="router.params.title === 'Paul Bowles, Contemporary Authors Autobiographical Series, volume I, pp. 81-95'">
+        v-else-if="
+          router.params.title ===
+          'Paul Bowles, Contemporary Authors Autobiographical Series, volume I, pp. 81-95'
+        "
+      >
         <div class="mt-10 text-justify">
           I think that my father would have preferred not to have been burdened with a child. Quite
           possibly my coming into existence was the result of an accident. He was nervous and
@@ -903,6 +913,23 @@ useHead({ title: `${router.params.title}` })
           agree to the definitive extinction of all life on his planet.
         </div>
       </template>
+      <template v-else>
+        <div class="flex gap-5 justify-center mt-36">
+          <img :src="WithoutStopingImage" class="-rotate-90 w-1/3 cursor-pointer" alt="Transcript WITHOUT STOPPING. AN AUTOBIOGRAPHY 1" @click="active_item = WithoutStopingImage" />
+          <img :src="WithoutStopingImageTwo" class="-rotate-90 w-1/3 cursor-pointer" alt="Transcript WITHOUT STOPPING. AN AUTOBIOGRAPHY 2" @click="active_item = WithoutStopingImageTwo" />
+        </div>
+      </template>
+    </div>
+    <div
+      class="fixed top-0 right-0 left-0 bottom-0 bg-black bg-opacity-80 flex justify-center items-center text-center z-50"
+      v-if="active_item !== null"
+    >
+      <OnClickOutside
+        @trigger="active_item = null"
+        class="text-center px-10 md:px-0 md:w-1/2 cursor-pointer text-white"
+      >
+        <img :src="active_item" class="w-full h-auto rounded-xl cursor-default -rotate-90" />
+      </OnClickOutside>
     </div>
   </div>
 </template>
