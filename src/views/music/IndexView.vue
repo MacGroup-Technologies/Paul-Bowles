@@ -360,10 +360,10 @@ const music = [
           </p>
         </li>
         <li class="mt-10">
-          <h3>Huapango #1 (1937)</h3>
+          <h3>Huapango 1 (1937)</h3>
         </li>
         <li class="mt-10">
-          <h3>Huapango #2 (El Sol) (1937)</h3>
+          <h3>Huapango 2 (El Sol) (1937)</h3>
         </li>
         <li class="mt-10">
           <h3>Six Preludes for Piano (1938, 1945, 1943, 1934, 1936, 1944)</h3>
