@@ -1,43 +1,25 @@
 <script lang="ts" setup>
-import { getTranslations, getTranslationsByQuery } from '@/services/translations';
+import { getTranslations } from '@/services/translations';
 import { onMounted, reactive, ref } from 'vue';
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue';
 import { useThemeStore } from '@/stores/theme';
-import { getUrl } from '@/services/misc';
 
 import { useHead } from '@unhead/vue'
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router';
 useHead({ title: `Paul Bowles's Library` })
 
 const route = useRoute();
-
+const router = useRouter();
 
 let pagination = reactive({
   next: null,
   previous: null,
   page: null
 });
-const translations = reactive({ items: [] as any });
-const formRef = ref(null);
-const filter = reactive({
-  keyword: '',
-  category: '' as any,
-});
 
-const getStepUrl = async function (url: any) {
-  setLoading(true);
-  try {
-    const response = await getUrl(url)
-    pagination.next = response.data.next
-    pagination.previous = response.data.previous
-    translations.items = response.data.results
-    setLoading(false);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  } catch (error: any) {
-    console.log(error);
-    setError(error);
-  }
-}
+const translations = reactive({ items: [] as any });
+
+const formRef = ref(null);
 
 const setLoading = function (val: boolean) {
   useThemeStore().updateLoading(val)
@@ -47,42 +29,85 @@ const setError = function (val: string) {
   useThemeStore().updateError(val)
 }
 
-const fetchTranslations = async function () {
-  try {
-    const response = await getTranslations();
-    pagination.next = response.data.next
-    pagination.previous = response.data.previous
-    translations.items = response.data.results
-    setLoading(false);
-  } catch (error) {
-    console.log(error);
-  }
+const PAGE_URL = window.location.pathname;
 
-  setLoading(false);
+function getNextPage() {
+  const url = new URL(PAGE_URL)
+  "page, query, category".split(", ").forEach(filter => {
+    if (filter === "page") {
+      url.searchParams.set(filter, String(Number(route.query.page || 1) + 1))
+    }
+    else {
+      if (route.query[filter]) {
+        // @ts-ignore
+        url.searchParams.set(filter, route.query[filter])
+      }
+    }
+  })
+  return url.toString();
 }
 
-const filterTranslations = async function () {
+function getPreviousPage() {
+  const url = new URL(PAGE_URL)
+  "page, query, category".split(", ").forEach(filter => {
+    if (route.query[filter]) {
+      if (filter === "page") {
+        Number(route.query.page) - 1
+      }
+      else {
+        // @ts-ignore
+        url.searchParams.set(filter, route.query[filter])
+      }
+    }
+  })
+  return url.toString();
+}
+
+const filter = reactive({
+  keyword: route.query.query || '',
+  category: '' as any,
+  page: Number(route.query.page) || 1,
+});
+
+const filterPageData = async function () {
+  const _route = { path: PAGE_URL, query: { query: filter.keyword, category: filter.category } }
+  if (filter.keyword) {
+    router.push(_route);
+  }
+}
+
+function clearFilters() {
+  router.push({ path: PAGE_URL, query: { query: '', category: "" } });
+}
+
+function fetchPageData() {
   setLoading(true);
-  try {
-    const response = await getTranslationsByQuery(filter.category);
-    pagination.next = response.data.next
-    pagination.previous = response.data.previous
+  getTranslations(filter.page, filter.keyword, filter.category).then((response: any) => {
     translations.items = response.data.results
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  } catch (error) {
-    console.log(error);
-  }
-  setLoading(false);
+    pagination.next = response.data.next;
+    pagination.previous = response.data.previous;
+    setLoading(false);
+  });
 }
 
-onMounted(async () => {
-  if (route.query.category) {
-    filter.category = route.query.category;
-    await filterTranslations()
-  } else {
-    await fetchTranslations();
+onBeforeRouteUpdate((to, from) => {
+  if (to !== from) {
+    filter.keyword = to.query.query || '';
+    filter.category = to.query.category || '';
+    filter.page = Number(to.query.page) || 1;
+    fetchPageData()
   }
 })
+
+onMounted(async () => {
+  setLoading(true);
+  try {
+    fetchPageData();
+  } catch (error: any) {
+    console.log(error);
+    setError(error);
+  }
+});
 
 </script>
 
@@ -98,17 +123,19 @@ onMounted(async () => {
       </div>
     </div>
     <div class="mx-5 mb-10 lg:mx-16 2xl:mx-20 p-10 rounded-xl text-xl bg-white z-10 sticky top-20">
-      <el-form :model="filter" ref="formRef" @submit.prevent="filterTranslations()">
+      <el-form :model="filter" ref="formRef" @submit.prevent="filterPageData()">
         <div class="flex flex-col md:flex-row gap-5">
           <el-input v-model="filter.keyword" class="md:w-2/3" size="large" placeholder="Author, Title, or Keyword" />
           <el-select class="md:w-1/3" v-model="filter.category" size="large">
-            <el-option value="" label="All" />
+            <el-option value="" label="All Languages" />
             <el-option value="From Moghrebi" label="From Moghrebi" />
             <el-option value="From Spanish" label="From Spanish" />
             <el-option value="From French" label="From French" />
           </el-select>
-          <el-button class="md:w-auto bg-primary" type="primary" size="large"
-            @click="filterTranslations()">Search</el-button>
+          <el-button class="md:w-auto bg-primary" type="primary" size="large" @click="filterPageData()">Search</el-button>
+          <el-button v-if="route.query.query" type="primary" size="large" class="bg-primary" @click="clearFilters">
+            Clear filters
+          </el-button>
         </div>
       </el-form>
     </div>
@@ -136,19 +163,35 @@ onMounted(async () => {
         </router-link>
       </div>
     </div>
+
     <div class="my-24 mx-auto md:w-64 flex justify-center">
       <el-button-group>
-        <el-button type="primary" size="large" class="bg-primary" :icon="ArrowLeft"
-          :disabled="pagination.previous === null" @click="getStepUrl(pagination.previous)">
+        <router-link v-if="pagination.previous" :to="getPreviousPage()"
+          class="el-button--primary el-button--large el-button">
+          <el-icon class="el-icon--left">
+            <ArrowLeft />
+          </el-icon>
           Prev
-        </el-button>
-        <el-button type="primary" size="large" class="bg-primary" :disabled="pagination.next === null"
-          @click="getStepUrl(pagination.next)">
+        </router-link>
+        <p v-else class="is-disabled el-button--primary el-button--large el-button">
+          <el-icon class="el-icon--left">
+            <ArrowLeft />
+          </el-icon>
+          Prev
+        </p>
+
+        <router-link v-if="pagination.next" :to="getNextPage()" class="el-button--primary el-button--large el-button">
           Next
           <el-icon class="el-icon--right">
             <ArrowRight />
           </el-icon>
-        </el-button>
+        </router-link>
+        <p v-else class="is-disabled el-button--primary el-button--large el-button">
+          Next
+          <el-icon class="el-icon--right">
+            <ArrowRight />
+          </el-icon>
+        </p>
       </el-button-group>
     </div>
   </div>
