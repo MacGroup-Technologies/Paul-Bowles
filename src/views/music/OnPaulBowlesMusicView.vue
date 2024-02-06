@@ -2,9 +2,16 @@
 <script lang="ts" setup>
 import { useRoute, useRouter } from 'vue-router'
 import { useHead } from '@unhead/vue'
+import { ref } from 'vue';
+import { OnClickOutside } from '@vueuse/components'
+
+import LincolnProgramImage from '@/assets/imgs/Lincoln_program.png'
+import LincolnProgramSecondImage from '@/assets/imgs/Lincoln_programA.png'
 
 const route = useRoute()
 const router = useRouter()
+
+const active_item = ref<any>(null)
 
 useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
 </script>
@@ -189,11 +196,11 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
       <div class="mt-10 text-justify" v-else-if="route.params.title === 'Lincoln Center Tribute'">
         In 1995, Paul Bowles was honored with a festival at Lincoln Center in New York. His music was performed by the Eos
         Orchestra, conducted by Jonathan Sheffer.
-        <div class="flex gap-10 mt-10">
-          <img src="@/assets/imgs/Lincoln_program.png" alt="Paul Bowles Lincoln Center Tribute Flier"
-            class="w-auto h-auto" />
-          <img src="@/assets/imgs/Lincoln_programA.png" alt="Paul Bowles Lincoln Center Tribute Program"
-            class="w-auto h-auto" />
+        <div class="flex justify-center gap-10 mt-10">
+          <img :src="LincolnProgramImage" alt="Paul Bowles Lincoln Center Tribute Flier"
+            class="w-auto h-auto cursor-pointer" @click="active_item = LincolnProgramImage" />
+          <img :src="LincolnProgramSecondImage" alt="Paul Bowles Lincoln Center Tribute Program"
+            class="w-auto h-auto cursor-pointer" @click="active_item = LincolnProgramSecondImage" />
         </div>
       </div>
       <div class="mt-10 text-justify" v-else-if="route.params.title === 'Rey Rosa - The Return Trip'">
@@ -225,5 +232,12 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         </div>
       </div>
     </div>
+  </div>
+  <div
+    class="fixed top-0 right-0 left-0 bottom-0 bg-black bg-opacity-80 flex justify-center items-center text-center z-50"
+    v-if="active_item !== null">
+    <OnClickOutside @trigger="active_item = null" class="text-center px-10 md:px-0 md:w-1/3 cursor-pointer text-white">
+      <img :src="active_item" class="w-full h-auto rounded-xl cursor-default" />
+    </OnClickOutside>
   </div>
 </template>
