@@ -146,7 +146,7 @@ watchEffect(() => {
 
 onMounted(() => {
   playBackground()
-  setTimeout(()=>{
+  setTimeout(() => {
     setModal()
   }, 5000)
 })
@@ -214,7 +214,8 @@ onMounted(() => {
       </div>
       <div class="hidden md:flex flex-wrap gap-x-5 md:gap-x-0 gap-y-5 w-full md:w-5/6 2xl:w-full mr-40">
         <div class="2xl:w-72 capitalize" v-for="(item, index) in links" :key="index">
-          <router-link class="px-10 hover:opacity-70 text-[20px] 2xl:text-[40px] text-white-shade transition-colors hover:bg-white/0"
+          <router-link
+            class="px-10 hover:opacity-70 text-[20px] 2xl:text-[40px] text-white-shade transition-colors hover:bg-white/0"
             :to="`/${item.link}`" @mouseover="mouseHover(item)" @mouseout="mouseHover(null)">
             {{ item.title }}
           </router-link>
@@ -230,8 +231,7 @@ onMounted(() => {
       </div>
     </div>
   </main>
-  <div v-if="modal"
-    class="fixed top-0 right-0 z-50 flex justify-end m-8 items-center">
+  <div v-if="modal" class="fixed top-0 right-0 z-50 flex justify-end m-8 items-center">
     <div class="h-auto md:w-1/3 shadow-2xl bg-primary-light rounded-md px-7 py-4 mx-10 md:mx-0">
       <div class="flex justify-end mb-2">
         <div @click="setModal()" class="flex items-center gap-3 cursor-pointer hamburger">
@@ -242,7 +242,7 @@ onMounted(() => {
         </div>
       </div>
       <div class="">
-        <h1 class="text-3xl font-semibold">UPDATE!!!</h1>
+        <h1 class="text-3xl font-semibold">Special Feature</h1>
         <p class="mt-3 mb-5 text-xl opacity-75">
           Audio and transcriptions of Paul Bowles’s translations from the Moghrebi are now available.
         </p>
