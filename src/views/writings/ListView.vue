@@ -21,7 +21,7 @@ useHead({ title: "Paul Bowles Writings" })
           v-for="(item, index) in items" :key="index">
           <div class="relative inline-flex mx-auto">
             <img src="@/assets/imgs/writings-thumbnail-blank.png" class="" />
-            <div class="absolute grid place-items-center inset-0">
+            <div class="absolute grid place-items-center inset-0 cursor-pointer">
               <p class="mt-auto pb-10"> {{ item }} </p>
             </div>
           </div>
