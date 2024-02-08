@@ -42,7 +42,7 @@ const music = [
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <a name="content" />
       Paul Bowles wrote music that encompassed a broad variety of genres, including scores for
-      theater, opera, ballet, and chamber music; soundtracks for art films; piano compositions and
+      theater, opera, Hippolytus of Athens, ballet, and chamber music; soundtracks for art films; piano compositions and
       experimental sound recordings, particularly those of a style often referred to as musique
       concrète.
     </div>
@@ -360,10 +360,10 @@ const music = [
           </p>
         </li>
         <li class="mt-10">
-          <h3>Huapango #1 (1937)</h3>
+          <h3>Huapango 1 (1937)</h3>
         </li>
         <li class="mt-10">
-          <h3>Huapango #2 (El Sol) (1937)</h3>
+          <h3>Huapango 2 (El Sol) (1937)</h3>
         </li>
         <li class="mt-10">
           <h3>Six Preludes for Piano (1938, 1945, 1943, 1934, 1936, 1944)</h3>
@@ -718,7 +718,7 @@ const music = [
           <h3>Camp Cataract and A Quarreling Pair (1984)</h3>
         </li>
         <li class="mt-10">
-          <h3>Hippolytos (1992)</h3>
+          <h3>Hippolytys (1992)</h3>
         </li>
         <li class="mt-10">
           <h3>Salomé (1993)</h3>
