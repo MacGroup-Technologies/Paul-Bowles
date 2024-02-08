@@ -33,7 +33,7 @@ const PAGE_URL = window.location.pathname;
 
 function getNextPage() {
   const url = new URL(PAGE_URL)
-  "page, query, category".split(", ").forEach(filter => {
+  "page, query, language".split(", ").forEach(filter => {
     if (filter === "page") {
       url.searchParams.set(filter, String(Number(route.query.page || 1) + 1))
     }
@@ -49,7 +49,7 @@ function getNextPage() {
 
 function getPreviousPage() {
   const url = new URL(PAGE_URL)
-  "page, query, category".split(", ").forEach(filter => {
+  "page, query, language".split(", ").forEach(filter => {
     if (route.query[filter]) {
       if (filter === "page") {
         Number(route.query.page) - 1
@@ -65,24 +65,24 @@ function getPreviousPage() {
 
 const filter = reactive({
   keyword: route.query.query || '',
-  category: '' as any,
+  language: '' as any,
   page: Number(route.query.page) || 1,
 });
 
 const filterPageData = async function () {
-  const _route = { path: PAGE_URL, query: { query: filter.keyword, category: filter.category } }
-  if (filter.keyword) {
+  const _route = { path: PAGE_URL, query: { query: filter.keyword, language: filter.language } }
+  if (filter.keyword || filter.language) {
     router.push(_route);
   }
 }
 
 function clearFilters() {
-  router.push({ path: PAGE_URL, query: { query: '', category: "" } });
+  router.push({ path: PAGE_URL, query: { query: '', language: "" } });
 }
 
 function fetchPageData() {
   setLoading(true);
-  getTranslations(filter.page, filter.keyword, filter.category).then((response: any) => {
+  getTranslations(filter.page, filter.keyword, filter.language).then((response: any) => {
     translations.items = response.data.results
     pagination.next = response.data.next;
     pagination.previous = response.data.previous;
@@ -93,7 +93,7 @@ function fetchPageData() {
 onBeforeRouteUpdate((to, from) => {
   if (to !== from) {
     filter.keyword = to.query.query || '';
-    filter.category = to.query.category || '';
+    filter.language = to.query.language || '';
     filter.page = Number(to.query.page) || 1;
     fetchPageData()
   }
@@ -126,7 +126,7 @@ onMounted(async () => {
       <el-form :model="filter" ref="formRef" @submit.prevent="filterPageData()">
         <div class="flex flex-col md:flex-row gap-5">
           <el-input v-model="filter.keyword" class="md:w-2/3" size="large" placeholder="Author, Title, or Keyword" />
-          <el-select class="md:w-1/3" v-model="filter.category" size="large">
+          <el-select class="md:w-1/3" v-model="filter.language" size="large">
             <el-option value="" label="All Languages" />
             <el-option value="From Moghrebi" label="From Moghrebi" />
             <el-option value="From Spanish" label="From Spanish" />

@@ -2,7 +2,7 @@ import axios from "axios";
 
 const baseURL = import.meta.env.VITE_BASE_URL;
 
-export function getTranslations(page=1, query="", category="") {
+export function getTranslations(page=1, query="", language="") {
   const url = new URL(`${baseURL}/v1/archive/translations/`)
   if (query){
     url.searchParams.set("query", query)
@@ -10,8 +10,8 @@ export function getTranslations(page=1, query="", category="") {
   if (page){
     url.searchParams.set("page", String(page))
   }
-  if (category){
-    url.searchParams.set("category", category)
+  if (language){
+    url.searchParams.set("language", language)
   }
   return axios.get(url.toString());
 }
