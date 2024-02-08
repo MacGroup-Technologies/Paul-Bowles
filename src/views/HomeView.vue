@@ -31,7 +31,7 @@ const links = [
     title: 'music',
     link: 'music',
     image: 'Music',
-    text: 'This section contains the amazing musical compositions of Paul Bowles, encompassing a variety of genres.'
+    text: 'Bowles composed orchestral works, piano pieces, and  numerous songs.'
   },
   {
     title: 'writings',

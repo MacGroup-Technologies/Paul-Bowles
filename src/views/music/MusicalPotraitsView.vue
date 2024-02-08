@@ -77,7 +77,7 @@ onMounted(async () => {
             {{ music.items[0].title }}
           </h3>
           <div class="">
-            <audio controls class="md:w-96 show-controls">
+            <audio controlslist="nodownload" class="md:w-96 show-controls">
               <source :src="music.items[0].attachment_url" type="audio/mpeg" />
             </audio>
           </div>
@@ -116,7 +116,7 @@ onMounted(async () => {
             {{ music.items[1].title }}
           </h3>
           <div class="">
-            <audio controls class="md:w-96 show-controls">
+            <audio controls controlslist="nodownload" class="md:w-96 show-controls">
               <source :src="music.items[1].attachment_url" type="audio/mpeg" />
             </audio>
           </div>
@@ -156,7 +156,7 @@ onMounted(async () => {
             {{ music.items[2].title }}
           </h3>
           <div class="">
-            <audio controls class="md:w-96 show-controls">
+            <audio controls controlslist="nodownload" class="md:w-96 show-controls">
               <source :src="music.items[2].attachment_url" type="audio/mpeg" />
             </audio>
           </div>

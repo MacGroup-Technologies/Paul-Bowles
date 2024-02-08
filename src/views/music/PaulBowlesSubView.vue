@@ -110,28 +110,28 @@ onMounted(async () => {
             himself and by other authors such as Tennessee Williams, William Saroyan, Federico
             García Lorca, Gertrude Stein and Jane Bowles.
             <br />
-            <el-button class="bg-primary text-lg mt-5" type="primary" style="padding: 30px 30px;" size="large">
+            <!-- <el-button class="bg-primary text-lg mt-5" type="primary" style="padding: 30px 30px;" size="large">
               <svg class="h-10 w-auto mr-5" viewBox="0 0 54 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M26.6922 0C11.95 0 0 11.6394 0 25.9984C0 40.3575 11.95 51.9969 26.6922 51.9969C41.4344 51.9969 53.3844 40.3575 53.3844 25.9984C53.3876 11.6394 41.4344 0 26.6922 0ZM38.9354 37.5012C38.4573 38.2681 37.4309 38.5071 36.6468 38.0414C30.377 34.3096 22.4879 33.4683 13.1963 35.536C12.3006 35.7347 11.4081 35.1882 11.2041 34.3189C11.0001 33.4465 11.5579 32.5772 12.4568 32.3785C22.6249 30.1152 31.346 31.0901 38.384 35.2752C39.1681 35.7378 39.4135 36.7375 38.9354 37.5012ZM42.2026 30.4195C41.6002 31.3726 40.3188 31.6738 39.3402 31.087C32.1683 26.7932 21.2288 25.5483 12.7405 28.0568C11.6408 28.3797 10.4773 27.7774 10.1427 26.7063C9.81115 25.6352 10.4327 24.5051 11.5292 24.1791C21.2256 21.3135 33.2776 22.7013 41.5141 27.6346C42.4959 28.2214 42.8019 29.4695 42.2026 30.4195ZM42.4831 23.049C33.88 18.0722 19.6861 17.6159 11.4718 20.0437C10.1522 20.4349 8.75927 19.7084 8.35765 18.4231C7.95921 17.1377 8.7019 15.781 10.0215 15.3898C19.4502 12.6018 35.1263 13.142 45.0299 18.867C46.2157 19.5532 46.6046 21.0465 45.9033 22.1983C45.1989 23.3533 43.6657 23.7351 42.4831 23.049Z"
                   fill="white" />
               </svg>
               Open On Spotify
-            </el-button>
+            </el-button> -->
           </div>
           <div class="" v-else-if="router.params.title === 'Works for Piano'">
             This selection contains some of Paul Bowles’s music inspired by Latin American themes.
             The outstanding Sonata for Two Pianos has been described as one of the best kept secrets
             of American piano music.
             <br />
-            <el-button class="bg-primary text-lg mt-5" type="primary" style="padding: 30px 30px;" size="large">
+            <!-- <el-button class="bg-primary text-lg mt-5" type="primary" style="padding: 30px 30px;" size="large">
               <svg class="h-10 w-auto mr-5" viewBox="0 0 54 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M26.6922 0C11.95 0 0 11.6394 0 25.9984C0 40.3575 11.95 51.9969 26.6922 51.9969C41.4344 51.9969 53.3844 40.3575 53.3844 25.9984C53.3876 11.6394 41.4344 0 26.6922 0ZM38.9354 37.5012C38.4573 38.2681 37.4309 38.5071 36.6468 38.0414C30.377 34.3096 22.4879 33.4683 13.1963 35.536C12.3006 35.7347 11.4081 35.1882 11.2041 34.3189C11.0001 33.4465 11.5579 32.5772 12.4568 32.3785C22.6249 30.1152 31.346 31.0901 38.384 35.2752C39.1681 35.7378 39.4135 36.7375 38.9354 37.5012ZM42.2026 30.4195C41.6002 31.3726 40.3188 31.6738 39.3402 31.087C32.1683 26.7932 21.2288 25.5483 12.7405 28.0568C11.6408 28.3797 10.4773 27.7774 10.1427 26.7063C9.81115 25.6352 10.4327 24.5051 11.5292 24.1791C21.2256 21.3135 33.2776 22.7013 41.5141 27.6346C42.4959 28.2214 42.8019 29.4695 42.2026 30.4195ZM42.4831 23.049C33.88 18.0722 19.6861 17.6159 11.4718 20.0437C10.1522 20.4349 8.75927 19.7084 8.35765 18.4231C7.95921 17.1377 8.7019 15.781 10.0215 15.3898C19.4502 12.6018 35.1263 13.142 45.0299 18.867C46.2157 19.5532 46.6046 21.0465 45.9033 22.1983C45.1989 23.3533 43.6657 23.7351 42.4831 23.049Z"
                   fill="white" />
               </svg>
               Open On Spotify
-            </el-button>
+            </el-button> -->
           </div>
           <p class="" v-else-if="router.params.title === 'Incidental Music'">
             In 1992, Bowles composed incidental music for Eurypides’s Hippolytus (presented by the American School of
@@ -141,14 +141,14 @@ onMounted(async () => {
           <div class="" v-else-if="router.params.title === 'Film Music'">
             In 1944, Bowles composed music for the documentary film Congo, with a script by John Latouche.
             <br />
-            <el-button class="bg-primary text-lg mt-5" type="primary" style="padding: 30px 30px;" size="large">
+            <!-- <el-button class="bg-primary text-lg mt-5" type="primary" style="padding: 30px 30px;" size="large">
               <svg class="h-10 w-auto mr-5" viewBox="0 0 54 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M26.6922 0C11.95 0 0 11.6394 0 25.9984C0 40.3575 11.95 51.9969 26.6922 51.9969C41.4344 51.9969 53.3844 40.3575 53.3844 25.9984C53.3876 11.6394 41.4344 0 26.6922 0ZM38.9354 37.5012C38.4573 38.2681 37.4309 38.5071 36.6468 38.0414C30.377 34.3096 22.4879 33.4683 13.1963 35.536C12.3006 35.7347 11.4081 35.1882 11.2041 34.3189C11.0001 33.4465 11.5579 32.5772 12.4568 32.3785C22.6249 30.1152 31.346 31.0901 38.384 35.2752C39.1681 35.7378 39.4135 36.7375 38.9354 37.5012ZM42.2026 30.4195C41.6002 31.3726 40.3188 31.6738 39.3402 31.087C32.1683 26.7932 21.2288 25.5483 12.7405 28.0568C11.6408 28.3797 10.4773 27.7774 10.1427 26.7063C9.81115 25.6352 10.4327 24.5051 11.5292 24.1791C21.2256 21.3135 33.2776 22.7013 41.5141 27.6346C42.4959 28.2214 42.8019 29.4695 42.2026 30.4195ZM42.4831 23.049C33.88 18.0722 19.6861 17.6159 11.4718 20.0437C10.1522 20.4349 8.75927 19.7084 8.35765 18.4231C7.95921 17.1377 8.7019 15.781 10.0215 15.3898C19.4502 12.6018 35.1263 13.142 45.0299 18.867C46.2157 19.5532 46.6046 21.0465 45.9033 22.1983C45.1989 23.3533 43.6657 23.7351 42.4831 23.049Z"
                   fill="white" />
               </svg>
               Open On Spotify
-            </el-button>
+            </el-button> -->
           </div>
         </div>
 
@@ -240,7 +240,7 @@ onMounted(async () => {
                   </svg>
                 </div>
               </div>
-              <audio controls class="w-full" autoplay>
+              <audio controls controlslist="nodownload" class="w-full" autoplay>
                 <source :src="player.item.attachment_url" type="audio/mpeg" />
                 <div class="text-red-500 font-bold p-5 border-red-300">
                   Your device does not support audio
