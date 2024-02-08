@@ -19,8 +19,12 @@ useHead({ title: "Paul Bowles Writings" })
       <div class="grid gap-x-5 gap-y-10 md:gap-10 grid-cols-1 md:grid-cols-4 w-full">
         <router-link :to="`/writings/${item}`" class="w-full flex flex-col gap-y-5 text-center text-2xl"
           v-for="(item, index) in items" :key="index">
-          <img src="@/assets/imgs/writings-thumbnail.png" class="" />
-          {{ item }}
+          <div class="relative inline-flex mx-auto">
+            <img src="@/assets/imgs/writings-thumbnail-blank.png" class="" />
+            <div class="absolute grid place-items-center inset-0">
+              <p class="mt-auto pb-10"> {{ item }} </p>
+            </div>
+          </div>
         </router-link>
       </div>
     </div>
