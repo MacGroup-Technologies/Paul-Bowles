@@ -392,7 +392,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           by composer. Result: no entries.
         </div>
       </template>
-      <template v-else-if="router.params.title === 'North African Music'">
+      <template v-else-if="router.params.title === 'North African Music I'">
         <div class="mt-10">
           <h2 class="">DECEMBER 27 (1942), <i>NEW YORK HERALD TRIBUNE</i></h2>
         </div>
