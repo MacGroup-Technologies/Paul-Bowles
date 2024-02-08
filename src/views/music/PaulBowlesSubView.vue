@@ -158,9 +158,7 @@ onMounted(async () => {
           </div>
 
           <div class="">
-            <div class="px-10 mb-5 font-bold">List</div>
             <div class="flex flex-row gap-3 font-bold px-10 mb-3">
-              <div class="w-10">#</div>
               <div class="px-8" />
               <div class="w-full">Title</div>
             </div>

@@ -32,13 +32,12 @@ useHead({ title: `Paul Bowles's Life` })
         </div>
         <div class="py-5 px-3">
           <h2 class="font-heading text-3xl">Synthetic Biography</h2>
-          <p class="mt-2">A night with thunder in the sky he packed his bag and left...</p>
         </div>
       </router-link>
       <router-link to="/chronology"
         class="block bg-white dark:bg-opacity-10 hover:-translate-y-2 transition-transform p-5 rounded-xl">
         <div class="flex justify-center items-center bg-primary-light rounded-xl">
-          <img src="@/assets/imgs/Chronology-Thumbnail.png" />
+          <img src="@/assets/imgs/imageimage.png" />
         </div>
         <div class="py-5 px-3">
           <h2 class="font-heading text-3xl">Chronology</h2>

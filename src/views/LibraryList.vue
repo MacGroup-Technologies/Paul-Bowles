@@ -104,7 +104,8 @@ onMounted(async () => {
     <div class="mx-5 mb-10 lg:mx-16 2xl:mx-20 p-10 rounded-xl text-xl bg-white z-10 sticky top-20">
       <el-form :model="filter" ref="formRef" @submit.prevent="filterLibrary()">
         <div class="flex flex-col md:flex-row gap-5">
-          <el-input v-model="filter.keyword" class="md:w-2/3" size="large" placeholder="Author, Title, or Keyword" />
+          <el-input v-model="filter.keyword" class="md:w-2/3" size="large"
+            placeholder="Author, Title, Genre, Language, Year of Publication, or Keyword" />
           <el-button v-if="!route.query.query || route.query.query !== filter.keyword" class="md:w-auto bg-primary"
             type="primary" size="large" @click="() => filterLibrary()">Search</el-button>
           <el-button v-if="route.query.query" type="primary" size="large" class="bg-primary" @click="clearFilters">
