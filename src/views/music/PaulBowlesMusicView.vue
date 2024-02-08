@@ -38,9 +38,11 @@ const music = [
         class="grid grid-cols-1 md:grid-cols-3 gap-20 2xl:gap-48 justify-between py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl">
         <router-link :to="'/music/paul-bowles-music/' + encodeURI(item.link)" class="relative text-center"
           v-for="(item, index) in music" :key="index">
-          <img src="@/assets/imgs/music-thumbnail-blank.png" alt="">
-          <div class="absolute grid place-items-center inset-0">
-            <p class="mt-auto pb-10"> {{ item.title }} </p>
+          <div class="relative inline-flex mx-auto">
+            <img src="@/assets/imgs/music-thumbnail-blank.png" alt="">
+            <div class="absolute grid place-items-center inset-0">
+              <p class="mt-auto pb-10"> {{ item.title }} </p>
+            </div>
           </div>
         </router-link>
       </div>
