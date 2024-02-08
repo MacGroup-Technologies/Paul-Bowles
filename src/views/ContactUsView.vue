@@ -257,10 +257,10 @@ Claude Natalie Thomas<br />
         </div>
         <div class="md:w-1/2">
           Leonard Bernstein Office<br />
-The University of Delaware Library<br />
-Fotostiftung Schweiz<br />
-The Wylie Agency<br />
-The Allen Ginsberg Project<br />
+          Fotostiftung Schweiz<br />
+          The Allen Ginsberg Project<br />
+          The University of Delaware Library<br />
+          The Wylie Agency<br />
         </div>
       </div>
     </div>
