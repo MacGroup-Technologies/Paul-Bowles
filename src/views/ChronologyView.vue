@@ -12,7 +12,7 @@ const chronology = [
   {
     year: '1915-1918',
     text: 'Bowles learns to read by age four and keeps notebooks with drawings and stories, a habit that will continue throughout his childhood. Mother reads him stories of Hawthorne and Poe.',
-    highlight: ` “I can’t remember a period when the printed word did not make its corresponding sound in my head as I looked at it. I still have a little notebook with stories about animals, invented by me and printed in pencil, each one carefully dated at the end, and the year is 1915, which means that I was four years old when I wrote them.” (&lt;i&gt;Without Stopping&lt;/i&gt, page 14)`
+    highlight: ` “I can’t remember a period when the printed word did not make its corresponding sound in my head as I looked at it. I still have a little notebook with stories about animals, invented by me and printed in pencil, each one carefully dated at the end, and the year is 1915, which means that I was four years old when I wrote them.” (<i>Without Stopping</i>, page 14)`
   },
   {
     year: '1919',
