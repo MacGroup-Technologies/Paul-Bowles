@@ -41,10 +41,9 @@ const music = [
     </div>
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <a name="content" />
-      Paul Bowles wrote music that encompassed a broad variety of genres, including scores for
-      theater, opera, Hippolytus of Athens, ballet, and chamber music; soundtracks for art films; piano compositions and
-      experimental sound recordings, particularly those of a style often referred to as musique
-      concrète.
+      Paul Bowles wrote music that encompassed a broad variety of genres, including scores for theater, opera, ballet, 
+      and chamber music; soundtracks for art films; piano compositions and experimental sound recordings, particularly 
+      those of a style often referred to as musique concrète.
     </div>
     <div
       class="grid grid-cols-1 md:grid-cols-3 gap-20 2xl:gap-48 justify-between py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl">
