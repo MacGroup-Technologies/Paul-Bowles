@@ -522,7 +522,7 @@ const music = [
         </li>
         <li class="mt-10">
           <h3>
-            No. 2 of Three Songs from the Sierras, under title; “Ya Lluegó” "The Heart Grows Old"
+            No. 2 of Three Songs from the Sierras, under title; “Ya llegó” "The Heart Grows Old"
             "Her Head on the Pillow" Gothic Suite (1960)
           </h3>
           <p class="text-xl mt-1">
