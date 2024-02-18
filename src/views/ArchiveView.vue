@@ -35,7 +35,7 @@ useHead({ title: `Archives` })
           <p class="mt-2">An Inventory of His Collection at the Harry Ransom Center</p>
         </div>
       </a>
-      <a target="_blank" href="https://library.udel.edu/special/findaids/view?docId=ead/mss0164.xml;tab=subj"
+      <a target="_blank" href="https://findingaids.lib.udel.edu/repositories/2/resources/2228"
         class="flex flex-col bg-white dark:bg-opacity-10 hover:-translate-y-2 transition-transform p-5 rounded-xl">
         <div class="flex justify-center flex-1 bg-primary rounded-xl">
           <img src="https://library.udel.edu/static/img/ud-logo-head.png" class="py-20" />

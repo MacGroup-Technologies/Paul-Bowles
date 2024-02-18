@@ -295,9 +295,6 @@ const music = [
           <h3>Sonata for Flute and Piano (1932)</h3>
         </li>
         <li class="mt-10">
-          <h3>Par le Détroit (1933)</h3>
-        </li>
-        <li class="mt-10">
           <h3>Sonata for Violin and Piano (1934)</h3>
         </li>
         <li class="mt-10">
@@ -429,7 +426,7 @@ const music = [
           <h3>Scènes d'Anabase for Tenor, Piano, Oboe (1932)</h3>
         </li>
         <li class="mt-10">
-          <h3>Cantata, for Soprano, Four Male Voices, and Harmonium (1933) &mdash; Text by composer</h3>
+          <h3>Par le Détroit a.k.a. Cantata, for Soprano, Four Male Voices, and Harmonium (1933) &mdash; Text by composer</h3>
         </li>
         <li class="mt-10">
           <h3>
@@ -526,7 +523,7 @@ const music = [
         </li>
         <li class="mt-10">
           <h3>
-            No. 2 of Three Songs from the Sierras, under title; “Ya Lluegó” "The Heart Grows Old"
+            No. 2 of Three Songs from the Sierras, under title; “Ya llegó” "The Heart Grows Old"
             "Her Head on the Pillow" Gothic Suite (1960)
           </h3>
           <p class="text-xl mt-1">

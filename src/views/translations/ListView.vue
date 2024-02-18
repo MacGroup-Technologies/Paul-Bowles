@@ -1,11 +1,13 @@
 <script lang="ts" setup>
 import { getTranslations } from '@/services/translations';
-import { onMounted, reactive, ref } from 'vue';
+import { onMounted, reactive, ref, computed } from 'vue';
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue';
 import { useThemeStore } from '@/stores/theme';
+import { useUserStore } from '@/stores/user';
 
 import { useHead } from '@unhead/vue'
 import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router';
+
 useHead({ title: `Paul Bowles's Library` })
 
 const route = useRoute();
@@ -63,15 +65,24 @@ function getPreviousPage() {
   return url.toString();
 }
 
+const filterLanguage = computed({
+  get() {
+    return useUserStore().filterLanguage
+  },
+  set(newValue) {
+    useUserStore().setFilterLanguage(newValue);
+  }
+})
+
 const filter = reactive({
   keyword: route.query.query || '',
-  language: '' as any,
+  language: useUserStore().filterLanguage,
   page: Number(route.query.page) || 1,
 });
 
 const filterPageData = async function () {
-  const _route = { path: PAGE_URL, query: { query: filter.keyword, language: filter.language } }
-  if (filter.keyword || filter.language) {
+  const _route = { path: PAGE_URL, query: { query: filter.keyword, language: filterLanguage.value } }
+  if (filter.keyword || filterLanguage) {
     router.push(_route);
   }
 }
@@ -82,7 +93,7 @@ function clearFilters() {
 
 function fetchPageData() {
   setLoading(true);
-  getTranslations(filter.page, filter.keyword, filter.language).then((response: any) => {
+  getTranslations(filter.page, filter.keyword as any, filterLanguage.value as any).then((response: any) => {
     translations.items = response.data.results
     pagination.next = response.data.next;
     pagination.previous = response.data.previous;
@@ -93,7 +104,7 @@ function fetchPageData() {
 onBeforeRouteUpdate((to, from) => {
   if (to !== from) {
     filter.keyword = to.query.query || '';
-    filter.language = to.query.language || '';
+    filterLanguage.value = to.query.language || '' as any;
     filter.page = Number(to.query.page) || 1;
     fetchPageData()
   }
@@ -126,12 +137,14 @@ onMounted(async () => {
       <el-form :model="filter" ref="formRef" @submit.prevent="filterPageData()">
         <div class="flex flex-col md:flex-row gap-5">
           <el-input v-model="filter.keyword" class="md:w-2/3" size="large" placeholder="Author, Title, or Keyword" />
-          <el-select class="md:w-1/3" v-model="filter.language" size="large">
-            <el-option value="" label="All Languages" />
-            <el-option value="From Moghrebi" label="From Moghrebi" />
-            <el-option value="From Spanish" label="From Spanish" />
-            <el-option value="From French" label="From French" />
-          </el-select>
+          <div class="">
+            <el-radio-group class="md:w-full" v-model="filterLanguage" size="large">
+              <el-radio border value="" label="All Languages" />
+              <el-radio border value="From Moghrebi" label="From Moghrebi" />
+              <el-radio border value="From Spanish" label="From Spanish" />
+              <el-radio border value="From French" label="From French" />
+            </el-radio-group>
+          </div>
           <el-button class="md:w-auto bg-primary" type="primary" size="large" @click="filterPageData()">Search</el-button>
           <el-button v-if="route.query.query" type="primary" size="large" class="bg-primary" @click="clearFilters">
             Clear filters
@@ -196,3 +209,16 @@ onMounted(async () => {
     </div>
   </div>
 </template>
+
+<style scoped>
+.el-radio-group {
+  display: flex!important;
+  flex-wrap: nowrap!important;
+  overflow-x: auto;
+  gap: 15px!important;
+}
+
+.el-radio {
+  margin-right: 0!important;
+}
+</style>
