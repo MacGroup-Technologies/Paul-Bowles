@@ -27,7 +27,7 @@ const img = ref(null)
               v-if="item.image_urls.split('|')[0] !== ''" />
             <img v-else src="@/assets/imgs/Image-thumbnail.png" class="w-full h-auto rounded-[22px]" />
             <div class="py-5 md:py-3 px-5 md:px-20 w-full flex gap-5 overflow-auto scrollbar-thin scrollbar-thumb-primary"
-              v-if="item.image_urls.split('|')[0] !== ''">
+              v-if="item.image_urls.split('|').length > 1 && item.image_urls.split('|')[0] !== ''">
               <img :src="imgs"
                 class="bg-primary bg-opacity-20 inline w-32 rounded-xl cursor-pointer hover:-translate-y-2 transition-transform"
                 :class="{ '-translate-y-1 bg-opacity-70': img == imgs }"
