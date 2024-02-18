@@ -17,7 +17,7 @@ const music = [
     link: 'on-paul-bowless-music'
   },
   {
-    title: "Paul Bowle's Musical Works",
+    title: "Paul Bowles's Musical Works",
     link: 'paul-bowless-musical-works'
   },
 ]
@@ -51,11 +51,16 @@ const music = [
       concrète.
     </div>
     <div
-      class="grid grid-cols-1 md:grid-cols-3 gap-20 2xl:gap-48 justify-between py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl">
-      <router-link :to="'/music/' + encodeURI(item.link)" class="flex flex-col items-center gap-3"
+      class="grid grid-cols-1 md:grid-cols-3 gap-20 2xl:gap-48 justify-between py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl text-center">
+      <router-link :to="'/music/' + encodeURI(item.link)" class="relative flex flex-col items-center gap-3"
         v-for="(item, index) in music" :key="index">
-        <img src="@/assets/imgs/music-thumbnail.png" alt="">
-        {{ item.title }}
+
+        <div class="relative inline-flex mx-auto">
+          <img src="@/assets/imgs/music-thumbnail-blank.png" alt="">
+          <div class="absolute grid place-items-center inset-0 cursor-pointer">
+            <p class="mt-auto pb-10"> {{ item.title }} </p>
+          </div>
+        </div>
       </router-link>
     </div>
   </div>
