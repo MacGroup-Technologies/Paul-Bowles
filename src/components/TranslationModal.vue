@@ -39,6 +39,8 @@ const img = ref(null)
             <p class="mt-3 text-justify" v-html="item.inscription.replaceAll('/', '')" />
             <div class="mt-5">
               <div class="" v-if="item.publisher"><b>PUBLISHER:</b> {{ item.publisher }}</div>
+              <div class="" v-if="item.genre"><b>PLACE OF PUBlICATION:</b> {{ item.place_of_publication }}</div>
+              <div class="" v-if="item.genre"><b>PUBlICATION DATE:</b> {{ item.date_of_publication }}</div>
               <div class="" v-if="item.isbn"><b>ISBN:</b> {{ item.isbn }}</div>
               <div class="" v-if="item.language"><b>LANGUAGES:</b> {{ item.language }}</div>
               <div class="" v-if="item.translator"><b>TRANSLATOR:</b> {{ item.translator }}</div>
