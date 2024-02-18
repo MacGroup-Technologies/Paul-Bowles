@@ -61,6 +61,11 @@ const router = createRouter({
           component: () => import('../views/music/OnPaulBowlesMusicView.vue'),
         },
         {
+          path: "/music/paul-bowless-musical-works",
+          name: "PaulBowlesMusicalWorksPage",
+          component: () => import('../views/music/OnPaulBowlesMusicalWorksView.vue'),
+        },
+        {
           path: '/library',
           name: 'libraryPage',
           component: () => import('../views/LibraryView.vue')
