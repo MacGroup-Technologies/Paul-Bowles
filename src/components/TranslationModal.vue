@@ -27,7 +27,7 @@ const img = ref(null)
               v-if="item.image_urls.split('|')[0] !== ''" />
             <img v-else src="@/assets/imgs/Image-thumbnail.png" class="w-full h-auto rounded-[22px]" />
             <div class="py-5 md:py-3 px-5 md:px-20 w-full flex gap-5 overflow-auto scrollbar-thin scrollbar-thumb-primary"
-              v-if="item.image_urls.split('|')[0] !== ''">
+              v-if="item.image_urls.split('|').length > 1 && item.image_urls.split('|')[0] !== ''">
               <img :src="imgs"
                 class="bg-primary bg-opacity-20 inline w-32 rounded-xl cursor-pointer hover:-translate-y-2 transition-transform"
                 :class="{ '-translate-y-1 bg-opacity-70': img == imgs }"
@@ -39,6 +39,8 @@ const img = ref(null)
             <p class="mt-3 text-justify" v-html="item.inscription.replaceAll('/', '')" />
             <div class="mt-5">
               <div class="" v-if="item.publisher"><b>PUBLISHER:</b> {{ item.publisher }}</div>
+              <div class="" v-if="item.genre"><b>PLACE OF PUBlICATION:</b> {{ item.place_of_publication }}</div>
+              <div class="" v-if="item.genre"><b>PUBlICATION DATE:</b> {{ item.date_of_publication }}</div>
               <div class="" v-if="item.isbn"><b>ISBN:</b> {{ item.isbn }}</div>
               <div class="" v-if="item.language"><b>LANGUAGES:</b> {{ item.language }}</div>
               <div class="" v-if="item.translator"><b>TRANSLATOR:</b> {{ item.translator }}</div>
