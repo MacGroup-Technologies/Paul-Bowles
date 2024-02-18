@@ -12,7 +12,7 @@ const chronology = [
   {
     year: '1915-1918',
     text: 'Bowles learns to read by age four and keeps notebooks with drawings and stories, a habit that will continue throughout his childhood. Mother reads him stories of Hawthorne and Poe.',
-    highlight: ` “I can’t remember a period when the printed word did not make its corresponding sound in my head as I looked at it. I still have a little notebook with stories about animals, invented by me and printed in pencil, each one carefully dated at the end, and the year is 1915, which means that I was four years old when I wrote them.” (<i>Without Stopping</i>, page 14)`
+    highlight: ` “I can't remember a period when the printed word did not make its corresponding sound in my head as I looked at it. I still have a little notebook with stories about animals, invented by me and printed in pencil, each one carefully dated at the end, and the year is 1915, which means that I was four years old when I wrote them.” (<i>Without Stopping</i>, page 14)`
   },
   {
     year: '1919',
@@ -22,12 +22,12 @@ const chronology = [
   {
     year: '1920-1921',
     text: `Keeps diary filled with imaginary events and made-up characters. Writes daily “newspaper.”`,
-    highlight: `“Minnesota was erected. Bluey plans to come. Dolok Parosol stops her saying ‘Marry me don’t go.’ Bluey gets mad. Dolok Parosol tells her again to marry him. She knocks him down. Bluey gets her things packed and puts on a beautiful blue sash. Bluey sails for Wen Kroy and lands. Bluey loves it.” (from Bowles’s diary, age 9)`
+    highlight: `“Minnesota was erected. Bluey plans to come. Dolok Parosol stops her saying "Marry me don't go." Bluey gets mad. Dolok Parosol tells her again to marry him. She knocks him down. Bluey gets her things packed and puts on a beautiful blue sash. Bluey sails for Wen Kroy and lands. Bluey loves it.” (from Bowles’s diary, age 9)`
   },
   {
     year: '1925-1926',
     text: `Writes crime stories with the recurring character “the Snake-Woman.” Reads English writer Arthur Machen.
-          Is deeply impressed by a performance of Stravinsky’s The Firebird at Carnegie Hall.`,
+          Is deeply impressed by a performance of Stravinsky's The Firebird at Carnegie Hall.`,
     highlight: `“I would not have expected an orchestra to be able to make such sounds. I was electrified and on my way home I stopped at a phonograph [store] to see if Stravinsky’s The Firebird was available on records. Fortunately Victor had just issued two 12-inch discs. I bought them and played them constantly but very softly, on the portable phonograph I had in my room.” (Without Stopping, page 69)`
   },
   {
@@ -422,7 +422,8 @@ const chronology = [
       </div>
     </div>
     <div
-      class="fixed top-20 right-0 left-0 px-5 md:px-16 py-3 z-30 backdrop-blur-sm bg-background-light dark:bg-background-dark bg-opacity-30 dark:bg-opacity-30 transition-all flex overflow-auto md:flex-wrap gap-x-5 gap-y-3">
+      class="fixed top-20 right-0 left-0 px-5 md:px-16 py-3 z-30 backdrop-blur-sm bg-background-light dark:bg-background-dark bg-opacity-30 dark:bg-opacity-30 transition-all flex overflow-auto gap-x-5 gap-y-3"
+      >
       <a :href="'#' + item.year" class="inline-block px-2 mr-5 flex-shrink-0 hover:text-primary"
         v-for="(item, i) in chronology" :key="i">
         {{ item.year }}
