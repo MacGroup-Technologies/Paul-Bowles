@@ -77,6 +77,8 @@ onMounted(async () => {
         between 1940 and 1970 reproduced here are held by the Fotostiftung Schweiz in Winterthur at
         "The Paul Bowles Archive."
       </p>
+      <p class="my-10" v-else>
+      </p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div
           :class="`w-full h-64 bg-cover group/image ${item.id == 68 ? '' : 'bg-center'} rounded-xl cursor-pointer transition-transform hover:scale-105 relative overflow-hidden`"
@@ -102,16 +104,18 @@ onMounted(async () => {
       <button class="cursor-pointer text-xl absolute right-0 top-0 p-4 text-center" @click="active_item_index = -1">
         <p>close</p>
       </button>
-      <img :src="active_item?.image_featured" class="w-full max-h-[80vh] object-cover h-auto rounded-xl cursor-default" />
-      <p v-if="isNaN(active_item?.title)" class="text-white"> {{ active_item.title.split(" ").slice(1,
-        active_item.title.length).join(" ") }}
-      </p>
-      <div class="flex items-center gap-4 justify-center">
-        <button @click="goToPreviousImage()">
-          Previous Image
+      <div class="flex justify-between items-center gap-4">
+        <button @click="goToPreviousImage()" class="text-3xl">
+          &larr;
         </button>
-        <button @click="goToNextImage()">
-          Next Image
+        <div>
+          <img :src="active_item?.image_featured" class="max-h-[80vh] mx-auto h-auto rounded-xl cursor-default" />
+          <p v-if="isNaN(active_item?.title)" class="text-white"> {{ active_item.title.split(" ").slice(1,
+            active_item.title.length).join(" ") }}
+          </p>
+        </div>
+        <button @click="goToNextImage()" class="text-3xl">
+          &rarr;
         </button>
       </div>
     </OnClickOutside>
