@@ -84,6 +84,12 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
       <div class="my-10 text-2xl">
         <p v-html="translation.data.blocks_rows_0_text" v-if="translation.data.blocks_rows_0_text !== ''" />
         <p v-html="translation.data.blocks_0_column_1" v-else />
+        <p v-if="route.params.id === '5165'" class="mt-5">
+          Below, we offer a glimse into the first pages of the manuscript:
+        </p>
+        <p v-else-if="route.params.id === '5200'" class="mt-5">
+          Below, we offer a glimse into the first pages of the corrected typescript:
+        </p>
       </div>
       <div class="text-2xl py-10 flex gap-10 flex-col md:flex-row justify-between items-start">
         <div class="md:w-1/3">
@@ -105,6 +111,6 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
       </div>
     </div>
   </div>
-  <image-viewer-modal v-if="modal.opened" :items="modal.items" :active_index="modal.active_index"
+  <image-viewer-modal v-if="modal.opened" :items="(modal.items as any)" :active_index="modal.active_index"
     @close="modal.opened = false" />
 </template>
