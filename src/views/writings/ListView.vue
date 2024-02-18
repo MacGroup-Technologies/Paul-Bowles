@@ -16,17 +16,11 @@ useHead({ title: "Paul Bowles Writings" })
       </div>
     </div>
     <div class="py-10 lg:px-16 2xl:px-20">
-      <div class="grid gap-x-5 gap-y-10 md:gap-10 grid-cols-1 md:grid-cols-4 w-full">
-        <router-link :to="`/writings/${item}`" class="w-full flex flex-col gap-y-5 text-center text-2xl"
-          v-for="(item, index) in items" :key="index">
-          <div class="relative inline-flex mx-auto">
-            <img src="@/assets/imgs/writings-thumbnail-blank.png" class="" />
-            <div class="absolute grid place-items-center inset-0 cursor-pointer">
-              <p class="mt-auto pb-10"> {{ item }} </p>
-            </div>
-          </div>
+      <ul class="gap-x-5 gap-y-10 max-md:px-2 md:gap-10 w-full">
+        <router-link :to="`/writings/${item}`" class="gap-y-5  text-2xl" v-for="(item, index) in items" :key="index">
+          <p class="mt-auto hover:underline text-primary pb-10 cursor-pointer"> {{ index + 1 }}. {{ item }} </p>
         </router-link>
-      </div>
+      </ul>
     </div>
   </div>
 </template>
