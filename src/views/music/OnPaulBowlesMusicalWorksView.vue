@@ -1,22 +1,5 @@
-<script lang="ts" setup>
-import { useRouter } from 'vue-router'
-import { useHead } from '@unhead/vue'
-
-useHead({ title: "On Paul Bowles Music" })
-
-const route = useRouter()
-
-const music = [
-  { title: 'Leonard Bernstein', image: "Leonard-Bernstein-to-Professor-Lawrence.jpg" },
-  { title: 'Irene Herrmann: Paul Bowles, Composer', },
-  { title: 'Virgil Thompson - On Twelfth Night', },
-  { title: 'Rey Rosa - The Return Trip', },
-  { title: 'Lincoln Center Tribute', },
-]
-</script>
 <template>
   <div class="">
-
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 mb-10 text-justify md:text-left">
       <h1 class="font-mono font-semibold uppercase text-3xl lg:text-4xl">
         PAUL BOWLES’S MUSICAL WORKS
@@ -389,7 +372,8 @@ const music = [
           <h3>Scènes d'Anabase for Tenor, Piano, Oboe (1932)</h3>
         </li>
         <li class="mt-10">
-          <h3>Par le Détroit a.k.a. Cantata, for Soprano, Four Male Voices, and Harmonium (1933) &mdash; Text by composer</h3>
+          <h3>Par le Détroit a.k.a. Cantata, for Soprano, Four Male Voices, and Harmonium (1933) &mdash; Text by composer
+          </h3>
         </li>
         <li class="mt-10">
           <h3>
