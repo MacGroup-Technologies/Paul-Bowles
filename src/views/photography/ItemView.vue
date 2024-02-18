@@ -77,9 +77,6 @@ onMounted(async () => {
         between 1940 and 1970 reproduced here are held by the Fotostiftung Schweiz in Winterthur at
         "The Paul Bowles Archive."
       </p>
-      <p class="my-10" v-else>
-        Her collection of photos offers a unique glimpse into the artist's life.
-      </p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div
           :class="`w-full h-64 bg-cover group/image ${item.id == 68 ? '' : 'bg-center'} rounded-xl cursor-pointer transition-transform hover:scale-105 relative overflow-hidden`"
