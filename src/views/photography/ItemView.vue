@@ -122,12 +122,19 @@ function goToPreviousImage() {
           :style="`background-image: url(${item.image_featured})`" v-for="(item, index) in photography.items"
           :key="item.id" @click="active_item_index = index">
           <div class="absolute inset-0 overflow-hidden">
-            <div
+            <div v-if="isNaN(item.title) || item.year_published"
               class="opacity-0 group-hover/image:opacity-100 tranisiton-opacity bg-gradient-to-t from-black/90 absolute inset-0 text-white">
             </div>
-            <p v-if="isNaN(item.title)"
+            <div
               class="opacity-0 translate-y-10 group-hover/image:opacity-100 group-hover/image:translate-y-0 transition-all text-sm text-center absolute bottom-0 inset-x-0 text-white pb-1 px-1">
-              {{ item.title.split(" ").slice(1, item.title.length).join(" ") }}</p>
+              <p>
+                {{ item.title.split(" ").slice(1, item.title.length).join(" ") }}
+              </p>
+              <p>
+                {{ item.year_published }}
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -177,9 +184,14 @@ function goToPreviousImage() {
         </button>
         <div>
           <img :src="active_item?.image_featured" class="max-h-[80vh] mx-auto h-auto rounded-xl cursor-default" />
-          <p v-if="isNaN(active_item?.title)" class="text-white"> {{ active_item.title.split(" ").slice(1,
-            active_item.title.length).join(" ") }}
-          </p>
+          <div v-if="isNaN(active_item?.title) || active_item.year_published" class="text-white">
+            <p>
+              {{ active_item.title.split(" ").slice(1, active_item.title.length).join(" ") }}
+            </p>
+            <p>
+              {{ active_item.year_published }}
+            </p>
+          </div>
         </div>
         <button @click="goToNextImage()" class="text-3xl">
           &rarr;
