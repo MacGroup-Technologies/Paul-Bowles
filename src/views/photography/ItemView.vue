@@ -1,35 +1,38 @@
 <script lang="ts" setup>
 import { computed, onMounted, reactive, ref } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router';
 import { useThemeStore } from '@/stores/theme'
 import { getPhotoAltTag } from '@/services/misc'
 import { useHead } from '@unhead/vue'
+import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue';
 
 import { OnClickOutside } from '@vueuse/components'
 
-const router = useRoute()
-const route = useRouter()
+const route = useRoute()
+const router = useRouter()
+
 const photography = reactive({ items: [] as any[] })
+let pagination = reactive({
+  next: null,
+  previous: null,
+  page: null
+});
 
-const active_item_index = ref<number>(-1)
-const active_item = computed(() => {
-  return photography.items[active_item_index.value]
-})
 
-useHead({ title: `Paul Bowles ${router.params.title}` })
+const PAGE_URL = window.location.pathname;
 
-const fetchPhotography = async function () {
-  setLoading(true)
-  await getPhotoAltTag('' + router.params.title)
-    .then((response: any) => {
-      photography.items = response.data.results
-      setLoading(false)
-    })
-    .catch((error: any) => {
-      setLoading(false)
-      setError(error)
-    })
+function getNextPage() {
+  return PAGE_URL + `?page=${Number(route.query.page || 1) + 1}`;
 }
+
+function getPreviousPage() {
+  return PAGE_URL + `?page=${Number(route.query.page) - 1 || 1}`;
+}
+
+const filter = reactive({
+  page: Number(route.query.page) || 1,
+});
+
 
 const setLoading = function (val: boolean) {
   useThemeStore().updateLoading(val)
@@ -38,6 +41,47 @@ const setLoading = function (val: boolean) {
 const setError = function (val: string) {
   useThemeStore().updateError(val)
 }
+
+onBeforeRouteUpdate((to, from) => {
+  if (to !== from) {
+    filter.page = Number(to.query.page) || 1;
+    fetchPageData()
+  }
+})
+
+onMounted(async () => {
+  setLoading(true);
+  try {
+    fetchPageData();
+  } catch (error: any) {
+    console.log(error);
+    setError(error);
+  }
+});
+
+
+const active_item_index = ref<number>(-1)
+const active_item = computed(() => {
+  return photography.items[active_item_index.value]
+})
+
+useHead({ title: `Paul Bowles ${route.params.title}` })
+
+const fetchPageData = async function () {
+  setLoading(true)
+  await getPhotoAltTag('' + route.params.title, filter.page)
+    .then((response: any) => {
+      photography.items = response.data.results
+      pagination.next = response.data.next;
+      pagination.previous = response.data.previous;
+      setLoading(false)
+    })
+    .catch((error: any) => {
+      setLoading(false)
+      setError(error)
+    })
+}
+
 
 function changeIndex(direction: 1 | -1) {
   active_item_index.value += direction;
@@ -51,25 +95,18 @@ function goToNextImage() {
 function goToPreviousImage() {
   changeIndex(-1)
 }
-
-
-onMounted(async () => {
-  await fetchPhotography()
-})
-
 </script>
 
 <template>
   <div class="">
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <div class="flex items-center justify-between">
-        <h1 class="text-6xl font-heading uppercase w-1/2 md:w-auto">{{ router.params.title }}</h1>
-        <router-link to="#back" @click.prevent="route.go(-1)"
-          class="hover:opacity-75 hover:-translate-x-5 transition-transform">
+        <h1 class="text-6xl font-heading uppercase w-1/2 md:w-auto">{{ route.params.title }}</h1>
+        <router-link to="/photography" class="hover:opacity-75 hover:-translate-x-5 transition-transform">
           <icon-back />
         </router-link>
       </div>
-      <p class="my-10" v-if="router.params.title === 'Paul Bowles Archive at Fotostiftung Schweiz'">
+      <p class="my-10" v-if="route.params.title === 'Paul Bowles Archive at Fotostiftung Schweiz'">
         The earliest photographs by Paul Bowles that we have records of date back to the 1940s.
         Bowles used to carry a camera with him on his excursions and travels. His photographic work
         represents a personal record of the landscapes he visited, as well as of social life,
@@ -93,6 +130,36 @@ onMounted(async () => {
               {{ item.title.split(" ").slice(1, item.title.length).join(" ") }}</p>
           </div>
         </div>
+      </div>
+      <div class="my-24 mx-auto md:w-64 flex justify-center">
+        <el-button-group>
+          <router-link v-if="pagination.previous" :to="getPreviousPage()"
+            class="el-button--primary el-button--large el-button">
+            <el-icon class="el-icon--left">
+              <ArrowLeft />
+            </el-icon>
+            Prev
+          </router-link>
+          <p v-else class="is-disabled el-button--primary el-button--large el-button">
+            <el-icon class="el-icon--left">
+              <ArrowLeft />
+            </el-icon>
+            Prev
+          </p>
+
+          <router-link v-if="pagination.next" :to="getNextPage()" class="el-button--primary el-button--large el-button">
+            Next
+            <el-icon class="el-icon--right">
+              <ArrowRight />
+            </el-icon>
+          </router-link>
+          <p v-else class="is-disabled el-button--primary el-button--large el-button">
+            Next
+            <el-icon class="el-icon--right">
+              <ArrowRight />
+            </el-icon>
+          </p>
+        </el-button-group>
       </div>
     </div>
   </div>
