@@ -22,7 +22,9 @@
           </p>
         </li>
         <li class="mt-10">
-          <h2 class="mb-1">The Wind Remains (zarzuela) (1941–42)</h2>
+          <router-link to="/music/paul-bowles-music/Chamber%20Works%20and%20Orchesta#the-wind-remains" class="text-primary hover:underline">
+            <h2 class="mb-1">The Wind Remains (zarzuela) (1941–42)</h2>
+          </router-link>
           <p class="text-xl">
             Libretto by Paul Bowles. Adaptation of a play by Federico García Lorca.
           </p>
@@ -217,16 +219,22 @@
           <h3>Suite of [Three] Mexican Dances for Small Orchestra (1937)</h3>
         </li>
         <li class="mt-10">
-          <h3>Concerto for Two Pianos, Winds and Percussion (1946 &mdash; 47)</h3>
+          <router-link to="/music/paul-bowles-music/Chamber%20Works%20and%20Orchesta#concerto-for-two-painos-wind-percussion" class="text-primary hover:underline">
+            <h3>Concerto for Two Pianos, Winds and Percussion (1946 &mdash; 47)</h3>
+          </router-link>
         </li>
         <li class="mt-10">
-          <h3>Version for full orchestra as Concerto for Two Pianos and Orchestra (1947 &mdash; 49)</h3>
+          <router-link to="/music/paul-bowles-music/Chamber%20Works%20and%20Orchesta#concerto-for-two-pianos-and-orchestra" class="text-primary hover:underline">
+            <h3>Version for full orchestra as Concerto for Two Pianos and Orchestra (1947 &mdash; 49)</h3>
+          </router-link>
         </li>
       </ul>
       <h2 class="mt-10 font-semibold">CHAMBER ENSEMBLE</h2>
       <ul>
         <li class="mt-10">
-          <h3>Music For a Farce (1938) &mdash; for small ensemble</h3>
+          <router-link to="/music/paul-bowles-music/Chamber%20Works%20and%20Orchesta#music-for-a-farce" class="text-primary hover:underline">
+            <h3>Music For a Farce (1938) &mdash; for small ensemble</h3>
+          </router-link>
         </li>
         <li class="mt-10">
           <h3>Prelude and Dance (1947) &mdash; lost</h3>
@@ -303,7 +311,9 @@
           </p>
         </li>
         <li class="mt-10">
-          <h3>Huapango 1 (1937)</h3>
+          <router-link to="/music/paul-bowles-music/Works%20for%20Piano#huapango-no-1" class="text-primary hover:underline">
+            <h3>Huapango 1 (1937)</h3>
+          </router-link>
         </li>
         <li class="mt-10">
           <h3>Huapango 2 (El Sol) (1937)</h3>
@@ -318,7 +328,9 @@
           <h3>Carretera De Estepona (1939)</h3>
         </li>
         <li class="mt-10">
-          <h3>La Cuelga (1943)</h3>
+          <router-link to="/music/paul-bowles-music/Works%20for%20Piano#la-cuelga" class="text-primary hover:underline">
+            <h3>La Cuelga (1943)</h3>
+          </router-link>
         </li>
         <li class="mt-10">
           <h3>El Bejuco (1943)</h3>
@@ -333,7 +345,9 @@
           <h3>Tierra Mojada (Iquitos) (1947)</h3>
         </li>
         <li class="mt-10">
-          <h3>Orosí (1948)</h3>
+          <router-link to="/music/paul-bowles-music/Works%20for%20Piano#orosi" class="text-primary hover:underline">
+            <h3>Orosí (1948)</h3>
+          </router-link>
         </li>
       </ul>
       <h2 class="mt-10 font-semibold">TWO PIANOS</h2>
@@ -348,7 +362,9 @@
           <h3>Small Suite (1939)</h3>
         </li>
         <li class="mt-10">
-          <h3>Sonata for Two Pianos (1947)</h3>
+          <router-link to="/music/paul-bowles-music/Works%20for%20Piano#sonata-for-two-pianos" class="text-primary hover:underline">
+            <h3>Sonata for Two Pianos (1947)</h3>
+          </router-link>
         </li>
         <li class="mt-10">
           <h3>Night Waltz (1949)</h3>
@@ -415,7 +431,10 @@
           <p class="text-xl mt-1">Poem by Tennessee Williams.</p>
         </li>
         <li class="mt-10">
-          <h3>Blue Mountain Ballads (1946)</h3>
+          <h3> <router-link to="/music/paul-bowles-music/Songs#blue-mountain-ballads-cabin"
+              class="text-primary hover:underline"> Blue Mountain
+              Ballads (1946)
+            </router-link> </h3>
         </li>
         <li class="mt-10">
           <h3>Lonesome Man (1946)</h3>
@@ -434,7 +453,11 @@
           <h3>"Sleeping Song" (slightly revised version of "Baby Baby,") (1946)</h3>
         </li>
         <li class="mt-10">
-          <h3>"Once a Lady was Here" (1946)</h3>
+          <router-link to="/music/paul-bowles-music/Songs#selected-songs-no-3-once-a-lady-was-here" class="text-primary hover:underline">
+            <h3>
+              "Once a Lady was Here" (1946)
+            </h3>
+          </router-link>
         </li>
         <li class="mt-10">
           <h3>Cuatro Canciones (1944)</h3>
@@ -466,7 +489,9 @@
           <p class="text-xl mt-1">For voice and piano; text by Joe Massey; recorded in 1946</p>
         </li>
         <li class="mt-10">
-          <h3>"Mes de Mayo" (1944)</h3>
+          <router-link to="/music/paul-bowles-music/Songs#selected-songs-no-2-mes-de-mayo" class="text-primary hover:underline">
+            <h3>"Mes de Mayo" (1944)</h3>
+          </router-link>
         </li>
         <li class="mt-10">
           <h3>
@@ -479,7 +504,11 @@
           </p>
         </li>
         <li class="mt-10">
-          <h3>"My Sister’s Hand in Mine" (1945)</h3>
+          <h3>
+            <router-link to="/music/paul-bowles-music/Songs#my-sisters-hand-in-mine" class="text-primary hover:underline">
+              <h3>"My Sister’s Hand in Mine" (1945)</h3>
+            </router-link>
+          </h3>
           <p class="text-xl mt-1">Original title: "Bluebell Mountain," words by Jane Bowles.</p>
         </li>
         <li class="mt-10">
@@ -516,7 +545,10 @@
           <p class="text-xl mt-1">"Que te Falta" and "El Carbonera"</p>
         </li>
         <li class="mt-10">
-          <h3>Blue Mountain Ballads (1946)</h3>
+          <h3> <router-link to="/music/paul-bowles-music/Songs#blue-mountain-ballads-cabin"
+              class="text-primary hover:underline"> Blue Mountain
+              Ballads (1946)
+            </router-link> </h3>
           <p class="text-xl mt-1">
             Tennessee Williams "Scenes from the Door" (New York: Éditions de la Vipère, 1934) Paul
             Bowles's first printed musical composition. The text by Gertrude Stein.
@@ -662,10 +694,14 @@
           <h3>Camp Cataract and A Quarreling Pair (1984)</h3>
         </li>
         <li class="mt-10">
-          <h3>Hippolytys (1992)</h3>
+          <router-link to="/music/paul-bowles-music/Incidental%20Music#hippolytos" class="text-primary hover:underline">
+            <h3>Hippolytys (1992)</h3>
+          </router-link>
         </li>
         <li class="mt-10">
-          <h3>Salomé (1993)</h3>
+          <router-link to="/music/paul-bowles-music/Incidental%20Music#salome" class="text-primary hover:underline">
+            <h3>Salomé (1993)</h3>
+          </router-link>
         </li>
         <li class="mt-10">
           <h3>The Royal Hunt of the Sun (1996)</h3>
@@ -704,7 +740,9 @@
           <h3>Roots in the Soil (1940)*</h3>
         </li>
         <li class="mt-10">
-          <h3>Congo (1944)</h3>
+          <router-link to="/music/paul-bowles-music/Film%20Music" class="text-primary hover:underline">
+            <h3>Congo (1944)</h3>
+          </router-link>
         </li>
         <li class="mt-10">
           <h3>Dreams that Money Can Buy (1947)*</h3>

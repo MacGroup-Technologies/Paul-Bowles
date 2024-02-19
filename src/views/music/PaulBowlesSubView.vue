@@ -165,7 +165,7 @@ onMounted(async () => {
             <div
               class="flex flex-row md:items-center gap-3 md:gap-0 mb-3 py-5 cursor-pointer px-10 rounded-xl transition hover:bg-white hover:text-black hover:shadow"
               :class="{ 'bg-white text-black shadow': item.title === player.item.title }"
-              v-for="(item, index) in collection.items.items" :key="item.id" @click="player.item = item">
+              v-for="(item, index) in collection.items.items" :key="item.id" @click="player.item = item" :id="item.slug">
               <div class="w-10" v-if="item.title !== player.item.title">{{ index + 1 }}</div>
               <div class="w-10 flex items-center justify-center" @click="playMusic()" v-else>
                 <svg v-if="playState !== 'play'" width="40" height="40" viewBox="0 0 40 40" fill="none"
