@@ -23,7 +23,7 @@ const img = ref(null)
         </div>
         <div class="py-5 md:py-3 px-5 md:px-20 grid place-items-start gap-10 grid-cols-1 md:grid-cols-2 h-[65%]">
           <div>
-            <VueMagnifier :src="img ?? item.image_urls.split('|')[0]" width="500" class="rounded-2xl"
+            <VueMagnifier :src="img ?? item.image_urls.split('|')[0]" width="500" class="rounded-2xl" zoomFactor="2"
               v-if="item.image_urls.split('|')[0] !== ''" />
             <img v-else src="@/assets/imgs/Image-thumbnail.png" class="w-full h-auto rounded-[22px]" />
             <div class="py-5 md:py-3 px-5 md:px-20 w-full flex gap-5 overflow-auto scrollbar-thin scrollbar-thumb-primary"
