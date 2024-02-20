@@ -53,6 +53,11 @@ async function fetchPageData() {
 
     pagination.next = response.data.next;
     pagination.previous = response.data.previous;
+    if (route.params.title === "Autobiography") {
+      const temp = response.data.results.shift()
+      response.data.results.push(temp)
+    }
+    console.log({ response })
     writing.item = response.data.results
 
     setLoading(false)
@@ -181,7 +186,6 @@ useHead({ title: `Paul Bowles ${route.params.title}` })
 
       <div class="flex justify-center mt-10" v-if="route.params.title !== 'Autobiography'">
         <el-button-group>
-
           <router-link v-if="pagination.previous" :to="getPreviousPage()"
             class="el-button--primary el-button--large el-button">
             <el-icon class="el-icon--left">
@@ -210,6 +214,7 @@ useHead({ title: `Paul Bowles ${route.params.title}` })
           </p>
 
         </el-button-group>
+
       </div>
     </div>
   </div>
