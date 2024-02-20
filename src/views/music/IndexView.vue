@@ -57,7 +57,7 @@ const music = [
 
         <div class="relative inline-flex mx-auto">
           <img src="@/assets/imgs/music-thumbnail-blank.png" alt="">
-          <div class="absolute grid place-items-center inset-0 cursor-pointer">
+          <div class="absolute grid place-items-center inset-0 px-2 cursor-pointer text-black">
             <p class="mt-auto pb-10"> {{ item.title }} </p>
           </div>
         </div>
