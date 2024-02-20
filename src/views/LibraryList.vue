@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { reactive, onMounted, onUpdated } from 'vue';
+import { computed, ref, reactive, onMounted, onUpdated } from 'vue';
 import { useHead } from '@unhead/vue'
 import { useThemeStore } from '@/stores/theme';
 import { fetchLibrary } from '@/services/library';
@@ -14,11 +14,44 @@ const route = useRoute();
 const router = useRouter();
 
 const modal = reactive({ opened: false, data: {} });
-const library = reactive({ items: [] as any });
+const library = reactive({ items_with_images: [] as any, items_without_images: [] as any });
+
+const _active_tab = ref("all books");
+
+function switchTab(){
+  switch (_active_tab.value) {
+    case "all books" : 
+      return "all"; 
+      break;
+    case "without images" : 
+      return "items_without_images"; 
+      break;
+    default : 
+      return "items_with_images"; 
+      break
+  }
+}
+
+const active_tab = computed(()=>{
+  return switchTab()
+})
+
 const pagination = reactive({
-  next: null,
-  previous: null,
-  page: null,
+  all: {
+    next: null,
+    previous: null,
+    page: null,
+  },
+  items_with_images: {
+    next: null,
+    previous: null,
+    page: null,
+  },
+  items_without_images: {
+    next: null,
+    previous: null,
+    page: null,
+  },
 });
 
 
@@ -36,7 +69,6 @@ const openModal = async function (item: any) {
 }
 
 const PAGE_URL = window.location.pathname;
-const PAGE_QUERY = route.query.query;
 
 function getNextPage() {
   return PAGE_URL + `?page=${Number(route.query.page || 1) + 1}&query=${route.query.query || ''}`;
@@ -64,10 +96,26 @@ function clearFilters() {
 
 function fetchPageData() {
   setLoading(true);
+
+  //fetch all
   fetchLibrary(filter.page, filter.keyword as string).then((response: any) => {
-    library.items = response.data.results;
-    pagination.next = response.data.next;
-    pagination.previous = response.data.previous;
+    library.all = response.data.results;
+    pagination.all.next = response.data.next;
+    pagination.all.previous = response.data.previous;
+  });
+
+  //fetch with images
+  fetchLibrary(filter.page, filter.keyword as string, true).then((response: any) => {
+    library.items_with_images = response.data.results;
+    pagination.items_with_images.next = response.data.next;
+    pagination.items_with_images.previous = response.data.previous;
+  });
+
+  //fetch without images
+  fetchLibrary(filter.page, filter.keyword as string, false).then((response: any) => {
+    library.items_without_images = response.data.results;
+    pagination.items_without_images.next = response.data.next;
+    pagination.items_without_images.previous = response.data.previous;
     setLoading(false);
   });
 }
@@ -102,6 +150,13 @@ onMounted(async () => {
       </div>
     </div>
     <div class="mx-5 mb-10 lg:mx-16 2xl:mx-20 p-10 rounded-xl text-xl bg-white z-10 sticky top-20">
+          <div class="mb-2">
+            <el-radio-group class="justify-center flex gap-2 w-full capitalize" v-model="_active_tab" size="large" @change="e=>switchTab()">
+              <el-radio border label="all books" class="!mr-0" />
+              <el-radio border label="with images" class="!mr-0" />
+              <el-radio border label="without images" />
+            </el-radio-group>
+          </div>
       <el-form :model="filter" ref="formRef" @submit.prevent="filterLibrary()">
         <div class="flex flex-col md:flex-row gap-5">
           <el-input v-model="filter.keyword" class="md:w-2/3" size="large"
@@ -115,7 +170,7 @@ onMounted(async () => {
       </el-form>
     </div>
     <div class="py-10 lg:px-16 2xl:px-20">
-      <template v-if="library.items.length === 0">
+      <template v-if="library?.[active_tab]?.length === 0">
         <div class="space-y-2 text-center">
           <p>No item to display</p>
           <div v-if="filter.keyword" class="space-y-2 text-sm">
@@ -127,7 +182,7 @@ onMounted(async () => {
         </div>
       </template>
       <div class="grid gap-x-5 gap-y-10 grid-cols-1 md:grid-cols-4 w-full">
-        <div class="w-full flex flex-col px-10 md:px-0" v-for="item in library.items" :key="item.id">
+        <div class="w-full flex flex-col px-10 md:px-0" v-for="item in library?.[active_tab]" :key="item.id">
           <img v-if="item.image_urls === ''" src="@/assets/imgs/library-thumbnail.png"
             class="w-full h-auto md:w-3/4 md:h-64 rounded-[22px] fancy-img my-0 md:mx-auto cursor-pointer"
             @click="openModal(item)" />
@@ -149,7 +204,7 @@ onMounted(async () => {
     </div>
     <div class="my-24 mx-auto md:w-64 flex justify-center">
       <el-button-group>
-        <router-link v-if="pagination.previous" :to="getPreviousPage()"
+        <router-link v-if="pagination[active_tab]?.previous" :to="getPreviousPage()"
           class="el-button--primary el-button--large el-button">
           <el-icon class="el-icon--left">
             <ArrowLeft />
@@ -163,7 +218,7 @@ onMounted(async () => {
           Prev
         </p>
 
-        <router-link v-if="pagination.next" :to="getNextPage()" class="el-button--primary el-button--large el-button">
+        <router-link v-if="pagination[active_tab]?.next" :to="getNextPage()" class="el-button--primary el-button--large el-button">
           Next
           <el-icon class="el-icon--right">
             <ArrowRight />

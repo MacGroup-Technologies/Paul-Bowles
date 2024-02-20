@@ -6,7 +6,8 @@ useHead({ title: `Paul Bowles's Library` })
 <template>
   <div class="">
     <div
-      class="h-screen bg-background-light dark:bg-background-dark relative flex items-center bg-[url('@/assets/imgs/imagehero-5.png')]">
+      class="h-screen bg-background-light dark:bg-background-dark relative flex items-center bg-[url('@/assets/imgs/imagehero-5.png')]"
+      style="background-size:cover;background-position:center,center;">
       <div
         class="h-full md:w-2/3 z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">
         <div class="p-5 lg:px-16 2xl:px-20">
@@ -29,7 +30,7 @@ useHead({ title: `Paul Bowles's Library` })
       Paul Bowles's personal library includes over three thousand volumes that he collected during
       the five decades he lived in Tangier. The result of a recent major cataloging effort, his
       copious library is now available in digitized form for public consultation.
-    <br />
+      <br />
       <div class="mt-5 md:mt-10">
         <router-link to="/library/list">
           <el-button type="primary" size="large" class="bg-primary" style="padding: 30px 35px;">Proceed to
@@ -164,15 +165,20 @@ useHead({ title: `Paul Bowles's Library` })
           Bowles’s literary influences but also in the confluences between the creative act and the
           literary context in which it was framed.
           <br /><br />
-          
-          Unfortunately, already a year or two before Bowles passed away, some visitors had begun to ransack his bookshelves. 
-      Among the absent volumes were works by renowned authors, with signatures and dedications. Noteworthy losses included 
-      “Fragments from a Work in Progress” (<i>Finnegans Wake</i>), signed by Joyce; various works by Tennessee Williams, 
-      William Burroughs, Allen Ginsberg, Patricia Highsmith, and other friends and collaborators of Bowles. Also missing 
-      were Émile Laoust’s <i>Contes berbères du Maroc</i>, and an old edition of Burton’s translation of <i>The Book of the 
-      Thousand Nights and a Night</i>.
+
+          Unfortunately, already a year or two before Bowles passed away, some visitors had begun to ransack his
+          bookshelves.
+          Among the absent volumes were works by renowned authors, with signatures and dedications. Noteworthy losses
+          included
+          “Fragments from a Work in Progress” (<i>Finnegans Wake</i>), signed by Joyce; various works by Tennessee
+          Williams,
+          William Burroughs, Allen Ginsberg, Patricia Highsmith, and other friends and collaborators of Bowles. Also
+          missing
+          were Émile Laoust’s <i>Contes berbères du Maroc</i>, and an old edition of Burton’s translation of <i>The Book
+            of the
+            Thousand Nights and a Night</i>.
           <br /><br />
-          
+
           The online catalogue provides access for the first time to information and materials that
           were previously reserved for specialists. Every book is presented with its corresponding
           bibliographic information, and photographs accompany the entries for books that contain
@@ -186,8 +192,9 @@ useHead({ title: `Paul Bowles's Library` })
           that of Antiochus Omissi, who patiently reviewed all the information uploaded, so that it
           would be ready for use. This joint and collective effort aims to create a new space for
           interaction among Bowles’s readers in order to open his legacy up to new modes of use,
-        study, and reading. 
-      </p>
+          study, and reading. 
+        </p>
+      </div>
     </div>
   </div>
-</div></template>
+</template>
