@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { OnClickOutside } from '@vueuse/components'
 import { ref, onMounted } from 'vue'
+import VueMagnifier from '@websitebeaver/vue-magnifier'
+import '@websitebeaver/vue-magnifier/styles.css'
 
 const props = defineProps<{ items: string[], active_index: number }>()
 
@@ -33,7 +35,8 @@ onMounted(() => {
           Close <span class="inline-block pt-[2px] w-10 bg-black dark:bg-white-shade" />
         </div>
         <div class="relative flex items-center justify-center">
-          <img :src="image_displayed" class="max-h-[80vh]" />
+          <VueMagnifier :src="image_displayed" width="500" class="max-h-[80vh] rounded-2xl" zoomFactor="2"
+            v-if="image_displayed" />
         </div>
         <button @click="() => previousImage()" class="text-6xl absolute left-0 inset-y-0 m-4">&larr;</button>
         <button @click="() => nextImage()" class="text-6xl absolute right-0 inset-y-0 m-4">&rarr;</button>
