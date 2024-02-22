@@ -37,12 +37,15 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
           thing with words in his precise and quasi-Victorian way of presenting the primitive and
           the shocking. He is a wonder, and I have learned a lot from him. (Copland still refers to
           the “Bowles style” that crops up now and then in my music.)
+        </p>
+        <p class="text-right"> L.B. 
+
         <div class="flex justify-center gap-10 mt-10">
           <img :src="LeonardBernsteinImage" alt="Handwritten note by Leonard Bernstein to professor Lawrence J. Shifreen"
             class="w-auto h-auto"/>
         </div>
+        
         </p>
-        <p class="text-right"> L.B. </p>
       </div>
       <div class="mt-10 text-justify" v-else-if="route.params.title === 'Irene Herrmann: Paul Bowles, Composer'">
         Paul Bowles once said, "I never wanted a career," contempt dripping from his inflection.
