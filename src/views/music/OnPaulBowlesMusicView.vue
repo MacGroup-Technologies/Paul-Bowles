@@ -39,7 +39,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
           the “Bowles style” that crops up now and then in my music.)
         <div class="flex justify-center gap-10 mt-10">
           <img :src="LeonardBernsteinImage" alt="Handwritten note by Leonard Bernstein to professor Lawrence J. Shifreen"
-            class="w-auto h-auto cursor-pointer" @click="active_item = LeonardBernsteinImage" />
+            class="w-auto h-auto"/>
         </div>
         </p>
         <p class="text-right"> L.B. </p>
