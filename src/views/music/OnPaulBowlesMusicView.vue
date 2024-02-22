@@ -7,6 +7,7 @@ import { OnClickOutside } from '@vueuse/components'
 
 import LincolnProgramImage from '@/assets/imgs/Lincoln_program.png'
 import LincolnProgramSecondImage from '@/assets/imgs/Lincoln_programA.png'
+import LeonardBernsteinImage from '@/assets/imgs/Bernstein_Note.jpg'
 
 const route = useRoute()
 const router = useRouter()
@@ -36,6 +37,10 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
           thing with words in his precise and quasi-Victorian way of presenting the primitive and
           the shocking. He is a wonder, and I have learned a lot from him. (Copland still refers to
           the “Bowles style” that crops up now and then in my music.)
+        <div class="flex justify-center gap-10 mt-10">
+          <img :src="LeonardBernsteinImage" alt="Handwritten note by Leonard Bernstein to professor Lawrence J. Shifreen"
+            class="w-auto h-auto cursor-pointer" @click="active_item = LeonardBernsteinImage" />
+        </div>
         </p>
         <p class="text-right"> L.B. </p>
       </div>
