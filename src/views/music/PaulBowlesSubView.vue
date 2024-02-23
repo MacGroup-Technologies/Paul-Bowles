@@ -134,7 +134,8 @@ onMounted(async () => {
             </el-button> -->
           </div>
           <p class="" v-else-if="router.params.title === 'Incidental Music'">
-            In 1992, Bowles composed incidental music for Eurypides’s Hippolytus (presented by the American School of
+            In 1992, Bowles composed incidental music for Eurypides’s Hippolytus of Athens (presented by the American
+            School of
             Tangier). This is Bowles’s first composition using a synthesizer. Oscar Wilde’s Salomé was followed in 1993,
             also presented by the American School of Tangier and composed on a synthesizer.
           </p>
