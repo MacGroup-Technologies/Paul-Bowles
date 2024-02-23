@@ -97,9 +97,10 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
         </p>
       </div>
 
-      <div class="w-max font-bold mt-12">
-        <label v-for="tab in    tabs   " class="px-8 py-4 !cursor-pointer capitalize"
-          :class="{ 'bg-black/20': tab == current_tab, 'hover:bg-primary-light border-b border-black/20': tab !== current_tab }">
+      <div v-if="route.params.id === '4864'"
+        class="mx-auto w-max font-bold mt-12 border-b dark:border-white/20 border-black/20">
+        <label v-for="tab in tabs" class="px-8 py-4 inline-block !cursor-pointer capitalize"
+          :class="{ 'bg-black/20 dark:bg-white/20': tab == current_tab, 'dark:hover:bg-white/10 dark:hover:text-white hover:bg-black/10': tab !== current_tab }">
           {{ tab }}
           <input name="current_tab" type="radio" v-model="current_tab" :value="tab" hidden>
         </label>
@@ -107,10 +108,16 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
 
       <div class="text-2xl py-10 flex gap-10 flex-col md:flex-row justify-between items-start">
 
-        <div v-if="current_tab == 'arabic'" class="text-right">
+        <div v-if="route.params.id !== '4864' || current_tab == 'arabic'" class="text-right">
           <p v-html="translation.data.blocks_1_column_3" />
         </div>
-        <div v-else-if="current_tab == 'english'" class="">
+
+        <div v-if="route.params.id !== '4864'">
+          <p v-html="translation.data.blocks_1_column_2" />
+          <p v-html="translation.data.blocks_rows_4_text" />
+        </div>
+
+        <div v-else-if="route.params.id !== '4864' || current_tab == 'english'" class="">
           <p v-html="translation.data.blocks_1_column_1" />
         </div>
 

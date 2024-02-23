@@ -22,7 +22,8 @@
           </p>
         </li>
         <li class="mt-10">
-          <router-link to="/music/paul-bowles-music/Chamber%20Works%20and%20Orchesta#the-wind-remains" class="text-primary hover:underline">
+          <router-link to="/music/paul-bowles-music/Chamber%20Works%20and%20Orchesta#the-wind-remains"
+            class="text-primary hover:underline">
             <h2 class="mb-1">The Wind Remains (zarzuela) (1941–42)</h2>
           </router-link>
           <p class="text-xl">
@@ -219,12 +220,16 @@
           <h3>Suite of [Three] Mexican Dances for Small Orchestra (1937)</h3>
         </li>
         <li class="mt-10">
-          <router-link to="/music/paul-bowles-music/Chamber%20Works%20and%20Orchesta#concerto-for-two-painos-wind-percussion" class="text-primary hover:underline">
+          <router-link
+            to="/music/paul-bowles-music/Chamber%20Works%20and%20Orchesta#concerto-for-two-painos-wind-percussion"
+            class="text-primary hover:underline">
             <h3>Concerto for Two Pianos, Winds and Percussion (1946 &mdash; 47)</h3>
           </router-link>
         </li>
         <li class="mt-10">
-          <router-link to="/music/paul-bowles-music/Chamber%20Works%20and%20Orchesta#concerto-for-two-pianos-and-orchestra" class="text-primary hover:underline">
+          <router-link
+            to="/music/paul-bowles-music/Chamber%20Works%20and%20Orchesta#concerto-for-two-pianos-and-orchestra"
+            class="text-primary hover:underline">
             <h3>Version for full orchestra as Concerto for Two Pianos and Orchestra (1947 &mdash; 49)</h3>
           </router-link>
         </li>
@@ -232,7 +237,8 @@
       <h2 class="mt-10 font-semibold">CHAMBER ENSEMBLE</h2>
       <ul>
         <li class="mt-10">
-          <router-link to="/music/paul-bowles-music/Chamber%20Works%20and%20Orchesta#music-for-a-farce" class="text-primary hover:underline">
+          <router-link to="/music/paul-bowles-music/Chamber%20Works%20and%20Orchesta#music-for-a-farce"
+            class="text-primary hover:underline">
             <h3>Music For a Farce (1938) &mdash; for small ensemble</h3>
           </router-link>
         </li>
@@ -311,7 +317,8 @@
           </p>
         </li>
         <li class="mt-10">
-          <router-link to="/music/paul-bowles-music/Works%20for%20Piano#huapango-no-1" class="text-primary hover:underline">
+          <router-link to="/music/paul-bowles-music/Works%20for%20Piano#huapango-no-1"
+            class="text-primary hover:underline">
             <h3>Huapango 1 (1937)</h3>
           </router-link>
         </li>
@@ -362,7 +369,8 @@
           <h3>Small Suite (1939)</h3>
         </li>
         <li class="mt-10">
-          <router-link to="/music/paul-bowles-music/Works%20for%20Piano#sonata-for-two-pianos" class="text-primary hover:underline">
+          <router-link to="/music/paul-bowles-music/Works%20for%20Piano#sonata-for-two-pianos"
+            class="text-primary hover:underline">
             <h3>Sonata for Two Pianos (1947)</h3>
           </router-link>
         </li>
@@ -453,7 +461,8 @@
           <h3>"Sleeping Song" (slightly revised version of "Baby Baby,") (1946)</h3>
         </li>
         <li class="mt-10">
-          <router-link to="/music/paul-bowles-music/Songs#selected-songs-no-3-once-a-lady-was-here" class="text-primary hover:underline">
+          <router-link to="/music/paul-bowles-music/Songs#selected-songs-no-3-once-a-lady-was-here"
+            class="text-primary hover:underline">
             <h3>
               "Once a Lady was Here" (1946)
             </h3>
@@ -489,7 +498,8 @@
           <p class="text-xl mt-1">For voice and piano; text by Joe Massey; recorded in 1946</p>
         </li>
         <li class="mt-10">
-          <router-link to="/music/paul-bowles-music/Songs#selected-songs-no-2-mes-de-mayo" class="text-primary hover:underline">
+          <router-link to="/music/paul-bowles-music/Songs#selected-songs-no-2-mes-de-mayo"
+            class="text-primary hover:underline">
             <h3>"Mes de Mayo" (1944)</h3>
           </router-link>
         </li>
@@ -694,8 +704,8 @@
           <h3>Camp Cataract and A Quarreling Pair (1984)</h3>
         </li>
         <li class="mt-10">
-          <router-link to="/music/paul-bowles-music/Incidental%20Music#hippolytos" class="text-primary hover:underline">
-            <h3>Hippolytys (1992)</h3>
+          <router-link to="/music/paul-bowles-music/Incidental%20Music#hippolytus" class="text-primary hover:underline">
+            <h3>Hippolytus (1992)</h3>
           </router-link>
         </li>
         <li class="mt-10">
@@ -743,11 +753,10 @@
           <router-link to="/music/paul-bowles-music/Film%20Music" class="text-primary hover:underline">
             <h3>Congo (1944)</h3>
           </router-link>
-        </li>
-        <li class="mt-10">
-          <h3>Dreams that Money Can Buy (1947)*</h3>
-        </li>
-      </ul>
-    </div>
+      </li>
+      <li class="mt-10">
+        <h3>Dreams that Money Can Buy (1947)*</h3>
+      </li>
+    </ul>
   </div>
-</template>
+</div></template>
