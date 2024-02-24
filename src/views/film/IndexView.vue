@@ -12,7 +12,7 @@ useHead({ title: `Paul Bowles's Films` })
         class="h-full z-10 bg-background-light dark:bg-background-dark bg-opacity-60 dark:bg-opacity-60 flex flex-col justify-center items-start">
         <div class="p-5 lg:px-16 2xl:px-20">
           <h1 class="text-8xl font-mono uppercase text-black dark:text-white-shade">Film</h1>
-          <p class="md:w-2/3 text-primary text-3xl mt-5">
+          <p class="md:w-2/3 dark:text-white text-3xl mt-5">
             Excerpts from a documentary and an experimental film, and a selected filmography.
           </p>
         </div>
