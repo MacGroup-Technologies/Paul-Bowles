@@ -29,7 +29,7 @@ const music = [
         class="h-full md:w-2/3 z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">
         <div class="p-5 lg:px-16 2xl:px-20">
           <h1 class="text-8xl font-mono uppercase">Music</h1>
-          <p class="md:w-2/3 text-primary text-3xl mt-10">
+          <p class="md:w-2/3 dark:text-white text-3xl mt-10">
             Bowles composed orchestral works, piano pieces, and numerous songs.
           </p>
         </div>
