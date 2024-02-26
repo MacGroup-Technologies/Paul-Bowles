@@ -18,6 +18,8 @@ const openModal = async function (items: string[], active_index = 0) {
   modal.active_index = active_index
 }
 
+const is_text_expanded = ref(false)
+
 const route = useRoute();
 const setLoading = function (val: boolean) {
   useThemeStore().updateLoading(val)
@@ -85,7 +87,7 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
       </div>
 
 
-      <div class="my-10 text-2xl">
+      <div class="my-10 text-2xl text-justify">
         <p v-html="translation.data.blocks_rows_0_text" v-if="translation.data.blocks_rows_0_text !== ''" />
         <p v-html="translation.data.blocks_0_column_1" v-else />
         <p v-if="route.params.id === '5165'" class="mt-5">
@@ -105,7 +107,8 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
         </label>
       </div>
 
-      <div class="text-2xl py-10 flex gap-10 flex-col md:flex-row justify-between items-start">
+      <div class="text-2xl py-10 flex gap-10 flex-col md:flex-row justify-between items-start text-justify"
+        :class="{ 'max-h-[15lh] m-2 p-2 overflow-auto': route.params.id == '4864' && is_text_expanded == false }">
 
         <div v-if="route.params.id !== '4864' || current_tab == 'arabic'" class="text-right">
           <p v-html="translation.data.blocks_1_column_3" />
@@ -120,6 +123,15 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
           <p v-html="translation.data.blocks_1_column_1" />
         </div>
 
+
+      </div>
+      <div v-if="route.params.id === '4864'" class="flex justify-center">
+        <button v-if="is_text_expanded == true" @click="is_text_expanded = false" class="border p-4 m-4">{{ current_tab
+          ===
+          'english' ? "Read less" :
+          "قراءة أقل" }}</button>
+        <button v-else @click="is_text_expanded = true" class="border p-4 m-4">{{ current_tab === 'english' ? `Show full
+          text` : `إظهار النص الكامل` }}</button>
       </div>
 
       <div class="grid md:grid-cols-3 pb-5 scrollbar-thin scrollbar-thumb-primary gap-10"
