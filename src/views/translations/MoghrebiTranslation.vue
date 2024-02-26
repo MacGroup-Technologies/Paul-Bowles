@@ -125,7 +125,7 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
 
 
       </div>
-      <div class="flex justify-center">
+      <div v-if="route.params.id === '4864'" class="flex justify-center">
         <button v-if="is_text_expanded == true" @click="is_text_expanded = false" class="border p-4 m-4">{{ current_tab
           ===
           'english' ? "Read less" :
