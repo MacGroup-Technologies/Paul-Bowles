@@ -103,7 +103,8 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
         <label v-for="tab in tabs" class="px-8 py-4 inline-block !cursor-pointer capitalize"
           :class="{ 'bg-black/20 dark:bg-white/20': tab == current_tab, 'dark:hover:bg-white/10 dark:hover:text-white hover:bg-black/10': tab !== current_tab }">
           {{ tab }}
-          <input name="current_tab" type="radio" v-model="current_tab" :value="tab" hidden>
+          <input name="current_tab" type="radio" @change="is_text_expanded = false" v-model="current_tab" :value="tab"
+            hidden>
         </label>
       </div>
 
