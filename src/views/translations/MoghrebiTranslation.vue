@@ -7,7 +7,6 @@ import { useRoute } from 'vue-router';
 import { getTranslationsById } from '../../services/translations';
 
 import ImageViewerModal from '@/components/ImageViewerModal.vue';
-import VueMagnifier from '@websitebeaver/vue-magnifier'
 
 const modal = reactive({ opened: false, items: {}, active_index: 0 });
 const openModal = async function (items: string[], active_index = 0) {
