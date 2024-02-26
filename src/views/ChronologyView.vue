@@ -236,7 +236,7 @@ const chronology = [
     text: `Begins writing The Spider's House, inspired by political upheaval in Morocco.
           <br /><br />Transcribes Moghrebi tales told to him by Yacoubi.`,
     highlight: null
-  },	
+  },
   {
     year: '1955',
     text: `Works on The Spider’s House at house on Taprobane.
@@ -406,7 +406,8 @@ const chronology = [
 </script>
 <template>
   <div class="relative">
-    <div class="h-screen bg-background-light dark:bg-background-dark relative bg-[url('@/assets/imgs/chronology.png')]">
+    <div class="h-screen bg-background-light dark:bg-background-dark relative bg-[url('@/assets/imgs/chronology.png')]"
+      style="background-size:cover">
       <div
         class="h-full md:w-2/3 z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">
         <div class="p-5 mt-24 lg:px-16 2xl:px-20">
@@ -422,9 +423,9 @@ const chronology = [
       </div>
     </div>
     <div
-      class="fixed top-20 right-0 left-0 px-5 md:px-16 py-3 z-30 backdrop-blur-sm bg-background-light dark:bg-background-dark bg-opacity-30 dark:bg-opacity-30 transition-all flex overflow-auto gap-x-5 gap-y-3"
-      >
-      <a :href="'#' + item.year" class="inline-block px-2 mr-5 flex-shrink-0 hover:text-primary"
+      class="fixed top-20 right-0 left-0 px-5 md:px-16 py-3 z-30 backdrop-blur-sm bg-background-light dark:bg-background-dark bg-opacity-30 dark:bg-opacity-30 transition-all flex overflow-auto gap-x-5 gap-y-3">
+      <a :href="'#' + item.year"
+        class="inline-block px-2 mr-5 flex-shrink-0 rounded-md bg-black/50 text-white dark:text-white dark:bg-white/20 py-2"
         v-for="(item, i) in chronology" :key="i">
         {{ item.year }}
       </a>

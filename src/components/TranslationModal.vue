@@ -15,15 +15,15 @@ const img = ref(null)
 
     <OnClickOutside @trigger="$emit('close')">
       <div
-        class="overflow-y-auto mx-5 md:mx-0 h-[90vh] md:w-[60vw] bg-background-light dark:bg-background-dark rounded-xl">
+        class="overflow-y-auto mx-5 md:mx-0 h-[90vh] md:w-[80vw] bg-background-light dark:bg-background-dark rounded-xl">
         <div
-          class="py-5 px-5 md:px-20 inline-flex items-center gap-3 text-black dark:text-white-shade hover:text-opacity-80 cursor-pointer"
+          class="py-5 px-5 md:px-20 flex justify-end items-center gap-3 text-black dark:text-white-shade hover:text-opacity-80 cursor-pointer"
           @click="$emit('close')">
           Close <span class="inline-block pt-[2px] w-10 bg-black dark:bg-white-shade" />
         </div>
         <div class="py-5 md:py-3 px-5 md:px-20 grid place-items-start gap-10 grid-cols-1 md:grid-cols-2 h-[65%]">
           <div>
-            <VueMagnifier :src="img ?? item.image_urls.split('|')[0]" width="500" class="rounded-2xl"
+            <VueMagnifier :src="img ?? item.image_urls.split('|')[0]" width="500" class="rounded-2xl" zoomFactor="2"
               v-if="item.image_urls.split('|')[0] !== ''" />
             <img v-else src="@/assets/imgs/Image-thumbnail.png" class="w-full h-auto rounded-[22px]" />
             <div class="py-5 md:py-3 px-5 md:px-20 w-full flex gap-5 overflow-auto scrollbar-thin scrollbar-thumb-primary"

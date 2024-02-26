@@ -134,7 +134,8 @@ onMounted(async () => {
             </el-button> -->
           </div>
           <p class="" v-else-if="router.params.title === 'Incidental Music'">
-            In 1992, Bowles composed incidental music for Eurypides’s Hippolytus (presented by the American School of
+            In 1992, Bowles composed incidental music for Eurypides’s Hippolytus of Athens (presented by the American
+            School of
             Tangier). This is Bowles’s first composition using a synthesizer. Oscar Wilde’s Salomé was followed in 1993,
             also presented by the American School of Tangier and composed on a synthesizer.
           </p>
@@ -165,7 +166,7 @@ onMounted(async () => {
             <div
               class="flex flex-row md:items-center gap-3 md:gap-0 mb-3 py-5 cursor-pointer px-10 rounded-xl transition hover:bg-white hover:text-black hover:shadow"
               :class="{ 'bg-white text-black shadow': item.title === player.item.title }"
-              v-for="(item, index) in collection.items.items" :key="item.id" @click="player.item = item">
+              v-for="(item, index) in collection.items.items" :key="item.id" @click="player.item = item" :id="item.slug">
               <div class="w-10" v-if="item.title !== player.item.title">{{ index + 1 }}</div>
               <div class="w-10 flex items-center justify-center" @click="playMusic()" v-else>
                 <svg v-if="playState !== 'play'" width="40" height="40" viewBox="0 0 40 40" fill="none"

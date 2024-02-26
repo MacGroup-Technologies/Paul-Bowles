@@ -7,6 +7,7 @@ import { OnClickOutside } from '@vueuse/components'
 
 import LincolnProgramImage from '@/assets/imgs/Lincoln_program.png'
 import LincolnProgramSecondImage from '@/assets/imgs/Lincoln_programA.png'
+import LeonardBernsteinImage from '@/assets/imgs/Bernstein_Note.jpg'
 
 const route = useRoute()
 const router = useRouter()
@@ -37,7 +38,14 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
           the shocking. He is a wonder, and I have learned a lot from him. (Copland still refers to
           the “Bowles style” that crops up now and then in my music.)
         </p>
-        <p class="text-right"> L.B. </p>
+        <p class="text-right"> L.B. 
+
+        <div class="flex justify-center gap-10 mt-10">
+          <img :src="LeonardBernsteinImage" alt="Handwritten note by Leonard Bernstein to professor Lawrence J. Shifreen"
+            class="w-auto h-auto"/>
+        </div>
+        
+        </p>
       </div>
       <div class="mt-10 text-justify" v-else-if="route.params.title === 'Irene Herrmann: Paul Bowles, Composer'">
         Paul Bowles once said, "I never wanted a career," contempt dripping from his inflection.

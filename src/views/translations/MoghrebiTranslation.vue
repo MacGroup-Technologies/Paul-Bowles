@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { onMounted, reactive } from 'vue';
+import { ref, onMounted, reactive } from 'vue';
 import { useThemeStore } from '@/stores/theme';
 
 import { useHead } from '@unhead/vue'
@@ -7,6 +7,9 @@ import { useRoute } from 'vue-router';
 import { getTranslationsById } from '../../services/translations';
 
 import ImageViewerModal from '@/components/ImageViewerModal.vue';
+
+const tabs = "arabic, english".split(", ")
+const current_tab = ref("arabic")
 
 const modal = reactive({ opened: false, items: {}, active_index: 0 });
 const openModal = async function (items: string[], active_index = 0) {
@@ -80,6 +83,8 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
           <div class="text-red-500 font-bold p-5 border-red-300">Your device does not support audio</div>
         </audio>
       </div>
+
+
       <div class="my-10 text-2xl">
         <p v-html="translation.data.blocks_rows_0_text" v-if="translation.data.blocks_rows_0_text !== ''" />
         <p v-html="translation.data.blocks_0_column_1" v-else />
@@ -90,23 +95,37 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
           Below, we offer a glimse into the first pages of the corrected typescript:
         </p>
       </div>
+
+      <div v-if="route.params.id === '4864'"
+        class="mx-auto w-max font-bold mt-12 border-b dark:border-white/20 border-black/20">
+        <label v-for="tab in tabs" class="px-8 py-4 inline-block !cursor-pointer capitalize"
+          :class="{ 'bg-black/20 dark:bg-white/20': tab == current_tab, 'dark:hover:bg-white/10 dark:hover:text-white hover:bg-black/10': tab !== current_tab }">
+          {{ tab }}
+          <input name="current_tab" type="radio" v-model="current_tab" :value="tab" hidden>
+        </label>
+      </div>
+
       <div class="text-2xl py-10 flex gap-10 flex-col md:flex-row justify-between items-start">
-        <div class="md:w-1/3">
-          <p v-html="translation.data.blocks_1_column_1" />
-        </div>
-        <div class="md:w-1/3">
-          <p v-html="translation.data.blocks_1_column_2" />
-        </div>
-        <div class="md:w-1/3 text-right">
+
+        <div v-if="route.params.id !== '4864' || current_tab == 'arabic'" class="text-right">
           <p v-html="translation.data.blocks_1_column_3" />
         </div>
+
+        <div v-if="route.params.id !== '4864'">
+          <p v-html="translation.data.blocks_1_column_2" />
+          <p v-html="translation.data.blocks_rows_4_text" />
+        </div>
+
+        <div v-else-if="route.params.id !== '4864' || current_tab == 'english'" class="">
+          <p v-html="translation.data.blocks_1_column_1" />
+        </div>
+
       </div>
-      <div
-        class="flex items-center flex-col md:flex-row md:overflow-x-auto pb-5 scrollbar-thin scrollbar-thumb-primary gap-10"
+
+      <div class="grid md:grid-cols-3 pb-5 scrollbar-thin scrollbar-thumb-primary gap-10"
         v-if="translation.img.split(',').length !== 0 && translation.img !== ''">
-        <img @click="() => openModal(translation.img.split(','), index)" :src="img"
-          class="cursor-pointer w-[200px] h-[200px] object-cover" v-for="(img, index) in translation.img.split(',')"
-          :key="index" lazy />
+        <img @click="() => openModal(translation.img.split(','), index)" :src="img" class="cursor-pointer object-cover"
+          v-for="(   img, index   ) in    translation.img.split(',')   " :key="index" lazy />
       </div>
     </div>
   </div>
