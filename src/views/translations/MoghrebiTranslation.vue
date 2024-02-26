@@ -7,7 +7,6 @@ import { useRoute } from 'vue-router';
 import { getTranslationsById } from '../../services/translations';
 
 import ImageViewerModal from '@/components/ImageViewerModal.vue';
-import VueMagnifier from '@websitebeaver/vue-magnifier'
 
 const tabs = "arabic, english".split(", ")
 const current_tab = ref("arabic")
