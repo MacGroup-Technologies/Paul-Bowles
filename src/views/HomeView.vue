@@ -99,7 +99,7 @@ const setModal = function () {
 
 const mouseHover = function (e: any) {
   if (e === null) {
-    ;(hover.animate = ''), (hover.item = { title: '', text: '', image: '' })
+    ; (hover.animate = ''), (hover.item = { title: '', text: '', image: '' })
   } else {
     setTimeout(() => {
       hover.item = e
@@ -155,108 +155,60 @@ onMounted(() => {
 <template>
   <main class="h-screen text-white">
     <div id="img">
-      <img
-        src="@/assets/imgs/Paul-on-Keyboard.png"
-        class="absolute top-0 left-0 w-full h-full object-cover jumbo"
-        id="hero1"
-        data-animate
-      />
-      <img
-        src="@/assets/imgs/Young-Paul.png"
-        class="absolute top-0 left-0 w-full h-full object-cover jumbo"
-        id="hero1"
-        data-animate
-      />
-      <img
-        src="@/assets/imgs/Paul-arms-wide.png"
-        class="absolute top-0 left-0 w-full h-full object-cover jumbo"
-        id="hero1"
-        data-animate
-      />
+      <img src="@/assets/imgs/Paul-on-Keyboard.png" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
+        id="hero1" data-animate />
+      <img src="@/assets/imgs/Young-Paul.png" class="fixed min-h-screen w-screen inset-0 object-cover jumbo" id="hero1"
+        data-animate />
+      <img src="@/assets/imgs/Paul-arms-wide.png" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
+        id="hero1" data-animate />
     </div>
-    <img
-      src="@/assets/imgs/Music-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-cover jumbo transition-opacity"
-      :class="hover.animate === 'music' ? 'opacity-100' : 'opacity-0'"
-      v-if="hover.animate === 'music'"
-    />
-    <img
-      src="@/assets/imgs/Translation-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
+    <img src="@/assets/imgs/Music-doutone.png"
+      class="fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      :class="hover.animate === 'music' ? 'opacity-100' : 'opacity-0'" v-if="hover.animate === 'music'" />
+    <img src="@/assets/imgs/Translation-doutone.png"
+      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'translation' ? 'opacity-100' : 'opacity-0'"
-      v-else-if="hover.animate === 'translation'"
-    />
-    <img
-      src="@/assets/imgs/Photography-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
+      v-else-if="hover.animate === 'translation'" />
+    <img src="@/assets/imgs/Photography-doutone.png"
+      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'photography' ? 'opacity-100' : 'opacity-0'"
-      v-else-if="hover.animate === 'photography'"
-    />
-    <img
-      src="@/assets/imgs/Life-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
-      :class="hover.animate === 'life' ? 'opacity-100' : 'opacity-0'"
-      v-else-if="hover.animate === 'life'"
-    />
-    <img
-      src="@/assets/imgs/Archive-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
-      :class="hover.animate === 'archives' ? 'opacity-100' : 'opacity-0'"
-      v-else-if="hover.animate === 'archives'"
-    />
-    <img
-      src="@/assets/imgs/Writings-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
-      :class="hover.animate === 'writings' ? 'opacity-100' : 'opacity-0'"
-      v-else-if="hover.animate === 'writings'"
-    />
-    <img
-      src="@/assets/imgs/MoroccanMusic-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
+      v-else-if="hover.animate === 'photography'" />
+    <img src="@/assets/imgs/Life-doutone.png"
+      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      :class="hover.animate === 'life' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'life'" />
+    <img src="@/assets/imgs/Archive-doutone.png"
+      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      :class="hover.animate === 'archives' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'archives'" />
+    <img src="@/assets/imgs/Writings-doutone.png"
+      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      :class="hover.animate === 'writings' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'writings'" />
+    <img src="@/assets/imgs/MoroccanMusic-doutone.png"
+      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'moroccan music' ? 'opacity-100' : 'opacity-0'"
-      v-else-if="hover.animate === 'moroccan music'"
-    />
-    <img
-      src="@/assets/imgs/Library-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
-      :class="hover.animate === 'library' ? 'opacity-100' : 'opacity-0'"
-      v-else-if="hover.animate === 'library'"
-    />
-    <img
-      src="@/assets/imgs/PaulBowles-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
+      v-else-if="hover.animate === 'moroccan music'" />
+    <img src="@/assets/imgs/Library-doutone.png"
+      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      :class="hover.animate === 'library' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'library'" />
+    <img src="@/assets/imgs/PaulBowles-doutone.png"
+      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'on paul bowles' ? 'opacity-100' : 'opacity-0'"
-      v-else-if="hover.animate === 'on paul bowles'"
-    />
-    <img
-      src="@/assets/imgs/Film-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
-      :class="hover.animate === 'film' ? 'opacity-100' : 'opacity-0'"
-      v-else-if="hover.animate === 'film'"
-    />
-    <img
-      src="@/assets/imgs/Contact-doutone.png"
-      class="absolute top-0 left-0 w-full h-full object-fit jumbo transition-opacity"
-      :class="hover.animate === 'contact' ? 'opacity-100' : 'opacity-0'"
-      v-else-if="hover.animate === 'contact'"
-    />
-    <div
-      class="absolute top-0 right-0 left-0 bottom-0 z-50 p-10 md:p-20 flex flex-col justify-between"
-    >
+      v-else-if="hover.animate === 'on paul bowles'" />
+    <img src="@/assets/imgs/Film-doutone.png"
+      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      :class="hover.animate === 'film' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'film'" />
+    <img src="@/assets/imgs/Contact-doutone.png"
+      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      :class="hover.animate === 'contact' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'contact'" />
+    <div class="absolute top-0 right-0 left-0 bottom-0 z-50 p-10 md:p-20 flex flex-col justify-between">
       <div class="mt-10 2xl:mt-20">
-        <h1
-          class="font-heading font-bold uppercase text-white text-6xl md:text-8xl 2xl:text-9xl mb-5"
-          id="heading"
-        >
+        <h1 class="font-heading font-bold uppercase text-white text-6xl md:text-8xl 2xl:text-9xl mb-5" id="heading">
           The Artist’s Legacy
         </h1>
         <img src="@/assets/imgs/logo.svg" class="w-auto h-12 md:h-16 2xl:h-28" id="logo" />
       </div>
       <div clas="mt-10" v-if="hover.animate">
         <h2 class="font-heading text-[30px] md:text-[66px] uppercase">{{ hover.item.title }}</h2>
-        <p
-          class="text-black text-[18px] md:text-[27px] 2xl:text-[37px] w-2/3 text-justify 2xl:w-1/3"
-        >
+        <p class="text-black text-[18px] md:text-[27px] 2xl:text-[37px] w-2/3 text-justify 2xl:w-1/3">
           {{ hover.item.text }}
         </p>
       </div>
@@ -264,22 +216,15 @@ onMounted(() => {
         <div class="capitalize text-left" v-for="(item, index) in links" :key="index">
           <router-link
             class="inline-block hover:opacity-70 text-[20px] 2xl:text-[40px] md:min-w-[150px] text-white-shade transition-colors"
-            :to="`/${item.link}`"
-            @mouseover="mouseHover(item)"
-            @mouseout="mouseHover(null)"
-          >
+            :to="`/${item.link}`" @mouseover="mouseHover(item)" @mouseout="mouseHover(null)">
             {{ item.title }}
           </router-link>
         </div>
       </div>
-      <div
-        class="flex md:hidden flex-wrap gap-x-5 md:gap-x-0 gap-y-5 w-full md:w-5/6 2xl:w-full mr-40"
-      >
+      <div class="flex md:hidden flex-wrap gap-x-5 md:gap-x-0 gap-y-5 w-full md:w-5/6 2xl:w-full mr-40">
         <div class="2xl:w-72 capitalize" v-for="(item, index) in links" :key="index">
-          <router-link
-            class="px-5 hover:opacity-70 text-[18px] 2xl:text-[23px] text-white-shade transition-colors"
-            :to="`/${item.link}`"
-          >
+          <router-link class="px-5 hover:opacity-70 text-[18px] 2xl:text-[23px] text-white-shade transition-colors"
+            :to="`/${item.link}`">
             {{ item.title }}
           </router-link>
         </div>
@@ -303,12 +248,8 @@ onMounted(() => {
           available.
         </p>
         <router-link to="/translation/list?category=From Moghrebi">
-          <el-button
-            type="primary"
-            class="bg-primary"
-            style="padding: 20px 25px; border-radius: 8px"
-            >Check it Out</el-button
-          >
+          <el-button type="primary" class="bg-primary" style="padding: 20px 25px; border-radius: 8px">Check it
+            Out</el-button>
         </router-link>
       </div>
     </div>
