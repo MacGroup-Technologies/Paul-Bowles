@@ -86,7 +86,8 @@ useHead({
 <template>
   <div class="">
     <div
-      class="h-screen overflow-hidden bg-background-light dark:bg-background-dark relative bg-[url('@/assets/imgs/contact.png')]">
+      class="h-screen overflow-hidden bg-background-light dark:bg-background-dark relative bg-[url('@/assets/imgs/contact.png')]"
+      style="background-size:cover;">
       <div
         class="h-full md:w-2/3 z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">
         <div class="p-5 mt-24 lg:px-16 2xl:px-20">
@@ -188,7 +189,7 @@ useHead({
             Arianna Sullivan
           </div>
         </div>
-        <div class="md:w-1/2 md:py-5">  
+        <div class="md:w-1/2 md:py-5">
           <div class="mb-5">
             <h3 class="font-bold">Research</h3>
             Delfina Cabrera<br />
@@ -211,49 +212,49 @@ useHead({
       <h2 class="uppercase font-heading text-5xl font-bold">ACKNOWLEDGEMENTS</h2>
       <div class="flex gap-10 flex-col md:flex-row mt-5">
         <div class="md:w-1/2">
-          Miquel  Barceló<br />
-Ambrogio Borsani<br />
-<br />
+          Miquel Barceló<br />
+          Ambrogio Borsani<br />
+          <br />
 
-Gary Conklin<br />
-<br />
+          Gary Conklin<br />
+          <br />
 
-Jean Philippe Fournier<br />
-<br />
+          Jean Philippe Fournier<br />
+          <br />
 
-Xenia Geroulanos<br />
-<br />
+          Xenia Geroulanos<br />
+          <br />
 
-Peter Hale<br />
-Irene Hermann<br />
-Émil Hernon<br />
-<br />
+          Peter Hale<br />
+          Irene Hermann<br />
+          Émil Hernon<br />
+          <br />
 
-Abdelaziz Jadir<br />
-<br />
+          Abdelaziz Jadir<br />
+          <br />
 
-Kenneth Lisenbee<br />
-<br />
+          Kenneth Lisenbee<br />
+          <br />
 
 
-Jeffrey Miller<br />
-Timothy  Murray<br />
-<br />
+          Jeffrey Miller<br />
+          Timothy Murray<br />
+          <br />
 
-Cherie Nutting<br />
-<br />
+          Cherie Nutting<br />
+          <br />
 
-Simon Pettet<br />
-Francis Poole<br />
-Jeffrey Posternak<br />
-<br />
+          Simon Pettet<br />
+          Francis Poole<br />
+          Jeffrey Posternak<br />
+          <br />
 
-Philip Ramey<br />
-Pía Rey Rosa<br />
-Katharina Rippstein<br />
-<br />
+          Philip Ramey<br />
+          Pía Rey Rosa<br />
+          Katharina Rippstein<br />
+          <br />
 
-Claude Natalie Thomas<br />
+          Claude Natalie Thomas<br />
         </div>
         <div class="md:w-1/2">
           Leonard Bernstein Office<br />
