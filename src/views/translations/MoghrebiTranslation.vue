@@ -18,6 +18,11 @@ const openModal = async function (items: string[], active_index = 0) {
   modal.active_index = active_index
 }
 
+const is_text_expanded = ref(false)
+
+// translations that show the tabs and other translation logics for languages
+const has_translations = ["5165", "4864"]
+
 const route = useRoute();
 const setLoading = function (val: boolean) {
   useThemeStore().updateLoading(val)
@@ -78,14 +83,14 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
       </div>
       <div v-if="translation.data.attachment_url?.split(',')[0].endsWith('.mp3')" class="space-y-2 mt-4 ">
         <p>Listen to audio:</p>
-        <audio controls controlslist="nodownload" class="w-full" autoplay>
+        <audio controls controlslist="nodownload" class="w-full">
           <source :src="translation.data.attachment_url.split(',')[0]" type="audio/mpeg" />
           <div class="text-red-500 font-bold p-5 border-red-300">Your device does not support audio</div>
         </audio>
       </div>
 
 
-      <div class="my-10 text-2xl">
+      <div class="my-10 text-2xl text-justify">
         <p v-html="translation.data.blocks_rows_0_text" v-if="translation.data.blocks_rows_0_text !== ''" />
         <p v-html="translation.data.blocks_0_column_1" v-else />
         <p v-if="route.params.id === '5165'" class="mt-5">
@@ -96,36 +101,47 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
         </p>
       </div>
 
-      <div v-if="route.params.id === '4864'"
+      <div v-if="has_translations.includes(route.params.id)"
         class="mx-auto w-max font-bold mt-12 border-b dark:border-white/20 border-black/20">
         <label v-for="tab in tabs" class="px-8 py-4 inline-block !cursor-pointer capitalize"
           :class="{ 'bg-black/20 dark:bg-white/20': tab == current_tab, 'dark:hover:bg-white/10 dark:hover:text-white hover:bg-black/10': tab !== current_tab }">
           {{ tab }}
-          <input name="current_tab" type="radio" v-model="current_tab" :value="tab" hidden>
+          <input name="current_tab" type="radio" @change="is_text_expanded = false" v-model="current_tab" :value="tab"
+            hidden>
         </label>
       </div>
 
-      <div class="text-2xl py-10 flex gap-10 flex-col md:flex-row justify-between items-start">
+      <div class="text-2xl py-10 flex gap-10 flex-col md:flex-row justify-between items-start text-justify"
+        :class="{ 'max-h-[15lh] m-2 p-2 overflow-auto': route.params.id == '4864' && is_text_expanded == false }">
 
-        <div v-if="route.params.id !== '4864' || current_tab == 'arabic'" class="text-right">
+        <div v-if="!has_translations.includes(route.params.id) || current_tab == 'arabic'" class="text-right">
           <p v-html="translation.data.blocks_1_column_3" />
         </div>
 
-        <div v-if="route.params.id !== '4864'">
+        <div v-if="!has_translations.includes(route.params.id)">
           <p v-html="translation.data.blocks_1_column_2" />
           <p v-html="translation.data.blocks_rows_4_text" />
         </div>
 
-        <div v-else-if="route.params.id !== '4864' || current_tab == 'english'" class="">
+        <div v-else-if="!has_translations.includes(route.params.id) || current_tab == 'english'" class="">
           <p v-html="translation.data.blocks_1_column_1" />
         </div>
 
+
+      </div>
+      <div v-if="route.params.id === '4864'" class="flex justify-center">
+        <button v-if="is_text_expanded == true" @click="is_text_expanded = false" class="border p-4 m-4">{{ current_tab
+          ===
+          'english' ? "Read less" :
+          "قراءة أقل" }}</button>
+        <button v-else @click="is_text_expanded = true" class="border p-4 m-4">{{ current_tab === 'english' ? `Show full
+          text` : `إظهار النص الكامل` }}</button>
       </div>
 
       <div class="grid md:grid-cols-3 pb-5 scrollbar-thin scrollbar-thumb-primary gap-10"
         v-if="translation.img.split(',').length !== 0 && translation.img !== ''">
         <img @click="() => openModal(translation.img.split(','), index)" :src="img" class="cursor-pointer object-cover"
-          v-for="(   img, index   ) in    translation.img.split(',')   " :key="index" lazy />
+          v-for="(     img, index     ) in      translation.img.split(',')     " :key="index" lazy />
       </div>
     </div>
   </div>

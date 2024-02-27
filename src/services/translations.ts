@@ -10,7 +10,7 @@ export function getTranslations(page=1, query="", language="") {
   if (page){
     url.searchParams.set("page", String(page))
   }
-  if (language){
+  if (language && language !== "All Languages"){
     url.searchParams.set("language", language)
   }
   return axios.get(url.toString());

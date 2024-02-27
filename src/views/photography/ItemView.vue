@@ -130,8 +130,8 @@ function goToPreviousImage() {
               <p>
                 {{ item.title.split(" ").slice(1, item.title.length).join(" ") }}
               </p>
-              <p>
-                {{ item.year_published }}
+              <p v-if="item.year_published">
+                Year: {{ item.year_published }}
               </p>
             </div>
 
@@ -183,15 +183,22 @@ function goToPreviousImage() {
           &larr;
         </button>
         <div>
-          <img :src="active_item?.image_featured" class="max-h-[80vh] mx-auto h-auto rounded-xl cursor-default" />
-          <div v-if="isNaN(active_item?.title) || active_item.year_published" class="text-white">
-            <p>
-              {{ active_item.title.split(" ").slice(1, active_item.title.length).join(" ") }}
-            </p>
-            <p>
-              {{ active_item.year_published }}
-            </p>
+          <div class="relative">
+            <img :src="active_item?.image_featured" class="max-h-[80vh] mx-auto h-auto rounded-xl cursor-default" />
+            <div v-if="isNaN(active_item?.title) || active_item.year_published"
+              class="text-white flex gap-2 absolute left-0 bottom-0 m-2">
+              <p class="p-2 bg-white/80 text-black rounded-md" v-if="active_item.year_published">
+                {{ active_item.year_published }}
+              </p>
+              <p class="p-2 bg-black/80 text-white rounded-md" v-if="active_item.publisher">
+                {{ active_item.publisher }}
+              </p>
+            </div>
           </div>
+          <p class="p-2">
+            {{ active_item.title.split(" ").slice(1, active_item.title.length).join(" ") }}
+          </p>
+
         </div>
         <button @click="goToNextImage()" class="text-3xl">
           &rarr;
