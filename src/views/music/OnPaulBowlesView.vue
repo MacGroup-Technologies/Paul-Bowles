@@ -29,7 +29,7 @@ const music = [
         <div class="py-10 lg:px-16 2xl:px-20 text-xl lg:text-2xl">
           <router-link :to="'/music/on-paul-bowless-music/' + encodeURI(item.title)" v-for="(item, index) in  music"
             :key="index" class="hover:text-primary">
-            <p> {{ index + 1 }}. {{ item.title }} </p>
+            <p class="mt-auto hover:underline text-primary pb-10 cursor-pointer"> {{ index + 1 }}. {{ item.title }} </p>
           </router-link>
         </div>
       </div>

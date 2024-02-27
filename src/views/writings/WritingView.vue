@@ -178,7 +178,7 @@ useHead({ title: `Paul Bowles ${route.params.title}` })
         </li>
       </ol>
       <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10" v-else>
-        <div class="rounded grid place-items-center overflow-hidden" v-for="item in writing.item" :key="item.id">
+        <div class="rounded flex flex-col items-center overflow-hidden" v-for="item in writing.item" :key="item.id">
           <img src="@/assets/imgs/writings-thumbnail.png" />
           <h3 class="text-center mt-4">{{ item.title }}</h3>
         </div>
