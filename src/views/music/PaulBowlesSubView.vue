@@ -15,6 +15,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
 const music = reactive({ items: [] as MusicItem[] })
 const player = reactive({ item: {} as any })
 const collections = reactive({ items: [] as MusicCollectionItem[] })
+const playing_collection = ref()
 
 const audio = document.getElementsByTagName('audio') as any
 const playState = ref('pause')
@@ -63,7 +64,9 @@ const getMusic = async function () {
   }
 }
 
-const playMusic = function () {
+const playMusic = function (title) {
+  console.log("hello")
+  playing_collection.value = title
   if (playState.value === 'play') {
     audio[0].play()
     playState.value = 'pause'
@@ -166,9 +169,10 @@ onMounted(async () => {
             <div
               class="flex flex-row md:items-center gap-3 md:gap-0 mb-3 py-5 cursor-pointer px-10 rounded-xl transition hover:bg-white hover:text-black hover:shadow"
               :class="{ 'bg-white text-black shadow': item.title === player.item.title }"
-              v-for="(item, index) in collection.items.items" :key="item.id" @click="player.item = item" :id="item.slug">
+              v-for="(item, index) in collection.items.items" :key="item.id"
+              @click="() => { playing_collection = collection.title; player.item = item }" :id="item.slug">
               <div class="w-10" v-if="item.title !== player.item.title">{{ index + 1 }}</div>
-              <div class="w-10 flex items-center justify-center" @click="playMusic()" v-else>
+              <div class="w-10 flex items-center justify-center" @click="playMusic(collection.title)" v-else>
                 <svg v-if="playState !== 'play'" width="40" height="40" viewBox="0 0 40 40" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -204,7 +208,7 @@ onMounted(async () => {
                 </p> -->
               </div>
             </div>
-            <div class="bg-black bg-opacity-10 md:w-1/3 p-5 rounded" v-if="!isEmpty(player.item)" :key="player.item.id">
+            <div class="bg-black bg-opacity-10 md:w-1/3 p-5 rounded" v-if="!isEmpty(player.item) && playing_collection == collection.title" :key="player.item.id">
               <div class="mb-3 flex items-center justify-between gap-5">
                 <div class="bg-primary bg-opacity-10 p-2 rounded">
                   <svg width="31" height="31" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -224,7 +228,7 @@ onMounted(async () => {
                   :class="{ 'text-red-500': player.item.attachment_url === 'null' }">
                   {{ player.item.title }}
                 </h3>
-                <div class="w-10 flex items-center justify-center cursor-pointer" @click="playMusic()">
+                <div class="w-10 flex items-center justify-center cursor-pointer" @click="playMusic(collection.title)">
                   <svg v-if="playState !== 'play'" width="40" height="40" viewBox="0 0 40 40" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -239,7 +243,8 @@ onMounted(async () => {
                   </svg>
                 </div>
               </div>
-              <audio controls controlslist="nodownload" class="w-full" autoplay>
+              <audio controls controlslist="nodownload" class="w-full"
+                autoplay>
                 <source :src="player.item.attachment_url" type="audio/mpeg" />
                 <div class="text-red-500 font-bold p-5 border-red-300">
                   Your device does not support audio
