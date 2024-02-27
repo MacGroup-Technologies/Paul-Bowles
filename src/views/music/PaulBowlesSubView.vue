@@ -65,7 +65,6 @@ const getMusic = async function () {
 }
 
 const playMusic = function (title) {
-  console.log("hello")
   playing_collection.value = title
   if (playState.value === 'play') {
     audio[0].play()
@@ -162,10 +161,6 @@ onMounted(async () => {
           </div>
 
           <div class="">
-            <div class="flex flex-row gap-3 font-bold px-10 mb-3">
-              <div class="px-8" />
-              <div class="w-full">Title</div>
-            </div>
             <div
               class="flex flex-row md:items-center gap-3 md:gap-0 mb-3 py-5 cursor-pointer px-10 rounded-xl transition hover:bg-white hover:text-black hover:shadow"
               :class="{ 'bg-white text-black shadow': item.title === player.item.title }"
@@ -208,7 +203,8 @@ onMounted(async () => {
                 </p> -->
               </div>
             </div>
-            <div class="bg-black bg-opacity-10 md:w-1/3 p-5 rounded" v-if="!isEmpty(player.item) && playing_collection == collection.title" :key="player.item.id">
+            <div class="bg-black bg-opacity-10 md:w-1/3 p-5 rounded"
+              v-if="!isEmpty(player.item) && playing_collection == collection.title" :key="player.item.id">
               <div class="mb-3 flex items-center justify-between gap-5">
                 <div class="bg-primary bg-opacity-10 p-2 rounded">
                   <svg width="31" height="31" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -243,8 +239,7 @@ onMounted(async () => {
                   </svg>
                 </div>
               </div>
-              <audio controls controlslist="nodownload" class="w-full"
-                autoplay>
+              <audio controls controlslist="nodownload" class="w-full" autoplay>
                 <source :src="player.item.attachment_url" type="audio/mpeg" />
                 <div class="text-red-500 font-bold p-5 border-red-300">
                   Your device does not support audio
