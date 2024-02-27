@@ -6,7 +6,8 @@ useHead({ title: `Archives` })
 <template>
   <div class="">
     <div
-      class="h-screen bg-background-light dark:primary dark:bg-background-dark relative bg-[url('@/assets/imgs/archive.png')]">
+      class="h-screen bg-background-light dark:primary dark:bg-background-dark relative bg-[url('@/assets/imgs/archive.png')]"
+      style="background-size:cover;">
       <div
         class="h-full md:w-2/3 z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">
         <div class="p-5 lg:px-16 2xl:px-20">
