@@ -80,7 +80,7 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
       </div>
       <div v-if="translation.data.attachment_url?.split(',')[0].endsWith('.mp3')" class="space-y-2 mt-4 ">
         <p>Listen to audio:</p>
-        <audio controls controlslist="nodownload" class="w-full" autoplay>
+        <audio controls controlslist="nodownload" class="w-full">
           <source :src="translation.data.attachment_url.split(',')[0]" type="audio/mpeg" />
           <div class="text-red-500 font-bold p-5 border-red-300">Your device does not support audio</div>
         </audio>
