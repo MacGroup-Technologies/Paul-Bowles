@@ -159,9 +159,9 @@ onMounted(async () => {
             size="large"
             placeholder="Author, Title, Genre, Language, Year of Publication, or Keyword"
           />
-          <div class="md:w-full">
+          <div class="md:w-full overflow-auto">
             <el-radio-group
-              class="flex justify-between md:justify-center gap-2 w-full capitalize"
+              class="overflow-auto flex !flex-nowrap justify-between md:justify-center gap-2 w-full capitalize"
               v-model="_active_tab"
               size="large"
               @change="(e) => switchTab()"
