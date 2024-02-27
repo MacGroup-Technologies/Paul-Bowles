@@ -184,7 +184,7 @@ useHead({ title: `Paul Bowles ${route.params.title}` })
         </div>
       </div>
 
-      <div class="flex justify-center mt-10" v-if="route.params.title !== 'Autobiography'">
+      <div class="flex justify-center mt-10" v-if="route.params.title.toLowerCase() === 'contributions to periodicals'">
         <el-button-group>
           <router-link v-if="pagination.previous" :to="getPreviousPage()"
             class="el-button--primary el-button--large el-button">
