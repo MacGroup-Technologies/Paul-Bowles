@@ -102,13 +102,19 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
       </div>
 
       <div v-if="has_translations.includes(route.params.id)"
-        class="mx-auto w-max font-bold mt-12 border-b dark:border-white/20 border-black/20">
+        class="mx-auto w-full max-sm:text-center font-bold max-sm:flex flex-col mt-12 border-b dark:border-white/20 border-black/20">
         <label v-for="tab in tabs" class="px-8 py-4 inline-block !cursor-pointer capitalize"
           :class="{ 'bg-black/20 dark:bg-white/20': tab == current_tab, 'dark:hover:bg-white/10 dark:hover:text-white hover:bg-black/10': tab !== current_tab }">
-          {{ tab }}
+          Transcription in {{ tab }}
           <input name="current_tab" type="radio" @change="is_text_expanded = false" v-model="current_tab" :value="tab"
             hidden>
         </label>
+        <span class="w-full">
+          <a href="#published-text" class="px-8 py-4 inline-block !cursor-pointer capitalize">
+            Published text
+          </a>
+
+        </span>
       </div>
 
       <div class="text-2xl py-10 flex gap-10 flex-col md:flex-row justify-between items-start text-justify"
@@ -138,7 +144,7 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
           text` : `إظهار النص الكامل` }}</button>
       </div>
 
-      <div class="grid md:grid-cols-3 pb-5 scrollbar-thin scrollbar-thumb-primary gap-10"
+      <div class="grid md:grid-cols-3 pb-5 scrollbar-thin scrollbar-thumb-primary gap-10" id="published-text"
         v-if="translation.img.split(',').length !== 0 && translation.img !== ''">
         <img @click="() => openModal(translation.img.split(','), index)" :src="img" class="cursor-pointer object-cover"
           v-for="(     img, index     ) in      translation.img.split(',')     " :key="index" lazy />
