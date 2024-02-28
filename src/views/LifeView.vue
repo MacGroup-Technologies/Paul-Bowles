@@ -37,7 +37,7 @@ useHead({ title: `Paul Bowles's Life` })
       <router-link to="/chronology"
         class="block bg-white dark:bg-opacity-10 hover:-translate-y-2 transition-transform p-5 rounded-xl">
         <div class="flex justify-center items-center bg-primary-light rounded-xl">
-          <img src="@/assets/imgs/imageimage.png" />
+          <img src="@/assets/imgs/Chronology-Thumbnail.png" />
         </div>
         <div class="py-5 px-3">
           <h2 class="font-heading text-3xl">Chronology</h2>
