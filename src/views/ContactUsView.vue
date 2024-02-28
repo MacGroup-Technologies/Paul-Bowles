@@ -112,7 +112,7 @@ useHead({
       </p>
       <el-form :model="wylie" :rules="rules" ref="wylie_mail" class="md:w-1/2 my-10 mx-auto" label-position="top">
         <el-form-item label="Name" prop="name">
-          <el-input v-model="wylie.name" size="large" placeholder="Joh Doe" />
+          <el-input v-model="wylie.name" size="large" placeholder="John Doe" />
         </el-form-item>
         <el-form-item label="Email" prop="email">
           <el-input v-model="wylie.email" size="large" placeholder="example@example.com" />
