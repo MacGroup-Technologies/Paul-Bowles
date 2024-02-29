@@ -91,7 +91,7 @@ useHead({
       <div
         class="h-full md:w-2/3 z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">
         <div class="p-5 mt-24 lg:px-16 2xl:px-20">
-          <h1 class="text-5xl md:text-8xl font-mono uppercase text-black dark:text-white-shade">Contact</h1>
+          <h1 class="text-title font-mono uppercase text-black dark:text-white-shade">Contact</h1>
         </div>
         <div class="p-5 lg:px-16 2xl:px-20 mt-5">
           <a href="#content"
@@ -159,7 +159,7 @@ useHead({
     </div>
 
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
-      <h2 class="uppercase font-heading text-5xl font-bold">Credits</h2>
+      <h2 class="uppercase font-heading text-title font-bold">Credits</h2>
       <div class="flex gap-10 flex-col md:flex-row">
         <div class="md:w-1/2 md:py-5">
           <div class="mb-5">
@@ -209,7 +209,7 @@ useHead({
           </div>
         </div>
       </div>
-      <h2 class="uppercase font-heading text-5xl font-bold">ACKNOWLEDGEMENTS</h2>
+      <h2 class="uppercase font-heading text-title font-bold">ACKNOWLEDGEMENTS</h2>
       <div class="flex gap-10 flex-col md:flex-row mt-5">
         <div class="md:w-1/2">
           Miquel Barceló<br />

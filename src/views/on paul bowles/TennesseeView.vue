@@ -28,7 +28,8 @@ window.addEventListener('scroll', function () {
           <icon-back />
         </router-link>
       </div>
-      <div class="sticky top-0 my-10 py-5 bg-background-light dark:bg-background-dark head flex gap-10">
+      <div
+        class="sticky top-0 my-10 py-5 bg-background-light dark:bg-background-dark head flex max-md:flex-col max-md:items-center gap-10">
         <img src="@/assets/imgs/Tennessee-Williams.png" class="md:w-1/3 h-auto transition-all" alt="Tennessee Williams" />
         <h1 class="text-2xl md:text-4xl md:w-1/2 font-heading uppercase hidden">
           an allegory of man and his sahara - Tennessee Williams
@@ -100,30 +101,32 @@ window.addEventListener('scroll', function () {
           From then on the story is focused upon the continuing and continually more astonishing adventures of his wife,
           Kit, who wanders on like a body in which the rational mechanism is gradually upset and destroyed. The liberation
           is too intense, too extreme, for a nature conditioned by and for a state of civilized confinement. Her primitive
-        nature, divested one by one of its artificial reserves and diffidences, eventually overwhelms her, and the end
-        of this novel is as wildly beautiful and terrifying as the whole panorama that its protagonists have crossed.
-      </p>
-      <p class="mb-10">
-        In this external aspect the novel is, therefore, an account of startling adventure. In its interior aspect, The
-        Sheltering Sky is an allegory of the spiritual adventure of the fully conscious person into modern experience.
-        This is not an enticing way to describe it. It is a way that might suggest the very opposite kind of a novel
-        from the one that Paul Bowles has written. Actually this superior motive does not intrude in explicit form upon
-        the story, certainly not in any form that will need to distract you from the great pleasure of being told a
-        first-rate story of adventure by a really first-rate author.
-      </p>
-      <p class="mb-10">
-        I suspect that a good many people will read this book and be enthralled by it without once suspecting that it
-        contains a mirror of what is most terrifying and cryptic within the Sahara of moral nihilism, into which the
-        race of man seems to be wandering blindly.
-      </p>
-      <p class="text-right mb-10 font-bold font-heading">
-        Tennessee Williams<br />
-        New York Times Book Review, December 4, 1949
-      </p>
+          nature, divested one by one of its artificial reserves and diffidences, eventually overwhelms her, and the end
+          of this novel is as wildly beautiful and terrifying as the whole panorama that its protagonists have crossed.
+        </p>
+        <p class="mb-10">
+          In this external aspect the novel is, therefore, an account of startling adventure. In its interior aspect, The
+          Sheltering Sky is an allegory of the spiritual adventure of the fully conscious person into modern experience.
+          This is not an enticing way to describe it. It is a way that might suggest the very opposite kind of a novel
+          from the one that Paul Bowles has written. Actually this superior motive does not intrude in explicit form upon
+          the story, certainly not in any form that will need to distract you from the great pleasure of being told a
+          first-rate story of adventure by a really first-rate author.
+        </p>
+        <p class="mb-10">
+          I suspect that a good many people will read this book and be enthralled by it without once suspecting that it
+          contains a mirror of what is most terrifying and cryptic within the Sahara of moral nihilism, into which the
+          race of man seems to be wandering blindly.
+        </p>
+        <p class="text-right mb-10 font-bold font-heading">
+          Tennessee Williams<br />
+          New York Times Book Review, December 4, 1949
+        </p>
+      </div>
     </div>
   </div>
-</div></template>
-<style lang="scss">.resize {
+</template>
+<style lang="scss">
+.resize {
   padding-top: 100px;
 
   & img {
@@ -134,4 +137,5 @@ window.addEventListener('scroll', function () {
   & .hidden {
     display: block;
   }
-}</style>
+}
+</style>

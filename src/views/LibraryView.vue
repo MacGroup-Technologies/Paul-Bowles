@@ -11,8 +11,8 @@ useHead({ title: `Paul Bowles's Library` })
       <div
         class="h-full md:w-2/3 z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">
         <div class="p-5 lg:px-16 2xl:px-20">
-          <h1 class="text-8xl font-mono uppercase text-black dark:text-white-shade">Library</h1>
-          <p class="md:w-1/2 dark:text-white text-3xl mt-5">
+          <h1 class="text-title font-mono uppercase text-black dark:text-white-shade">Library</h1>
+          <p class="md:w-1/2 dark:text-white text-subtitle mt-5">
             Explore Paul Bowles's library of over 3,000 volumes collected during the five decades he
             lived in Tangier.
           </p>

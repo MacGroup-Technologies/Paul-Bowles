@@ -29,7 +29,7 @@ window.addEventListener('scroll', function () {
         </router-link>
       </div>
       <div
-        class="sticky top-0 my-10 py-5 bg-background-light dark:bg-background-dark head flex gap-10"
+        class="sticky top-0 my-10 py-5 bg-background-light dark:bg-background-dark head flex max-md:flex-col max-md:items-center gap-10"
       >
         <img
           src="@/assets/imgs/William-Burroughs.png"

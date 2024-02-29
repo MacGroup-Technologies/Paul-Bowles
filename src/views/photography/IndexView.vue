@@ -28,8 +28,8 @@ const photography = reactive([
       <div
         class="h-full md:w-2/3 z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">
         <div class="p-5 mt-24 lg:px-16 2xl:px-20">
-          <h1 class="text-5xl md:text-8xl font-mono uppercase text-black dark:text-white-shade">Photography</h1>
-          <p class="md:w-1/2 dark:text-white text-3xl mt-5">
+          <h1 class="text-title font-mono uppercase text-black dark:text-white-shade">Photography</h1>
+          <p class="md:w-1/2 dark:text-white text-subtitle mt-5">
             A selection of travel photography by Bowles, and portraits of Bowles, relatives, and friends.
           </p>
         </div>
@@ -51,7 +51,8 @@ const photography = reactive([
             :style="`background-image: url(${item.image})`" />
           <h2 class="text-background-dark m-5 mt-7">
             {{ item.title }}
-            <span v-if="item.id == 0" class="group-hover/image:opacity-100 opacity-0 transition-opacity block text-sm">
+            <span v-if="item.id == 0"
+              class="md:group-hover/image:opacity-100 md:opacity-0 transition-opacity block text-sm">
               Photo of Paul Bowles and Cherie Nutting by Jeffrey Miller
             </span>
           </h2>
