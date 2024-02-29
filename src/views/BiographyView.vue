@@ -9,7 +9,7 @@ useHead({ title: `Paul Bowles's Biography` })
       <div
         class="h-full md:w-2/3 z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-white/20 w-full sm:to-transparent flex flex-col justify-center items-start">
         <div class="p-5 lg:px-16 2xl:px-20">
-          <h1 class="text-6xl sm:text-8xl font-mono uppercase">Biography</h1>
+          <h1 class="text-title font-mono uppercase">Biography</h1>
         </div>
         <div class="p-5 lg:px-16 2xl:px-20">
           <a href="#content"

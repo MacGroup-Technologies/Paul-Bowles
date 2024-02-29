@@ -4,6 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .text-title {
+    @apply text-4xl md:text-8xl 
+  }
+  .text-subtitle {
+    @apply text-xl md:text-3xl 
+  }
+}
+
 :target {
   content: '';
   display: block;

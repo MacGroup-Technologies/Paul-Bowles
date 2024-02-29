@@ -10,8 +10,8 @@ useHead({ title: `Tributes to Paul Bowles` })
       <div
         class="h-full md:w-2/3 z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">
         <div class="p-5 mt-24 lg:px-16 2xl:px-20">
-          <h1 class="text-5xl md:text-8xl font-mono uppercase text-black dark:text-white-shade">on paul bowles</h1>
-          <p class="md:w-2/3 dark:text-white text-3xl mt-5">
+          <h1 class="text-title font-mono uppercase text-black dark:text-white-shade">on paul bowles</h1>
+          <p class="md:w-2/3 dark:text-white text-subtitle mt-5">
             Highsmith, Williams, Ginsberg, Burroughs, Purdy, Vidal and Rey Rosa on Paul Bowles.
           </p>
         </div>

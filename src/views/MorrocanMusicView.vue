@@ -66,8 +66,8 @@ onMounted(async () => {
       <div
         class="h-full  z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">
         <div class="p-5 lg:px-16 2xl:px-20 mt-38">
-          <h1 class="text-8xl font-mono uppercase text-black dark:text-white-shade">Moroccan Music</h1>
-          <p class="md:w-1/2 dark:text-white text-3xl mt-5">
+          <h1 class="text-title font-mono uppercase text-black dark:text-white-shade">Moroccan Music</h1>
+          <p class="md:w-1/2 dark:text-white text-subtitle mt-5">
             In 1959 Paul Bowles traveled extensively across Morocco recording its traditional music.
           </p>
         </div>
@@ -89,7 +89,7 @@ onMounted(async () => {
       </p>
       <div class="" v-if="music.items.length !== 0">
         <div
-          class="flex flex-row md:items-center gap-3 md:gap-0 mb-3 py-5 cursor-pointer px-10 rounded-xl transition hover:bg-white hover:text-black hover:shadow"
+          class="flex flex-row md:items-center gap-3 md:gap-0 mb-3 py-5 cursor-pointer md:px-10 rounded-xl transition hover:bg-white hover:text-black hover:shadow"
           :class="{ 'bg-white text-black shadow': item.title === player.item.title }" v-for="(item, index) in music.items"
           :key="item.id" @click="player.item = item">
           <div class="w-10" v-if="item.title !== player.item.title">{{ index + 1 }}</div>

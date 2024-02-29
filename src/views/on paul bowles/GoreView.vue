@@ -25,7 +25,8 @@ window.addEventListener('scroll', function () {
           <icon-back />
         </router-link>
       </div>
-      <div class="sticky top-0 my-10 py-5 bg-background-light dark:bg-background-dark head flex gap-10">
+      <div
+        class="sticky top-0 my-10 py-5 bg-background-light dark:bg-background-dark head flex max-md:flex-col max-md:items-center gap-10">
         <img src="@/assets/imgs/Gore-Vidal.png" class="md:w-1/3 h-auto transition-all" alt="Gore Vidal" />
         <h1 class="text-2xl md:text-4xl md:w-1/2 font-heading uppercase hidden">Gore Vidal</h1>
       </div>
