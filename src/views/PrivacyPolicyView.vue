@@ -29,7 +29,7 @@ useHead({ title: `Privacy Policy` })
       />
     </div>
     <a name="content" />
-    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 text-justify">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 md:text-justify">
       Thank you for visiting [PaulBowles.org] ("Website"). At [PaulBowles.org], we are committed to
       protecting your privacy and ensuring that your personal information is kept secure. This
       Privacy Policy outlines our practices concerning the collection, use, and disclosure of your

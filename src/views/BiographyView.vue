@@ -21,7 +21,7 @@ useHead({ title: `Paul Bowles's Biography` })
       <img src="@/assets/imgs/imageimage.png" class="absolute inset-0 w-full h-full object-cover" />
     </div>
     <a name="content" />
-    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 text-justify">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 md:text-justify">
       “A night with thunder in the sky he packed his bag and left,” Paul Bowles wrote in a short
       autobiographical piece in 1986&#8212;referring to an escape from his parents’ home in New York City
       to Paris in 1929, at the age of eighteen, after tossing a coin to decide whether he should

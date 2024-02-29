@@ -35,7 +35,7 @@ window.addEventListener('scroll', function () {
           an allegory of man and his sahara - Tennessee Williams
         </h1>
       </div>
-      <div class="text-justify">
+      <div class="md:text-justify">
         <p class="mb-10">
           After several literary seasons given over, mostly, to the frisky antics of kids, precociously knowing and
           singularly charming, but not to be counted on for those gifts that arrive by no other way than the experience

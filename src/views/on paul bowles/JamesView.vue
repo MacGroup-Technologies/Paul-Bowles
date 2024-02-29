@@ -32,7 +32,7 @@ window.addEventListener('scroll', function () {
           James Purdy
         </h1>
       </div>
-      <div class="text-justify">
+      <div class="md:text-justify">
         Carl Van Vechten invited me to meet Paul Bowles one evening. I was at the beginning of my own career as a writer,
         and was a bit nervous at meeting so mysterious and legendary a figure as Mr Bowles. My apprehension was put at an
         end when I met him. He seemed like a quiet, very dignified and kind man, perhaps like a doctor of medicine. It was

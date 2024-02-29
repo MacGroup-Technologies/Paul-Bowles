@@ -47,7 +47,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
         
         </p>
       </div>
-      <div class="mt-10 text-justify" v-else-if="route.params.title === 'Irene Herrmann: Paul Bowles, Composer'">
+      <div class="mt-10 md:text-justify" v-else-if="route.params.title === 'Irene Herrmann: Paul Bowles, Composer'">
         Paul Bowles once said, "I never wanted a career," contempt dripping from his inflection.
         That he managed to leave an indelible, if modest entry in the annals of American music—a
         distinction desperately but vainly coveted by many better-trained, more ambitious
@@ -165,7 +165,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
           Irene Herrmann
         </p>
       </div>
-      <div class="mt-10 text-justify" v-else-if="route.params.title === 'Virgil Thompson - On Twelfth Night'">
+      <div class="mt-10 md:text-justify" v-else-if="route.params.title === 'Virgil Thompson - On Twelfth Night'">
         It is Mr. Bowles's gift as a composer to write theater music of pinpoint delicacy that is so precise in its
         functional design and so accurate. In its adjustment to the subject of each play it hits his audience squarely in
         both ears and rings the bell for the play at every music cue. With six musicians—flute, oboe, harp, imitation
@@ -201,7 +201,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
           New York Herald Tribune,<br /> 20 November 1940
         </p>
       </div>
-      <div class="mt-10 text-justify" v-else-if="route.params.title === 'Lincoln Center Tribute'">
+      <div class="mt-10 md:text-justify" v-else-if="route.params.title === 'Lincoln Center Tribute'">
         In 1995, Paul Bowles was honored with a festival at Lincoln Center in New York. His music was performed by the Eos
         Orchestra, conducted by Jonathan Sheffer.
         <div class="flex justify-center gap-10 mt-10">
@@ -211,7 +211,7 @@ useHead({ title: 'On Paul Bowles Music: ' + route.params.title })
             class="w-auto h-auto cursor-pointer" @click="active_item = LincolnProgramSecondImage" />
         </div>
       </div>
-      <div class="mt-10 text-justify" v-else-if="route.params.title === 'Rey Rosa - The Return Trip'">
+      <div class="mt-10 md:text-justify" v-else-if="route.params.title === 'Rey Rosa - The Return Trip'">
         <div class="text-right">
           Les sons rentreront dans<br />
           l'orgue et l'avenir<br />

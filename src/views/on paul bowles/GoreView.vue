@@ -30,7 +30,7 @@ window.addEventListener('scroll', function () {
         <img src="@/assets/imgs/Gore-Vidal.png" class="md:w-1/3 h-auto transition-all" alt="Gore Vidal" />
         <h1 class="text-2xl md:text-4xl md:w-1/2 font-heading uppercase hidden">Gore Vidal</h1>
       </div>
-      <div class="text-justify">
+      <div class="md:text-justify">
         <p class="mb-10">
           “Carson McCullers, Paul Bowles, Tennessee Williams are, at this moment at least, the three
           most interesting writers in the United States.” A quarter century has passed since I wrote

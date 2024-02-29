@@ -40,7 +40,7 @@ window.addEventListener('scroll', function () {
           William S. Burroughs
         </h1>
       </div>
-      <div class="text-justify">
+      <div class="md:text-justify">
         Paul Bowles is one of the most impeccably, almost inhumanly reserved men I have ever known,
         reminiscent of the subject of Edwin Arlington Robinson's poem, 'The Man Flamonde' — 'How was
         it that his charm revealed/Somehow the surface of a shield?'

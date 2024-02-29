@@ -208,7 +208,7 @@ onMounted(() => {
       </div>
       <div clas="mt-10" v-if="hover.animate">
         <h2 class="font-heading text-[30px] md:text-[66px] uppercase">{{ hover.item.title }}</h2>
-        <p class="text-black text-[18px] md:text-[27px] 2xl:text-[37px] w-2/3 text-justify 2xl:w-1/3">
+        <p class="text-black text-[18px] md:text-[27px] 2xl:text-[37px] w-2/3 md:text-justify 2xl:w-1/3">
           {{ hover.item.text }}
         </p>
       </div>

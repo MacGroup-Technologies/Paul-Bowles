@@ -36,7 +36,7 @@ const img = ref(null)
           </div>
           <div class="pb-10 md:pb-0">
             <h1 class="text-xl font-semibold">{{ item.title }}</h1>
-            <p class="mt-3 text-justify" v-html="item.inscription.replaceAll('/', '')" />
+            <p class="mt-3 md:text-justify" v-html="item.inscription.replaceAll('/', '')" />
             <div class="mt-5">
               <div class="" v-if="item.publisher"><b>PUBLISHER:</b> {{ item.publisher }}</div>
               <div class="" v-if="item.genre"><b>PLACE OF PUBlICATION:</b> {{ item.place_of_publication }}</div>
