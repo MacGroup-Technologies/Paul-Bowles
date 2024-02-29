@@ -22,7 +22,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           <h2 class="italic text-md">Pages From a Journal</h2>
           <h2 class="">WINTER (1946), <i>MODERN MUSIC</i></h2>
         </div>
-        <p class="my-10 text-justify">
+        <p class="my-10 md:text-justify">
           <i>Havana, June 1945</i>—Until now I had never slept in Havana, only wandered about during
           the daytime stopovers for the boat en route to Vera Cruz. I am already wondering why Cuba
           has recently been built up in legend as one of the world's most intensely musical
@@ -43,7 +43,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           Nacional, where American tourists, unaware of the arrival of the new chic, still want to
           hear an occasional rumba or conga.
         </p>
-        <p class="my-10 text-justify">
+        <p class="my-10 md:text-justify">
           <i>Havana</i>—Or do I exaggerate? This evening on the Muelle de Luz, waiting for the
           launch that carries late merrymakers across the harbor to Regla (where because of last
           night's murders there is a state of martial law), I came on a group of Negroes inventing
@@ -52,7 +52,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           <i>claves</i> they used the palms of their hands. And being pleasantly drunk, they did not
           stop when they saw me.
         </p>
-        <p class="my-10 text-justify">
+        <p class="my-10 md:text-justify">
           <i>Santiago de Cuba</i>—The Provincia de Oriente, they say, produces the finest music of
           Cuba. Here I am; where is it? I remember a group called El Cuarteto de Caney. El Caney
           lies just inland, half an hour above Santiago. I take a bus. There is a corner cantina at
@@ -64,7 +64,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           earth. “Aren't you sorry about that?” “No, it gives us fame out in the world, and anyway
           we like your music better, the <i>suin</i>.”
         </p>
-        <p class="my-10 text-justify">
+        <p class="my-10 md:text-justify">
           <i>Camagüey</i>—Having missed the plane for Haiti in Santiago, I am waiting to go shipside
           here. This is the triumph of visual <i>cursilería</i>: every other store seems to be a
           gift shop dealing in glazed pottery figurines and poufs covered in rayon satin. Today is a
@@ -80,7 +80,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           the impromptu procession moved from house to house, and then, the leader having apparently
           exhausted his ideas thereon, another was begun.
         </p>
-        <p class="my-10 text-justify">
+        <p class="my-10 md:text-justify">
           <i>Havana</i>—Today some of the Grupo de la Renovación came to lunch: Ardévol, and with
           him his young disciples, the bland Cuban Harold Gramatges, and the fanatical looking
           Spaniard Julian Orbon. Ardévol himself is from Spain; the idea of “reform” in his movement
@@ -92,7 +92,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           all agreed that it was no longer to be found, save on the gramophone recordings of a
           decade or two ago. I still am unable to believe this.
         </p>
-        <p class="my-10 text-justify">
+        <p class="my-10 md:text-justify">
           <i>Havana</i>—Each day my trip to witness a Lucumí rite, promised me by Lydia Cabrera, has
           had to be put off. Señorita Cabrera has collected and published a good many Afro-Cuban
           folktales and claims to have influence with various practicing <i>babalaos</i> of the
@@ -108,7 +108,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           that I had missed little of interest, since only the rival cult, the <i>ñàñigos</i>, have
           really good ritual music.
         </p>
-        <p class="my-10 text-justify">
+        <p class="my-10 md:text-justify">
           <i>Havana</i>—That part of Marianao where the dancehalls are is a long, sad boulevard
           lined with one-story shanties. The roofs continue to the street to form a shelter over the
           sidewalk; you have to weave your way around the tables and chairs as you walk down the
@@ -128,7 +128,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           percussive orchestras that used to enliven certain nightclubs in Paris fifteen years ago.
           That day is apparently gone for good.
         </p>
-        <p class="my-10 text-justify">
+        <p class="my-10 md:text-justify">
           <i>San Salvador</i>—It is beautifully cool and clear here after Belize. There is great
           excitement over the fact that, in a recent marimba contest between Guatemala and Salvador,
           the Salvadoreans came out ahead. My informant modestly added that perhaps the victory was
@@ -153,7 +153,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           ranch up the river. “I used to make a great many,” he said casually, “but now the fever is
           past, and I hope to learn soon how to make radios.”
         </p>
-        <p class="my-10 text-justify">
+        <p class="my-10 md:text-justify">
           <i>Guatemala</i>—The marimbas here are objects of luxury, with cases enhanced by marquetry
           and box-shaped resonating chambers of varnished wood. Their visual aspect bespeaks a
           certain degree of mass production, and as a consequence they are less attractive to the
@@ -166,7 +166,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           which is quite as undistinguished as the rest, and whose name implies simply that it has
           been written by a Guatemalan.
         </p>
-        <div class="my-10 text-justify">
+        <div class="my-10 md:text-justify">
           <i>Chichicastenango</i>—The dubious meaning our culture holds for the members of less
           evolved groups: this village, where during Holy Week in 1938 I heard some of the best
           autochthonous Indian music it had been my luck to encounter, has recently been presented
@@ -190,7 +190,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
         <div class="mt-10">
           <h2 class="">MARCH (1946), <i>MADEMOISELLE</i></h2>
         </div>
-        <div class="mt-10 text-justify">
+        <div class="mt-10 md:text-justify">
           The expression “Latin American” in connection with music is likely to awaken in most minds
           the idea of a rumba or a samba, and a vague impression of palms and a wave-kissed beach.
           Certainly this kind of music exists in Latin America, but it by no means forms the more
@@ -226,7 +226,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           American folk music contains extra-European elements, and as a matter of fact, I am
           inclined to believe that such is the case.
         </div>
-        <div class="mt-10 text-justify">
+        <div class="mt-10 md:text-justify">
           It is the basic change from the European to the American (read Negro and Indian)
           conception of rhythm which makes the great and immediately perceived difference between
           the music of the Old World and that of the New. So that, even though a given form can
@@ -262,7 +262,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           extent absorbed the Latin elements, carrying them from the lowlands and valleys back up
           into the mountain fastnesses, there to digest and transform them.
         </div>
-        <div class="mt-10 text-justify">
+        <div class="mt-10 md:text-justify">
           Comparatively very little pure Indian music remains to be heard now by the casual voyager
           down there. Almost all of it, even when native texts are used (and the number of
           indigenous spoken languages between Texas and Tierra del Fuego is stupendous), uses some
@@ -299,7 +299,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           <h2 class="">NOVEMBER&mdash;DECEMBER (1941), <i>MODERN MUSIC</i></h2>
         </div>
         <p class="mt-10 mb-5 text-right italic">Mexico City, November 1</p>
-        <div class="my-10 text-justify">
+        <div class="my-10 md:text-justify">
           The composer's opportunity to live solely from the music he writes, rare enough in the
           United States, is reduced to all but zero here in Mexico. Due to the absence of any
           royalty-collecting organization, even famous songwriters like Augustin Lara, Dominguez,
@@ -354,7 +354,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           Hollywood!
         </div>
         <div class="mb-10 text-center">. . .</div>
-        <div class="my-10 text-justify">
+        <div class="my-10 md:text-justify">
           One event of the past symphonic season was the new Stravinsky symphony, which, even though
           the composer conducted, proved a balancing job a bit too difficult for the orchestra.
           Instruments supposed to pick up the line unnoticed would blurt boorishly in, apparently
@@ -396,7 +396,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
         <div class="mt-10">
           <h2 class="">DECEMBER 27 (1942), <i>NEW YORK HERALD TRIBUNE</i></h2>
         </div>
-        <div class="my-10 text-justify">
+        <div class="my-10 md:text-justify">
           From Agadir on the Atlantic across to the shores of Chott Djerid in Tunisia there are a
           lot of Americans just now. It is safe to assume that, if they stay there very long, they
           are going to hear a good deal of the music of these parts in spite of themselves, and even
@@ -495,14 +495,14 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
         <div class="mt-10">
           <h2 class="">FEBRUARY 8 (1943), <i>NEW YORK HERALD TRIBUNE</i></h2>
         </div>
-        <p class="my-10 text-justify text-xl">
+        <p class="my-10 md:text-justify text-xl">
           A program of percussion music, last night at the Museum of Modern Art, directed by John
           Cage, presented by the League of Composers in association with the Museum of Modern Art.
           Assisting artist, Ruth Stuber Jeanne, marimba. Ensemble: Mary Anthony, Xenia Cage, David
           Campbell, Jean Campbell, Arthur Christie, Merce Cunningham, Renata Garve, Molly Howe,
           Cecil Kitcat, Helen Lanfer, Edward McLean, and Joan Palmer.
         </p>
-        <div class="my-10 text-justify">
+        <div class="my-10 md:text-justify">
           The concert was good for the hearing; it was an ear massage. Fourteen persons, 125
           instruments, and about fifty sticks to hit them with. When things were not beaten or
           tapped they were shaken, rubbed, pulled, or immersed in water. There was an ominous
@@ -540,7 +540,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
         <div class="mt-10">
           <h2 class="">MARCH 19 (1944), <i>NEW YORK HERALD TRIBUNE</i></h2>
         </div>
-        <div class="my-10 text-justify">
+        <div class="my-10 md:text-justify">
           “Popular” here is used in a strict sense and can be construed as embracing all shades of
           non-art music, from the purely folk product to the purely commercial. Naturally it is not
           the passage of money between persons in payment for a piece which makes it commercial, but
@@ -616,7 +616,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
         <div class="mt-10">
           <h2 class="">MAY&mdash;JUNE (1941), <i>MODERN MUSIC</i></h2>
         </div>
-        <div class="my-10 text-justify">
+        <div class="my-10 md:text-justify">
           There exists a state of great confusion about the factors that differentiate the various
           forms of Mexican popular music, even in the minds of Mexican musicians.* The best a
           non-Mexican can do, outside of serious musicological research, is to record the confusion
@@ -669,7 +669,7 @@ useHead({ title: `Paul Bowles ${router.params.title}` })
           managed successfully to contrive more complications than one would have thought humanly
           possible.
         </div>
-        <div class="my-10 text-justify">
+        <div class="my-10 md:text-justify">
           &nbsp;&nbsp;The <i>Son</i> (to be kept absolutely apart from the Cuban <i>Son</i>, of
           course) is still the most mysterious of the forms. One writer claims the Huapango is a
           variety of <i>Son</i>, another that the <i>Son</i> is part of the <i>Jarabe</i>; no one

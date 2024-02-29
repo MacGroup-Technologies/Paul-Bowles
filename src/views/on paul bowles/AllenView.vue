@@ -30,7 +30,7 @@ window.addEventListener('scroll', function () {
         <img src="@/assets/imgs/Allen-Ginsberg.png" class="md:w-1/3 h-auto transition-all" alt="Allen Ginsberg" />
         <h1 class="text-2xl md:text-4xl md:w-1/2 font-heading uppercase hidden">Allen Ginsberg</h1>
       </div>
-      <div class="text-justify">
+      <div class="md:text-justify">
         <h2 class="uppercase font-heading text-4xl">
           Allen Ginsberg to Jack Kerouac, May 31, 1957
         </h2>

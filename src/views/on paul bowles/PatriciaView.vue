@@ -34,7 +34,7 @@ window.addEventListener('scroll', function () {
           a north african encounter - Patricia Highsmith
         </h1>
       </div>
-      <div class="text-justify">
+      <div class="md:text-justify">
         <p class="mb-10">
           Paul Bowles has his own way of doing things. It is hard to imagine a New Yorker falling in
           love with Tangier and choosing to spend most of his life there, in a city where the

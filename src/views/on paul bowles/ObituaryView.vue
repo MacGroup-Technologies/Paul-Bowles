@@ -30,7 +30,7 @@ window.addEventListener('scroll', function () {
           alt="Paul Bowles obituary via The Economist" />
         <h1 class="text-2xl md:text-4xl md:w-1/2 font-heading uppercase hidden">the economist</h1>
       </div>
-      <div class="text-justify">
+      <div class="md:text-justify">
         <h2 class="uppercase font-heading text-4xl">
           Paul Bowles, “the only American existentialist,” died on November 18th, aged 88
         </h2>

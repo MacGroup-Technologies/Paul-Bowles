@@ -103,7 +103,7 @@ useHead({ title: `Paul Bowles's Library` })
       </div>
       <div class="md:w-2/3">
         <h2 class="font-mono font-semibold uppercase text-3xl lg:text-4xl">about the library</h2>
-        <p class="mt-5 text-justify text-xl">
+        <p class="mt-5 md:text-justify text-xl">
           Paul Bowles’s personal library comprises more than three thousand volumes that the writer
           collected over his five decades living in Tangier. Little is known of the books he read
           before 1947, the year he moved to Morocco, although he did bring some with him. These

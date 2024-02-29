@@ -116,7 +116,7 @@ useHead({ title: `Paul Bowles ${route.params.title}` })
       </div>
       <div class="mt-16" v-if="route.params.title === 'Short Stories'">
         <h2 class="uppercase text-4xl">Introduction</h2>
-        <p class="mt-5 text-justify">
+        <p class="mt-5 md:text-justify">
           Of his first collection of stories, <i>The Delicate Prey (1950)</i>, Paul Bowles wrote:
           “All the tales are a variety of detective story in which the reader is the detective; the
           mystery is the motivation for the characters' behavior.” In 1989, in a preface to a
@@ -126,23 +126,23 @@ useHead({ title: `Paul Bowles ${route.params.title}` })
           protagonists were born.”
         </p>
       </div>
-      <p class="mt-16 text-justify" v-else-if="route.params.title === 'Novels'">
+      <p class="mt-16 md:text-justify" v-else-if="route.params.title === 'Novels'">
         Paul Bowles wrote three novels set in North Africa: <i>The Sheltering Sky</i>,
         <i>Let it Come Down</i> and <i>The Spider's House</i>. Up Above the World is set in Central
         America, and <i>Too Far from Home</i>, a novella, in Mali.
       </p>
-      <p class="mt-16 text-justify" v-else-if="route.params.title === 'Contributions to Periodicals'">
+      <p class="mt-16 md:text-justify" v-else-if="route.params.title === 'Contributions to Periodicals'">
         By the time of his death in Tangier, Morocco, in 1999, Paul Bowles had become a legendary
         figure in modern literary culture. The range of his literary work includes poems, short
         stories, novels, travel writing, essays, music criticism, autobiography, and translations.
       </p>
-      <p class="mt-16 text-justify" v-else-if="route.params.title === 'Autobiography'">
+      <p class="mt-16 md:text-justify" v-else-if="route.params.title === 'Autobiography'">
         In 1972 Bowles published <i>Without Stopping</i>, his book-length autobiography. In this
         section we present two pages of its typescript along with two short autobiographical texts.
         “Paul Bowles, His Life” could be called poetic as opposed to the more factual one written
         for the <i>Contemporary Authors Autobiographical Series</i> (Detroit, 1984).
       </p>
-      <div class="mt-16 text-justify" v-else-if="route.params.title === 'Music Criticism'">
+      <div class="mt-16 md:text-justify" v-else-if="route.params.title === 'Music Criticism'">
         <p>
           From 1939 through early 1945, the only prose Paul Bowles published was music criticism. He
           served on the music reviewing staff of the New York Herald <i>Tribune</i>, where his friend
