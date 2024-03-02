@@ -6,7 +6,7 @@ useHead({ title: `Paul Bowles's Library` })
 <template>
   <div class="">
     <div
-      class="h-screen bg-background-light dark:bg-background-dark relative flex items-center bg-[url('@/assets/imgs/imagehero-5.png')]"
+      class="h-screen bg-background-light dark:bg-background-dark relative flex items-center bg-[url('@/assets/imgs/mobile-covers/library.png')] md:bg-[url('@/assets/imgs/imagehero-5.png')]"
       style="background-size:cover;background-position:center,center;">
       <div
         class="h-full md:w-2/3 z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">

@@ -41,7 +41,10 @@ const music = [
         </div>
       </div>
       <img src="@/assets/imgs/imagehero-4.png"
-        class="absolute top-0 right-0 w-full h-full object-cover md:object-right-top" />
+        class="max-md:hidden absolute top-0 right-0 w-full h-full object-cover md:object-right-top" />
+      <img src="@/assets/imgs/mobile-covers/Music.png"
+        class="md:hidden absolute top-0 right-0 w-full h-full object-cover md:object-right-top" />
+
     </div>
     <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20">
       <a name="content" />

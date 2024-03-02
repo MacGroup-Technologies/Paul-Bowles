@@ -7,7 +7,7 @@ useHead({ title: `Paul Bowles's Films` })
 <template>
   <div class="">
     <div
-      class="h-screen bg-background-light dark:primary dark:bg-background-dark relative bg-[url('@/assets/imgs/imagehero-1.png')]"
+      class="h-screen bg-background-light dark:primary dark:bg-background-dark relative bg-[url('@/assets/imgs/mobile-covers/Film.png')] lg:bg-[url('@/assets/imgs/imagehero-1.png')]"
       style="background-size:cover;">
       <div
         class="h-full z-10 bg-background-light dark:bg-background-dark bg-opacity-60 dark:bg-opacity-60 flex flex-col justify-center items-start">

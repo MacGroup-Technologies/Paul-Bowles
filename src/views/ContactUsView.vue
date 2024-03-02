@@ -86,7 +86,7 @@ useHead({
 <template>
   <div class="">
     <div
-      class="h-screen overflow-hidden bg-background-light dark:bg-background-dark relative bg-[url('@/assets/imgs/contact.png')]"
+      class="h-screen overflow-hidden bg-background-light dark:bg-background-dark relative bg-[url('@/assets/imgs/mobile-covers/contact.png')] lg:bg-[url('@/assets/imgs/contact.png')]"
       style="background-size:cover;">
       <div
         class="h-full md:w-2/3 z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">

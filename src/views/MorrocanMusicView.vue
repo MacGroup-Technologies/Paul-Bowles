@@ -61,7 +61,7 @@ onMounted(async () => {
 <template>
   <div class="">
     <div
-      class="h-screen bg-background-light dark:bg-background-dark relative flex items-center bg-[url('@/assets/imgs/MoroccanMusic.png')]"
+      class="h-screen bg-background-light dark:bg-background-dark relative flex items-center bg-[url('@/assets/imgs/mobile-covers/moroccan-music.png')] lg:bg-[url('@/assets/imgs/MoroccanMusic.png')]"
       style="background-size:cover;background-position:center,center;">
       <div
         class="h-full  z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">

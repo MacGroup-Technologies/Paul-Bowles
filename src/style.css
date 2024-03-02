@@ -9,7 +9,7 @@
     @apply text-4xl md:text-8xl 
   }
   .text-subtitle {
-    @apply text-xl md:text-3xl 
+    @apply text-xl md:text-3xl  text-black;
   }
 }
 
