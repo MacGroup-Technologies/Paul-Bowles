@@ -21,7 +21,9 @@ useHead({ title: `Paul Bowles's Life` })
           </a>
         </div>
       </div>
-      <img src="@/assets/imgs/imageimage.png" class="absolute top-0 right-0 w-full h-full object-cover " />
+      <img src="@/assets/imgs/imageimage.png" class="max-md:hidden absolute top-0 right-0 w-full h-full object-cover " />
+      <img src="@/assets/imgs/mobile-covers/Life.png"
+        class="md:hidden absolute top-0 right-0 w-full h-full object-cover " />
     </div>
     <a name="content" />
     <div class="px-5 py-10 lg:px-16 2xl:px-20 grid place-items-stretch gap-5 grid-cols-1 md:grid-cols-2">

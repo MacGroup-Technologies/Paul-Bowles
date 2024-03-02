@@ -5,7 +5,8 @@ useHead({ title: `Tributes to Paul Bowles` })
 </script>
 <template>
   <div class="">
-    <div class="h-screen bg-background-light dark:bg-background-dark relative bg-[url('@/assets/imgs/paul-bowles.png')]"
+    <div
+      class="h-screen bg-background-light dark:bg-background-dark relative bg-[url('@/assets/imgs/mobile-covers/paul-bowles.png')] md:bg-[url('@/assets/imgs/paul-bowles.png')]"
       style="background-repeat: no-repeat;background-size: cover;">
       <div
         class="h-full md:w-2/3 z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">
