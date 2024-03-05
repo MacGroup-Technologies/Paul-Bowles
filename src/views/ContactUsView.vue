@@ -260,6 +260,7 @@ useHead({
           Leonard Bernstein Office<br />
           Fotostiftung Schweiz<br />
           The Allen Ginsberg Project<br />
+          The Harry Ransom Center at The University of Texas at Austin<br />
           The University of Delaware Library<br />
           The Wylie Agency<br />
         </div>
