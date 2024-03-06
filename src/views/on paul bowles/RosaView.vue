@@ -32,7 +32,7 @@ window.addEventListener('scroll', function () {
           Bowles and i - Rodrigo Rey Rosa
         </h1>
       </div>
-      <div class="md:text-justify">
+      <div class="">
         It’s been 29 years since I first set foot in Tangier. “It looks like Sicily, with a touch of
         Greece and the south of Spain, without the camels,” I thought, half-asleep, pressing my head
         against the window of an old school bus that was taking me, together with 50 or so North
