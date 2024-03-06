@@ -148,7 +148,7 @@ onMounted(() => {
   playBackground()
   setTimeout(() => {
     setModal()
-  }, 5000)
+  }, 3000)
 })
 </script>
 
@@ -156,11 +156,13 @@ onMounted(() => {
   <main class="h-screen text-white">
     <div id="img">
       <img src="@/assets/imgs/Paul-on-Keyboard.png" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
-        id="hero1" data-animate />
-      <img src="@/assets/imgs/Young-Paul.png" class="fixed min-h-screen w-screen inset-0 object-cover jumbo" id="hero1"
+        data-animate />
+      <img src="@/assets/imgs/Young-Paul.png" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
         data-animate />
       <img src="@/assets/imgs/Paul-arms-wide.png" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
-        id="hero1" data-animate />
+        data-animate />
+      <img src="@/assets/imgs/typewriter-duotone.png" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
+        data-animate />
     </div>
     <img src="@/assets/imgs/Music-doutone.png"
       class="fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
