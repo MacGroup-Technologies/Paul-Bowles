@@ -27,7 +27,7 @@ useHead({ title: `${router.params.title}` })
         </router-link>
       </div>
       <template v-if="router.params.title === 'Paul Bowles: His Life'">
-        <div class="mt-10 md:text-justify">
+        <div class="mt-10 ">
           By Paul Bowles
           <br /><br />
           The first sky he saw was the sky above New York. Winters it snowed. The school was dark.
@@ -180,7 +180,7 @@ useHead({ title: `${router.params.title}` })
           'Paul Bowles, Contemporary Authors Autobiographical Series, volume I, pp. 81-95'
         "
       >
-        <div class="mt-10 md:text-justify">
+        <div class="mt-10 ">
           I think that my father would have preferred not to have been burdened with a child. Quite
           possibly my coming into existence was the result of an accident. He was nervous and
           hypochondriacal, having become a dentist only after his goal of a career as violinist had

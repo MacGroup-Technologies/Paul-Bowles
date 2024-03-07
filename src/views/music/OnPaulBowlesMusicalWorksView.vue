@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 mb-10 md:text-justify md:text-left">
+    <div class="px-5 py-20 lg:px-16 2xl:px-20 text-xl lg:text-2xl lg:py-20 mb-10  md:text-left">
       <h1 class="font-mono font-semibold uppercase text-3xl lg:text-4xl">
         PAUL BOWLES’S MUSICAL WORKS
       </h1>

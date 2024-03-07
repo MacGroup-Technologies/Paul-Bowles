@@ -51,7 +51,7 @@ onMounted(async () => {
         </router-link>
       </div>
       <div v-if="music.items.length !== 0">
-        <pre class="mt-10 md:text-justify">
+        <pre class="mt-10 ">
           {{ music.items[0].description }}
         </pre>
         <div class="mt-10 grid dgrid-cols-2 md:grid-cols-5 gap-5">

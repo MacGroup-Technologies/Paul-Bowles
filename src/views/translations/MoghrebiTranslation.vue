@@ -90,7 +90,7 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
       </div>
 
 
-      <div class="my-10 text-2xl md:text-justify ">
+      <div class="my-10 text-2xl  ">
         <p v-html="translation.data.blocks_rows_0_text" v-if="translation.data.blocks_rows_0_text !== ''" />
         <p v-html="translation.data.blocks_0_column_1" v-else />
         <p v-if="route.params.id === '5165'" class="mt-5">
@@ -117,7 +117,7 @@ useHead({ title: translation.data.title ?? 'Paul Bowles Translations' })
         </span>
       </div>
 
-      <div class="text-2xl py-10 flex gap-10 flex-col md:flex-row justify-between items-start md:text-justify"
+      <div class="text-2xl py-10 flex gap-10 flex-col md:flex-row justify-between items-start "
         :class="{ 'max-h-[15lh] m-2 p-2 overflow-auto': route.params.id == '4864' && is_text_expanded == false }">
 
         <div v-if="!has_translations.includes(route.params.id) || current_tab == 'arabic'" class="text-right">
