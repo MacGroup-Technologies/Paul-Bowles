@@ -201,7 +201,7 @@ onMounted(() => {
     <img src="@/assets/imgs/Contact-doutone.png"
       class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'contact' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'contact'" />
-    <div class="absolute top-0 right-0 left-0 bottom-0 z-50 p-10 md:p-20 flex flex-col justify-between">
+    <div class="absolute top-0 right-0 left-0 bottom-0 z-50 p-8 md:p-20 flex flex-col gap-4 md:justify-between">
       <div class="mt-10 2xl:mt-20">
         <h1 class="font-heading font-bold uppercase text-white text-6xl md:text-8xl 2xl:text-9xl mb-5" id="heading">
           The Artist’s Legacy
@@ -223,7 +223,7 @@ onMounted(() => {
           </router-link>
         </div>
       </div>
-      <div class="flex md:hidden flex-wrap gap-x-5 md:gap-x-0 gap-y-5 w-full md:w-5/6 2xl:w-full mr-40">
+      <div class="flex flex-col md:hidden gap-5">
         <div class="2xl:w-72 capitalize" v-for="(item, index) in links" :key="index">
           <router-link class="px-5 hover:opacity-70 text-[18px] 2xl:text-[23px] text-white-shade transition-colors"
             :to="`/${item.link}`">
