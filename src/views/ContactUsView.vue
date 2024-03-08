@@ -180,6 +180,7 @@ useHead({
           </div>
           <div class="mb-5">
             <h3 class="font-bold">Programming</h3>
+            Felipe Duarte<br />
             Israel Jorquera Vidal
           </div>
           <div class="mb-5">
