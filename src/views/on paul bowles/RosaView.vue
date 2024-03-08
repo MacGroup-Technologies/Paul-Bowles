@@ -37,7 +37,7 @@ window.addEventListener('scroll', function () {
         Greece and the south of Spain, without the camels,” I thought, half-asleep, pressing my head
         against the window of an old school bus that was taking me, together with 50 or so North
         American students, from the Boukhalef Airport to the American School of Tangier, on the rue
-        Cristophe Colomb, which now goes by a name out of the Arabian Nights, Haruner Rashid.
+        Cristophe Colomb, which now goes by a name out of the Arabian Nights, Harun-er-Rashid.
         Willows, poplars and Roman cypresses lined either side of the road that was leading us
         through the hills and fields; poppies rose above the ripening wheat, oleander betrayed the
         wetness beneath the dried-up streams, and the palm trees shone in the sun, the Atlantic’s
