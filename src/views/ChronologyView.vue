@@ -257,7 +257,7 @@ const chronology = [
   },
   {
     year: '1958',
-    text: `Finishes score for Yerma. Writes score for Milton Geiger's play Edwin Booth, directed by José Ferrer and Night Waltz for Two Pianos.
+    text: `Performances of Yerma at Denver University and Ithaca College, New York. (scratch finishes score).
           <br /><br />In New York, tries mescaline for the first time with Ned Rorem and John Goodwin.`,
     highlight: null
   },
