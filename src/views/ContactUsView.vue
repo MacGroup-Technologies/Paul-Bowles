@@ -227,8 +227,8 @@ useHead({
           <br />
 
           Peter Hale<br />
-          Irene Herrmann<br />
           Émil Hernon<br />
+          Irene Herrmann<br />
           <br />
 
           Abdelaziz Jadir<br />
