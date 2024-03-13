@@ -179,7 +179,14 @@ useHead({ title: `Paul Bowles ${route.params.title}` })
       </ol>
       <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10" v-else>
         <div class="rounded flex flex-col items-center overflow-hidden" v-for="item in writing.item" :key="item.id">
-          <img src="@/assets/imgs/writings-thumbnail.png" />
+          <div v-if="item.image_urls !== 'N/A'" class="relative overflow-hidden">
+            <img src="@/assets/imgs/writings-thumbnail.png" class="opacity-0" />
+            <div class="absolute inset-0 grid place-items-center">
+              <img :src="item.image_urls" class="absolute inset-0 blur scale-[200%]" />
+              <img :src="item.image_urls" class="relative p-2" />
+            </div>
+          </div>
+          <img v-else src="@/assets/imgs/writings-thumbnail.png" />
           <h3 class="text-center mt-4">{{ item.title }}</h3>
         </div>
       </div>
