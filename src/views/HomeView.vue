@@ -203,10 +203,11 @@ onMounted(() => {
       :class="hover.animate === 'contact' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'contact'" />
     <div class="absolute top-0 right-0 left-0 bottom-0 z-50 p-8 md:p-20 flex flex-col gap-4 md:justify-between">
       <div class="mt-10 2xl:mt-20">
-        <h1 class="font-heading font-bold uppercase text-white text-6xl md:text-8xl 2xl:text-9xl mb-5" id="heading">
-          His Legacy
-        </h1>
         <img src="@/assets/imgs/logo.svg" class="w-auto h-12 md:h-16 2xl:h-28" id="logo" />
+        <h1 class="font-heading font-bold uppercase text-white text-6xl md:text-8xl 2xl:text-9xl mb-5" id="heading">
+          Life and Legacy
+        </h1>
+
       </div>
       <div clas="mt-10" v-if="hover.animate">
         <h2 class="font-heading text-[30px] md:text-[66px] uppercase">{{ hover.item.title }}</h2>
