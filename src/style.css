@@ -6,7 +6,7 @@
 
 @layer components {
   .text-title {
-    @apply text-4xl md:text-8xl 
+    @apply text-4xl md:text-5xl 
   }
   .text-subtitle {
     @apply text-xl md:text-3xl  text-black;
