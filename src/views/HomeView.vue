@@ -203,7 +203,7 @@ onMounted(() => {
       :class="hover.animate === 'contact' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'contact'" />
     <div class="absolute top-0 right-0 left-0 bottom-0 z-50 p-8 md:p-20 flex flex-col gap-4 md:justify-between">
       <div class="mt-10 2xl:mt-20">
-        <img src="@/assets/imgs/logo.svg" class="w-auto h-12 md:h-16 2xl:h-28" id="logo" />
+        <img style="display: block; margin-left: auto; margin-right: auto;" src="@/assets/imgs/logo.svg" class="w-auto h-12 md:h-16 2xl:h-28" id="logo" />
         <h1 style="text-align: center;" class="font-heading font-bold uppercase text-white text-3xl md:text-5xl 2xl:text-9xl mb-5" id="heading">
           Life and Legacy
         </h1>
