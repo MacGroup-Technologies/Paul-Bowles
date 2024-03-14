@@ -61,19 +61,19 @@ onMounted(async () => {
 <template>
   <div class="">
     <div
-      class="h-screen bg-background-light dark:bg-background-dark relative flex items-center bg-[url('@/assets/imgs/mobile-covers/moroccan-music.png')] lg:bg-[url('@/assets/imgs/MoroccanMusic.png')]"
-      style="background-size:cover;background-position:center,center;">
-      <div
-        class="h-full  z-10 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% to-transparent flex flex-col justify-center items-start">
-        <div class="p-5 lg:px-16 2xl:px-20 mt-38">
-          <h1 class="text-title font-mono uppercase text-black dark:text-white-shade">Moroccan Music</h1>
-          <p class="md:w-1/2 dark:text-white text-subtitle mt-5">
+      class="mt-16 min-h-[400px] md:h-screen bg-background-light dark:primary dark:bg-background-dark relative flex items-center">
+      <img src="@/assets/imgs/MoroccanMusic.png" class="absolute top-0 right-0 w-full h-full object-cover" />
+      <div class="cover__overlay" />
+      <div class="h-full md:w-2/3 flex flex-col justify-center items-start relative">
+        <div class="p-5 lg:px-16 2xl:px-20">
+          <h1 class="text-title font-mono uppercase">Moroccan Music</h1>
+          <p class="md:w-2/3 dark:text-white text-subtitle mt-5">
             In 1959 Paul Bowles traveled extensively across Morocco recording its traditional music.
           </p>
         </div>
-        <div class="p-5 lg:px-16 2xl:px-20">
+        <div class="p-5 lg:px-16 2xl:px-20 max-md:hidden">
           <a href="#content"
-            class="w-20 h-20 md:w-32 md:h-32 flex justify-center items-center rounded-full border-[2px] text-black border-black dark:border-white-shade dark:text-white-shade hover:opacity-75">
+            class="w-20 h-20 md:w-32 md:h-32 flex justify-center items-center rounded-full border-[2px] border-[currentColor] dark:border-white-shade hover:opacity-75">
             <p class="text-5xl md:text-7xl animate-bounce">&DownArrow;</p>
           </a>
         </div>

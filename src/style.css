@@ -11,6 +11,10 @@
   .text-subtitle {
     @apply text-xl md:text-3xl  text-black;
   }
+
+  .cover__overlay {
+    @apply absolute inset-0 bg-gradient-to-r from-white/80 dark:from-black/80 md:from-55% !to-black/20
+  }
 }
 
 :target {
