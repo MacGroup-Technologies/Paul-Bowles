@@ -7,19 +7,19 @@ useHead({ title: `Paul Bowles's Films` })
 <template>
   <div class="">
     <div
-      class="h-screen bg-background-light dark:primary dark:bg-background-dark relative bg-[url('@/assets/imgs/mobile-covers/Film.png')] lg:bg-[url('@/assets/imgs/imagehero-1.png')]"
-      style="background-size:cover;">
-      <div
-        class="h-full z-10 bg-background-light dark:bg-background-dark bg-opacity-60 dark:bg-opacity-60 flex flex-col justify-center items-start">
+      class="mt-16 min-h-[400px] md:h-screen bg-background-light dark:primary dark:bg-background-dark relative flex items-center">
+      <img src="@/assets/imgs/imagehero-1.png" class="absolute top-0 right-0 w-full h-full object-cover" />
+      <div class="cover__overlay" />
+      <div class="h-full md:w-2/3 flex flex-col justify-center items-start relative">
         <div class="p-5 lg:px-16 2xl:px-20">
-          <h1 class="text-title font-mono uppercase text-black dark:text-white-shade">Film</h1>
+          <h1 class="text-title font-mono uppercase">Film</h1>
           <p class="md:w-2/3 dark:text-white text-subtitle mt-5">
             Excerpts from a documentary and an experimental film, and a selected filmography.
           </p>
         </div>
-        <div class="p-5 lg:px-16 2xl:px-20">
+        <div class="p-5 lg:px-16 2xl:px-20 max-md:hidden">
           <a href="#content"
-            class="w-20 h-20 md:w-32 md:h-32 flex justify-center items-center rounded-full border-[2px] text-black border-black dark:border-white-shade dark:text-white-shade hover:opacity-75">
+            class="w-20 h-20 md:w-32 md:h-32 flex justify-center items-center rounded-full border-[2px] border-[currentColor] dark:border-white-shade hover:opacity-75">
             <p class="text-5xl md:text-7xl animate-bounce">&DownArrow;</p>
           </a>
         </div>
