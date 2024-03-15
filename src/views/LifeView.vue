@@ -7,7 +7,9 @@ useHead({ title: `Paul Bowles's Life` })
   <div class="">
     <div
       class="mt-16 min-h-[400px] md:h-screen bg-background-light dark:primary dark:bg-background-dark relative flex items-center">
-      <img src="@/assets/imgs/imageimage.png" class="absolute top-0 right-0 w-full h-full object-cover" />
+      <img src="@/assets/imgs/mobile-covers/Life.png"
+        class="md:hidden absolute top-0 right-0 w-full h-full object-cover object-left" />
+      <img src="@/assets/imgs/imageimage.png" class="max-md:hidden absolute top-0 right-0 w-full h-full object-cover" />
       <div class="cover__overlay" />
       <div class="h-full md:w-2/3 flex flex-col justify-center items-start relative">
         <div class="p-5 lg:px-16 2xl:px-20">
