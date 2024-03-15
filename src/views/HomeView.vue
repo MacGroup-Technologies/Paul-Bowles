@@ -86,7 +86,8 @@ const links = [
 
 let imgs: any
 
-const tl = gsap.timeline().repeat(-1)
+const tl = gsap.timeline({ repeat: -1 })
+
 const tL = gsap.timeline()
 const textTl = gsap.timeline()
 const modal = computed(() => {
@@ -109,21 +110,24 @@ const mouseHover = function (e: any) {
 }
 
 const playBackground = function () {
-  let img = gsap.utils.toArray('img.jumbo')
-  img.reverse()
-  imgs = img
-  let wrap = gsap.utils.wrap(imgs),
-    count = imgs.length,
-    i
-  for (i = 0; i < count - 1; i++) {
-    if (imgs[i]) {
-      tl.to(imgs[i], { autoAlpha: 0 }, '+=2').addLabel(imgs[i].getAttribute('data-animate'), '+=2')
-      tl.to(imgs[i + 1], { autoAlpha: 1 }, '>')
-    } else {
-      tl.to(imgs[i], { autoAlpha: 0 }, '>')
-      tl.to(imgs[i + 1], { autoAlpha: 1 }, '<')
-    }
+  // let targets = gsap.utils.toArray('img.jumbo')
+  let targets = document.querySelectorAll('img.jumbo')
+  // targets.reverse()
+
+  let targets_length = targets.length;
+  let pause_duration = 3;
+  let duration = 1;
+  let stagger_duration = duration + pause_duration;
+  let repeat_delay = (stagger_duration * (targets_length - 1)) + pause_duration
+
+  let stagger = {
+    each: stagger_duration,
+    repeat: -1,
+    repeatDelay: repeat_delay,
   }
+
+  tl.from(targets, { autoAlpha: 0, stagger })
+    .to(targets, { autoAlpha: 0, stagger }, stagger_duration)
 }
 
 watchEffect(() => {
@@ -233,7 +237,7 @@ onMounted(() => {
       </div>
     </div>
   </main>
-  <div v-if="modal" class="fixed bottom-0 md:top-0 right-0 z-50 flex justify-end m-2 md:m-8 items-center">
+  <div v-if="modal" class="fixed max-md:bottom-0 md:top-0 right-0 z-50 flex justify-end m-2 md:m-8 items-center">
     <div class="h-auto md:w-1/3 shadow-2xl bg-primary-light rounded-md px-7 py-4 md:mx-0">
       <div class="flex justify-end mb-2">
         <div @click="setModal()" class="flex items-center gap-3 cursor-pointer hamburger">
