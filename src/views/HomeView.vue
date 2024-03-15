@@ -233,8 +233,8 @@ onMounted(() => {
       </div>
     </div>
   </main>
-  <div v-if="modal" class="fixed top-0 right-0 z-50 flex justify-end m-8 items-center">
-    <div class="h-auto md:w-1/3 shadow-2xl bg-primary-light rounded-md px-7 py-4 mx-10 md:mx-0">
+  <div v-if="modal" class="fixed bottom-0 md:top-0 right-0 z-50 flex justify-end m-2 md:m-8 items-center">
+    <div class="h-auto md:w-1/3 shadow-2xl bg-primary-light rounded-md px-7 py-4 md:mx-0">
       <div class="flex justify-end mb-2">
         <div @click="setModal()" class="flex items-center gap-3 cursor-pointer hamburger">
           <span class="block">Close</span>
