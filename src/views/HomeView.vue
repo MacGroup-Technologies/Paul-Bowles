@@ -137,7 +137,8 @@ watchEffect(() => {
     textTl
       .to(
         '#heading',
-        { fontSize: breakpoints.mdAndUp ? '25.83px' : '20px', marginBottom: 10, duration: 0.2 },
+//        { fontSize: breakpoints.mdAndUp ? '25.83px' : '20px', marginBottom: 10, duration: 0.2 },
+        { fontSize: breakpoints.mdAndUp ? '25.83px' : '20px', marginBottom: 0, duration: 0.2 },
         0
       )
       .to('#logo', { height: breakpoints.mdAndUp ? '38px' : '25px', duration: 0.2 }, 0)
