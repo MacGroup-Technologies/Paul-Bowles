@@ -219,7 +219,7 @@ onMounted(() => {
           {{ hover.item.text }}
         </p>
       </div>
-      <div class="hidden md:flex flex-wrap gap-x-10 gap-y-5 w-full md:w-5/6 2xl:w-full mr-40" style="position: fixed; bottom: 0; width: 100%;">
+      <div class="hidden md:flex flex-wrap gap-x-10 gap-y-5 w-full md:w-5/6 2xl:w-full mr-40" style="position: fixed; bottom: 2em; width: 100%;">
         <div class="capitalize text-left" v-for="(item, index) in links" :key="index">
           <router-link
             class="inline-block hover:opacity-70 text-[20px] 2xl:text-[40px] md:min-w-[150px] text-white-shade transition-colors"
