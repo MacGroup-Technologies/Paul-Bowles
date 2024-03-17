@@ -168,8 +168,8 @@ onMounted(() => {
       <img src="@/assets/imgs/typewriter-duotone.webp" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
         data-animate />
     </div>
-/*prueba problema texto de las areas cambia el tamaño de la pagina inicio funciono 20240317 */
-<!--
+<!-- prueba problema texto de las areas cambia el tamaño de la pagina inicio funciono 20240317
+
     <img src="@/assets/imgs/Music-doutone.png"
       class="fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'music' ? 'opacity-100' : 'opacity-0'" v-if="hover.animate === 'music'" />
