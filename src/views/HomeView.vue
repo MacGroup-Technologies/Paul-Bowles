@@ -129,7 +129,7 @@ const playBackground = function () {
   tl.from(targets, { autoAlpha: 0, stagger })
     .to(targets, { autoAlpha: 0, stagger }, stagger_duration)
 }
-/* prueba logo
+/* prueba quitar animacion del logo: funcionó 20240317
 watchEffect(() => {
   if (hover.animate !== '') {
     tl.paused(true)
@@ -205,8 +205,8 @@ onMounted(() => {
     <img src="@/assets/imgs/Contact-doutone.png"
       class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'contact' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'contact'" />
-    <div class="absolute top-0 right-0 left-0 bottom-0 z-50 p-8 md:p-20 flex flex-col gap-4 md:justify-between">
-      <div class="mt-10 2xl:mt-20" style="margin-top: 0.5rem;">
+    <div class="absolute top-0 right-0 left-0 bottom-0 z-50 p-8 md:p-20 flex flex-col gap-4 md:justify-between" style="padding-bottom: 8rem;">
+      <div class="mt-10 2xl:mt-20" style="margin-top: 0rem;">
         <img style="display: block; margin-left: auto; margin-right: auto;" src="@/assets/imgs/logo.svg" class="w-auto h-12 md:h-16 2xl:h-28" id="logo" />
         <h1 style="text-align: center;" class="font-bold uppercase text-white text-3xl md:text-5xl 2xl:text-9xl mb-5" id="heading">
           Life and Legacy
