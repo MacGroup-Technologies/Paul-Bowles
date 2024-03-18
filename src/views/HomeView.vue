@@ -168,7 +168,7 @@ onMounted(() => {
       <img src="@/assets/imgs/typewriter-duotone.webp" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
         data-animate />
     </div>
-<!-- prueba problema texto de las areas cambia el tamaño de la pagina inicio funciono 20240317
+
 
     <img src="@/assets/imgs/Music-doutone.png"
       class="fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
@@ -207,8 +207,6 @@ onMounted(() => {
     <img src="@/assets/imgs/Contact-doutone.png"
       class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'contact' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'contact'" />
-    prueba fin
--->
     
     <div class="absolute top-0 right-0 left-0 bottom-0 z-50 p-8 md:p-20 flex flex-col gap-4 md:justify-between" style="padding-bottom: 8rem;">
       <div class="mt-10 2xl:mt-20" style="margin-top: 0rem;">
