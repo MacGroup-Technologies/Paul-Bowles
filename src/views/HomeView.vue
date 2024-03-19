@@ -158,7 +158,7 @@ onMounted(() => {
 
 <template>
   <main class="h-screen text-white">
-    <div id="img"> <!-- original en png -->
+    <div id="img">
       <img src="@/assets/imgs/Paul-on-Keyboard.png" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
         data-animate />
       <img src="@/assets/imgs/Young-Paul.png" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
