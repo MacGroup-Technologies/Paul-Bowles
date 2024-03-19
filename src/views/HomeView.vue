@@ -129,7 +129,7 @@ const playBackground = function () {
   tl.from(targets, { autoAlpha: 0, stagger })
     .to(targets, { autoAlpha: 0, stagger }, stagger_duration)
 }
-/* prueba quitar animacion del logo: funcionó 20240317
+
 watchEffect(() => {
   if (hover.animate !== '') {
     tl.paused(true)
@@ -146,7 +146,7 @@ watchEffect(() => {
     textTl.reverse()
     tl.play()
   }
-}) */
+}) 
 
 onMounted(() => {
   playBackground()
