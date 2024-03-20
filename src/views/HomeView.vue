@@ -110,16 +110,14 @@ const mouseHover = function (e: any) {
 }
 
 const playBackground = function () {
-  // let targets = gsap.utils.toArray('img.jumbo')
-  let targets = document.querySelectorAll('img.jumbo')
-  // targets.reverse()
+  gsap.set('img.jumbo', { autoAlpha: 1 })
 
+  let targets = document.querySelectorAll('img.jumbo')
   let targets_length = targets.length;
   let pause_duration = 3;
   let duration = 1;
   let stagger_duration = duration + pause_duration;
   let repeat_delay = (stagger_duration * (targets_length - 1)) + pause_duration
-
   let stagger = {
     each: stagger_duration,
     repeat: -1,
