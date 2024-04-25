@@ -177,7 +177,7 @@ useHead({ title: `Paul Bowles ${route.params.title}` })
           <contributions-list-item :index="index" :item="item"></contributions-list-item>
         </li>
       </ol>
-      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-10" v-else>
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-16" v-else>
         <div class="rounded flex flex-col items-center overflow-hidden" v-for="item in writing.item" :key="item.id">
           <div v-if="item.image_urls !== 'N/A'" class="relative overflow-hidden">
             <img src="@/assets/imgs/writings-thumbnail.png" class="opacity-0" />
@@ -188,7 +188,9 @@ useHead({ title: `Paul Bowles ${route.params.title}` })
           </div>
           <img v-else src="@/assets/imgs/writings-thumbnail.png" />
           <h3 class="text-center mt-4">{{ item.title }}</h3>
-          <div v-html="item.html_code" v-if="item.html_code"></div>
+          <div v-if="item.html_code" class="mt-2">
+            <a :href="item.html_code" target="_blank"><el-button type="primary" class="bg-primary">Read in Library</el-button></a>
+          </div>
         </div>
       </div>
 
