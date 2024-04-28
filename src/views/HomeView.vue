@@ -172,38 +172,38 @@ onMounted(() => {
       class="fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'music' ? 'opacity-100' : 'opacity-0'" v-if="hover.animate === 'music'" />
     <img src="@/assets/imgs/Translation-doutone.png"
-      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      class="fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'translation' ? 'opacity-100' : 'opacity-0'"
       v-else-if="hover.animate === 'translation'" />
     <img src="@/assets/imgs/Photography-doutone.png"
-      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      class="fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'photography' ? 'opacity-100' : 'opacity-0'"
       v-else-if="hover.animate === 'photography'" />
     <img src="@/assets/imgs/Life-doutone.png"
-      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      class="fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'life' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'life'" />
     <img src="@/assets/imgs/Archive-doutone.png"
-      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      class="fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'archives' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'archives'" />
     <img src="@/assets/imgs/Writings-doutone.png"
-      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      class="fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'writings' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'writings'" />
     <img src="@/assets/imgs/MoroccanMusic-doutone.png"
-      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      class="fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'moroccan music' ? 'opacity-100' : 'opacity-0'"
       v-else-if="hover.animate === 'moroccan music'" />
     <img src="@/assets/imgs/Library-doutone.png"
-      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      class="fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'library' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'library'" />
     <img src="@/assets/imgs/PaulBowles-doutone.png"
-      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      class="fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'on paul bowles' ? 'opacity-100' : 'opacity-0'"
       v-else-if="hover.animate === 'on paul bowles'" />
     <img src="@/assets/imgs/Film-doutone.png"
-      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      class="fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'film' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'film'" />
     <img src="@/assets/imgs/Contact-doutone.png"
-      class="12fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
+      class="fixed min-h-screen w-screen inset-0 object-cover jumbo transition-opacity"
       :class="hover.animate === 'contact' ? 'opacity-100' : 'opacity-0'" v-else-if="hover.animate === 'contact'" />
     
     <div class="absolute top-0 right-0 left-0 bottom-0 z-50 p-8 md:p-20 flex flex-col gap-4 md:justify-between" style="padding-bottom: 8rem;">
