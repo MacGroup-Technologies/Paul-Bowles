@@ -205,29 +205,29 @@ onMounted(async () => {
       </template>
       <div class="grid gap-x-5 gap-y-10 grid-cols-1 md:grid-cols-4 w-full">
         <div
-          class="w-full flex flex-col px-10 md:px-0"
+          class="w-full flex flex-col px-10 md:px-0 !cursor-pointer"
           v-for="item in library?.[active_tab]"
           :key="item.id"
         >
           <img
             v-if="item.image_urls === ''"
             src="@/assets/imgs/library-thumbnail.png"
-            class="w-full h-auto md:w-3/4 md:h-64 rounded-[22px] fancy-img my-0 md:mx-auto cursor-pointer"
+            class="w-full h-auto md:w-3/4 md:h-64 rounded-[22px] fancy-img my-0 md:mx-auto !cursor-pointer"
             @click="openModal(item)"
           />
           <div
             v-else
-            class="flex flex-col flex-1 max-h-[256px] justify-center cursor-pointer"
+            class="flex flex-col flex-1 max-h-[256px] justify-center !cursor-pointer"
             @click="openModal(item)"
           >
             <div
-              class="flex-1 flex items-center mx-auto justify-center relative overflow-hidden w-[210px] rounded-3xl"
+              class="flex-1 flex items-center mx-auto justify-center relative overflow-hidden w-[210px] rounded-3xl !cursor-pointer"
             >
               <img
                 :src="item.image_urls.split('|')[0]"
-                class="absolute inset-0 object-center h-full blur-sm scale-[200%] object-cover"
+                class="absolute inset-0 object-center h-full blur-sm scale-[200%] object-cover !cursor-pointer"
               />
-              <img :src="item.image_urls.split('|')[0]" class="relative max-h-[200px] m-1" />
+              <img :src="item.image_urls.split('|')[0]" class="relative max-h-[200px] m-1  !cursor-pointer" />
             </div>
           </div>
           <div class="px-5 md:px-0 mt-5 text-center">
