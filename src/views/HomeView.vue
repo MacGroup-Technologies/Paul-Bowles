@@ -157,13 +157,13 @@ onMounted(() => {
 <template>
   <main class="h-screen text-white">
     <div id="img">
-      <img src="@/assets/imgs/Paul-on-Keyboard.png" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
+      <img src="@/assets/imgs/Paul-on-Keyboard.webp" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
         data-animate />
-      <img src="@/assets/imgs/Young-Paul.png" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
+      <img src="@/assets/imgs/Young-Paul.webp" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
         data-animate />
-      <img src="@/assets/imgs/Paul-arms-wide.png" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
+      <img src="@/assets/imgs/Paul-arms-wide.webp" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
         data-animate />
-      <img src="@/assets/imgs/typewriter-duotone.png" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
+      <img src="@/assets/imgs/typewriter-duotone.webp" class="fixed min-h-screen w-screen inset-0 object-cover jumbo"
         data-animate />
     </div>
 
