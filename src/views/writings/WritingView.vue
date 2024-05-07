@@ -178,7 +178,7 @@ useHead({ title: `Paul Bowles ${route.params.title}` })
         </li>
       </ol>
       <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-16" v-else>
-        <div class="rounded flex flex-col items-center overflow-hidden" v-for="item in writing.item" :key="item.id">
+        <div class="rounded flex flex-col items-center overflow-hidden relative pb-20" v-for="item in writing.item" :key="item.id">
           <div v-if="item.image_urls !== 'N/A'" class="relative overflow-hidden">
             <img src="@/assets/imgs/writings-thumbnail.png" class="opacity-0" />
             <div class="absolute inset-0 grid place-items-center">
@@ -187,8 +187,8 @@ useHead({ title: `Paul Bowles ${route.params.title}` })
             </div>
           </div>
           <img v-else src="@/assets/imgs/writings-thumbnail.png" />
-          <h3 class="text-center mt-4">{{ item.title }}</h3>
-          <div class="flex justify-between items-center mt-2 gap-[10px]">
+          <h3 class="text-center mt-4 line-clamp-2">{{ item.title }}</h3>
+          <div class="flex justify-center items-center mt-2 gap-[10px] absolute bottom-0">
             <a v-if="item.library_url" :href="item.library_url" target="_blank"><el-button type="primary" class="bg-primary">Read in Library</el-button></a>
             <a v-if="item.purchase_url" :href="item.purchase_url" target="_blank"><el-button type="primary" class="bg-primary">Purchase Writing</el-button></a>
           </div>
