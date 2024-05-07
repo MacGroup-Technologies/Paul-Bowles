@@ -188,11 +188,9 @@ useHead({ title: `Paul Bowles ${route.params.title}` })
           </div>
           <img v-else src="@/assets/imgs/writings-thumbnail.png" />
           <h3 class="text-center mt-4">{{ item.title }}</h3>
-          <div v-if="item.library_url" class="mt-2">
-            <a :href="item.library_url" target="_blank"><el-button type="primary" class="bg-primary">Read in Library</el-button></a>
-          </div>
-          <div v-else-if="item.purchase_url" class="mt-2">
-            <a :href="item.purchase_url" target="_blank"><el-button type="primary" class="bg-primary">Purchase Writing</el-button></a>
+          <div class="flex justify-between items-center mt-2">
+            <a v-if="item.library_url" :href="item.library_url" target="_blank"><el-button type="primary" class="bg-primary">Read in Library</el-button></a>
+            <a v-if="item.purchase_url" :href="item.purchase_url" target="_blank"><el-button type="primary" class="bg-primary">Purchase Writing</el-button></a>
           </div>
         </div>
       </div>
